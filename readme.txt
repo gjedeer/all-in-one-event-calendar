@@ -150,7 +150,7 @@ https://vimeo.com/135004810
 == Changelog ==
 
 = Version 2.5.16 =
-* Improved: API error message handling has been improved.
+* Improved: Changed some error messages for Ticketing and API access.
 
 = Version 2.5.15 =
 * Fixed: Importing calendar into Google Calendar wasn't working is some specific cases.
