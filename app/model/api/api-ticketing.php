@@ -284,7 +284,7 @@ class Ai1ec_Api_Ticketing extends Ai1ec_Api_Abstract {
 
 		$utc_current_time         = $this->_registry->get( 'date.time')->format_to_javascript();
 		$body['created_at']       = $utc_current_time;
-		$body['updated_at']       = $utc_current_time;		
+		$body['updated_at']       = $utc_current_time;
 
 		//removing blank values
 		foreach ($body as $key => $value) {
@@ -328,7 +328,7 @@ class Ai1ec_Api_Ticketing extends Ai1ec_Api_Abstract {
 		}
 		$body['ticket_types'] = $tickets_types;
 
-        return $body;
+		return $body;
 	}
 
 	/**
