@@ -97,7 +97,7 @@ class Ai1ec_View_Tickets extends Ai1ec_View_Admin_Abstract {
 							'Time.ly Ticketing'
 							),
 					'sign_up_text' => '',
-					'signup_form'  => 'Ticketing feature is not enabled for this website. Please sign up for Ticketing plan <a href="https://https://time.ly/pricing/" target="_blank">here</a>.'
+					'signup_form'  => 'Ticketing feature is not enabled for this website. Please sign up for Ticketing plan <a href="https://time.ly/pricing/" target="_blank">here</a>.'
 			);
 			$file = $loader->get_file( 'ticketing/signup.twig', $args, true );
 		} else {
