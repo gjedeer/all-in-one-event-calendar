@@ -127,7 +127,8 @@ class Ai1ec_Api_Registration extends Ai1ec_Api_Abstract {
 	}
 
 	public function is_ticket_available() {
-		return $this->is_feature_available( Ai1ec_Api_Features::CODE_TICKETING );
+		return $this->is_feature_available( Ai1ec_Api_Features::CODE_TICKETING ) &&
+				$this->has_subscription_active( Ai1ec_Api_Features::CODE_TICKETING );
 	}
 
  	/**
