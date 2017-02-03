@@ -10,7 +10,7 @@
  */
 class Ai1ec_Review extends Ai1ec_Base {
 
-	const EMAIL_FEEDBACK_DESTINATION = 'VPProduct@time.ly';
+	const EMAIL_FEEDBACK_DESTINATION = 'info@time.ly';
 	const OPTION_KEY                 = '_ai1ec_review';
 	const FEEDBACK_FIELD             = 'feedback';
 	const RELEASE_DATE_FIELD         = 'release_date';

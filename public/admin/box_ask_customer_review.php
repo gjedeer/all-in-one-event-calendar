@@ -172,8 +172,8 @@
 				<p style="text-align: right"> 
 					<br/>
 					<?php _e( 'Thank you for being our customer,' ); ?><br/>
-					<?php _e( 'Aristotel Dascal, VP of Product, Time.ly' ); ?><br/>
-					<?php _e( 'VPproduct@time.ly' ); ?>
+					<?php _e( 'Time.ly team' ); ?><br/>
+					<?php _e( 'info@time.ly' ); ?>
 				</p>				
 			</div>
 			 <div class="ai1ec-modal-footer ai1ec-clearfix">			 
