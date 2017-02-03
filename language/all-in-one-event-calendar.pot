@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: All-in-One Event Calendar by Time.ly 2.5.16\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/all-in-one-event-calendar\n"
-"POT-Creation-Date: 2017-02-03 21:46:39+00:00\n"
+"POT-Creation-Date: 2017-02-03 21:53:21+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -235,11 +235,11 @@ msgstr ""
 msgid "Guest Name"
 msgstr ""
 
-#: app/controller/javascript.php:568 app/view/admin/tickets.php:113
+#: app/controller/javascript.php:568 app/view/admin/tickets.php:123
 msgid "Status"
 msgstr ""
 
-#: app/controller/javascript.php:569 app/view/admin/tickets.php:112
+#: app/controller/javascript.php:569 app/view/admin/tickets.php:122
 #: app/view/event/ticket.php:71
 msgid "Email"
 msgstr ""
@@ -366,19 +366,19 @@ msgstr ""
 msgid "We were unable to Sign you Up for Time.ly Network"
 msgstr ""
 
-#: app/model/api/api-registration.php:148
+#: app/model/api/api-registration.php:152
 msgid "We were unable to Sign you Out of Time.ly Network"
 msgstr ""
 
-#: app/model/api/api-registration.php:178
+#: app/model/api/api-registration.php:182
 msgid "Payment preferences were saved."
 msgstr ""
 
-#: app/model/api/api-registration.php:187
+#: app/model/api/api-registration.php:191
 msgid "Payment preferences were not saved."
 msgstr ""
 
-#: app/model/api/api-registration.php:215
+#: app/model/api/api-registration.php:219
 msgid "We were unable to get the Sales information from Time.ly Network"
 msgstr ""
 
@@ -386,7 +386,7 @@ msgstr ""
 msgid "This Event was replicated from another site. Changes are not allowed."
 msgstr ""
 
-#: app/model/api/api-ticketing.php:75 app/view/admin/add-new-event.php:354
+#: app/model/api/api-ticketing.php:75 app/view/admin/add-new-event.php:359
 #: app/view/admin/all-events.php:214
 msgid ""
 "This Event was created using a different account %s. Changes are not allowed."
@@ -841,25 +841,32 @@ msgid ""
 "later."
 msgstr ""
 
-#: app/view/admin/add-new-event.php:407
+#: app/view/admin/add-new-event.php:312
+msgid ""
+"Ticketing feature is not enabled for this website. Please sign up for "
+"Ticketing plan <a href=\"https://time.ly/pricing/\" target=\"_blank\">here</"
+"a>."
+msgstr ""
+
+#: app/view/admin/add-new-event.php:412
 msgid ""
 "<span class=\"ai1ec-info-text\">The event was submitted by this Organizer.</"
 "span>"
 msgstr ""
 
-#: app/view/admin/add-new-event.php:416
+#: app/view/admin/add-new-event.php:421
 msgid ", email: "
 msgstr ""
 
-#: app/view/admin/add-new-event.php:420
+#: app/view/admin/add-new-event.php:425
 msgid "<span class=\"ai1ec-info-text\">The event was submitted by %s.</span>"
 msgstr ""
 
-#: app/view/admin/add-new-event.php:500
+#: app/view/admin/add-new-event.php:505
 msgid "Set banner image"
 msgstr ""
 
-#: app/view/admin/add-new-event.php:501
+#: app/view/admin/add-new-event.php:506
 msgid "Remove banner image"
 msgstr ""
 
@@ -1072,7 +1079,7 @@ msgid "All-in-One Event Calendar: Settings"
 msgstr ""
 
 #: app/view/admin/settings.php:68 app/view/admin/settings.php:69
-#: app/view/admin/tickets.php:100 lib/date/timezone.php:366
+#: app/view/admin/tickets.php:110 lib/date/timezone.php:366
 msgid "Settings"
 msgstr ""
 
@@ -1122,7 +1129,7 @@ msgstr ""
 msgid "Please, Sign In to Timely Network."
 msgstr ""
 
-#: app/view/admin/settings.php:184 app/view/admin/tickets.php:106
+#: app/view/admin/settings.php:184 app/view/admin/tickets.php:116
 #: public/admin/box_ask_customer_review.php:113
 #: public/admin/box_ask_customer_review.php:127
 #: public/admin/box_ask_customer_review.php:141
@@ -1191,7 +1198,7 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: app/view/admin/settings.php:206 app/view/admin/tickets.php:115
+#: app/view/admin/settings.php:206 app/view/admin/tickets.php:125
 msgid "Sign Out"
 msgstr ""
 
@@ -1269,198 +1276,198 @@ msgstr ""
 msgid "Ticketing"
 msgstr ""
 
-#: app/view/admin/tickets.php:70 app/view/admin/tickets.php:85
-#: app/view/admin/tickets.php:97
+#: app/view/admin/tickets.php:71 app/view/admin/tickets.php:86
+#: app/view/admin/tickets.php:96 app/view/admin/tickets.php:107
 msgid "Time.ly Ticketing"
 msgstr ""
 
-#: app/view/admin/tickets.php:74
+#: app/view/admin/tickets.php:75
 msgid ""
-"You need to sign up for a Timely Network account in order to use "
-"Ticketing<br /><br />"
+"You need to sign up for a Timely Network account in order to use Ticketing "
+"or Import Feeds<br /><br />"
 msgstr ""
 
-#: app/view/admin/tickets.php:77
+#: app/view/admin/tickets.php:78
 msgid ""
 "<a href=\"edit.php?post_type=ai1ec_event&page=all-in-one-event-calendar-"
 "settings\" class=\"ai1ec-btn ai1ec-btn-primary ai1ec-btn-lg\">Sign In to "
 "Timely Network</a>"
 msgstr ""
 
-#: app/view/admin/tickets.php:78
+#: app/view/admin/tickets.php:79
 msgid ""
 "<b>Signing up for a Timely Network account is currently unavailable. Please, "
 "try again later.</b>"
 msgstr ""
 
-#: app/view/admin/tickets.php:101
+#: app/view/admin/tickets.php:111
 msgid "Sales"
 msgstr ""
 
-#: app/view/admin/tickets.php:102
+#: app/view/admin/tickets.php:112
 msgid "Please provide your PayPal details."
 msgstr ""
 
-#: app/view/admin/tickets.php:103
+#: app/view/admin/tickets.php:113
 msgid "Cheque"
 msgstr ""
 
-#: app/view/admin/tickets.php:104
+#: app/view/admin/tickets.php:114
 msgid "PayPal"
 msgstr ""
 
-#: app/view/admin/tickets.php:105
+#: app/view/admin/tickets.php:115
 msgid "Preferred currency for tickets:"
 msgstr ""
 
-#: app/view/admin/tickets.php:107
+#: app/view/admin/tickets.php:117
 msgid "Save Changes"
 msgstr ""
 
-#: app/view/admin/tickets.php:108
+#: app/view/admin/tickets.php:118
 msgid "Date"
 msgstr ""
 
-#: app/view/admin/tickets.php:109
+#: app/view/admin/tickets.php:119
 msgid "Event"
 msgstr ""
 
-#: app/view/admin/tickets.php:110
+#: app/view/admin/tickets.php:120
 msgid "Purchaser"
 msgstr ""
 
-#: app/view/admin/tickets.php:111 app/view/calendar/view/abstract.php:107
+#: app/view/admin/tickets.php:121 app/view/calendar/view/abstract.php:107
 #: app/view/event/ticket.php:39
 msgid "Tickets"
 msgstr ""
 
-#: app/view/admin/tickets.php:114
+#: app/view/admin/tickets.php:124
 msgid "Total"
 msgstr ""
 
-#: app/view/admin/tickets.php:131
+#: app/view/admin/tickets.php:141
 msgid "United States Dollar"
 msgstr ""
 
-#: app/view/admin/tickets.php:132
+#: app/view/admin/tickets.php:142
 msgid "Canadian Dollar"
 msgstr ""
 
-#: app/view/admin/tickets.php:133
+#: app/view/admin/tickets.php:143
 msgid "Australian Dollar"
 msgstr ""
 
-#: app/view/admin/tickets.php:134
+#: app/view/admin/tickets.php:144
 msgid "Brazilian Real"
 msgstr ""
 
-#: app/view/admin/tickets.php:134 app/view/admin/tickets.php:142
-#: app/view/admin/tickets.php:155
+#: app/view/admin/tickets.php:144 app/view/admin/tickets.php:152
+#: app/view/admin/tickets.php:165
 msgid ""
 "Note: This currency is supported as a payment currency and a currency "
 "balance for in-country PayPal accounts only."
 msgstr ""
 
-#: app/view/admin/tickets.php:135
+#: app/view/admin/tickets.php:145
 msgid "Czech Koruna"
 msgstr ""
 
-#: app/view/admin/tickets.php:136
+#: app/view/admin/tickets.php:146
 msgid "Danish Krone"
 msgstr ""
 
-#: app/view/admin/tickets.php:137
+#: app/view/admin/tickets.php:147
 msgid "Euro"
 msgstr ""
 
-#: app/view/admin/tickets.php:138
+#: app/view/admin/tickets.php:148
 msgid "Hong Kong Dollar"
 msgstr ""
 
-#: app/view/admin/tickets.php:139
+#: app/view/admin/tickets.php:149
 msgid "Hungarian Forint"
 msgstr ""
 
-#: app/view/admin/tickets.php:139 app/view/admin/tickets.php:153
+#: app/view/admin/tickets.php:149 app/view/admin/tickets.php:163
 msgid ""
 "Note: Decimal amounts are not supported for this currency. Passing a decimal "
 "amount will throw an error."
 msgstr ""
 
-#: app/view/admin/tickets.php:140
+#: app/view/admin/tickets.php:150
 msgid "Israeli New Sheqel"
 msgstr ""
 
-#: app/view/admin/tickets.php:141
+#: app/view/admin/tickets.php:151
 msgid "Japanese Yen"
 msgstr ""
 
-#: app/view/admin/tickets.php:141
+#: app/view/admin/tickets.php:151
 msgid ""
 "Note: This currency does not support decimals. Passing a decimal amount will "
 "throw an error. 1,000,000"
 msgstr ""
 
-#: app/view/admin/tickets.php:142
+#: app/view/admin/tickets.php:152
 msgid "Malaysian Ringgit"
 msgstr ""
 
-#: app/view/admin/tickets.php:143
+#: app/view/admin/tickets.php:153
 msgid "Mexican Peso"
 msgstr ""
 
-#: app/view/admin/tickets.php:144
+#: app/view/admin/tickets.php:154
 msgid "Norwegian Krone"
 msgstr ""
 
-#: app/view/admin/tickets.php:145
+#: app/view/admin/tickets.php:155
 msgid "New Zealand Dollar"
 msgstr ""
 
-#: app/view/admin/tickets.php:146
+#: app/view/admin/tickets.php:156
 msgid "Philippine Peso"
 msgstr ""
 
-#: app/view/admin/tickets.php:147
+#: app/view/admin/tickets.php:157
 msgid "Polish Zloty"
 msgstr ""
 
-#: app/view/admin/tickets.php:148
+#: app/view/admin/tickets.php:158
 msgid "Pound Sterling"
 msgstr ""
 
-#: app/view/admin/tickets.php:149
+#: app/view/admin/tickets.php:159
 msgid "Russian Ruble"
 msgstr ""
 
-#: app/view/admin/tickets.php:149
+#: app/view/admin/tickets.php:159
 msgid ""
 "For in-border payments (payments made within Russia), the Russian Ruble is "
 "the only accepted currency. If you use another currency for in-border "
 "payments, the transaction will fail"
 msgstr ""
 
-#: app/view/admin/tickets.php:150
+#: app/view/admin/tickets.php:160
 msgid "Singapore Dollar"
 msgstr ""
 
-#: app/view/admin/tickets.php:151
+#: app/view/admin/tickets.php:161
 msgid "Swedish Krona"
 msgstr ""
 
-#: app/view/admin/tickets.php:152
+#: app/view/admin/tickets.php:162
 msgid "Swiss Franc"
 msgstr ""
 
-#: app/view/admin/tickets.php:153
+#: app/view/admin/tickets.php:163
 msgid "Taiwan New Dollar"
 msgstr ""
 
-#: app/view/admin/tickets.php:154
+#: app/view/admin/tickets.php:164
 msgid "Thai Baht"
 msgstr ""
 
-#: app/view/admin/tickets.php:155
+#: app/view/admin/tickets.php:165
 msgid "Turkish Lira"
 msgstr ""
 
