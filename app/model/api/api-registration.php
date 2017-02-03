@@ -130,6 +130,10 @@ class Ai1ec_Api_Registration extends Ai1ec_Api_Abstract {
 		return $this->is_feature_available( Ai1ec_Api_Features::CODE_TICKETING );
 	}
 
+	public function is_ticket_enabled() {
+		return $this->has_subscription_active( Ai1ec_Api_Features::CODE_TICKETING );
+	}
+
  	/**
 	 * Clean the ticketing settings on WP database only
 	 */
