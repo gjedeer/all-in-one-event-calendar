@@ -296,16 +296,21 @@ class Ai1ec_View_Add_New_Event extends Ai1ec_Base {
 
 		$api                   = $this->_registry->get( 'model.api.api-ticketing' );
 		$api_reg               = $this->_registry->get( 'model.api.api-registration' );
-		$ticketing             = $api_reg->is_signed() && $api_reg->is_ticket_available();
+		$ticketing             = $api_reg->is_signed() && $api_reg->is_ticket_available() && $api_reg->is_ticket_enabled();
 		$message               = $api->get_sign_message();
 		$ticket_error          = null;
 		$ticket_event_imported = false;
 		$tickets               = array( null );
 		$tax_options           = null;
-		
+
 		if ( ! $api_reg->is_ticket_available() ) {
 			$message = __(
 				'Ticketing is currently not available for this website. Please, try again later.',
+				AI1EC_PLUGIN_NAME
+			);
+		} else if ( ! $api_reg->is_ticket_enabled() ) {
+			$message = __(
+				'Ticketing feature is not enabled for this website. Please sign up for Ticketing plan <a href="https://time.ly/pricing/" target="_blank">here</a>.',
 				AI1EC_PLUGIN_NAME
 			);
 		}

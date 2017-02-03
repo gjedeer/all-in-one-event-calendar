@@ -57,6 +57,7 @@ class Ai1ec_View_Tickets extends Ai1ec_View_Admin_Abstract {
 		$signed_to_api       = $this->_api_registration->is_signed();
 		$signup_available    = $this->_api_registration->is_api_sign_up_available();
 		$ticketing_available = $this->_api_registration->is_ticket_available();
+		$ticketing_enabled   = $this->_api_registration->has_subscription_active( Ai1ec_Api_Features::CODE_TICKETING );
 		$ticketing_message   = $this->_api_registration->get_sign_message();
 		$loader              = $this->_registry->get( 'theme.loader' );
 
@@ -70,8 +71,8 @@ class Ai1ec_View_Tickets extends Ai1ec_View_Admin_Abstract {
 				'title' => Ai1ec_I18n::__(
 					'Time.ly Ticketing'
 				),
-				'sign_up_text' => 'Please, <a href="edit.php?post_type=ai1ec_event&page=all-in-one-event-calendar-settings">Sign Up for a Timely Network account</a> to use Ticketing.',
-				'signup_form'  => Ai1ec_I18n::__( 'You need to sign up for a Timely Network account in order to use Ticketing<br /><br />' ) .
+				'sign_up_text' => 'Please, <a href="edit.php?post_type=ai1ec_event&page=all-in-one-event-calendar-settings">Sign Up for a Timely Network account</a> to use Ticketing or Import Feeds.',
+				'signup_form'  => Ai1ec_I18n::__( 'You need to sign up for a Timely Network account in order to use Ticketing or Import Feeds<br /><br />' ) .
 					(
 						$signup_available
 						? Ai1ec_I18n::__( '<a href="edit.php?post_type=ai1ec_event&page=all-in-one-event-calendar-settings" class="ai1ec-btn ai1ec-btn-primary ai1ec-btn-lg">Sign In to Timely Network</a>' )
@@ -88,6 +89,15 @@ class Ai1ec_View_Tickets extends Ai1ec_View_Admin_Abstract {
 				'sign_up_text' => '',
 				'signup_form'  => 'Ticketing is currently not available for this website. Please, try again later.'
 
+			);
+			$file = $loader->get_file( 'ticketing/signup.twig', $args, true );
+		} elseif ( ! $ticketing_enabled ) {
+			$args = array(
+					'title' => Ai1ec_I18n::__(
+							'Time.ly Ticketing'
+							),
+					'sign_up_text' => '',
+					'signup_form'  => 'Ticketing feature is not enabled for this website. Please sign up for Ticketing plan <a href="https://time.ly/pricing/" target="_blank">here</a>.'
 			);
 			$file = $loader->get_file( 'ticketing/signup.twig', $args, true );
 		} else {
