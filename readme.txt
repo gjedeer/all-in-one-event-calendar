@@ -13,9 +13,9 @@ categories, recurrence, and import/export of .ics feeds.
 
 == Description ==
 
-><strong>Note on support:</strong> The purpose of the [support forum](https://wordpress.org/support/plugin/all-in-one-event-calendar) is to capture bugs, but we need to set the expectation that troubleshooting  issues can take up to one week or more, having a very small team (1 support person). Please read our [sticky](https://wordpress.org/support/topic/read-this-first-welcome-to-all-in-one-event-calendar-support-forum) post before creating a new support thread and [vote/raise ideas here](http://ideas.time.ly/).
+><strong>Note on support:</strong> Please read our sticky post before creating a new thread. The forum is a place where our users can provide insightful help to other plugin users.
 >
-> Please check-out our [Hub and Pro hosted plans](http://time.ly/products) for many extra features and prioritized support.
+>Please check-out our [Hub and Pro hosted plans](http://time.ly/products) for many extra features and prioritized support.o
 
 The [All-in-One Event Calendar](http://time.ly/) from
 [Timely](http://time.ly/) is a beautiful way to list your events in
