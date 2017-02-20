@@ -90,13 +90,12 @@ class Ai1ec_Settings_View extends Ai1ec_App {
 	 */
 	public function get_configured( $view ) {
 		$enabled_views = $this->_get();
-
 		if ( empty( $enabled_views ) ) {
 			throw new Ai1ec_Settings_Exception( 'No view is enabled' );
 		}
 		if (
 			isset( $enabled_views[$view] ) &&
-			$enabled_views[$view]['enabled' . ( wp_is_mobile() ? '_mobile' : '' ) ]
+			$enabled_views[$view]['enabled' . ( wp_is_mobile() ? '_mobile' : '' ]
 		) {
 			return $view;
 		}
