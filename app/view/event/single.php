@@ -174,9 +174,10 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
 		$desc    = substr( $desc, 0, 300 );
 
 		$og      = array(
-			'url'         => home_url( add_query_arg( null, null ) ),
+			'url'         => get_permalink( $event->get( 'post_id' ) ),
 			'title'       => htmlspecialchars(
-				$event->get( 'post' )->post_title
+				$event->get( 'post' )->post_title .
+				' (' . substr( $event->get( 'start' ) , 0, 10 ) . ')'
 			),
 			'type'        => 'article',
 			'description' => htmlspecialchars( $desc ),
