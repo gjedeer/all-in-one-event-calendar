@@ -172,11 +172,11 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
 		$desc    = strip_tags( $desc );
 		$desc    = preg_replace( '/\n+/', ' ', $desc);
 		$desc    = substr( $desc, 0, 300 );
+
 		$og      = array(
-			'url'         => get_permalink( $event->get( 'post_id' ) ),
+			'url'         => home_url( add_query_arg( null, null ) ),
 			'title'       => htmlspecialchars(
-				$event->get( 'post' )->post_title .
-				' (' . substr( $event->get( 'start' ) , 0, 10 ) . ')'
+				$event->get( 'post' )->post_title
 			),
 			'type'        => 'article',
 			'description' => htmlspecialchars( $desc ),
