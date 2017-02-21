@@ -164,6 +164,7 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
 
 		// Get Event and process desciption
 		$instance_id = $_GET[ 'instance_id' ];
+		$instance_id = preg_replace( '/\D/', '', $instance_id );
 		$event       = $this->_registry->get( 'model.event', get_the_ID(), $instance_id );
 		$content     = $this->_registry->get( 'view.event.content' );
 		$desc        = $event->get( 'post' )->post_content;
