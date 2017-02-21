@@ -95,7 +95,7 @@ class Ai1ec_Settings_View extends Ai1ec_App {
 		}
 		if (
 			isset( $enabled_views[$view] ) &&
-			$enabled_views[$view]['enabled']
+			$enabled_views[$view]['enabled' . ( wp_is_mobile() ? '_mobile' : '' ) ]
 		) {
 			return $view;
 		}
