@@ -180,7 +180,8 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
 		$og              = array(
 			'url'         => home_url( add_query_arg( null, null ) ),
 			'title'       => htmlspecialchars(
-				$event->get( 'post' )->post_title
+				$event->get( 'post' )->post_title .
+				' (' . substr( $event->get( 'start' ) , 0, 10 ) . ')'
 			),
 			'type'        => 'article',
 			'description' => htmlspecialchars( $desc ),
