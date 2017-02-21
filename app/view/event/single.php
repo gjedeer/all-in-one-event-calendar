@@ -163,19 +163,21 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
 		if ( ! $aco->is_our_post_type() ) return;
 
 		// Get Event and process desciption
-		$instance_id = $_GET[ 'instance_id' ];
-		$instance_id = preg_replace( '/\D/', '', $instance_id );
-		$event       = $this->_registry->get( 'model.event', get_the_ID(), $instance_id );
-		$content     = $this->_registry->get( 'view.event.content' );
-		$desc        = $event->get( 'post' )->post_content;
-		$desc        = apply_filters( 'the_excerpt', $desc );
-		$desc        = strip_shortcodes( $desc );
-		$desc        = str_replace( ']]>', ']]&gt;', $desc );
-		$desc        = strip_tags( $desc );
-		$desc        = preg_replace( '/\n+/', ' ', $desc);
-		$desc        = substr( $desc, 0, 300 );
+		$instance_id     = $_GET[ 'instance_id' ];
+		if ( !is_null( $instance_id ) ) {
+			$instance_id = preg_replace( '/\D/', '', $instance_id );
+		}
+		$event           = $this->_registry->get( 'model.event', get_the_ID(), $instance_id );
+		$content         = $this->_registry->get( 'view.event.content' );
+		$desc            = $event->get( 'post' )->post_content;
+		$desc            = apply_filters( 'the_excerpt', $desc );
+		$desc            = strip_shortcodes( $desc );
+		$desc            = str_replace( ']]>', ']]&gt;', $desc );
+		$desc            = strip_tags( $desc );
+		$desc            = preg_replace( '/\n+/', ' ', $desc);
+		$desc            = substr( $desc, 0, 300 );
 
-		$og          = array(
+		$og              = array(
 			'url'         => home_url( add_query_arg( null, null ) ),
 			'title'       => htmlspecialchars(
 				$event->get( 'post' )->post_title
