@@ -201,13 +201,13 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
 		
 		$text_calendar_feed = null;
 		
-		if ( strpos( $event->get( 'ical_feed_url' ), 'http') !== false ) {
+		if ( strpos( $event->get( 'ical_feed_url' ), 'http' ) !== false ) {
 			$text_calendar_feed = Ai1ec_I18n::__(
 				'This post was replicated from another site\'s <a href="%s" title="iCalendar feed"><i class="ai1ec-fa ai1ec-fa-calendar"></i> calendar feed</a>.'
 			);
-		}else{
+		} else {
 			$text_calendar_feed = Ai1ec_I18n::__(
-				'This post was replicated from another site.'
+				'This post was imported from a CSV/ICS file.'
 			);
 		}
 
