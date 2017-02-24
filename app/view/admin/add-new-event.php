@@ -310,7 +310,7 @@ class Ai1ec_View_Add_New_Event extends Ai1ec_Base {
 			);
 		} else if ( ! $api_reg->is_ticket_enabled() ) {
 			$message = __(
-				'Ticketing feature is not enabled for this website. Please sign up for Ticketing plan <a href="https://time.ly/pricing/" target="_blank">here</a>.',
+				'Ticketing feature is not enabled for this website. Please sign up for Ticketing plan <a href="https://time.ly/tickets/" target="_blank">here</a>.',
 				AI1EC_PLUGIN_NAME
 			);
 		}
