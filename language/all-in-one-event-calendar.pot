@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: All-in-One Event Calendar by Time.ly 2.5.17\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/all-in-one-event-calendar\n"
-"POT-Creation-Date: 2017-02-24 19:09:52+00:00\n"
+"POT-Creation-Date: 2017-02-24 23:38:46+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -843,9 +843,12 @@ msgstr ""
 
 #: app/view/admin/add-new-event.php:312
 msgid ""
-"Ticketing feature is not enabled for this website. Please sign up for "
-"Ticketing plan <a href=\"https://time.ly/tickets/\" target=\"_blank\">here</"
-"a>."
+"Timely Ticketing saves time & money. Create ticketing/registration right "
+"here and now. You do not pay any ticketing fees (other than regular PayPal "
+"transaction costs). Create as many ticketing/registration as you'd like.<br /"
+"><br />Ticketing feature is not enabled for this website. Please sign up for "
+"Ticketing plan <a href=\"https://time.ly/tickets-existing-users/\" target="
+"\"_blank\">here</a>."
 msgstr ""
 
 #: app/view/admin/add-new-event.php:412
@@ -1803,14 +1806,18 @@ msgstr ""
 msgid "Edit this occurrence (%s)"
 msgstr ""
 
-#: app/view/event/single.php:201
+#: app/view/event/single.php:207
 msgid ""
 "This post was replicated from another site's <a href=\"%s\" title="
 "\"iCalendar feed\"><i class=\"ai1ec-fa ai1ec-fa-calendar\"></i> calendar "
 "feed</a>."
 msgstr ""
 
-#: app/view/event/single.php:212
+#: app/view/event/single.php:211
+msgid "This post was imported from a CSV/ICS file."
+msgstr ""
+
+#: app/view/event/single.php:224
 msgid "View original"
 msgstr ""
 
