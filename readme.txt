@@ -152,6 +152,7 @@ https://vimeo.com/135004810
 = Version 2.5.17 =
 * Fixed: Open Graph meta tags now matches correct dates and URLs for recurrent events.
 * Fixed: Prevents duplicate post IDs from being passed to update_meta_cache() after searching for events, creating a much smaller database query. Thanks to @zrothauser for the fix.
+* Fixed: Removed use of deprecated WP function (get_currentuserinfo()).
 
 = Version 2.5.16 =
 * Improved: Changed some error messages for Ticketing and API access.
