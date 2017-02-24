@@ -26,7 +26,7 @@
 				</optgroup>
 			{% else %}
 				<option
-					value="{{ option.value }}"
+					value="{{ option.value | e( 'html' ) | replace( {'&amp;': '&'} ) | raw }}"
 				{% for attribute, value in option.args %}
 					{{ attribute }}="{{ value }}"
 				{% endfor %}
