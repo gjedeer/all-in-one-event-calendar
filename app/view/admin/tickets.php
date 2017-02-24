@@ -97,7 +97,7 @@ class Ai1ec_View_Tickets extends Ai1ec_View_Admin_Abstract {
 							'Time.ly Ticketing'
 							),
 					'sign_up_text' => '',
-					'signup_form'  => 'Timely Ticketing saves time & money. Create ticketing/registration right here and now. You do not pay any ticketing fees (other than regular PayPal transaction costs). Create as many ticketing/registration as you\'d like.<br /><br />Ticketing feature is not enabled for this website. Please sign up for Ticketing plan <a href="https://time.ly/tickets/" target="_blank">here</a>.'
+					'signup_form'  => 'Timely Ticketing saves time & money. Create ticketing/registration right here and now. You do not pay any ticketing fees (other than regular PayPal transaction costs). Create as many ticketing/registration as you\'d like.<br /><br />Ticketing feature is not enabled for this website. Please sign up for Ticketing plan <a href="https://time.ly/tickets-existing-users/" target="_blank">here</a>.'
 			);
 			$file = $loader->get_file( 'ticketing/signup.twig', $args, true );
 		} else {
