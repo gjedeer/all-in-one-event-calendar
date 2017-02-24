@@ -361,14 +361,26 @@ class Ai1ec_Calendar_View_Agenda extends Ai1ec_Calendar_View_Abstract {
 			) {
 				$event_object = $event;
 			}
+
+			$months   = apply_filters( 'ai1ec_i18n_months', array() );
+			$weekdays = apply_filters( 'ai1ec_i18n_weekdays', array() );
+			
 			$dates[$timestamp]['events'][$category][] = $event_object;
 			$dates[$timestamp]['href']                = $href_for_date;
 			$dates[$timestamp]['day']                 = $this->_registry->
 				get( 'date.time', $timestamp )->format_i18n( 'j' );
-			$dates[$timestamp]['weekday']             = $this->_registry->
-				get( 'date.time', $timestamp )->format_i18n( 'D' );
-			$dates[$timestamp]['month']               = $this->_registry->
+				
+			$w                                        = $this->
+				_registry->get( 'date.time', $timestamp )->format_i18n( 'D' );
+			$dates[$timestamp]['weekday']             = array_key_exists( $w, $weekdays ) ? $weekdays[$w] : $w;
+				
+			$m                                        = $this->
+				_registry->get( 'date.time', $timestamp )->format_i18n( 'M' );
+			$dates[$timestamp]['month']               = array_key_exists( $m, $months ) ? $months[$m] : $m;
+			
+			$this->_registry->
 				get( 'date.time', $timestamp )->format_i18n( 'M' );
+				
 			$dates[$timestamp]['full_month']          = $this->_registry->
 				get( 'date.time', $timestamp )->format_i18n( 'F' );
 			$dates[$timestamp]['full_weekday']        = $this->_registry->

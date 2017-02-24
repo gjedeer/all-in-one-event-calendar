@@ -175,10 +175,13 @@ class Ai1ec_View_Event_Time extends Ai1ec_Base {
 	 * @return string
 	 */
 	public function get_short_date( Ai1ec_Date_Time $time, $add_year = false ) {
+		$months = apply_filters( 'ai1ec_i18n_months', array() );
+		$m      = $time->format_i18n( 'M' );
+		$m      = array_key_exists( $m, $months ) ? $months[$m] : $m;
 		if ( $add_year ) {
-			return $time->format_i18n( 'M j Y' );
+			return $m . ' ' . $time->format_i18n( 'j Y' );
 		}
-		return $time->format_i18n( 'M j' );
+		return $m . ' ' . $time->format_i18n( 'j' );
 	}
 
 	/**
