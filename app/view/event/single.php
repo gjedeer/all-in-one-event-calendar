@@ -198,9 +198,19 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
 	 * @return The html of the footer
 	 */
 	public function get_footer( Ai1ec_Event $event ) {
-		$text_calendar_feed = Ai1ec_I18n::__(
-			'This post was replicated from another site\'s <a href="%s" title="iCalendar feed"><i class="ai1ec-fa ai1ec-fa-calendar"></i> calendar feed</a>.'
-		);
+		
+		$text_calendar_feed = null;
+		
+		if ( strpos( $event->get( 'ical_feed_url' ), 'http') !== false ) {
+			$text_calendar_feed = Ai1ec_I18n::__(
+				'This post was replicated from another site\'s <a href="%s" title="iCalendar feed"><i class="ai1ec-fa ai1ec-fa-calendar"></i> calendar feed</a>.'
+			);
+		}else{
+			$text_calendar_feed = Ai1ec_I18n::__(
+				'This post was replicated from another site.'
+			);
+		}
+
 		$loader = $this->_registry->get( 'theme.loader' );
 		$text_calendar_feed = sprintf(
 			$text_calendar_feed,
