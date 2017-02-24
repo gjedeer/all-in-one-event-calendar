@@ -383,8 +383,8 @@ abstract class Ai1ec_Api_Abstract extends Ai1ec_App {
 				$subscriptions = array();
 			}
 
-			// Save for 30 minutes
-			$minutes = 30;
+			// Save for 15 minutes
+			$minutes = 15;
 			set_site_transient( 'ai1ec_api_subscriptions', $subscriptions, $minutes * 60 );
 		}
 
