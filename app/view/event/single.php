@@ -200,9 +200,10 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
 	public function get_footer( Ai1ec_Event $event ) {
 		
 		$text_calendar_feed = null;
-		$feed_url = strtolower ( $event->get( 'ical_feed_url' ) ) ;
-		
-		if ( strpos( trim ( $feed_url ), 'http' ) === 0 ) {
+
+		$feed_url = trim( strtolower( $event->get( 'ical_feed_url' ) ) );
+
+		if ( strpos( $feed_url, 'http' ) === 0 ) {
 			$text_calendar_feed = Ai1ec_I18n::__(
 				'This post was replicated from another site\'s <a href="%s" title="iCalendar feed"><i class="ai1ec-fa ai1ec-fa-calendar"></i> calendar feed</a>.'
 			);
