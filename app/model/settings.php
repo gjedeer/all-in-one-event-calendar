@@ -847,17 +847,8 @@ class Ai1ec_Settings extends Ai1ec_App {
 				'default'  => false,
 			),
 			'show_create_event_button' => array(
-				'type' => 'bool',
-				'renderer' => array(
-					'class' => 'checkbox',
-					'tab'   => 'editing-events',
-					'label' => Ai1ec_I18n::__(
-						' Show the old <strong>Post Your Event</strong> button above the calendar to privileged users'
-					),
-					'help'  => Ai1ec_I18n::__(
-						'Install the <a target="_blank" href="http://time.ly/">Interactive Frontend Extension</a> for the <strong>frontend Post Your Event form</strong>.'
-					),
-				),
+				'type'     => 'deprecated',
+				'renderer' => null,
 				'default'  => false,
 			),
 			'embedding' => array(
