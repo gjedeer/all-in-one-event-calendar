@@ -322,7 +322,7 @@ class Ai1ec_Twig_Ai1ec_Extension extends Twig_Extension {
 	public function dropdown_filter(
 		$string
 	) {
-		$string = htmlspecialchars($string);
+		$string = htmlspecialchars( $string );
 		$string = preg_replace( '/&amp;/', '&', $string );
 		return $string;
 	}
