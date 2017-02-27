@@ -847,7 +847,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 				'default'  => false,
 			),
 			'show_create_event_button' => array(
-				'type' => 'deprecated',
+				'type'     => 'deprecated',
 				'renderer' => null,
 				'default'  => false,
 			),
