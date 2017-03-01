@@ -272,7 +272,8 @@ abstract class Ai1ec_Api_Abstract extends Ai1ec_App {
 			//if the calendar is not saved on settings it should exists on API
 			$ticketing_calendar_id = $this->_find_user_calendar();
 			if ( 0 < $ticketing_calendar_id  ) {
-				$this->save_calendar_id( $ticketing_calendar_id );				
+				$this->save_calendar_id( $ticketing_calendar_id );
+
 				return $ticketing_calendar_id;
 			} else {
 				//if the calendar should not exist on API, we will created
