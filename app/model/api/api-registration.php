@@ -30,7 +30,10 @@ class Ai1ec_Api_Registration extends Ai1ec_Api_Abstract {
 		$response         = $this->request_api( 'POST', AI1EC_API_URL . 'auth/authenticate', json_encode( $body ), true, array( 'Authorization' => null ) );
 		if ( $this->is_response_success( $response ) ) {
 			$response_body = (array) $response->body;
-			$this->save_ticketing_settings( $response_body['message'], true, $response_body['auth_token'], $this->_find_user_calendar(), $body['email'] );
+			// Save calendar ID as 0 first, otherwise the auth data won't be saved in the database before creating the calendar
+			$this->save_ticketing_settings( $response_body['message'], true, $response_body['auth_token'], 0, $body['email'] );
+			// Now save the calendar ID
+			$this->save_calendar_id( $this->_get_ticket_calendar() );
 			$this->has_payment_settings();
 			$this->get_subscriptions( true );
 			$this->sync_api_settings();

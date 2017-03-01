@@ -298,13 +298,13 @@ abstract class Ai1ec_Api_Abstract extends Ai1ec_App {
 		);
 		$response = $this->request_api( 'GET', AI1EC_API_URL . 'calendars', 
 			json_encode( $body )
-		); 		
+		);
 		if ( $this->is_response_success( $response ) ) {
 			if ( is_array( $response->body ) ) {
 				return $response->body[0]->id;
 			} else {
 				return $response->body->id;
-			}			
+			}
 		} else {
 			return 0;
 		}

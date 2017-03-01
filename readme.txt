@@ -155,7 +155,7 @@ https://vimeo.com/135004810
 * Fixed: Removed use of deprecated WP function (get_currentuserinfo()).
 * Fixed: Removed link from event's view when event was imported from a CSV/ICS file.
 * Fixed: Removed Ticketing TRY (Turkish Lira) currency as it is unsupported by PayPal.
-* Fixed: There was a bug related to the API sign up process.
+* Fixed: The API sign up/sign in process would fail sometimes.
 
 = Version 2.5.16 =
 * Improved: Changed some error messages for Ticketing and API access.
