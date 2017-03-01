@@ -30,7 +30,10 @@ class Ai1ec_Api_Registration extends Ai1ec_Api_Abstract {
 		$response         = $this->request_api( 'POST', AI1EC_API_URL . 'auth/authenticate', json_encode( $body ), true, array( 'Authorization' => null ) );
 		if ( $this->is_response_success( $response ) ) {
 			$response_body = (array) $response->body;
-			$this->save_ticketing_settings( $response_body['message'], true, $response_body['auth_token'], $this->_find_user_calendar(), $body['email'] );
+			// Save calendar ID as 0 first, otherwise the auth data won't be saved in the database before creating/finding the calendar
+			$this->save_ticketing_settings( $response_body['message'], true, $response_body['auth_token'], 0, $body['email'] );
+			// Now save the calendar ID
+			$this->save_calendar_id( $this->_get_ticket_calendar() );
 			$this->has_payment_settings();
 			$this->get_subscriptions( true );
 			$this->sync_api_settings();
@@ -54,7 +57,13 @@ class Ai1ec_Api_Registration extends Ai1ec_Api_Abstract {
 		$response                      = $this->request_api( 'POST', AI1EC_API_URL . 'auth/register', json_encode( $body ), true );
 		if ( $this->is_response_success( $response ) ) {
 			$response_body = (array) $response->body;
-			$this->save_ticketing_settings( $response_body['Registration'], true, $response_body['auth_token'] , $this->_create_calendar(), $body['email'] );
+			// Save calendar ID as 0 first, otherwise the auth data won't be saved in the database before creating the calendar
+			$this->save_ticketing_settings( $response_body['Registration'], true, $response_body['auth_token'] , 0, $body['email'] );
+			// Now save the calendar ID
+			$this->save_calendar_id( $this->_create_calendar() );
+			$this->has_payment_settings();
+			$this->get_subscriptions( true );
+			$this->sync_api_settings();
 		} else {
 			$error_message = $this->save_error_notification( $response, __( 'We were unable to Sign you Up for Time.ly Network', AI1EC_PLUGIN_NAME ) );
 			$this->save_ticketing_settings( $error_message, false, '', 0, null );
