@@ -267,10 +267,7 @@ class Ai1ec_Ics_Import_Export_Engine
 				$feed->import_timezone ? $forced_timezone : null
 			);
 			if ( false === $start || false === $end ) {
-				throw new Ai1ec_Parse_Exception(
-					'Failed to parse one or more dates given timezone "' .
-					var_export( $event_timezone, true ) . '"'
-				);
+				array_push ( $messages, $e->getProperty( 'summary' )." -  Failed to parse one or more dates to timezone: ".var_export( $event_timezone, true ) );
 				continue;
 			}
 
