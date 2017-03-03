@@ -156,6 +156,7 @@ https://vimeo.com/135004810
 * Fixed: Removed link from event's view when event was imported from a CSV/ICS file.
 * Fixed: Removed Ticketing TRY (Turkish Lira) currency as it is unsupported by PayPal.
 * Fixed: The API sign up/sign in process would fail sometimes.
+* Fixed: Multi-days events were overlapping in month view.
 
 = Version 2.5.16 =
 * Improved: Changed some error messages for Ticketing and API access.
