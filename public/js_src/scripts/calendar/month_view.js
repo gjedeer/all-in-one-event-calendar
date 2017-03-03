@@ -42,9 +42,31 @@ define(
 					cellNum = $td.index(),
 					day = parseInt( $dayEl.text(), 10 );
 
+
 				if ( day >= startDay && day <= endDay ) {
 					if ( day === startDay ) {
-						marginSize = parseInt( $dayEl.css( 'marginBottom' ), 10 ) + 16;
+						marginSize      = parseInt( $dayEl.css( 'marginBottom' ), 10 ) + 16;
+						newMargin       = marginSize;
+						$week           = $dayEl.closest( '.ai1ec-week' )
+						$multidayEvents = $week.find( 'a.ai1ec-multiday[data-end-day]' )
+							.filter( function() {
+								return (
+									$( this ).offset().left < $dayEl.offset().left &&
+									$( this ).offset().left + $( this ).width() > $dayEl.offset().left
+								);
+							} );
+
+						$multidayEvents.each( function() {
+							var newOffset = $( this ).prop( 'offsetTop' );
+							if ( null === newMargin || newOffset > newMargin ) {
+								newMargin = newOffset;
+							}
+						} );
+						if ( null !== newMargin && $multidayEvents.length && newMargin > marginSize) {
+							newMargin += 19 ;
+							marginSize = newMargin;
+							$dayEl.css( 'marginBottom', newMargin + 'px' );
+						}
 					}
 
 					if ( curLine === 0 ) {
@@ -153,8 +175,8 @@ define(
 			$multidayEvents = $week.find( 'a.ai1ec-multiday[data-end-day]' )
 				.filter( function() {
 					return (
-						$( this ).data( 'startDay' ) <= day &&
-						$( this ).data( 'endDay'   ) >= day
+						$( this ).offsetLeft <= $dayEl.offset().left &&
+						$( this ).offsetLeft + $( this ).width() >= $dayEl.offset().left
 					);
 				} );
 			$multidayEvents.each( function() {
