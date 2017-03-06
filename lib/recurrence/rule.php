@@ -178,8 +178,9 @@ class Ai1ec_Recurrence_Rule extends Ai1ec_Base {
 				)
 				->format_i18n( $date_format );
 		}
+		$dates_to_add = str_replace( ' ', '&nbsp;', $dates_to_add );
 		// append dates to the string and return it;
-		return implode( ', ', $dates_to_add );
+		return implode( '; ', $dates_to_add );
 	}
 
 	/**
