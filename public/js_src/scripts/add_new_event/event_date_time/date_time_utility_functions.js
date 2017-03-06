@@ -20,11 +20,11 @@ define(
 		var txt = $.trim( $( s2 ).text() );
 		if( txt.lastIndexOf( ':' ) === -1 ) {
 			txt = txt.substring( 0, txt.length - 3 );
-			$( s2 ).text( txt + ':' );
+			$( s2 ).html( txt + ':' );
 		}
 		$(button).attr( 'disabled', false );
 		$( s3 ).fadeOut( 'fast', function() {
-			$( this ).text( response.message );
+			$( this ).html( response.message );
 			$( this ).fadeIn( 'fast' );
 		});
 	};
