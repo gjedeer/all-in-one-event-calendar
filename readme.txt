@@ -4,7 +4,7 @@ Tags: calendar, events, ics, ics feed, wordpress ical importer, google
 calendar, ical, iCalendar, all-in-one, events sync, events widget,
 calendar widget
 Requires WordPress at least: 3.5
-Tested up to: 4.7.2
+Tested up to: 4.7.3
 Stable tag: 2.5.17
 License: GNU General Public License, version 3 (GPL-3.0)
 
@@ -157,6 +157,7 @@ https://vimeo.com/135004810
 * Fixed: Removed Ticketing TRY (Turkish Lira) currency as it is unsupported by PayPal.
 * Fixed: The API sign up/sign in process would fail sometimes.
 * Fixed: Multi-days events were overlapping in month view.
+* Fixed: For recurrent events, the month name in the "Repeats" tooltip was all lowercase.
 
 = Version 2.5.16 =
 * Improved: Changed some error messages for Ticketing and API access.
