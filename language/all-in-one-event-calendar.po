@@ -4,11 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: All-in-One Event Calendar by Time.ly 2.5.17\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/all-in-one-event-calendar\n"
-"POT-Creation-Date: 2017-03-03 20:34:35+00:00\n"
+"POT-Creation-Date: 2017-03-07 19:17:51+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-03-03 20:34+0000\n"
+"PO-Revision-Date: 2017-03-07 19:17+0000\n"
 "Last-Translator: Timely <support@time.ly>\n"
 "Language-Team:\n"
 
@@ -1105,7 +1105,7 @@ msgid "week(s)"
 msgstr "week(s)"
 
 #: app/view/admin/get-repeat-box.php:413 app/view/admin/get-repeat-box.php:485
-#: lib/recurrence/rule.php:298
+#: lib/recurrence/rule.php:299
 msgid "last"
 msgstr "last"
 
@@ -1996,11 +1996,11 @@ msgstr " – "
 msgid ", and "
 msgstr ", and "
 
-#: cache/twig/dc/78/b950182efb8f436b144938fb0dc48cf395d7daabe20293234dbcf2b26545.php:37
+#: cache/twig/dc/78/b950182efb8f436b144938fb0dc48cf395d7daabe20293234dbcf2b26545.php:38
 msgid "Excludes: "
 msgstr "Excludes: "
 
-#: cache/twig/dc/78/b950182efb8f436b144938fb0dc48cf395d7daabe20293234dbcf2b26545.php:48
+#: cache/twig/dc/78/b950182efb8f436b144938fb0dc48cf395d7daabe20293234dbcf2b26545.php:49
 msgid "Repeats"
 msgstr "Repeats"
 
@@ -2636,92 +2636,92 @@ msgstr ""
 msgid "All Events"
 msgstr "All Events"
 
-#: lib/recurrence/rule.php:243 lib/recurrence/rule.php:252
-#: lib/recurrence/rule.php:260
+#: lib/recurrence/rule.php:244 lib/recurrence/rule.php:253
+#: lib/recurrence/rule.php:261
 msgctxt "Recurrence editor - weekly tab"
 msgid "on"
 msgstr "on"
 
-#: lib/recurrence/rule.php:248 lib/recurrence/rule.php:277
-#: lib/recurrence/rule.php:326
+#: lib/recurrence/rule.php:249 lib/recurrence/rule.php:278
+#: lib/recurrence/rule.php:327
 msgid "and"
 msgstr "and"
 
-#: lib/recurrence/rule.php:273 lib/recurrence/rule.php:280
-#: lib/recurrence/rule.php:286 lib/recurrence/rule.php:308
+#: lib/recurrence/rule.php:274 lib/recurrence/rule.php:281
+#: lib/recurrence/rule.php:287 lib/recurrence/rule.php:309
 msgctxt "Recurrence editor - monthly tab"
 msgid "on"
 msgstr "on"
 
-#: lib/recurrence/rule.php:273 lib/recurrence/rule.php:280
-#: lib/recurrence/rule.php:286
+#: lib/recurrence/rule.php:274 lib/recurrence/rule.php:281
+#: lib/recurrence/rule.php:287
 msgid "of the month"
 msgstr "of the month"
 
-#: lib/recurrence/rule.php:321 lib/recurrence/rule.php:329
-#: lib/recurrence/rule.php:336
+#: lib/recurrence/rule.php:322 lib/recurrence/rule.php:330
+#: lib/recurrence/rule.php:337
 msgctxt "Recurrence editor - yearly tab"
 msgid "on"
 msgstr "on"
 
-#: lib/recurrence/rule.php:376 public/admin/box_repeat.php:16
+#: lib/recurrence/rule.php:377 public/admin/box_repeat.php:16
 #: public/admin/cron_freq.php:9
 msgid "Daily"
 msgstr "Daily"
 
-#: lib/recurrence/rule.php:379
+#: lib/recurrence/rule.php:380
 msgid "Every other day"
 msgstr "Every other day"
 
-#: lib/recurrence/rule.php:382
+#: lib/recurrence/rule.php:383
 msgid "Every %d days"
 msgstr "Every %d days"
 
-#: lib/recurrence/rule.php:391 public/admin/box_repeat.php:21
+#: lib/recurrence/rule.php:392 public/admin/box_repeat.php:21
 msgid "Weekly"
 msgstr "Weekly"
 
-#: lib/recurrence/rule.php:394
+#: lib/recurrence/rule.php:395
 msgid "Every other week"
 msgstr "Every other week"
 
-#: lib/recurrence/rule.php:397
+#: lib/recurrence/rule.php:398
 msgid "Every %d weeks"
 msgstr "Every %d weeks"
 
-#: lib/recurrence/rule.php:406 public/admin/box_repeat.php:26
+#: lib/recurrence/rule.php:407 public/admin/box_repeat.php:26
 msgid "Monthly"
 msgstr "Monthly"
 
-#: lib/recurrence/rule.php:409
+#: lib/recurrence/rule.php:410
 msgid "Every other month"
 msgstr "Every other month"
 
-#: lib/recurrence/rule.php:412
+#: lib/recurrence/rule.php:413
 msgid "Every %d months"
 msgstr "Every %d months"
 
-#: lib/recurrence/rule.php:421 public/admin/box_repeat.php:31
+#: lib/recurrence/rule.php:422 public/admin/box_repeat.php:31
 msgid "Yearly"
 msgstr "Yearly"
 
-#: lib/recurrence/rule.php:424
+#: lib/recurrence/rule.php:425
 msgid "Every other year"
 msgstr "Every other year"
 
-#: lib/recurrence/rule.php:427
+#: lib/recurrence/rule.php:428
 msgid "Every %d years"
 msgstr "Every %d years"
 
-#: lib/recurrence/rule.php:465
+#: lib/recurrence/rule.php:466
 msgid "until %s"
 msgstr "until %s"
 
-#: lib/recurrence/rule.php:475
+#: lib/recurrence/rule.php:476
 msgid "for %d occurrences"
 msgstr "for %d occurrences"
 
-#: lib/recurrence/rule.php:479
+#: lib/recurrence/rule.php:480
 msgid "forever"
 msgstr "forever"
 
