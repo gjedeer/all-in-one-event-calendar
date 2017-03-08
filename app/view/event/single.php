@@ -163,17 +163,22 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
 		if ( ! $aco->is_our_post_type() ) return;
 
 		// Get Event and process desciption
-		$event   = $this->_registry->get( 'model.event', get_the_ID() );
-		$content = $this->_registry->get( 'view.event.content' );
-		$desc    = $event->get( 'post' )->post_content;
-		$desc    = apply_filters( 'the_excerpt', $desc );
-		$desc    = strip_shortcodes( $desc );
-		$desc    = str_replace( ']]>', ']]&gt;', $desc );
-		$desc    = strip_tags( $desc );
-		$desc    = preg_replace( '/\n+/', ' ', $desc);
-		$desc    = substr( $desc, 0, 300 );
-		$og      = array(
-			'url'         => get_permalink( $event->get( 'post_id' ) ),
+		$instance_id     = $_GET[ 'instance_id' ];
+		if ( !is_null( $instance_id ) ) {
+			$instance_id = preg_replace( '/\D/', '', $instance_id );
+		}
+		$event           = $this->_registry->get( 'model.event', get_the_ID(), $instance_id );
+		$content         = $this->_registry->get( 'view.event.content' );
+		$desc            = $event->get( 'post' )->post_content;
+		$desc            = apply_filters( 'the_excerpt', $desc );
+		$desc            = strip_shortcodes( $desc );
+		$desc            = str_replace( ']]>', ']]&gt;', $desc );
+		$desc            = strip_tags( $desc );
+		$desc            = preg_replace( '/\n+/', ' ', $desc);
+		$desc            = substr( $desc, 0, 300 );
+
+		$og              = array(
+			'url'         => home_url( add_query_arg( null, null ) ),
 			'title'       => htmlspecialchars(
 				$event->get( 'post' )->post_title .
 				' (' . substr( $event->get( 'start' ) , 0, 10 ) . ')'
@@ -193,9 +198,21 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
 	 * @return The html of the footer
 	 */
 	public function get_footer( Ai1ec_Event $event ) {
-		$text_calendar_feed = Ai1ec_I18n::__(
-			'This post was replicated from another site\'s <a href="%s" title="iCalendar feed"><i class="ai1ec-fa ai1ec-fa-calendar"></i> calendar feed</a>.'
-		);
+		
+		$text_calendar_feed = null;
+
+		$feed_url = trim( strtolower( $event->get( 'ical_feed_url' ) ) );
+
+		if ( strpos( $feed_url, 'http' ) === 0 ) {
+			$text_calendar_feed = Ai1ec_I18n::__(
+				'This post was replicated from another site\'s <a href="%s" title="iCalendar feed"><i class="ai1ec-fa ai1ec-fa-calendar"></i> calendar feed</a>.'
+			);
+		} else {
+			$text_calendar_feed = Ai1ec_I18n::__(
+				'This post was imported from a CSV/ICS file.'
+			);
+		}
+		
 		$loader = $this->_registry->get( 'theme.loader' );
 		$text_calendar_feed = sprintf(
 			$text_calendar_feed,

@@ -168,11 +168,13 @@ class Ai1ec_Calendar_View_Month extends Ai1ec_Calendar_View_Abstract {
 			);
 		$args['exact_date'] = $local_date->format();
 		$href = $this->_registry->get( 'html.element.href', $args );
+		$months = apply_filters( 'ai1ec_i18n_months', array() );
+		$m = $local_date->format_i18n( 'M' );
 		$links[] = array(
 			'enabled' => true,
 			'class'=> 'ai1ec-prev-month',
 			'text' => '<i class="ai1ec-fa ai1ec-fa-angle-left"></i> ' .
-			$local_date->format_i18n( 'M' ),
+			array_key_exists( $m, $months ) ? $months[$m] : $m,
 			'href' => $href->generate_href(),
 		);
 
@@ -210,10 +212,11 @@ class Ai1ec_Calendar_View_Month extends Ai1ec_Calendar_View_Abstract {
 			->set_time( 0, 0, 0 );
 		$args['exact_date'] = $orig_date->format();
 		$href = $this->_registry->get( 'html.element.href', $args );
+		$m = $orig_date->format_i18n( 'M' );
 		$links[] = array(
 			'enabled' => true,
 			'class'=> 'ai1ec-next-month',
-			'text' => $orig_date->format_i18n( 'M' ) .
+			'text' => array_key_exists( $m, $months ) ? $months[$m] : $m .
 			' <i class="ai1ec-fa ai1ec-fa-angle-right"></i>',
 			'href' => $href->generate_href(),
 		);

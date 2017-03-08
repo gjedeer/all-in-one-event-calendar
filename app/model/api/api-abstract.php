@@ -269,16 +269,18 @@ abstract class Ai1ec_Api_Abstract extends Ai1ec_App {
 			if ( ! $createIfNotExists ) {
 				return 0;
 			}
-			//if the calendar is not saved on settings it should exists on API
+			// Try to find the calendar in the API
 			$ticketing_calendar_id = $this->_find_user_calendar();
 			if ( 0 < $ticketing_calendar_id  ) {
-				$this->save_calendar_id( $ticketing_calendar_id );				
+				$this->save_calendar_id( $ticketing_calendar_id );
+
 				return $ticketing_calendar_id;
 			} else {
-				//if the calendar should not exist on API, we will created
+				// If the calendar doesn't exist in the API, create a new one
 				$ticketing_calendar_id = $this->_create_calendar();
 				if ( 0 < $ticketing_calendar_id ) {
 					$this->save_calendar_id( $ticketing_calendar_id );
+
 					return $ticketing_calendar_id;
 				} else {
 					return 0;
@@ -297,13 +299,13 @@ abstract class Ai1ec_Api_Abstract extends Ai1ec_App {
 		);
 		$response = $this->request_api( 'GET', AI1EC_API_URL . 'calendars', 
 			json_encode( $body )
-		); 		
+		);
 		if ( $this->is_response_success( $response ) ) {
 			if ( is_array( $response->body ) ) {
 				return $response->body[0]->id;
 			} else {
 				return $response->body->id;
-			}			
+			}
 		} else {
 			return 0;
 		}
@@ -383,8 +385,8 @@ abstract class Ai1ec_Api_Abstract extends Ai1ec_App {
 				$subscriptions = array();
 			}
 
-			// Save for 30 minutes
-			$minutes = 30;
+			// Save for 15 minutes
+			$minutes = 15;
 			set_site_transient( 'ai1ec_api_subscriptions', $subscriptions, $minutes * 60 );
 		}
 

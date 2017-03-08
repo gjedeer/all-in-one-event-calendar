@@ -97,7 +97,7 @@ class Ai1ec_View_Tickets extends Ai1ec_View_Admin_Abstract {
 							'Time.ly Ticketing'
 							),
 					'sign_up_text' => '',
-					'signup_form'  => 'Ticketing feature is not enabled for this website. Please sign up for Ticketing plan <a href="https://time.ly/pricing/" target="_blank">here</a>.'
+					'signup_form'  => 'Timely Ticketing saves time & money. Create ticketing/registration right here and now. You do not pay any ticketing fees (other than regular PayPal transaction costs). Create as many ticketing/registration as you\'d like.<br /><br />Ticketing feature is not enabled for this website. Please sign up for Ticketing plan <a href="https://time.ly/tickets-existing-users/" target="_blank">here</a>.'
 			);
 			$file = $loader->get_file( 'ticketing/signup.twig', $args, true );
 		} else {
@@ -162,7 +162,6 @@ class Ai1ec_View_Tickets extends Ai1ec_View_Admin_Abstract {
 					array( 'description' => Ai1ec_I18n::__( 'Swiss Franc' ), 'code' => 'CHF' ),
 					array( 'description' => Ai1ec_I18n::__( 'Taiwan New Dollar' ), 'code' => 'TWD', 'note' => Ai1ec_I18n::__( 'Note: Decimal amounts are not supported for this currency. Passing a decimal amount will throw an error.' ) ),
 					array( 'description' => Ai1ec_I18n::__( 'Thai Baht' ), 'code' => 'THB' ),
-					array( 'description' => Ai1ec_I18n::__( 'Turkish Lira' ), 'code' => 'TRY', 'note' => Ai1ec_I18n::__( 'Note: This currency is supported as a payment currency and a currency balance for in-country PayPal accounts only.' ) ),
 				)
 			);
 			$file = $loader->get_file( 'ticketing/manage.twig', $args, true );

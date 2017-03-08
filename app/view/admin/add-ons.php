@@ -42,7 +42,7 @@ class Ai1ec_View_Add_Ons extends Ai1ec_View_Admin_Abstract {
 			array(),
 			AI1EC_VERSION
 		);
-		$content  = get_transient( 'ai1ec_timely_addons' );
+		$content  = get_site_transient( 'ai1ec_timely_addons' );
 		$is_error = false;
 		if (
 			false === $content ||
@@ -56,7 +56,7 @@ class Ai1ec_View_Add_Ons extends Ai1ec_View_Admin_Abstract {
 			if ( ! is_wp_error( $feed ) ) {
 				$content  = json_decode( wp_remote_retrieve_body( $feed ) );
 				if ( null !== $content ) {
-					set_transient( 'ai1ec_timely_addons', $content, 3600 );
+					set_site_transient( 'ai1ec_timely_addons', $content, 3600 );
 					$is_error = false;
 				}
 			}

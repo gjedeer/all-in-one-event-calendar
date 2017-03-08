@@ -188,7 +188,11 @@ class Ai1ec_Event_Search extends Ai1ec_Base {
 		$id_list = array();
 		$id_instance_list = array();
 		foreach ( $events as $event ) {
-			$id_list[] = $event['post_id'];
+
+			if ( ! in_array( $event['post_id'], $id_list, true ) ) {
+				$id_list[] = $event['post_id'];
+			}
+
 			$id_instance_list[] = array(
 				'id'          => $event['post_id'],
 				'instance_id' => $event['instance_id'],
@@ -750,8 +754,6 @@ class Ai1ec_Event_Search extends Ai1ec_Base {
 	 * args: the arguments for prepare()
 	 */
 	protected function _get_post_status_sql() {
-		global $current_user;
-
 		$args = array();
 
 		// Query the correct post status
@@ -767,8 +769,13 @@ class Ai1ec_Event_Search extends Ai1ec_Base {
 			// User has privilege of seeing all published and only their own
 			// private posts.
 
-			// get user info
-			get_currentuserinfo();
+			// Get user ID
+			$user_id           = 0;
+			if ( is_callable( 'wp_get_current_user' ) ) {
+				$user          = wp_get_current_user();
+				$user_id       = (int)$user->ID;
+				unset( $user );
+			}
 
 			// include post_status = published
 			//   OR
@@ -781,7 +788,7 @@ class Ai1ec_Event_Search extends Ai1ec_Base {
 
 			$args[] = 'publish';
 			$args[] = 'private';
-			$args[] = $current_user->ID;
+			$args[] = $user_id;
 		} else {
 			// User can only see published posts.
 			$post_status_where = 'AND post_status = %s ';

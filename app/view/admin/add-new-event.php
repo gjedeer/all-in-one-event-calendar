@@ -310,7 +310,7 @@ class Ai1ec_View_Add_New_Event extends Ai1ec_Base {
 			);
 		} else if ( ! $api_reg->is_ticket_enabled() ) {
 			$message = __(
-				'Ticketing feature is not enabled for this website. Please sign up for Ticketing plan <a href="https://time.ly/pricing/" target="_blank">here</a>.',
+				'Timely Ticketing saves time & money. Create ticketing/registration right here and now. You do not pay any ticketing fees (other than regular PayPal transaction costs). Create as many ticketing/registration as you\'d like.<br /><br />Ticketing feature is not enabled for this website. Please sign up for Ticketing plan <a href="https://time.ly/tickets-existing-users/" target="_blank">here</a>.',
 				AI1EC_PLUGIN_NAME
 			);
 		}

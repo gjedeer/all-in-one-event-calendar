@@ -24,11 +24,11 @@ class Ai1ec_News_Feed {
 			ABSPATH . WPINC . DIRECTORY_SEPARATOR . 'class-simplepie.php'
 		);
 		$cache  = $this->get_transient_name( $feed );
-		$result = get_transient( $cache );
+		$result = get_site_transient( $cache );
 		if ( false === $result || AI1EC_DEBUG ) {
 			$result     = $this->fetch_feed( $limit, $feed );
 			$expiration = $this->get_expiration( $feed );
-			set_transient( $cache, $result, $expiration );
+			set_site_transient( $cache, $result, $expiration );
 		}
 		return $result;
 	}

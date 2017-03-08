@@ -58,6 +58,9 @@ class Ai1ec_Twig_Ai1ec_Extension extends Twig_Extension {
 			new Twig_SimpleFilter( 'year',              array( $this, 'year' ) ),
 			new Twig_SimpleFilter( 'theme_img_url',     array( $this, 'theme_img_url' ) ),
 			new Twig_SimpleFilter( 'date_i18n',         array( $this, 'date_i18n' ) ),
+			new Twig_SimpleFilter( 'dropdown_filter',   array( $this, 'dropdown_filter' ),
+				array( 'is_safe' => array( 'html' ) )
+			),
 			new Twig_SimpleFilter( '__',                'Ai1ec_I18n::__' ),
 		);
 	}
@@ -306,6 +309,21 @@ class Ai1ec_Twig_Ai1ec_Extension extends Twig_Extension {
 			}
 		}
 
+		return $string;
+	}
+
+	/**
+	 * Filter string allowing ampersand symbols to be displayed.
+	 * at end of truncation.
+	 *
+	 * @param string $string        String to process.
+	 * @return string
+	 */
+	public function dropdown_filter(
+		$string
+	) {
+		$string = htmlspecialchars( $string );
+		$string = preg_replace( '/&amp;/', '&', $string );
 		return $string;
 	}
 

@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the All-in-One Event Calendar by Time.ly package.
 msgid ""
 msgstr ""
-"Project-Id-Version: All-in-One Event Calendar by Time.ly 2.5.16\n"
+"Project-Id-Version: All-in-One Event Calendar by Time.ly 2.5.17\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/all-in-one-event-calendar\n"
-"POT-Creation-Date: 2017-02-03 21:53:21+00:00\n"
+"POT-Creation-Date: 2017-03-07 19:17:51+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-02-03 21:53+0000\n"
+"PO-Revision-Date: 2017-03-07 19:17+0000\n"
 "Last-Translator: Timely <support@time.ly>\n"
 "Language-Team:\n"
 
@@ -375,7 +375,7 @@ msgstr ""
 "%s. Please try again. If this error persists, please contact us at %s. In "
 "your report please include the information below.<br/>%s."
 
-#: app/model/api/api-abstract.php:461
+#: app/model/api/api-abstract.php:463
 msgid "Error decoding the response"
 msgstr "Error decoding the response"
 
@@ -399,27 +399,27 @@ msgstr "We were unable to subscribe feed"
 msgid "We were unable to unsubscribe feed"
 msgstr "We were unable to unsubscribe feed"
 
-#: app/model/api/api-registration.php:38
+#: app/model/api/api-registration.php:41
 msgid "We were unable to Sign you In for Time.ly Network"
 msgstr "We were unable to Sign you In for Time.ly Network"
 
-#: app/model/api/api-registration.php:59
+#: app/model/api/api-registration.php:68
 msgid "We were unable to Sign you Up for Time.ly Network"
 msgstr "We were unable to Sign you Up for Time.ly Network"
 
-#: app/model/api/api-registration.php:152
+#: app/model/api/api-registration.php:161
 msgid "We were unable to Sign you Out of Time.ly Network"
 msgstr "We were unable to Sign you Out of Time.ly Network"
 
-#: app/model/api/api-registration.php:182
+#: app/model/api/api-registration.php:191
 msgid "Payment preferences were saved."
 msgstr "Payment preferences were saved."
 
-#: app/model/api/api-registration.php:191
+#: app/model/api/api-registration.php:200
 msgid "Payment preferences were not saved."
 msgstr "Payment preferences were not saved."
 
-#: app/model/api/api-registration.php:219
+#: app/model/api/api-registration.php:228
 msgid "We were unable to get the Sales information from Time.ly Network"
 msgstr "We were unable to get the Sales information from Time.ly Network"
 
@@ -774,29 +774,11 @@ msgstr ""
 "Use the configured <strong>region</strong> (WordPress locale) to bias the "
 "address autocomplete function "
 
-#: app/model/settings.php:854
-msgid ""
-" Show the old <strong>Post Your Event</strong> button above the calendar to "
-"privileged users"
-msgstr ""
-" Show the old <strong>Post Your Event</strong> button above the calendar to "
-"privileged users"
-
-#: app/model/settings.php:857
-msgid ""
-"Install the <a target=\"_blank\" href=\"http://time.ly/\">Interactive "
-"Frontend Extension</a> for the <strong>frontend Post Your Event form</"
-"strong>."
-msgstr ""
-"Install the <a target=\"_blank\" href=\"http://time.ly/\">Interactive "
-"Frontend Extension</a> for the <strong>frontend Post Your Event form</"
-"strong>."
-
-#: app/model/settings.php:878
+#: app/model/settings.php:869
 msgid "Move calendar into this DOM element"
 msgstr "Move calendar into this DOM element"
 
-#: app/model/settings.php:880
+#: app/model/settings.php:871
 msgid ""
 "Optional. Use this JavaScript-based shortcut to place the\n"
 "\t\t\t\t\t\tcalendar a DOM element other than the usual page content "
@@ -820,7 +802,7 @@ msgstr ""
 "\t\t\t\t\t\tAny existing markup found within the target will be replaced\n"
 "\t\t\t\t\t\tby the calendar."
 
-#: app/model/settings.php:899
+#: app/model/settings.php:890
 msgid ""
 "<strong>Skip <tt>in_the_loop()</tt> check </strong> that protects against "
 "multiple calendar output"
@@ -828,7 +810,7 @@ msgstr ""
 "<strong>Skip <tt>in_the_loop()</tt> check </strong> that protects against "
 "multiple calendar output"
 
-#: app/model/settings.php:902
+#: app/model/settings.php:893
 msgid ""
 "Try enabling this option if your calendar does not appear on the calendar "
 "page. It is needed for compatibility with a small number of themes that call "
@@ -838,11 +820,11 @@ msgstr ""
 "page. It is needed for compatibility with a small number of themes that call "
 "<tt>the_content()</tt> from outside of The Loop. Leave disabled otherwise."
 
-#: app/model/settings.php:914
+#: app/model/settings.php:905
 msgid "Disable <strong>gzip</strong> compression."
 msgstr "Disable <strong>gzip</strong> compression."
 
-#: app/model/settings.php:917
+#: app/model/settings.php:908
 msgid ""
 "Use this option if calendar is unresponsive. <a target=\"_blank\" href="
 "\"http://time.ly/document/user-guide/troubleshooting/disable-gzip-"
@@ -854,11 +836,11 @@ msgstr ""
 "compression/\">Read more</a> about the issue. (From version 2.1 onwards, "
 "gzip is disabled by default for maximum compatibility.)"
 
-#: app/model/settings.php:929
+#: app/model/settings.php:920
 msgid "Use frontend rendering."
 msgstr "Use frontend rendering."
 
-#: app/model/settings.php:932
+#: app/model/settings.php:923
 msgid ""
 "Renders calendar views on the client rather than the server; can improve "
 "performance."
@@ -866,15 +848,15 @@ msgstr ""
 "Renders calendar views on the client rather than the server; can improve "
 "performance."
 
-#: app/model/settings.php:944
+#: app/model/settings.php:935
 msgid "Use advanced JS cache."
 msgstr "Use advanced JS cache."
 
-#: app/model/settings.php:947
+#: app/model/settings.php:938
 msgid "Cache dynamically generated JS files. Improves performance."
 msgstr "Cache dynamically generated JS files. Improves performance."
 
-#: app/model/settings.php:959
+#: app/model/settings.php:950
 msgid ""
 "<strong>Link CSS</strong> in <code>&lt;head&gt;</code> section when file "
 "cache is unavailable."
@@ -882,7 +864,7 @@ msgstr ""
 "<strong>Link CSS</strong> in <code>&lt;head&gt;</code> section when file "
 "cache is unavailable."
 
-#: app/model/settings.php:962
+#: app/model/settings.php:953
 msgid ""
 "Use this option if file cache is unavailable and you would prefer to serve "
 "CSS as a link rather than have it output inline."
@@ -890,11 +872,11 @@ msgstr ""
 "Use this option if file cache is unavailable and you would prefer to serve "
 "CSS as a link rather than have it output inline."
 
-#: app/model/settings.php:974
+#: app/model/settings.php:965
 msgid "Current <strong>robots.txt</strong> on this site"
 msgstr "Current <strong>robots.txt</strong> on this site"
 
-#: app/model/settings.php:978
+#: app/model/settings.php:969
 msgid ""
 "The Robot Exclusion Standard, also known as the Robots Exclusion Protocol "
 "or\n"
@@ -918,7 +900,7 @@ msgstr ""
 "\t\t\t\t\t\tYou can change it manually by editing <code>robots.txt</code> in "
 "your root WordPress directory."
 
-#: app/model/settings.php:995
+#: app/model/settings.php:986
 msgid ""
 "<strong>Publicize, promote, and share my events</strong> marked as public on "
 "the Timely network. (<a href=\"%s\" target=\"_blank\">Learn more &#187;</a>)"
@@ -926,15 +908,15 @@ msgstr ""
 "<strong>Publicize, promote, and share my events</strong> marked as public on "
 "the Timely network. (<a href=\"%s\" target=\"_blank\">Learn more &#187;</a>)"
 
-#: app/model/settings.php:1018
+#: app/model/settings.php:1009
 msgid "Templates cache improves site performance"
 msgstr "Templates cache improves site performance"
 
-#: app/model/settings.php:1031
+#: app/model/settings.php:1022
 msgid "Display events in <strong>calendar time zone</strong>"
 msgstr "Display events in <strong>calendar time zone</strong>"
 
-#: app/model/settings.php:1034
+#: app/model/settings.php:1025
 msgid ""
 "If this box is checked events will appear in the calendar time zone with "
 "time zone information displayed on the event details page."
@@ -956,13 +938,19 @@ msgstr ""
 
 #: app/view/admin/add-new-event.php:312
 msgid ""
-"Ticketing feature is not enabled for this website. Please sign up for "
-"Ticketing plan <a href=\"https://time.ly/pricing/\" target=\"_blank\">here</"
-"a>."
+"Timely Ticketing saves time & money. Create ticketing/registration right "
+"here and now. You do not pay any ticketing fees (other than regular PayPal "
+"transaction costs). Create as many ticketing/registration as you'd like.<br /"
+"><br />Ticketing feature is not enabled for this website. Please sign up for "
+"Ticketing plan <a href=\"https://time.ly/tickets-existing-users/\" target="
+"\"_blank\">here</a>."
 msgstr ""
-"Ticketing feature is not enabled for this website. Please sign up for "
-"Ticketing plan <a href=\"https://time.ly/pricing/\" target=\"_blank\">here</"
-"a>."
+"Timely Ticketing saves time & money. Create ticketing/registration right "
+"here and now. You do not pay any ticketing fees (other than regular PayPal "
+"transaction costs). Create as many ticketing/registration as you'd like.<br /"
+"><br />Ticketing feature is not enabled for this website. Please sign up for "
+"Ticketing plan <a href=\"https://time.ly/tickets-existing-users/\" target="
+"\"_blank\">here</a>."
 
 #: app/view/admin/add-new-event.php:412
 msgid ""
@@ -1117,7 +1105,7 @@ msgid "week(s)"
 msgstr "week(s)"
 
 #: app/view/admin/get-repeat-box.php:413 app/view/admin/get-repeat-box.php:485
-#: lib/recurrence/rule.php:298
+#: lib/recurrence/rule.php:299
 msgid "last"
 msgstr "last"
 
@@ -1499,7 +1487,6 @@ msgid "Brazilian Real"
 msgstr "Brazilian Real"
 
 #: app/view/admin/tickets.php:144 app/view/admin/tickets.php:152
-#: app/view/admin/tickets.php:165
 msgid ""
 "Note: This currency is supported as a payment currency and a currency "
 "balance for in-country PayPal accounts only."
@@ -1612,10 +1599,6 @@ msgstr "Taiwan New Dollar"
 #: app/view/admin/tickets.php:164
 msgid "Thai Baht"
 msgstr "Thai Baht"
-
-#: app/view/admin/tickets.php:165
-msgid "Turkish Lira"
-msgstr "Turkish Lira"
 
 #: app/view/admin/widget-creator.php:24 app/view/admin/widget-creator.php:25
 #: app/view/admin/widget-creator.php:47
@@ -1969,7 +1952,7 @@ msgstr "Buy Tickets"
 msgid "Edit this occurrence (%s)"
 msgstr "Edit this occurrence (%s)"
 
-#: app/view/event/single.php:196
+#: app/view/event/single.php:207
 msgid ""
 "This post was replicated from another site's <a href=\"%s\" title="
 "\"iCalendar feed\"><i class=\"ai1ec-fa ai1ec-fa-calendar\"></i> calendar "
@@ -1979,7 +1962,11 @@ msgstr ""
 "\"iCalendar feed\"><i class=\"ai1ec-fa ai1ec-fa-calendar\"></i> calendar "
 "feed</a>."
 
-#: app/view/event/single.php:207
+#: app/view/event/single.php:211
+msgid "This post was imported from a CSV/ICS file."
+msgstr "This post was imported from a CSV/ICS file."
+
+#: app/view/event/single.php:224
 msgid "View original"
 msgstr "View original"
 
@@ -2009,11 +1996,11 @@ msgstr " – "
 msgid ", and "
 msgstr ", and "
 
-#: cache/twig/dc/78/b950182efb8f436b144938fb0dc48cf395d7daabe20293234dbcf2b26545.php:37
+#: cache/twig/dc/78/b950182efb8f436b144938fb0dc48cf395d7daabe20293234dbcf2b26545.php:38
 msgid "Excludes: "
 msgstr "Excludes: "
 
-#: cache/twig/dc/78/b950182efb8f436b144938fb0dc48cf395d7daabe20293234dbcf2b26545.php:48
+#: cache/twig/dc/78/b950182efb8f436b144938fb0dc48cf395d7daabe20293234dbcf2b26545.php:49
 msgid "Repeats"
 msgstr "Repeats"
 
@@ -2528,7 +2515,7 @@ msgstr ""
 "page. Do not attempt to embed the calendar via shortcode in a page that "
 "already displays the calendar."
 
-#: lib/import-export/ics.php:879
+#: lib/import-export/ics.php:876
 msgid "Tickets: "
 msgstr "Tickets: "
 
@@ -2649,92 +2636,92 @@ msgstr ""
 msgid "All Events"
 msgstr "All Events"
 
-#: lib/recurrence/rule.php:243 lib/recurrence/rule.php:252
-#: lib/recurrence/rule.php:260
+#: lib/recurrence/rule.php:244 lib/recurrence/rule.php:253
+#: lib/recurrence/rule.php:261
 msgctxt "Recurrence editor - weekly tab"
 msgid "on"
 msgstr "on"
 
-#: lib/recurrence/rule.php:248 lib/recurrence/rule.php:277
-#: lib/recurrence/rule.php:326
+#: lib/recurrence/rule.php:249 lib/recurrence/rule.php:278
+#: lib/recurrence/rule.php:327
 msgid "and"
 msgstr "and"
 
-#: lib/recurrence/rule.php:273 lib/recurrence/rule.php:280
-#: lib/recurrence/rule.php:286 lib/recurrence/rule.php:308
+#: lib/recurrence/rule.php:274 lib/recurrence/rule.php:281
+#: lib/recurrence/rule.php:287 lib/recurrence/rule.php:309
 msgctxt "Recurrence editor - monthly tab"
 msgid "on"
 msgstr "on"
 
-#: lib/recurrence/rule.php:273 lib/recurrence/rule.php:280
-#: lib/recurrence/rule.php:286
+#: lib/recurrence/rule.php:274 lib/recurrence/rule.php:281
+#: lib/recurrence/rule.php:287
 msgid "of the month"
 msgstr "of the month"
 
-#: lib/recurrence/rule.php:321 lib/recurrence/rule.php:329
-#: lib/recurrence/rule.php:336
+#: lib/recurrence/rule.php:322 lib/recurrence/rule.php:330
+#: lib/recurrence/rule.php:337
 msgctxt "Recurrence editor - yearly tab"
 msgid "on"
 msgstr "on"
 
-#: lib/recurrence/rule.php:376 public/admin/box_repeat.php:16
+#: lib/recurrence/rule.php:377 public/admin/box_repeat.php:16
 #: public/admin/cron_freq.php:9
 msgid "Daily"
 msgstr "Daily"
 
-#: lib/recurrence/rule.php:379
+#: lib/recurrence/rule.php:380
 msgid "Every other day"
 msgstr "Every other day"
 
-#: lib/recurrence/rule.php:382
+#: lib/recurrence/rule.php:383
 msgid "Every %d days"
 msgstr "Every %d days"
 
-#: lib/recurrence/rule.php:391 public/admin/box_repeat.php:21
+#: lib/recurrence/rule.php:392 public/admin/box_repeat.php:21
 msgid "Weekly"
 msgstr "Weekly"
 
-#: lib/recurrence/rule.php:394
+#: lib/recurrence/rule.php:395
 msgid "Every other week"
 msgstr "Every other week"
 
-#: lib/recurrence/rule.php:397
+#: lib/recurrence/rule.php:398
 msgid "Every %d weeks"
 msgstr "Every %d weeks"
 
-#: lib/recurrence/rule.php:406 public/admin/box_repeat.php:26
+#: lib/recurrence/rule.php:407 public/admin/box_repeat.php:26
 msgid "Monthly"
 msgstr "Monthly"
 
-#: lib/recurrence/rule.php:409
+#: lib/recurrence/rule.php:410
 msgid "Every other month"
 msgstr "Every other month"
 
-#: lib/recurrence/rule.php:412
+#: lib/recurrence/rule.php:413
 msgid "Every %d months"
 msgstr "Every %d months"
 
-#: lib/recurrence/rule.php:421 public/admin/box_repeat.php:31
+#: lib/recurrence/rule.php:422 public/admin/box_repeat.php:31
 msgid "Yearly"
 msgstr "Yearly"
 
-#: lib/recurrence/rule.php:424
+#: lib/recurrence/rule.php:425
 msgid "Every other year"
 msgstr "Every other year"
 
-#: lib/recurrence/rule.php:427
+#: lib/recurrence/rule.php:428
 msgid "Every %d years"
 msgstr "Every %d years"
 
-#: lib/recurrence/rule.php:465
+#: lib/recurrence/rule.php:466
 msgid "until %s"
 msgstr "until %s"
 
-#: lib/recurrence/rule.php:475
+#: lib/recurrence/rule.php:476
 msgid "for %d occurrences"
 msgstr "for %d occurrences"
 
-#: lib/recurrence/rule.php:479
+#: lib/recurrence/rule.php:480
 msgid "forever"
 msgstr "forever"
 
@@ -3577,24 +3564,24 @@ msgstr ""
 #: public/admin/plugins/ics/import_feed.php:17
 msgid ""
 "<b>You don't have a subscription for this feature.</b><br>\n"
-"\t\tPlease <a href=\"https://time.ly/pricing\">upgrade here</a> to a plan "
+"\t\tPlease <a href=\"https://time.ly/pricing/\">upgrade here</a> to a plan "
 "that\n"
 "\t\tsupports \"Import Feeds\"."
 msgstr ""
 "<b>You don't have a subscription for this feature.</b><br>\n"
-"\t\tPlease <a href=\"https://time.ly/pricing\">upgrade here</a> to a plan "
+"\t\tPlease <a href=\"https://time.ly/pricing/\">upgrade here</a> to a plan "
 "that\n"
 "\t\tsupports \"Import Feeds\"."
 
 #: public/admin/plugins/ics/import_feed.php:27
 msgid ""
 "<b>You have reached the limit of how many feeds you can import.</b><br>\n"
-"\t\tPlease <a href=\"https://time.ly/pricing\">upgrade here</a> to a plan "
+"\t\tPlease <a href=\"https://time.ly/pricing/\">upgrade here</a> to a plan "
 "that\n"
 "\t\tsupports more feeds."
 msgstr ""
 "<b>You have reached the limit of how many feeds you can import.</b><br>\n"
-"\t\tPlease <a href=\"https://time.ly/pricing\">upgrade here</a> to a plan "
+"\t\tPlease <a href=\"https://time.ly/pricing/\">upgrade here</a> to a plan "
 "that\n"
 "\t\tsupports more feeds."
 
