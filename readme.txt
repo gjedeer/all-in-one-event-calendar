@@ -15,7 +15,7 @@ categories, recurrence, and import/export of .ics feeds.
 
 ><strong>Note on support:</strong> Please read our sticky post before creating a new thread. The forum is a place where our users can provide insightful help to other plugin users.
 >
->Please check-out our [Hub and Pro hosted plans](http://time.ly/products) for many extra features and prioritized support.
+>Please check-out our [Hub, Hublite and Pro hosted plans](http://time.ly/products) for many extra features and prioritized support.
 
 The [All-in-One Event Calendar](http://time.ly/) from
 [Timely](http://time.ly/) is a beautiful way to list your events in
