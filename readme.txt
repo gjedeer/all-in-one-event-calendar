@@ -151,6 +151,8 @@ https://vimeo.com/135004810
 
 = Version 2.5.18 =
 * Fixed: Plugin wasn't working well in the WP Multisite Environment.
+* Fixed: In Month view, fixed error: Undefined index error: instance_id.
+* Fixed: In Month view, fixed blank month field in the previous month button.
 
 = Version 2.5.17 =
 * Fixed: Open Graph meta tags now matches correct dates and URLs for recurrent events.
