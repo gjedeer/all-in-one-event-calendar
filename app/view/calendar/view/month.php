@@ -170,11 +170,11 @@ class Ai1ec_Calendar_View_Month extends Ai1ec_Calendar_View_Abstract {
 		$href = $this->_registry->get( 'html.element.href', $args );
 		$months = apply_filters( 'ai1ec_i18n_months', array() );
 		$m = $local_date->format_i18n( 'M' );
+		$month_text = array_key_exists( $m, $months ) ? $months[$m] : $m;
 		$links[] = array(
 			'enabled' => true,
 			'class'=> 'ai1ec-prev-month',
-			'text' => '<i class="ai1ec-fa ai1ec-fa-angle-left"></i> ' .
-			array_key_exists( $m, $months ) ? $months[$m] : $m,
+			'text' => '<i class="ai1ec-fa ai1ec-fa-angle-left"></i> ' . $month_text,
 			'href' => $href->generate_href(),
 		);
 
