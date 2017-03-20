@@ -60,7 +60,7 @@ abstract class Twig_Node_Expression_Call extends Twig_Node_Expression
                 if (!$first) {
                     $compiler->raw(', ');
                 }
-                $compiler->string($argument);
+                $compiler->_string($argument);
                 $first = false;
             }
         }

@@ -22,7 +22,7 @@ class Twig_Node_SetTemp extends Twig_Node
         $compiler
             ->addDebugInfo($this)
             ->write('if (isset($context[')
-            ->string($name)
+            ->_string($name)
             ->raw('])) { $_')
             ->raw($name)
             ->raw('_ = $context[')
