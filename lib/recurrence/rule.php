@@ -246,7 +246,7 @@ class Ai1ec_Recurrence_Rule extends Ai1ec_Base {
 							$_days = '';
 							foreach( $rc->getByDay() as $d ) {
 								$day = $this->get_weekday_by_id( $d, true );
-								$_days .= ' ' . $wp_locale->weekday[$day] . ' ' . Ai1ec_I18n::__( 'and' );
+								$_days .= ' ' . $wp_locale->weekday[$day] . ' ' . Ai1ec_I18n::_trans( 'and' );
 							}
 							// remove the last ' and'
 							$_days = substr( $_days, 0, -4 );
@@ -271,20 +271,20 @@ class Ai1ec_Recurrence_Rule extends Ai1ec_Base {
 							$_days .= ' ' . $this->_ordinal( $m_day ) . ',';
 						}
 						$_days = substr( $_days, 0, -1 );
-						$txt .= ' ' . Ai1ec_I18n::_x( 'on', 'Recurrence editor - monthly tab' ) . $_days . ' ' . Ai1ec_I18n::__( 'of the month' );
+						$txt .= ' ' . Ai1ec_I18n::_x( 'on', 'Recurrence editor - monthly tab' ) . $_days . ' ' . Ai1ec_I18n::_trans( 'of the month' );
 					} else if( count( $rc->getByMonthDay() ) > 1 ) {
 						$_days = '';
 						foreach( $rc->getByMonthDay() as $m_day ) {
-							$_days .= ' ' . $this->_ordinal( $m_day ) . ' ' . Ai1ec_I18n::__( 'and' );
+							$_days .= ' ' . $this->_ordinal( $m_day ) . ' ' . Ai1ec_I18n::_trans( 'and' );
 						}
 						$_days = substr( $_days, 0, -4 );
-						$txt .= ' ' . Ai1ec_I18n::_x( 'on', 'Recurrence editor - monthly tab' ) . $_days . ' ' . Ai1ec_I18n::__( 'of the month' );
+						$txt .= ' ' . Ai1ec_I18n::_x( 'on', 'Recurrence editor - monthly tab' ) . $_days . ' ' . Ai1ec_I18n::_trans( 'of the month' );
 					} else {
 						$_days = '';
 						foreach( $rc->getByMonthDay() as $m_day ) {
 							$_days .= ' ' . $this->_ordinal( $m_day );
 						}
-						$txt .= ' ' . Ai1ec_I18n::_x( 'on', 'Recurrence editor - monthly tab' ) . $_days . ' ' . Ai1ec_I18n::__( 'of the month' );
+						$txt .= ' ' . Ai1ec_I18n::_x( 'on', 'Recurrence editor - monthly tab' ) . $_days . ' ' . Ai1ec_I18n::_trans( 'of the month' );
 					}
 				} elseif( $rc->getByDay() ) {
 					$_days = '';
@@ -296,7 +296,7 @@ class Ai1ec_Recurrence_Rule extends Ai1ec_Base {
 						$_dnum  = $matches[1];
 						$_day   = $matches[3];
 						if ( '-' === $matches[2] ) {
-							$dnum = ' ' . Ai1ec_I18n::__( 'last' );
+							$dnum = ' ' . Ai1ec_I18n::_trans( 'last' );
 						} else {
 							$dnum   = ' ' . $this->_registry->get(
 								'date.time',
@@ -324,7 +324,7 @@ class Ai1ec_Recurrence_Rule extends Ai1ec_Base {
 						$_months = '';
 						foreach( $rc->getByMonth() as $_m ) {
 							$_m = $_m < 10 ? 0 . $_m : $_m;
-							$_months .= ' ' . $wp_locale->month[$_m] . ' ' . Ai1ec_I18n::__( 'and' );
+							$_months .= ' ' . $wp_locale->month[$_m] . ' ' . Ai1ec_I18n::_trans( 'and' );
 						}
 						$_months = substr( $_months, 0, -4 );
 						$txt .= ' ' . Ai1ec_I18n::_x( 'on', 'Recurrence editor - yearly tab' ) . $_months;
@@ -374,13 +374,13 @@ class Ai1ec_Recurrence_Rule extends Ai1ec_Base {
 			case 'daily':
 				// check if interval is set
 				if ( ! $interval || $interval == 1 ) {
-					$txt = Ai1ec_I18n::__( 'Daily' );
+					$txt = Ai1ec_I18n::_trans( 'Daily' );
 				} else {
 					if ( $interval == 2 ) {
-						$txt = Ai1ec_I18n::__( 'Every other day' );
+						$txt = Ai1ec_I18n::_trans( 'Every other day' );
 					} else {
 						$txt = sprintf(
-							Ai1ec_I18n::__( 'Every %d days' ),
+							Ai1ec_I18n::_trans( 'Every %d days' ),
 							$interval
 						);
 					}
@@ -389,13 +389,13 @@ class Ai1ec_Recurrence_Rule extends Ai1ec_Base {
 			case 'weekly':
 				// check if interval is set
 				if ( ! $interval || $interval == 1 ) {
-					$txt = Ai1ec_I18n::__( 'Weekly' );
+					$txt = Ai1ec_I18n::_trans( 'Weekly' );
 				} else {
 					if ( $interval == 2 ) {
-						$txt = Ai1ec_I18n::__( 'Every other week' );
+						$txt = Ai1ec_I18n::_trans( 'Every other week' );
 					} else {
 						$txt = sprintf(
-							Ai1ec_I18n::__( 'Every %d weeks' ),
+							Ai1ec_I18n::_trans( 'Every %d weeks' ),
 							$interval
 						);
 					}
@@ -404,13 +404,13 @@ class Ai1ec_Recurrence_Rule extends Ai1ec_Base {
 			case 'monthly':
 				// check if interval is set
 				if ( ! $interval || $interval == 1 ) {
-					$txt = Ai1ec_I18n::__( 'Monthly' );
+					$txt = Ai1ec_I18n::_trans( 'Monthly' );
 				} else {
 					if ( $interval == 2 ) {
-						$txt = Ai1ec_I18n::__( 'Every other month' );
+						$txt = Ai1ec_I18n::_trans( 'Every other month' );
 					} else {
 						$txt = sprintf(
-							Ai1ec_I18n::__( 'Every %d months' ),
+							Ai1ec_I18n::_trans( 'Every %d months' ),
 							$interval
 						);
 					}
@@ -419,13 +419,13 @@ class Ai1ec_Recurrence_Rule extends Ai1ec_Base {
 			case 'yearly':
 				// check if interval is set
 				if ( ! $interval || $interval == 1 ) {
-					$txt = Ai1ec_I18n::__( 'Yearly' );
+					$txt = Ai1ec_I18n::_trans( 'Yearly' );
 				} else {
 					if ( $interval == 2 ) {
-						$txt = Ai1ec_I18n::__( 'Every other year' );
+						$txt = Ai1ec_I18n::_trans( 'Every other year' );
 					} else {
 						$txt = sprintf(
-							Ai1ec_I18n::__( 'Every %d years' ),
+							Ai1ec_I18n::_trans( 'Every %d years' ),
 							$interval
 						);
 					}
@@ -463,7 +463,7 @@ class Ai1ec_Recurrence_Rule extends Ai1ec_Base {
 				$until = strtotime( $until );
 			}
 			$txt .= ' ' . sprintf(
-				Ai1ec_I18n::__( 'until %s' ),
+				Ai1ec_I18n::_trans( 'until %s' ),
 				$this->_registry->get(
 					'date.time',
 					$until
@@ -473,11 +473,11 @@ class Ai1ec_Recurrence_Rule extends Ai1ec_Base {
 			);
 		} else if ( $count = $rc->getCount() ) {
 			$txt .= ' ' . sprintf(
-				Ai1ec_I18n::__( 'for %d occurrences' ),
+				Ai1ec_I18n::_trans( 'for %d occurrences' ),
 				$count
 			);
 		} else {
-			$txt .= ', ' . Ai1ec_I18n::__( 'forever' );
+			$txt .= ', ' . Ai1ec_I18n::_trans( 'forever' );
 		}
 	}
 

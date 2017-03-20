@@ -359,11 +359,11 @@ class Ai1ec_Date_Timezone extends Ai1ec_Base {
 				$default_timezone = 'UTC';
 				$this->_registry->get( 'notification.admin' )->store(
 					sprintf(
-						Ai1ec_I18n::__(
+						Ai1ec_I18n::_trans(
 							'Please select site timezone in %s <em>Timezone</em> dropdown menu.'
 						),
 						'<a href="' . ai1ec_admin_url( 'options-general.php' ) .
-						'">' . Ai1ec_I18n::__( 'Settings' ) . '</a>'
+						'">' . Ai1ec_I18n::_trans( 'Settings' ) . '</a>'
 					),
 					'error'
 				);
@@ -394,7 +394,7 @@ class Ai1ec_Date_Timezone extends Ai1ec_Base {
 		}
 		$this->_registry->get( 'notification.admin' )->store(
 			sprintf(
-				Ai1ec_I18n::__(
+				Ai1ec_I18n::_trans(
 					'Timezone "UTC%+d" is not recognized. Please %suse valid%s timezone name, until then events will be created in UTC timezone.'
 				),
 				$zone,
@@ -418,7 +418,7 @@ class Ai1ec_Date_Timezone extends Ai1ec_Base {
 			$decoded_zone = $this->decode_gmt_timezone( $zone );
 			if ( 'UTC' !== $decoded_zone ) {
 				$message = sprintf(
-					Ai1ec_I18n::__(
+					Ai1ec_I18n::_trans(
 						'Selected timezone "UTC%+d" will be treated as %s.'
 					),
 					$zone,

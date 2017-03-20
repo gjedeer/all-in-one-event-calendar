@@ -51,7 +51,7 @@ class Ai1ec_Calendar_Page extends Ai1ec_Base {
 		} catch ( Ai1ec_Settings_Exception $exception ) {
 			// short-circuit and return error message
 			return '<div id="ai1ec-container"><div class="timely"><p>' .
-				Ai1ec_I18n::__(
+				Ai1ec_I18n::_trans(
 					'There was an error loading calendar. Please contact site administrator and inform him to configure calendar views.'
 				) .
 				'</p></div></div>';
@@ -71,7 +71,7 @@ class Ai1ec_Calendar_Page extends Ai1ec_Base {
 		} catch ( Ai1ec_Bootstrap_Exception $exc ) {
 			$this->_registry->get( 'notification.admin' )->store(
 				sprintf(
-						Ai1ec_I18n::__( 'Calendar was unable to initialize %s view and has reverted to Agenda view. Please check if you have installed the latest versions of calendar add-ons.' ),
+						Ai1ec_I18n::_trans( 'Calendar was unable to initialize %s view and has reverted to Agenda view. Please check if you have installed the latest versions of calendar add-ons.' ),
 						ucfirst( $action )
 				),
 				'error',
@@ -257,9 +257,9 @@ class Ai1ec_Calendar_Page extends Ai1ec_Base {
 			'is_filtered'        => false,
 			'export_url'         => AI1EC_EXPORT_URL,
 			'export_url_no_html' => AI1EC_EXPORT_URL . '&no_html=true',
-			'text_filtered'      => Ai1ec_I18n::__( 'Subscribe to filtered calendar' ),
-			'text_subscribe'     => Ai1ec_I18n::__( 'Subscribe' ),
-			'text_get_calendar'  => Ai1ec_I18n::__( 'Get a Timely Calendar' ),
+			'text_filtered'      => Ai1ec_I18n::_trans( 'Subscribe to filtered calendar' ),
+			'text_subscribe'     => Ai1ec_I18n::_trans( 'Subscribe' ),
+			'text_get_calendar'  => Ai1ec_I18n::_trans( 'Get a Timely Calendar' ),
 			'show_get_calendar'  => ! $settings->get( 'disable_get_calendar_button' ),
 			'text'               => $this->_registry
 				->get( 'view.calendar.subscribe-button' )

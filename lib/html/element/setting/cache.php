@@ -35,11 +35,11 @@ class Ai1ec_Html_Setting_Cache extends Ai1ec_Html_Element_Settings {
 			'id'              => $this->_args['id'],
 			'label'           => $this->_args['renderer']['label'],
 			'text'            => array(
-				'refresh' => Ai1ec_I18n::__( 'Check again' ),
-				'nocache' => Ai1ec_I18n::__( 'Templates cache is not writable' ),
-				'okcache' => Ai1ec_I18n::__( 'Templates cache is writable' ),
-				'rescan'  => Ai1ec_I18n::__( 'Checking...' ),
-				'title'   => Ai1ec_I18n::__( 'Performance Report' ),
+				'refresh' => Ai1ec_I18n::_trans( 'Check again' ),
+				'nocache' => Ai1ec_I18n::_trans( 'Templates cache is not writable' ),
+				'okcache' => Ai1ec_I18n::_trans( 'Templates cache is writable' ),
+				'rescan'  => Ai1ec_I18n::_trans( 'Checking...' ),
+				'title'   => Ai1ec_I18n::_trans( 'Performance Report' ),
 			),
 		);
 

@@ -103,7 +103,7 @@ class Ai1ec_View_Admin_Widget extends Ai1ec_Embeddable {
 			'events_per_page' => array(
 				'renderer' => array(
 					'class'     => 'input',
-					'label'     => Ai1ec_I18n::__( 'Number of events to show' ),
+					'label'     => Ai1ec_I18n::_trans( 'Number of events to show' ),
 					'type'      => 'append',
 					'append'    => 'events',
 				),
@@ -112,7 +112,7 @@ class Ai1ec_View_Admin_Widget extends Ai1ec_Embeddable {
 			'days_per_page' => array(
 				'renderer' => array(
 					'class'     => 'input',
-					'label'     => Ai1ec_I18n::__( 'Number of days to show' ),
+					'label'     => Ai1ec_I18n::_trans( 'Number of days to show' ),
 					'type'      => 'append',
 					'append'    => 'days',
 				),
@@ -138,7 +138,7 @@ class Ai1ec_View_Admin_Widget extends Ai1ec_Embeddable {
 			'show_subscribe_buttons' => array(
 				'renderer' => array(
 					'class'     => 'checkbox',
-					'label'     => Ai1ec_I18n::__( 'Show the subscribe button in the widget' ),
+					'label'     => Ai1ec_I18n::_trans( 'Show the subscribe button in the widget' ),
 				),
 				'value'  => $defaults['show_subscribe_buttons'],
 			),

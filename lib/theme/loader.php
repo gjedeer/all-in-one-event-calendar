@@ -322,7 +322,7 @@ class Ai1ec_Theme_Loader {
 			default:
 				throw new Ai1ec_Exception(
 					sprintf(
-						Ai1ec_I18n::__( "We couldn't find a suitable loader for filename with extension '%s'" ),
+						Ai1ec_I18n::_trans( "We couldn't find a suitable loader for filename with extension '%s'" ),
 						$ext
 					)
 				);
@@ -628,7 +628,7 @@ class Ai1ec_Theme_Loader {
 		$this->switch_theme( $theme );
 		if ( ! $silent ) {
 			$this->_registry->get( 'notification.admin' )->store(
-				Ai1ec_I18n::__(
+				Ai1ec_I18n::_trans(
 					"Your calendar theme has been switched to Vortex due to a rendering problem. For more information, please enable debug mode by adding this line to your WordPress <code>wp-config.php</code> file:<pre>define( 'AI1EC_DEBUG', true );</pre>"
 				),
 				'error',

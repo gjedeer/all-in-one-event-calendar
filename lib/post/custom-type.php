@@ -25,16 +25,16 @@ class Ai1ec_Post_Custom_Type extends Ai1ec_Base {
 		$labels = array(
 			'name'               => Ai1ec_I18n::_x( 'Events', 'Custom post type name' ),
 			'singular_name'      => Ai1ec_I18n::_x( 'Event', 'Custom post type name (singular)' ),
-			'add_new'            => Ai1ec_I18n::__( 'Add New' ),
-			'add_new_item'       => Ai1ec_I18n::__( 'Add New Event' ),
-			'edit_item'          => Ai1ec_I18n::__( 'Edit Event' ),
-			'new_item'           => Ai1ec_I18n::__( 'New Event' ),
-			'view_item'          => Ai1ec_I18n::__( 'View Event' ),
-			'search_items'       => Ai1ec_I18n::__( 'Search Events' ),
-			'not_found'          => Ai1ec_I18n::__( 'No Events found' ),
-			'not_found_in_trash' => Ai1ec_I18n::__( 'No Events found in Trash' ),
-			'parent_item_colon'  => Ai1ec_I18n::__( 'Parent Event' ),
-			'menu_name'          => Ai1ec_I18n::__( 'Events' ),
+			'add_new'            => Ai1ec_I18n::_trans( 'Add New' ),
+			'add_new_item'       => Ai1ec_I18n::_trans( 'Add New Event' ),
+			'edit_item'          => Ai1ec_I18n::_trans( 'Edit Event' ),
+			'new_item'           => Ai1ec_I18n::_trans( 'New Event' ),
+			'view_item'          => Ai1ec_I18n::_trans( 'View Event' ),
+			'search_items'       => Ai1ec_I18n::_trans( 'Search Events' ),
+			'not_found'          => Ai1ec_I18n::_trans( 'No Events found' ),
+			'not_found_in_trash' => Ai1ec_I18n::_trans( 'No Events found in Trash' ),
+			'parent_item_colon'  => Ai1ec_I18n::_trans( 'Parent Event' ),
+			'menu_name'          => Ai1ec_I18n::_trans( 'Events' ),
 			'all_items'          => $this->get_all_items_name(),
 		);
 
@@ -52,7 +52,7 @@ class Ai1ec_Post_Custom_Type extends Ai1ec_Base {
 			$page_base = get_page_uri( $settings->get( 'calendar_page_id' ) );
 		}
 
-		$rewrite     = array( 'slug' => Ai1ec_I18n::__( 'event' ) );
+		$rewrite     = array( 'slug' => Ai1ec_I18n::_trans( 'event' ) );
 		$has_archive = true;
 		if (
 			$settings->get( 'calendar_base_url_for_permalinks' ) &&
@@ -282,7 +282,7 @@ class Ai1ec_Post_Custom_Type extends Ai1ec_Base {
 			if ( $query->post_count > 0 ) {
 				// append the pending events number to the menu
 				return sprintf(
-					Ai1ec_I18n::__(
+					Ai1ec_I18n::_trans(
 						'All Events <span class="update-plugins count-%d" title="%d Pending Events"><span class="update-count">%d</span></span>'
 					),
 					$query->post_count,
@@ -293,7 +293,7 @@ class Ai1ec_Post_Custom_Type extends Ai1ec_Base {
 		}
 
 		// no pending events, or the user doesn't have sufficient capabilities
-		return Ai1ec_I18n::__( 'All Events' );
+		return Ai1ec_I18n::_trans( 'All Events' );
 	}
 
 }

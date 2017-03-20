@@ -450,65 +450,65 @@ class Ai1ec_Javascript_Controller {
 			'calendar_feeds_nonce'           => wp_create_nonce( 'ai1ec_ics_feed_nonce'),
 			// ICS feed error messages
 			'duplicate_feed_message'         => esc_html(
-				Ai1ec_I18n::__( 'This feed is already being imported.' )
+				Ai1ec_I18n::_trans( 'This feed is already being imported.' )
 			),
 			'invalid_url_message'            => esc_html(
-				Ai1ec_I18n::__( 'Please enter a valid iCalendar URL.' )
+				Ai1ec_I18n::_trans( 'Please enter a valid iCalendar URL.' )
 			),
 			'invalid_website_message'      	 => esc_html(
-				Ai1ec_I18n::__( 'Please enter a valid Website URL.' )
+				Ai1ec_I18n::_trans( 'Please enter a valid Website URL.' )
 			),
 			'invalid_email_message'          => esc_html(
-				Ai1ec_I18n::__( 'Please enter a valid email address.' )
+				Ai1ec_I18n::_trans( 'Please enter a valid email address.' )
 			),
-			'choose_image_message'           => Ai1ec_I18n::__( 'Choose Image' ),
+			'choose_image_message'           => Ai1ec_I18n::_trans( 'Choose Image' ),
 			'now'                            => $this->_registry->get( 'date.system' )
 				->current_time(),
-			'size_less_variable_not_ok'      => Ai1ec_I18n::__(
+			'size_less_variable_not_ok'      => Ai1ec_I18n::_trans(
 				'The value you have entered is not a valid CSS length.'
 			),
-			'confirm_reset_theme'            => Ai1ec_I18n::__(
+			'confirm_reset_theme'            => Ai1ec_I18n::_trans(
 				'Are you sure you want to reset your theme options to their default values?'
 			),
-			'error_message_not_valid_lat'    => Ai1ec_I18n::__(
+			'error_message_not_valid_lat'    => Ai1ec_I18n::_trans(
 				'Please enter a valid latitude. A valid latitude is comprised between +90 and -90.'
 			),
-			'error_message_not_valid_long'   => Ai1ec_I18n::__(
+			'error_message_not_valid_long'   => Ai1ec_I18n::_trans(
 				'Please enter a valid longitude. A valid longitude is comprised between +180 and -180.'
 			),
-			'error_message_not_entered_lat'  => Ai1ec_I18n::__(
+			'error_message_not_entered_lat'  => Ai1ec_I18n::_trans(
 				'When the "Input coordinates" checkbox is checked, "Latitude" is a required field.'
 			),
-			'error_message_not_entered_long' => Ai1ec_I18n::__(
+			'error_message_not_entered_long' => Ai1ec_I18n::_trans(
 				'When the "Input coordinates" checkbox is checked, "Longitude" is a required field.'
 			),
-			'ai1ec_contact_url_not_valid'         => Ai1ec_I18n::__(
+			'ai1ec_contact_url_not_valid'         => Ai1ec_I18n::_trans(
 				'The URL you have entered in the <b>Organizer Contact Info</b> &gt; <b>Website URL</b> seems to be invalid.'
 			),
-			'ai1ec_ticket_ext_url_not_valid'           => Ai1ec_I18n::__(
+			'ai1ec_ticket_ext_url_not_valid'           => Ai1ec_I18n::_trans(
 				'The URL you have entered in the <b>Event Cost and Tickets</b> &gt; <b>Tickets or Registration URL</b> seems to be invalid.'
 			),
-			'ai1ec_contact_email_not_valid'         => Ai1ec_I18n::__(
+			'ai1ec_contact_email_not_valid'         => Ai1ec_I18n::_trans(
 				'The Email you have entered in the <b>Organizer Contact Info</b> &gt; <b>E-mail</b> seems to be invalid.'
 			),
-			'general_url_not_valid'          => Ai1ec_I18n::__(
+			'general_url_not_valid'          => Ai1ec_I18n::_trans(
 				'Please remember that URLs must start with either "http://" or "https://".'
 			),
-			'calendar_loading'               => Ai1ec_I18n::__(
+			'calendar_loading'               => Ai1ec_I18n::_trans(
 				'Loading&hellip;'
 			),
-			'ticketing_required_fields'      => Ai1ec_I18n::__(
+			'ticketing_required_fields'      => Ai1ec_I18n::_trans(
 				'<b>Required or incorrect fields for Ticketing are outlined red.</b>'
 			),
-			'ticketing_repeat_not_supported' => Ai1ec_I18n::__( '<b>The Repeat option was selected but recurrence is not supported by Event with Tickets.</b>'
+			'ticketing_repeat_not_supported' => Ai1ec_I18n::_trans( '<b>The Repeat option was selected but recurrence is not supported by Event with Tickets.</b>'
 			),
-			'ticketing_no_tickets_included'  => Ai1ec_I18n::__( '<b>
+			'ticketing_no_tickets_included'  => Ai1ec_I18n::_trans( '<b>
 				The Event has the cost option Tickets selected but no ticket was included.</b>'
 			),
-			'discovery_event_success'         => Ai1ec_I18n::__(
+			'discovery_event_success'         => Ai1ec_I18n::_trans(
 				'Event was imported successfully.'
 			),
-			'discovery_event_error'          => Ai1ec_I18n::__(
+			'discovery_event_error'          => Ai1ec_I18n::_trans(
 				'An error occurred when importing event. Please, try later.'
 			),
 			'language'                       => $this->_registry->get( 'p28n.wpml' )->get_lang(),
@@ -539,51 +539,51 @@ class Ai1ec_Javascript_Controller {
 			),
 			'javascript_widgets'             => array(),
 			'widget_creator'                 => array(
-				'preview'         => Ai1ec_I18n::__( 'Preview:' ),
-				'preview_loading' => Ai1ec_I18n::__(
+				'preview'         => Ai1ec_I18n::_trans( 'Preview:' ),
+				'preview_loading' => Ai1ec_I18n::_trans(
 					'Loading preview&nbsp;<i class="ai1ec-fa ai1ec-fa-spin ai1ec-fa-spinner"></i>'
 				)
 			),
 			'ticketing'                       => array(
-				'details'         => Ai1ec_I18n::__( 'Ticketing Details' ),
-				'hide_details'    => Ai1ec_I18n::__( 'Hide Ticketing Details' ),
-				'loading_details' => Ai1ec_I18n::__( 'Loading tickets details...' ),
-				'type_and_price'  => Ai1ec_I18n::__( 'Type and price' ),
-				'info'            => Ai1ec_I18n::__( 'Info' ),
-				'information'     => Ai1ec_I18n::__( 'Information' ),
-				'report'          => Ai1ec_I18n::__( 'Report' ),
-				'sale_dates'      => Ai1ec_I18n::__( 'Sale dates' ),
-				'limits'          => Ai1ec_I18n::__( 'Limits' ),
-				'actions'         => Ai1ec_I18n::__( 'Actions' ),
-				'sold'            => Ai1ec_I18n::__( 'Sold:' ),
-				'left'            => Ai1ec_I18n::__( 'Left:' ),
-				'start'           => Ai1ec_I18n::__( 'Start:' ),
-				'end'             => Ai1ec_I18n::__( 'End:' ),
-				'min'             => Ai1ec_I18n::__( 'Min:' ),
-				'max'             => Ai1ec_I18n::__( 'Max:' ),
-				'attendees'       => Ai1ec_I18n::__( 'Attendees' ),
-				'hide_attendees'  => Ai1ec_I18n::__( 'Hide Attendees' ),
-				'attendees_list'  => Ai1ec_I18n::__( 'Attendees List' ),
-				'guest_name'      => Ai1ec_I18n::__( 'Guest Name' ),
-				'status'          => Ai1ec_I18n::__( 'Status' ),
-				'email'           => Ai1ec_I18n::__( 'Email' ),
-				'no_attendees'    => Ai1ec_I18n::__( 'No attendees for this ticket type.' ),
-				'edit'            => Ai1ec_I18n::__( 'Edit' ),
-				'code'            => Ai1ec_I18n::__( 'Code' ),
-				'unlimited'       => Ai1ec_I18n::__( 'Unlimited' ),
-				'open_for_sale'   => Ai1ec_I18n::__( 'Open for sale' ),
-				'no_delete_text'  => Ai1ec_I18n::__( 'You have sold tickets for this ticket type. Please change it\'s status to "Canceled" and make refunds to all users that purchased tickets.' ),
-				'cancel_message'  => Ai1ec_I18n::__( 'You have sold tickets for this ticket type. Please make refunds to all users that purchased tickets' )
+				'details'         => Ai1ec_I18n::_trans( 'Ticketing Details' ),
+				'hide_details'    => Ai1ec_I18n::_trans( 'Hide Ticketing Details' ),
+				'loading_details' => Ai1ec_I18n::_trans( 'Loading tickets details...' ),
+				'type_and_price'  => Ai1ec_I18n::_trans( 'Type and price' ),
+				'info'            => Ai1ec_I18n::_trans( 'Info' ),
+				'information'     => Ai1ec_I18n::_trans( 'Information' ),
+				'report'          => Ai1ec_I18n::_trans( 'Report' ),
+				'sale_dates'      => Ai1ec_I18n::_trans( 'Sale dates' ),
+				'limits'          => Ai1ec_I18n::_trans( 'Limits' ),
+				'actions'         => Ai1ec_I18n::_trans( 'Actions' ),
+				'sold'            => Ai1ec_I18n::_trans( 'Sold:' ),
+				'left'            => Ai1ec_I18n::_trans( 'Left:' ),
+				'start'           => Ai1ec_I18n::_trans( 'Start:' ),
+				'end'             => Ai1ec_I18n::_trans( 'End:' ),
+				'min'             => Ai1ec_I18n::_trans( 'Min:' ),
+				'max'             => Ai1ec_I18n::_trans( 'Max:' ),
+				'attendees'       => Ai1ec_I18n::_trans( 'Attendees' ),
+				'hide_attendees'  => Ai1ec_I18n::_trans( 'Hide Attendees' ),
+				'attendees_list'  => Ai1ec_I18n::_trans( 'Attendees List' ),
+				'guest_name'      => Ai1ec_I18n::_trans( 'Guest Name' ),
+				'status'          => Ai1ec_I18n::_trans( 'Status' ),
+				'email'           => Ai1ec_I18n::_trans( 'Email' ),
+				'no_attendees'    => Ai1ec_I18n::_trans( 'No attendees for this ticket type.' ),
+				'edit'            => Ai1ec_I18n::_trans( 'Edit' ),
+				'code'            => Ai1ec_I18n::_trans( 'Code' ),
+				'unlimited'       => Ai1ec_I18n::_trans( 'Unlimited' ),
+				'open_for_sale'   => Ai1ec_I18n::_trans( 'Open for sale' ),
+				'no_delete_text'  => Ai1ec_I18n::_trans( 'You have sold tickets for this ticket type. Please change it\'s status to "Canceled" and make refunds to all users that purchased tickets.' ),
+				'cancel_message'  => Ai1ec_I18n::_trans( 'You have sold tickets for this ticket type. Please make refunds to all users that purchased tickets' )
 			),
 			'review'                         => array(
-				'message_sent'  => Ai1ec_I18n::__( 'Your message has been sent. Thank you for your feedback.' ),
-				'message_error' => Ai1ec_I18n::__( 'Your message has not been sent. Please try again or contact us.' )
+				'message_sent'  => Ai1ec_I18n::_trans( 'Your message has been sent. Thank you for your feedback.' ),
+				'message_error' => Ai1ec_I18n::_trans( 'Your message has not been sent. Please try again or contact us.' )
 			),
-			'load_views_error'                 => Ai1ec_I18n::__(
+			'load_views_error'                 => Ai1ec_I18n::_trans(
 				'Something went wrong while fetching events.<br>The request status is: %STATUS% <br>The error thrown was: %ERROR%'
 			),
-			'load_views_error_popup_title'   => Ai1ec_I18n::__( 'Response text received from server' ),
-			'load_views_error_link_popup'    => Ai1ec_I18n::__( 'Click here for technical details' ),
+			'load_views_error_popup_title'   => Ai1ec_I18n::_trans( 'Response text received from server' ),
+			'load_views_error_link_popup'    => Ai1ec_I18n::_trans( 'Click here for technical details' ),
 			'cookie_path'                    => $this->_registry->get(
 				'cookie.utility'
 			)->get_path_for_cookie(),

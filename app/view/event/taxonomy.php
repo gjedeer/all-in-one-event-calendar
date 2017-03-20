@@ -110,7 +110,7 @@ class Ai1ec_View_Event_Taxonomy extends Ai1ec_Base {
 		$image = $this->_taxonomy_model->get_category_image( $term_id );
 		if ( null !== $image ) {
 			return '<img src="' . $image . '" alt="' .
-				Ai1ec_I18n::__( 'Category image' ) .
+				Ai1ec_I18n::_trans( 'Category image' ) .
 				'" class="ai1ec_category_small_image_preview" />';
 		}
 		return '';

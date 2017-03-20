@@ -17,7 +17,7 @@ class Ai1ec_I18n {
 	 *
 	 * @return string Translated string representation.
 	 */
-	static public function __( $term ) {
+	static public function _trans( $term ) {
 		return __( $term, AI1EC_PLUGIN_NAME );
 	}
 

@@ -23,8 +23,8 @@ class Ai1ec_View_Add_Ons extends Ai1ec_View_Admin_Abstract {
 		// =======================
 		add_submenu_page(
 			AI1EC_ADMIN_BASE_URL,
-			Ai1ec_I18n::__( 'Add-ons' ),
-			Ai1ec_I18n::__( 'Add-ons' ),
+			Ai1ec_I18n::_trans( 'Add-ons' ),
+			Ai1ec_I18n::_trans( 'Add-ons' ),
 			'manage_ai1ec_feeds',
 			AI1EC_PLUGIN_NAME . '-add-ons',
 			array( $this, 'display_page' )
@@ -65,16 +65,16 @@ class Ai1ec_View_Add_Ons extends Ai1ec_View_Admin_Abstract {
 			'add-ons-list/page.twig',
 			array(
 				'labels'   => array(
-					'title'             => Ai1ec_I18n::__(
+					'title'             => Ai1ec_I18n::_trans(
 						'Add-ons for All In One Event Calendar'
 					),
-					'button_title'      => Ai1ec_I18n::__(
+					'button_title'      => Ai1ec_I18n::_trans(
 						'Browse All Add-ons'
 					),
-					'paragraph_content' => Ai1ec_I18n::__(
+					'paragraph_content' => Ai1ec_I18n::_trans(
 						'These add-ons extend the functionality of the All-in-One Event Calendar.'
 					),
-					'error'             => Ai1ec_I18n::__(
+					'error'             => Ai1ec_I18n::_trans(
 						'There was an error retrieving the extensions list from the server. Please try again later.'
 					),
 				),

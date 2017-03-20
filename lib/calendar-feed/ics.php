@@ -37,7 +37,7 @@ class Ai1ecIcsConnectorPlugin extends Ai1ec_Connector_Plugin {
 	protected $_api_feed = null;
 
 	public function get_tab_title() {
-		return Ai1ec_I18n::__( 'My Feeds' );
+		return Ai1ec_I18n::_trans( 'My Feeds' );
 	}
 
 	public function __construct( Ai1ec_Registry_Object $registry ) {
@@ -69,7 +69,7 @@ class Ai1ecIcsConnectorPlugin extends Ai1ec_Connector_Plugin {
 			'data' => array(
 				'ics_id'  => $feed_id,
 				'error'   => true,
-				'message' => Ai1ec_I18n::__(
+				'message' => Ai1ec_I18n::_trans(
 					'Another import process in progress. Please try again later.'
 				),
 			),
@@ -563,7 +563,7 @@ class Ai1ecIcsConnectorPlugin extends Ai1ec_Connector_Plugin {
 	public function add_ics_feed() {
 		check_ajax_referer( 'ai1ec_ics_feed_nonce', 'nonce' );
 		if ( ! current_user_can( 'manage_ai1ec_feeds' ) ) {
-			wp_die( Ai1ec_I18n::__( 'Oh, submission was not accepted.' ) );
+			wp_die( Ai1ec_I18n::_trans( 'Oh, submission was not accepted.' ) );
 		}
 
 		$api_feed   = $this->_api_feed;
@@ -758,7 +758,7 @@ class Ai1ecIcsConnectorPlugin extends Ai1ec_Connector_Plugin {
 			$output = array(
 				'error'   => false,
 				'message' => sprintf(
-					Ai1ec_I18n::__( 'Deleted %d events' ),
+					Ai1ec_I18n::_trans( 'Deleted %d events' ),
 					$total
 				),
 				'count'   => $total,
@@ -766,7 +766,7 @@ class Ai1ecIcsConnectorPlugin extends Ai1ec_Connector_Plugin {
 		} else {
 			$output = array(
 				'error'   => true,
-				'message' => Ai1ec_I18n::__( 'Invalid ICS feed ID' ),
+				'message' => Ai1ec_I18n::_trans( 'Invalid ICS feed ID' ),
 			);
 		}
 		if ( $ajax ) {
@@ -832,7 +832,7 @@ class Ai1ecIcsConnectorPlugin extends Ai1ec_Connector_Plugin {
 	 */
 	public function add_discover_events_feed_subscription() {
 		if ( ! current_user_can( 'manage_ai1ec_feeds' ) ) {
-			wp_die( Ai1ec_I18n::__( 'Oh, submission was not accepted.' ) );
+			wp_die( Ai1ec_I18n::_trans( 'Oh, submission was not accepted.' ) );
 		}
 
 		$feed_id       = $_POST['ai1ec_feed_id'];

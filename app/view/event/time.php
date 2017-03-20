@@ -129,7 +129,7 @@ class Ai1ec_View_Event_Time extends Ai1ec_Base {
 			$output .= apply_filters(
 				'ai1ec_get_timespan_html_allday_badge',
 				' <span class="ai1ec-allday-badge">' .
-				Ai1ec_I18n::__( 'all-day' ) .
+				Ai1ec_I18n::_trans( 'all-day' ) .
 				'</span>'
 			);
 		}
@@ -163,7 +163,7 @@ class Ai1ec_View_Event_Time extends Ai1ec_Base {
 			$excludes[] =
 			$rrule->exdate_to_text( $exception_dates );
 		}
-		return implode( Ai1ec_I18n::__( ', and ' ), $excludes );
+		return implode( Ai1ec_I18n::_trans( ', and ' ), $excludes );
 	}
 
 	/**

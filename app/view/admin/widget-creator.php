@@ -128,17 +128,17 @@ class Ai1ec_View_Widget_Creator extends Ai1ec_View_Admin_Abstract {
 			array(
 				'tabs'              => $tabs,
 				'siteurl'           => trailingslashit( preg_replace( '/^.*?:/', '', ai1ec_get_site_url() ) ),
-				'text_common_info'  => Ai1ec_I18n::__( 'Use this tool to generate code snippets you can add to <strong>an external website</strong> to embed new calendars and widgets.' ),
-				'text_alert'        => Ai1ec_I18n::__( '<h4>Attention!</h4><p>These widgets are designed to be embedded in <strong>external sites only</strong> and may cause conflicts if used within the same WordPress site.</p>' ),
+				'text_common_info'  => Ai1ec_I18n::_trans( 'Use this tool to generate code snippets you can add to <strong>an external website</strong> to embed new calendars and widgets.' ),
+				'text_alert'        => Ai1ec_I18n::_trans( '<h4>Attention!</h4><p>These widgets are designed to be embedded in <strong>external sites only</strong> and may cause conflicts if used within the same WordPress site.</p>' ),
 				'text_alternatives' => sprintf(
-					Ai1ec_I18n::__( '<p>Use <a href="%s"><strong>Appearance</strong> &gt; <strong>Widgets</strong></a> to add event widgets to your WordPress site as you would any other widget, or use <a href="%s" target="_blank">shortcodes</a> to embed the full calendar.</strong></p>' ),
+					Ai1ec_I18n::_trans( '<p>Use <a href="%s"><strong>Appearance</strong> &gt; <strong>Widgets</strong></a> to add event widgets to your WordPress site as you would any other widget, or use <a href="%s" target="_blank">shortcodes</a> to embed the full calendar.</strong></p>' ),
 					admin_url( 'widgets.php' ),
 					'http://time.ly/document/user-guide/using-calendar/display-multiple-calendars-site/'
 				),
 				'display_alert'     => apply_filters( 'ai1ec_display_widget_creator_warning', true ),
-				'text_preview'      => Ai1ec_I18n::__( 'Preview:' ),
-				'text_paste'        => Ai1ec_I18n::__( 'Paste this code onto your site:' ),
-				'text_updated_code' => Ai1ec_I18n::__( 'This code will update to reflect changes made to the settings. Changing settings will not affect previously embedded widgets.' ),
+				'text_preview'      => Ai1ec_I18n::_trans( 'Preview:' ),
+				'text_paste'        => Ai1ec_I18n::_trans( 'Paste this code onto your site:' ),
+				'text_updated_code' => Ai1ec_I18n::_trans( 'This code will update to reflect changes made to the settings. Changing settings will not affect previously embedded widgets.' ),
 			),
 			true
 		);

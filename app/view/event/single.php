@@ -90,7 +90,7 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
 			'subscribe_buttons_text'  => $this->_registry
 				->get( 'view.calendar.subscribe-button' )
 				->get_labels(),
-			'text_get_calendar'       => Ai1ec_I18n::__( 'Get a Timely Calendar' ),
+			'text_get_calendar'       => Ai1ec_I18n::_trans( 'Get a Timely Calendar' ),
 			'text_when'               => __( 'When:', AI1EC_PLUGIN_NAME ),
 			'text_where'              => __( 'Where:', AI1EC_PLUGIN_NAME ),
 			'text_cost'               => __( 'Cost:', AI1EC_PLUGIN_NAME ),
@@ -122,7 +122,7 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
 				'&action=edit&instance=' . $event->get( 'instance_id' )
 			);
 			$args['edit_instance_text'] = sprintf(
-				Ai1ec_I18n::__( 'Edit this occurrence (%s)' ),
+				Ai1ec_I18n::_trans( 'Edit this occurrence (%s)' ),
 				$event->get( 'start' )->format_i18n( 'M j' )
 			);
 		}
@@ -204,11 +204,11 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
 		$feed_url = trim( strtolower( $event->get( 'ical_feed_url' ) ) );
 
 		if ( strpos( $feed_url, 'http' ) === 0 ) {
-			$text_calendar_feed = Ai1ec_I18n::__(
+			$text_calendar_feed = Ai1ec_I18n::_trans(
 				'This post was replicated from another site\'s <a href="%s" title="iCalendar feed"><i class="ai1ec-fa ai1ec-fa-calendar"></i> calendar feed</a>.'
 			);
 		} else {
-			$text_calendar_feed = Ai1ec_I18n::__(
+			$text_calendar_feed = Ai1ec_I18n::_trans(
 				'This post was imported from a CSV/ICS file.'
 			);
 		}
@@ -221,7 +221,7 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
 		$args   = array(
 			'event'              => $event,
 			'text_calendar_feed' => $text_calendar_feed,
-			'text_view_post'     => Ai1ec_I18n::__( 'View original' ),
+			'text_view_post'     => Ai1ec_I18n::_trans( 'View original' ),
 		);
 		return $loader->get_file( 'event-single-footer.twig', $args, false )
 			->get_content();

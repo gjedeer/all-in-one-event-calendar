@@ -28,7 +28,7 @@ class Ai1ec_View_Admin_Theme_Switching extends Ai1ec_View_Admin_Abstract {
 			'deleted'       => $deleted,
 			'ct'            => $ct,
 			'wp_list_table' => $_list_table,
-			'page_title'    => Ai1ec_I18n::__(
+			'page_title'    => Ai1ec_I18n::_trans(
 				'All-in-One Event Calendar: Themes'
 			),
 		);
@@ -51,8 +51,8 @@ class Ai1ec_View_Admin_Theme_Switching extends Ai1ec_View_Admin_Abstract {
 		// ===============
 		$themes_page = add_submenu_page(
 			AI1EC_ADMIN_BASE_URL,
-			Ai1ec_I18n::__( 'Calendar Themes' ),
-			Ai1ec_I18n::__( 'Calendar Themes' ),
+			Ai1ec_I18n::_trans( 'Calendar Themes' ),
+			Ai1ec_I18n::_trans( 'Calendar Themes' ),
 			'switch_ai1ec_themes',
 			AI1EC_PLUGIN_NAME . '-themes',
 			array( $this, 'display_page' )

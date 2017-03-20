@@ -83,7 +83,7 @@ class Ai1ec_Captcha_Nocaptcha_Provider extends Ai1ec_Captcha_Provider {
 	 */
 	public function validate_challenge( array $data ) {
 
-		$response['message'] = Ai1ec_I18n::__(
+		$response['message'] = Ai1ec_I18n::_trans(
 			'Please try verifying you are human again.'
 		);
 		$response['success'] = false;

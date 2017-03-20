@@ -47,8 +47,8 @@ class Ai1ec_View_Theme_Options extends Ai1ec_View_Admin_Abstract {
 	public function add_page() {
 		$theme_options_page = add_submenu_page(
 			AI1EC_ADMIN_BASE_URL,
-			Ai1ec_I18n::__( 'Theme Options' ),
-			Ai1ec_I18n::__( 'Theme Options' ),
+			Ai1ec_I18n::_trans( 'Theme Options' ),
+			Ai1ec_I18n::_trans( 'Theme Options' ),
 			'manage_ai1ec_options',
 			AI1EC_PLUGIN_NAME . '-edit-css',
 			array( $this, 'display_page' )
@@ -57,7 +57,7 @@ class Ai1ec_View_Theme_Options extends Ai1ec_View_Admin_Abstract {
 		if ( false !== $settings->get( 'less_variables_page' ) ) {
 			// Make copy of Theme Options page at its old location.
 			$submenu['themes.php'][] = array(
-				Ai1ec_I18n::__( 'Calendar Theme Options' ),
+				Ai1ec_I18n::_trans( 'Calendar Theme Options' ),
 				'manage_ai1ec_options',
 				AI1EC_THEME_OPTIONS_BASE_URL,
 			);
@@ -93,7 +93,7 @@ class Ai1ec_View_Theme_Options extends Ai1ec_View_Admin_Abstract {
 		$settings = $this->_registry->get( 'model.settings' );
 
 		$args = array(
-			'title' => Ai1ec_I18n::__(
+			'title' => Ai1ec_I18n::_trans(
 				'Calendar Theme Options'
 			),
 			'nonce' => array(
@@ -130,25 +130,25 @@ class Ai1ec_View_Theme_Options extends Ai1ec_View_Admin_Abstract {
 
 		$tabs = array(
 			'general' => array(
-				'name' => Ai1ec_I18n::__( 'General' ),
+				'name' => Ai1ec_I18n::_trans( 'General' ),
 			),
 			'table' => array(
-				'name' => Ai1ec_I18n::__( 'Tables' ),
+				'name' => Ai1ec_I18n::_trans( 'Tables' ),
 			),
 			'buttons' => array(
-				'name' => Ai1ec_I18n::__( 'Buttons' ),
+				'name' => Ai1ec_I18n::_trans( 'Buttons' ),
 			),
 			'forms' => array(
-				'name' => Ai1ec_I18n::__( 'Forms' ),
+				'name' => Ai1ec_I18n::_trans( 'Forms' ),
 			),
 			'calendar' => array(
-				'name' => Ai1ec_I18n::__( 'Calendar general' ),
+				'name' => Ai1ec_I18n::_trans( 'Calendar general' ),
 			),
 			'month' => array(
-				'name' => Ai1ec_I18n::__( 'Month/week/day view' ),
+				'name' => Ai1ec_I18n::_trans( 'Month/week/day view' ),
 			),
 			'agenda' => array(
-				'name' => Ai1ec_I18n::__( 'Agenda view' ),
+				'name' => Ai1ec_I18n::_trans( 'Agenda view' ),
 			),
 		);
 
@@ -166,7 +166,7 @@ class Ai1ec_View_Theme_Options extends Ai1ec_View_Admin_Abstract {
 			'submit'        => array(
 				'id'          => self::SUBMIT_ID,
 				'value'       => '<i class="ai1ec-fa ai1ec-fa-save ai1ec-fa-fw"></i> ' .
-					Ai1ec_I18n::__( 'Save Options' ),
+					Ai1ec_I18n::_trans( 'Save Options' ),
 				'args'        => array(
 					'class'     => 'ai1ec-btn ai1ec-btn-primary ai1ec-btn-lg',
 				),
@@ -174,7 +174,7 @@ class Ai1ec_View_Theme_Options extends Ai1ec_View_Admin_Abstract {
 			'reset'         => array(
 				'id'          => self::RESET_ID,
 				'value'       => '<i class="ai1ec-fa ai1ec-fa-undo ai1ec-fa-fw"></i> ' .
-					Ai1ec_I18n::__( 'Reset to Defaults' ),
+					Ai1ec_I18n::_trans( 'Reset to Defaults' ),
 				'args'        => array(
 					'class'     => 'ai1ec-btn ai1ec-btn-danger ai1ec-btn-lg',
 				),

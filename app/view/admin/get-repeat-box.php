@@ -91,7 +91,7 @@ class Ai1ec_View_Admin_Get_repeat_Box extends Ai1ec_Base {
 			'count'           => $this->create_count_input(
 				'ai1ec_count',
 				$count
-			) . Ai1ec_I18n::__( 'times' ),
+			) . Ai1ec_I18n::_trans( 'times' ),
 			'end'             => $this->create_end_dropdown( $end ),
 			'until'           => $until,
 			'repeat'          => $repeat,
@@ -161,7 +161,7 @@ class Ai1ec_View_Admin_Get_repeat_Box extends Ai1ec_Base {
 			// check to see if rrule is empty
 			if ( empty( $_REQUEST['rrule'] ) ) {
 				$error   = true;
-				$message = Ai1ec_I18n::__(
+				$message = Ai1ec_I18n::_trans(
 					'Recurrence rule cannot be empty.'
 				);
 			} else {
@@ -179,7 +179,7 @@ class Ai1ec_View_Admin_Get_repeat_Box extends Ai1ec_Base {
 			}
 		} else {
 			$error   = true;
-			$message = Ai1ec_I18n::__(
+			$message = Ai1ec_I18n::_trans(
 				'Recurrence rule was not provided.'
 			);
 		}
@@ -206,9 +206,9 @@ class Ai1ec_View_Admin_Get_repeat_Box extends Ai1ec_Base {
 		ob_start();
 
 		$options = array(
-			0 => Ai1ec_I18n::__( 'Never' ),
-			1 => Ai1ec_I18n::__( 'After' ),
-			2 => Ai1ec_I18n::__( 'On date' ),
+			0 => Ai1ec_I18n::_trans( 'Never' ),
+			1 => Ai1ec_I18n::_trans( 'After' ),
+			2 => Ai1ec_I18n::_trans( 'On date' ),
 		);
 
 		?>
@@ -244,7 +244,7 @@ class Ai1ec_View_Admin_Get_repeat_Box extends Ai1ec_Base {
 				'ai1ec_daily_count',
 				$selected,
 				365
-			) . Ai1ec_I18n::__( 'day(s)' ),
+			) . Ai1ec_I18n::_trans( 'day(s)' ),
 		);
 		return $loader->get_file( 'row_daily.php', $args, true )
 			->get_content();
@@ -327,7 +327,7 @@ class Ai1ec_View_Admin_Get_repeat_Box extends Ai1ec_Base {
 				'ai1ec_weekly_count',
 				$count,
 				52
-			) . Ai1ec_I18n::__( 'week(s)' ),
+			) . Ai1ec_I18n::_trans( 'week(s)' ),
 			'week_days'  => $this->create_list_element(
 				'ai1ec_weekly_date_select',
 				$options,
@@ -410,7 +410,7 @@ class Ai1ec_View_Admin_Get_repeat_Box extends Ai1ec_Base {
 				strtotime( $_dn . '-01-1998 12:00:00' )
 			)->format_i18n( 'jS' );
 		}
-		$options_dn['-1'] = Ai1ec_I18n::__( 'last' );
+		$options_dn['-1'] = Ai1ec_I18n::_trans( 'last' );
 
 		$byday_checked       = $bymonthday ? '' : 'checked';
 		$byday_expanded      = $bymonthday ? 'ai1ec-collapse' : 'ai1ec-in';
@@ -423,7 +423,7 @@ class Ai1ec_View_Admin_Get_repeat_Box extends Ai1ec_Base {
 				'ai1ec_monthly_count',
 				$count,
 				12
-			) . Ai1ec_I18n::__( 'month(s)' ),
+			) . Ai1ec_I18n::_trans( 'month(s)' ),
 			'month'                => $this->create_monthly_date_select(
 				$month
 			),
@@ -477,12 +477,12 @@ class Ai1ec_View_Admin_Get_repeat_Box extends Ai1ec_Base {
 		$ret = '';
 
 		$first_options = array(
-			'0' => Ai1ec_I18n::__( 'first' ),
-			'1' => Ai1ec_I18n::__( 'second' ),
-			'2' => Ai1ec_I18n::__( 'third' ),
-			'3' => Ai1ec_I18n::__( 'fourth' ),
+			'0' => Ai1ec_I18n::_trans( 'first' ),
+			'1' => Ai1ec_I18n::_trans( 'second' ),
+			'2' => Ai1ec_I18n::_trans( 'third' ),
+			'3' => Ai1ec_I18n::_trans( 'fourth' ),
 			'4' => '------',
-			'5' => Ai1ec_I18n::__( 'last' )
+			'5' => Ai1ec_I18n::_trans( 'last' )
 		);
 		$ret = $this->create_select_element(
 			'ai1ec_monthly_each_select',
@@ -492,17 +492,17 @@ class Ai1ec_View_Admin_Get_repeat_Box extends Ai1ec_Base {
 		);
 
 		$second_options = array(
-			'0'   => Ai1ec_I18n::__( 'Sunday' ),
-			'1'   => Ai1ec_I18n::__( 'Monday' ),
-			'2'   => Ai1ec_I18n::__( 'Tuesday' ),
-			'3'   => Ai1ec_I18n::__( 'Wednesday' ),
-			'4'   => Ai1ec_I18n::__( 'Thursday' ),
-			'5'   => Ai1ec_I18n::__( 'Friday' ),
-			'6'   => Ai1ec_I18n::__( 'Saturday' ),
+			'0'   => Ai1ec_I18n::_trans( 'Sunday' ),
+			'1'   => Ai1ec_I18n::_trans( 'Monday' ),
+			'2'   => Ai1ec_I18n::_trans( 'Tuesday' ),
+			'3'   => Ai1ec_I18n::_trans( 'Wednesday' ),
+			'4'   => Ai1ec_I18n::_trans( 'Thursday' ),
+			'5'   => Ai1ec_I18n::_trans( 'Friday' ),
+			'6'   => Ai1ec_I18n::_trans( 'Saturday' ),
 			'7'   => '--------',
-			'8'   => Ai1ec_I18n::__( 'day' ),
-			'9'   => Ai1ec_I18n::__( 'weekday' ),
-			'10'  => Ai1ec_I18n::__( 'weekend day' )
+			'8'   => Ai1ec_I18n::_trans( 'day' ),
+			'9'   => Ai1ec_I18n::_trans( 'weekday' ),
+			'10'  => Ai1ec_I18n::_trans( 'weekend day' )
 		);
 
 		return $ret . $this->create_select_element(
@@ -568,7 +568,7 @@ class Ai1ec_View_Admin_Get_repeat_Box extends Ai1ec_Base {
 				'ai1ec_yearly_count',
 				$count,
 				10
-			) . Ai1ec_I18n::__( 'year(s)' ),
+			) . Ai1ec_I18n::_trans( 'year(s)' ),
 			'year'                 => $this->create_yearly_date_select( $year ),
 			'on_the_select'        => $this->create_on_the_select(
 				$first,

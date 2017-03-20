@@ -97,7 +97,7 @@ class Ai1ec_View_Organize extends Ai1ec_Base {
 					'ai1ec_custom_taxonomies',
 					$this->_taxonomies
 				),
-				'text_title' => Ai1ec_I18n::__( 'Organize Events' ),
+				'text_title' => Ai1ec_I18n::_trans( 'Organize Events' ),
 			),
 			true
 		)->get_content();
