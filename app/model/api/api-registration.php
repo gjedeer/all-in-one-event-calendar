@@ -75,7 +75,7 @@ class Ai1ec_Api_Registration extends Ai1ec_Api_Abstract {
 	 * @return object Response body in JSON.
 	 */
 	protected function availability() {
-		$api_features = get_site_transient( 'ai1ec_api_features' );
+		$api_features = get_transient( 'ai1ec_api_features' );
 
 		if ( false === $api_features || ( defined( 'AI1EC_DEBUG' ) && AI1EC_DEBUG ) ) {
 			$response = $this->request_api( 'GET', AI1EC_API_URL . 'feature/availability', null, true );
@@ -88,7 +88,7 @@ class Ai1ec_Api_Registration extends Ai1ec_Api_Abstract {
 
 			// Save for 5 minutes
 			$minutes = 5;
-			set_site_transient( 'ai1ec_api_features', $api_features, $minutes * 60 );
+			set_transient( 'ai1ec_api_features', $api_features, $minutes * 60 );
 		}
 
 		return $api_features;
@@ -112,7 +112,7 @@ class Ai1ec_Api_Registration extends Ai1ec_Api_Abstract {
 	 * @return object Response body in JSON.
 	 */
 	protected function settings() {
-		$calendar_settings = get_site_transient( 'ai1ec_calendar_settings' );
+		$calendar_settings = get_transient( 'ai1ec_calendar_settings' );
 
 		if ( false === $calendar_settings || ( defined( 'AI1EC_DEBUG' ) && AI1EC_DEBUG ) ) {
 			$response = $this->request_api( 'GET', AI1EC_API_URL . 'calendars/' . $this->_get_ticket_calendar() . '/settings', null, true );
@@ -125,7 +125,7 @@ class Ai1ec_Api_Registration extends Ai1ec_Api_Abstract {
 
 			// Save for 5 minutes
 			$minutes = 5;
-			set_site_transient( 'ai1ec_calendar_settings', $calendar_settings, $minutes * 60 );
+			set_transient( 'ai1ec_calendar_settings', $calendar_settings, $minutes * 60 );
 		}
 
 		return $calendar_settings;
