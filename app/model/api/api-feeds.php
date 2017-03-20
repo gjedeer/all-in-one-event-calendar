@@ -161,7 +161,7 @@ class Ai1ec_Api_Feeds extends Ai1ec_Api_Abstract {
 	 * Call the API to get list of feed subscriptions
 	 */
 	public function get_feed_subscriptions( $force_refresh = false ) {
-		$feeds_subscriptions = get_site_transient( 'ai1ec_api_feeds_subscriptions' );
+		$feeds_subscriptions = get_transient( 'ai1ec_api_feeds_subscriptions' );
 
 		if ( $force_refresh || false === $feeds_subscriptions ) {
 			$response = $this->request_api( 'GET', AI1EC_API_URL . 'calendars/' . $this->_get_ticket_calendar() . '/feeds/list',
@@ -177,7 +177,7 @@ class Ai1ec_Api_Feeds extends Ai1ec_Api_Abstract {
 
 			// Save for 5 minutes
 			$minutes = 5;
-			set_site_transient( 'ai1ec_api_feeds_subscriptions', $feeds_subscriptions, $minutes * 60 );
+			set_transient( 'ai1ec_api_feeds_subscriptions', $feeds_subscriptions, $minutes * 60 );
 		}
 
 		return $feeds_subscriptions;

@@ -5,7 +5,7 @@ calendar, ical, iCalendar, all-in-one, events sync, events widget,
 calendar widget
 Requires WordPress at least: 3.5
 Tested up to: 4.7.3
-Stable tag: 2.5.17
+Stable tag: 2.5.18
 License: GNU General Public License, version 3 (GPL-3.0)
 
 A calendar system with many views, upcoming events widget, color-coded
@@ -148,6 +148,11 @@ https://vimeo.com/135004810
 **[ai1ec exact_date="5-10-2015"]**
 
 == Changelog ==
+
+= Version 2.5.18 =
+* Fixed: Plugin wasn't working well in the WP Multisite Environment.
+* Fixed: In Month view, fixed error: Undefined index: instance_id.
+* Fixed: In Month view, fixed blank month field in the previous month button.
 
 = Version 2.5.17 =
 * Fixed: Open Graph meta tags now matches correct dates and URLs for recurrent events.

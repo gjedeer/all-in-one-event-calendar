@@ -164,6 +164,7 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
 
 		// Get Event and process desciption
         $instance_id     = ( isset( $_GET[ 'instance_id' ] ) ) ? $_GET[ 'instance_id' ] : null;
+
 		if ( !is_null( $instance_id ) ) {
 			$instance_id = preg_replace( '/\D/', '', $instance_id );
 		}
