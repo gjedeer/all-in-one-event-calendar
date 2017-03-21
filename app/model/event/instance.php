@@ -326,7 +326,8 @@ class Ai1ec_Event_Instance extends Ai1ec_Base {
 			if ( empty( $start_timezone ) ) {
 				$start_timezone = $this->_registry->get( 'date.timezone' )->get_default_timezone();
 			}
-            $events += $this->create_instances_by_recurrence(
+
+			$events += $this->create_instances_by_recurrence(
 				$event,
 				$event_item,
 				$_start,
