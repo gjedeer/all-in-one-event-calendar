@@ -15,10 +15,10 @@ categories, recurrence, and import/export of .ics feeds.
 
 ><strong>Note on support:</strong> Please read our sticky post before creating a new thread. The forum is a place where our users can provide insightful help to other plugin users.
 >
->Please check-out our [Hub, Hublite and Pro hosted plans](http://time.ly/products) for many extra features and prioritized support.
+>Please check-out our [Hub, Hublite and Pro hosted plans](https://time.ly/products) for many extra features and prioritized support.
 
-The [All-in-One Event Calendar](http://time.ly/) from
-[Timely](http://time.ly/) is a beautiful way to list your events in
+The [All-in-One Event Calendar](https://time.ly/) from
+[Timely](https://time.ly/) is a beautiful way to list your events in
 WordPress and easily share them with the rest of the world. Our
 calendar system combines clean visual design with a powerful set of
 features to create the most advanced calendar system available for
@@ -26,7 +26,7 @@ WordPress.
 
 = Get Add-ons =
 
-Download add-ons at [Time.ly](http://time.ly) to get more features,
+Download add-ons at [Time.ly](https://time.ly) to get more features,
 like [Extended Views](https://time.ly/downloads/extended-views/),
 [Frontend Submission
 form](https://time.ly/downloads/front-end-event-form/),
@@ -78,7 +78,7 @@ to create template files or modify the theme.
 = Languages =
 
 Timely is supported by a committed group of translators offering
-[languages files](http://translate.time.ly/) in numerous languages
+[languages files](https://translate.time.ly/) in numerous languages
 including:
 
 * German
@@ -98,7 +98,7 @@ including:
 * Latvian
 
 You can help translate by going to
-[translate.time.ly](http://translate.time.ly).
+[translate.time.ly](https://translate.time.ly).
 
 = Become the Hub of your community =
 
@@ -109,12 +109,12 @@ https://vimeo.com/135004810
 
 = Helpful Links =
 
-* [**Access our User Guide**](http://time.ly/document/user-guide/).
+* [**Access our User Guide**](https://time.ly/document/user-guide/).
 * [**Raise feature ideas**](https://ideas.time.ly/).
 
 == Frequently Asked Questions ==
 
-[**Learn more with our detailed documentation »**](http://time.ly/support/)
+[**Learn more with our detailed documentation »**](https://time.ly/support/)
 
 = Shortcodes =
 
@@ -268,7 +268,7 @@ https://vimeo.com/135004810
 * Fixed: Image does not appear in the month view pop-up window.
 * Fixed: Ticketing Beta - Every ticket type dropdown defaults to 1 instead of the actual minimum.
 * Fixed: Ticketing Beta - Ticket Types got misaligned when one ticket is closed.
-* If you want to see the release notes for Add-ons, then please visit [this page](http://time.ly/document/release-notes).
+* If you want to see the release notes for Add-ons, then please visit [this page](https://time.ly/document/release-notes).
 
 = Version 2.3.11 =
 * New: Now the calendar is set up automatically when you install the plug-in for the first time
@@ -744,7 +744,7 @@ events;
 calendar views;
 * Fixed issue where Postbox elements open/close functionality was
 broken;
-* Adjusted http://time.ly information panel in Settings page;
+* Adjusted https://time.ly information panel in Settings page;
 
 = Version 2.0.6 =
 * Initial public release of 2.0 on http://WordPress.org repository;
