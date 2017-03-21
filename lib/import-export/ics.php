@@ -253,7 +253,7 @@ class Ai1ec_Ics_Import_Export_Engine
 				$allday = true;
 			}
 			$event_timezone = $timezone;
-			if ( $allday ) {
+			if ( $allday || preg_match( "/GMT[+|-][0-9]{4}.*/", $event_timezone ) ) {
 				$event_timezone = $local_timezone;
 			}
 			$start = $this->_time_array_to_datetime(

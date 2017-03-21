@@ -1,5 +1,5 @@
 === All-in-One Event Calendar ===
-Contributors: uchu, calvinyeh, raquelleira, renatotbueno, elirenato, hubrik, vtowel, yani.iliev, nicolapeluchetti, jbutkus, lpawlik, bangelov
+Contributors: uchu, calvinyeh, raquelleira, renatotbueno, domanb, elirenato, hubrik, vtowel, yani.iliev, nicolapeluchetti, jbutkus, lpawlik, bangelov
 Tags: calendar, events, ics, ics feed, wordpress ical importer, google
 calendar, ical, iCalendar, all-in-one, events sync, events widget,
 calendar widget
@@ -150,9 +150,10 @@ https://vimeo.com/135004810
 == Changelog ==
 
 = Version 2.5.18 =
-* Fixed: Plugin wasn't working well in the WP Multisite Environment.
-* Fixed: In Month view, fixed error: Undefined index: instance_id.
-* Fixed: In Month view, fixed blank month field in the previous month button.
+* Fixed: Returned the missing label for the previous month button.
+* Fixed: Improved the handling of missing or poorly formatted timezones when importing events.
+* Fixed: Plugin wasn't enabling certain features in the WP Multisite Environment.
+* Fixed: An undefined index error would occur in the month view.
 
 = Version 2.5.17 =
 * Fixed: Open Graph meta tags now matches correct dates and URLs for recurrent events.
