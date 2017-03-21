@@ -1,11 +1,11 @@
 === All-in-One Event Calendar ===
-Contributors: uchu, calvinyeh, raquelleira, renatotbueno, elirenato, hubrik, vtowel, yani.iliev, nicolapeluchetti, jbutkus, lpawlik, bangelov
+Contributors: uchu, calvinyeh, raquelleira, renatotbueno, elirenato, hubrik, vtowel, yani.iliev, nicolapeluchetti, jbutkus, lpawlik, bangelov, bradd
 Tags: calendar, events, ics, ics feed, wordpress ical importer, google
 calendar, ical, iCalendar, all-in-one, events sync, events widget,
 calendar widget
 Requires WordPress at least: 3.5
 Tested up to: 4.7.3
-Stable tag: 2.5.17
+Stable tag: 2.5.18
 License: GNU General Public License, version 3 (GPL-3.0)
 
 A calendar system with many views, upcoming events widget, color-coded
@@ -148,6 +148,10 @@ https://vimeo.com/135004810
 **[ai1ec exact_date="5-10-2015"]**
 
 == Changelog ==
+
+= Version 2.5.18 =
+* Fixed: Returned the missing label for the previous month button.
+* Fixed: Improved the handling of missing or poorly formatted timezones when importing events.
 
 = Version 2.5.17 =
 * Fixed: Open Graph meta tags now matches correct dates and URLs for recurrent events.
