@@ -154,6 +154,7 @@ https://vimeo.com/135004810
 * Fixed: Improved the handling of missing or poorly formatted timezones when importing events.
 * Fixed: Plugin wasn't enabling certain features in the WP Multisite Environment.
 * Fixed: An undefined index error would occur in the month view.
+* Fixed: Some users were getting a blank page when trying to view the details of the new version.
 
 = Version 2.5.17 =
 * Fixed: Open Graph meta tags now matches correct dates and URLs for recurrent events.
