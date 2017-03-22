@@ -66,6 +66,22 @@ class Ai1ec_Calendar_Updates extends Ai1ec_Base {
 	 * @return mixed Plugin data.
 	 */
 	public function plugins_api_filter( $data, $action = '', $args = null ) {
+		/*
+		if (
+			'plugin_information' !== $action ||
+			empty( $args->slug ) ||
+			'all-in-one-event-calendar' !== substr( $args->slug, 0, 25 )
+		) {
+			return $data;
+		}
+		$update_data       = get_site_transient( 'update_plugins' );
+		$plugin_identifier = $args->slug . '/' . $args->slug . '.php';
+		if ( empty( $update_data->response[$plugin_identifier] ) ) {
+			return $data;
+		}
+
+		return $update_data->response[$plugin_identifier];
+		*/
 		$updates = $this->_download_updates();
 
 		return false;
