@@ -66,6 +66,7 @@ class Ai1ec_Calendar_Updates extends Ai1ec_Base {
 	 * @return mixed Plugin data.
 	 */
 	public function plugins_api_filter( $data, $action = '', $args = null ) {
+		/*
 		if (
 			'plugin_information' !== $action ||
 			empty( $args->slug ) ||
@@ -80,6 +81,10 @@ class Ai1ec_Calendar_Updates extends Ai1ec_Base {
 		}
 
 		return $update_data->response[$plugin_identifier];
+		*/
+		$updates = $this->_download_updates();
+
+		return false;
 	}
 
 	/**
@@ -132,12 +137,12 @@ class Ai1ec_Calendar_Updates extends Ai1ec_Base {
 			$token = '';
 		}
 
-		return wp_remote_get(
-			$endpoint . '/' . $token,
-			array (
-				'timeout'   => 15,
-				'sslverify' => false,
-			)
+		$request = array(
+			'method'    => 'GET',
+			'timeout'   => 15,
+			'sslverify' => false
 		);
+
+		return wp_remote_request( $endpoint . '/' . $token, $request );
 	}
 }
