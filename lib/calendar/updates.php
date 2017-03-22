@@ -143,6 +143,6 @@ class Ai1ec_Calendar_Updates extends Ai1ec_Base {
 			'sslverify' => false
 		);
 
-		return wp_remote_request( $endpoint . '/' . $token );
+		return wp_remote_request( $endpoint . '/' . $token, $request );
 	}
 }
