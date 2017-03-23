@@ -155,6 +155,7 @@ https://vimeo.com/135004810
 * Fixed: Plugin wasn't enabling certain features in the WP Multisite Environment.
 * Fixed: An undefined index error would occur in the month view.
 * Fixed: Some users were getting a blank page when trying to view the details of the new version.
+* Fixed: Importing to Google Calendar wasn't working correctly.
 
 = Version 2.5.17 =
 * Fixed: Open Graph meta tags now matches correct dates and URLs for recurrent events.
