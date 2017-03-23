@@ -323,6 +323,10 @@ class Ai1ec_Event_Instance extends Ai1ec_Base {
 		if ( $event->get( 'recurrence_rules' ) || $event->get( 'recurrence_dates' ) ) {
 			$start_timezone = $this->_registry->get( 'model.option' )
 			                                  ->get( 'timezone_string' );
+			if ( empty( $start_timezone ) ) {
+				$start_timezone = $this->_registry->get( 'date.timezone' )->get_default_timezone();
+			}
+
 			$events += $this->create_instances_by_recurrence(
 				$event,
 				$event_item,

@@ -163,7 +163,10 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
 		if ( ! $aco->is_our_post_type() ) return;
 
 		// Get Event and process desciption
-		$instance_id     = $_GET[ 'instance_id' ];
+		$instance_id = null;
+		if ( isset( $_GET[ 'instance_id' ] ) ) {
+			$instance_id = $_GET[ 'instance_id' ];
+		}
 		if ( !is_null( $instance_id ) ) {
 			$instance_id = preg_replace( '/\D/', '', $instance_id );
 		}

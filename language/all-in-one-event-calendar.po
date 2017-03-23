@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the All-in-One Event Calendar by Time.ly package.
 msgid ""
 msgstr ""
-"Project-Id-Version: All-in-One Event Calendar by Time.ly 2.5.17\n"
+"Project-Id-Version: All-in-One Event Calendar by Time.ly 2.5.18\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/all-in-one-event-calendar\n"
-"POT-Creation-Date: 2017-03-07 19:17:51+00:00\n"
+"POT-Creation-Date: 2017-03-23 18:10:01+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-03-07 19:17+0000\n"
+"PO-Revision-Date: 2017-03-23 18:10+0000\n"
 "Last-Translator: Timely <support@time.ly>\n"
 "Language-Team:\n"
 
@@ -1952,7 +1952,7 @@ msgstr "Buy Tickets"
 msgid "Edit this occurrence (%s)"
 msgstr "Edit this occurrence (%s)"
 
-#: app/view/event/single.php:207
+#: app/view/event/single.php:210
 msgid ""
 "This post was replicated from another site's <a href=\"%s\" title="
 "\"iCalendar feed\"><i class=\"ai1ec-fa ai1ec-fa-calendar\"></i> calendar "
@@ -1962,11 +1962,11 @@ msgstr ""
 "\"iCalendar feed\"><i class=\"ai1ec-fa ai1ec-fa-calendar\"></i> calendar "
 "feed</a>."
 
-#: app/view/event/single.php:211
+#: app/view/event/single.php:214
 msgid "This post was imported from a CSV/ICS file."
 msgstr "This post was imported from a CSV/ICS file."
 
-#: app/view/event/single.php:224
+#: app/view/event/single.php:227
 msgid "View original"
 msgstr "View original"
 
