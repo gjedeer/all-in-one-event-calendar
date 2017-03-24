@@ -522,7 +522,7 @@ class Ai1ec_Front_Controller {
 			array( 'compatibility.cli', 'disable_db_debug' )
 		);
 		// editing a child instance
-		if ( basename( $_SERVER['SCRIPT_NAME'] ) === 'post.php' ) {
+		if ( isset( $_SERVER['SCRIPT_NAME'] ) && basename( $_SERVER['SCRIPT_NAME'] ) === 'post.php' ) {
 			$dispatcher->register_action(
 				'admin_action_editpost',
 				array( 'model.event.parent', 'admin_init_post' )

@@ -179,7 +179,9 @@ class Ai1ec_View_Tickets extends Ai1ec_View_Admin_Abstract {
 			$response = $this->_api_registration->save_payment_preferences();
 
 			// this redirect makes sure that the error messages appear on the screen
-			header( "Location: " . $_SERVER['HTTP_REFERER'] );
+			if ( isset( $_SERVER['HTTP_REFERER'] ) ) {
+				header( "Location: " . $_SERVER['HTTP_REFERER'] );
+			}
 		}
 		return $file->render();
 	}
