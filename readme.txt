@@ -156,6 +156,7 @@ https://vimeo.com/135004810
 * Fixed: An undefined index error would occur in the month view.
 * Fixed: Some users were getting a blank page when trying to view the details of the new version.
 * Fixed: Importing to Google Calendar wasn't working correctly.
+* Fixed: Running wp-cron.php using PHP-Cli was throwing an error that $_SERVER wasn't set.
 
 = Version 2.5.17 =
 * Fixed: Open Graph meta tags now matches correct dates and URLs for recurrent events.
