@@ -80,7 +80,7 @@ class Ai1ec_Query_Helper {
 			$this->variable( $key, $value );
 		}
 		if ( null === $query ) {
-			$query = $_SERVER['REQUEST_URI'];
+			$query = isset( $_SERVER['REQUEST_URI'] ) ? $_SERVER['REQUEST_URI'] : '';
 		}
 
 		$particles = explode( '/', trim( $query, '/' ) );

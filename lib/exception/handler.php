@@ -572,12 +572,15 @@ class Ai1ec_Exception_Handler {
 		$trace     = nl2br( $exception->getTraceAsString() );
 		$ident     = sha1( $trace );
 		if ( ! empty( $trace ) ) {
-			// Remove all whitespaces
-			$request_uri = preg_replace( '/\s+/', '', $_SERVER['REQUEST_URI'] );
-			// Convert request URI and strip tags
-			$request_uri  = strip_tags( htmlspecialchars_decode( $request_uri ) );
-			// Limit URL to 100 characters
-			$request_uri = substr($request_uri, 0, 100);
+			$request_uri = '';
+			if ( isset( $_SERVER['REQUEST_URI'] ) ) {
+				// Remove all whitespaces
+				$request_uri = preg_replace( '/\s+/', '', $_SERVER['REQUEST_URI'] );
+				// Convert request URI and strip tags
+				$request_uri  = strip_tags( htmlspecialchars_decode( $request_uri ) );
+				// Limit URL to 100 characters
+				$request_uri = substr($request_uri, 0, 100);
+			}
 			$button_label = __( 'Toggle error details', AI1EC_PLUGIN_NAME );
 			$title        = __( 'Error Details:', AI1EC_PLUGIN_NAME );
 			$backtrace    = <<<JAVASCRIPT

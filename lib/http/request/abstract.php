@@ -46,8 +46,11 @@ abstract class Ai1ec_Abstract_Query extends Ai1ec_Base implements arrayaccess {
 	public function __construct( Ai1ec_Registry_Object $registry, array $argv = NULL ) {
 		parent::__construct( $registry );
 		if ( NULL === $argv ) {
-			$request_uri = explode( '?', $_SERVER['REQUEST_URI'] );
-			$request_uri = urldecode( $request_uri[0] );
+			$request_uri = '';
+			if ( isset( $_SERVER['REQUEST_URI'] ) ) {
+				$request_uri = explode( '?', $_SERVER['REQUEST_URI'] );
+				$request_uri = urldecode( $request_uri[0] );
+			}
 			$argv = trim( $request_uri, '/' );
 			if ( ( $arg_start = strpos( $argv, '/' ) ) > 0 ) {
 				$argv = substr( $argv, $arg_start + 1 );
