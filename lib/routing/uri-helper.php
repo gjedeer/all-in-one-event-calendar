@@ -94,11 +94,13 @@ class Ai1ec_Wp_Uri_Helper {
 			$page_url .= 's';
 		}
 		$page_url .= '://';
-		if ( $_SERVER['SERVER_PORT'] !== '80' && true !== $skip_port ) {
-			$page_url .= $_SERVER['SERVER_NAME'] . ':' .
-			$_SERVER['SERVER_PORT'] . $_SERVER['REQUEST_URI'];
-		} else {
-			$page_url .= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+		if ( isset( $_SERVER['SERVER_NAME'] ) && isset( $_SERVER['SERVER_PORT'] ) && isset( $_SERVER['REQUEST_URI'] ) ) {
+			if ( $_SERVER['SERVER_PORT'] !== '80' && true !== $skip_port ) {
+				$page_url .= $_SERVER['SERVER_NAME'] . ':' .
+				$_SERVER['SERVER_PORT'] . $_SERVER['REQUEST_URI'];
+			} else {
+				$page_url .= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+			}
 		}
 		return $page_url;
 	}

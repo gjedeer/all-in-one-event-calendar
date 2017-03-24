@@ -35,8 +35,9 @@ class Ai1ec_Date_System extends Ai1ec_Base {
 		$gmt_time = ( version_compare( PHP_VERSION, '5.1.0' ) >= 0 )
 			? time()
 			: gmmktime();
+		$requestTime = isset( $_SERVER['REQUEST_TIME'] ) ? (int)$_SERVER['REQUEST_TIME'] : time();
 		$this->_current_time     = array(
-			(int)$_SERVER['REQUEST_TIME'],
+			$requestTime,
 			$gmt_time,
 		);
 		$this->_gmtdates = $registry->get( 'cache.memory' );
@@ -237,7 +238,7 @@ class Ai1ec_Date_System extends Ai1ec_Base {
 	 */
 	public function gmgetdate( $timestamp = NULL ) {
 		if ( NULL === $timestamp ) {
-			$timestamp = (int)$_SERVER['REQUEST_TIME'];
+			$timestamp = isset( $_SERVER['REQUEST_TIME'] ) ? (int)$_SERVER['REQUEST_TIME'] : time();
 		}
 		if ( NULL === ( $date = $this->_gmtdates->get( $timestamp ) ) ) {
 			$particles = explode(

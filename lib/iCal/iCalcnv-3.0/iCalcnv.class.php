@@ -469,7 +469,7 @@ class iCalcnv {
       }
       $output   = $calendar->createCalendar();
       $filesize = strlen( $output );
-      if( substr_count( $_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip' )) {
+      if( isset( $_SERVER['HTTP_ACCEPT_ENCODING'] ) && substr_count( $_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip' )) {
         $output   = gzencode( $output, 9 );
         $filesize = strlen( $output );
         header( 'Content-Encoding: gzip' );
@@ -1317,7 +1317,7 @@ class iCalcnv {
     }
             /** return data, auto gzip */
     $filesize   = strlen( $output );
-    if( substr_count( $_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip' )) {
+    if( isset( $_SERVER['HTTP_ACCEPT_ENCODING'] ) && substr_count( $_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip' )) {
       $output   = gzencode( $output, 9 );
       $filesize = strlen( $output );
       header( 'Content-Encoding: gzip');
