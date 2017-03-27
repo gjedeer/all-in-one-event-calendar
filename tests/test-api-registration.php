@@ -17,6 +17,7 @@ class TestApiRegistration extends BaseTestCase {
 		$data['ai1ec_password']              = '123456';
 		$data['ai1ec_password_confirmation'] = '123456';
 		$data['ai1ec_phone']                 = '0000000';
+		$data['ai1ec_calendar_type']         = 'other';
 		$data['ai1ec_terms']                 = 1;
 		
 		$this->create_post_request( $data );
@@ -43,8 +44,9 @@ class TestApiRegistration extends BaseTestCase {
 		//sign wordpress
 		$this->wp_sign();
 
-		$data['ai1ec_email']	= 'not_existent_user@time.ly';
-		$data['ai1ec_password'] = 'anyone';
+		$data['ai1ec_email']         = 'not_existent_user@time.ly';
+		$data['ai1ec_password']      = 'anyone';
+		$data['ai1ec_calendar_type'] = 'other';
 
 		$this->create_post_request( $data );
 
@@ -58,14 +60,14 @@ class TestApiRegistration extends BaseTestCase {
 		$this->assertEquals( "Signin Failed. Please verify your account information and try again.", $message );
 	}
 
-/**
+	/**
 	 * @group api-registration
 	 * @group api-registration-availability
 	 */
-	function testAvailability() {	
+	function testAvailability() {
 		global $ai1ec_registry;
 		$api                = $ai1ec_registry->get( 'model.api.api-registration' );
-		$response           = $api->availability();		
+		$response           = $api->availability();
 		$this->assertNotNull( $response, "response should not be null" );
 		$this->assertTrue( is_array( $response ), "response must be an array" );
 		$has_ticketing_code = false;
