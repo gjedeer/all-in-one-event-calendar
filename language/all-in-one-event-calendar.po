@@ -4,11 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: All-in-One Event Calendar by Time.ly 2.5.18\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/all-in-one-event-calendar\n"
-"POT-Creation-Date: 2017-03-24 21:32:54+00:00\n"
+"POT-Creation-Date: 2017-03-28 16:00:53+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-03-24 21:32+0000\n"
+"PO-Revision-Date: 2017-03-28 16:00+0000\n"
 "Last-Translator: Timely <support@time.ly>\n"
 "Language-Team:\n"
 
@@ -399,27 +399,27 @@ msgstr "We were unable to subscribe feed"
 msgid "We were unable to unsubscribe feed"
 msgstr "We were unable to unsubscribe feed"
 
-#: app/model/api/api-registration.php:41
+#: app/model/api/api-registration.php:42
 msgid "We were unable to Sign you In for Time.ly Network"
 msgstr "We were unable to Sign you In for Time.ly Network"
 
-#: app/model/api/api-registration.php:68
+#: app/model/api/api-registration.php:70
 msgid "We were unable to Sign you Up for Time.ly Network"
 msgstr "We were unable to Sign you Up for Time.ly Network"
 
-#: app/model/api/api-registration.php:161
+#: app/model/api/api-registration.php:163
 msgid "We were unable to Sign you Out of Time.ly Network"
 msgstr "We were unable to Sign you Out of Time.ly Network"
 
-#: app/model/api/api-registration.php:191
+#: app/model/api/api-registration.php:193
 msgid "Payment preferences were saved."
 msgstr "Payment preferences were saved."
 
-#: app/model/api/api-registration.php:200
+#: app/model/api/api-registration.php:202
 msgid "Payment preferences were not saved."
 msgstr "Payment preferences were not saved."
 
-#: app/model/api/api-registration.php:228
+#: app/model/api/api-registration.php:230
 msgid "We were unable to get the Sales information from Time.ly Network"
 msgstr "We were unable to get the Sales information from Time.ly Network"
 
@@ -1327,11 +1327,51 @@ msgstr "Sign Up"
 msgid "Sign In"
 msgstr "Sign In"
 
+#: app/view/admin/settings.php:209
+msgid "Calendar Type:"
+msgstr "Calendar Type:"
+
+#: app/view/admin/settings.php:211
+msgid "Tourism"
+msgstr "Tourism"
+
+#: app/view/admin/settings.php:212
+msgid "Media"
+msgstr "Media"
+
+#: app/view/admin/settings.php:213
+msgid "Community Hubs"
+msgstr "Community Hubs"
+
+#: app/view/admin/settings.php:214
+msgid "Education"
+msgstr "Education"
+
+#: app/view/admin/settings.php:215
+msgid "Venue/Business"
+msgstr "Venue/Business"
+
+#: app/view/admin/settings.php:216
+msgid "Artist/Performer"
+msgstr "Artist/Performer"
+
+#: app/view/admin/settings.php:217
+msgid "Church/Spiritual"
+msgstr "Church/Spiritual"
+
+#: app/view/admin/settings.php:218
+msgid "Association/Group"
+msgstr "Association/Group"
+
 #: app/view/admin/settings.php:219
+msgid "Other"
+msgstr "Other"
+
+#: app/view/admin/settings.php:231
 msgid "Save Settings"
 msgstr "Save Settings"
 
-#: app/view/admin/settings.php:226
+#: app/view/admin/settings.php:238
 msgid ""
 "If the form below is not working please follow <a href=\"%s\">this link</a>."
 msgstr ""
