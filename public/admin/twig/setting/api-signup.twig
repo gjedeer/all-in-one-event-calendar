@@ -108,6 +108,24 @@
 							<input type="text" name="ai1ec_phone" class="ai1ec-required" />
 						</td>
 					</tr>
+					<tr class="signin">
+						<td>
+							{{ calendar_type_text }}
+						</td>
+						<td>
+							<div class="ai1ec-ticket-field-error">
+								{{ required_text }}
+							</div>
+							<select name="ai1ec_calendar_type" class="ai1ec-required">
+								<option value=""></option>
+								{% for calendar_type_key, calendar_type_option in calendar_types %}
+									<option value="{{ calendar_type_key }}">
+										{{ calendar_type_option }}
+									</option>
+								{% endfor %}
+							</select>
+						</td>
+					</tr>
 					<tr>
 						<td>
 						</td>
