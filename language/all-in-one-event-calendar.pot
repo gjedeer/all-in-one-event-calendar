@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: All-in-One Event Calendar by Time.ly 2.5.18\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/all-in-one-event-calendar\n"
-"POT-Creation-Date: 2017-03-24 21:32:54+00:00\n"
+"POT-Creation-Date: 2017-03-28 16:00:53+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -358,27 +358,27 @@ msgstr ""
 msgid "We were unable to unsubscribe feed"
 msgstr ""
 
-#: app/model/api/api-registration.php:41
+#: app/model/api/api-registration.php:42
 msgid "We were unable to Sign you In for Time.ly Network"
 msgstr ""
 
-#: app/model/api/api-registration.php:68
+#: app/model/api/api-registration.php:70
 msgid "We were unable to Sign you Up for Time.ly Network"
 msgstr ""
 
-#: app/model/api/api-registration.php:161
+#: app/model/api/api-registration.php:163
 msgid "We were unable to Sign you Out of Time.ly Network"
 msgstr ""
 
-#: app/model/api/api-registration.php:191
+#: app/model/api/api-registration.php:193
 msgid "Payment preferences were saved."
 msgstr ""
 
-#: app/model/api/api-registration.php:200
+#: app/model/api/api-registration.php:202
 msgid "Payment preferences were not saved."
 msgstr ""
 
-#: app/model/api/api-registration.php:228
+#: app/model/api/api-registration.php:230
 msgid "We were unable to get the Sales information from Time.ly Network"
 msgstr ""
 
@@ -1200,11 +1200,51 @@ msgstr ""
 msgid "Sign In"
 msgstr ""
 
+#: app/view/admin/settings.php:209
+msgid "Calendar Type:"
+msgstr ""
+
+#: app/view/admin/settings.php:211
+msgid "Tourism"
+msgstr ""
+
+#: app/view/admin/settings.php:212
+msgid "Media"
+msgstr ""
+
+#: app/view/admin/settings.php:213
+msgid "Community Hubs"
+msgstr ""
+
+#: app/view/admin/settings.php:214
+msgid "Education"
+msgstr ""
+
+#: app/view/admin/settings.php:215
+msgid "Venue/Business"
+msgstr ""
+
+#: app/view/admin/settings.php:216
+msgid "Artist/Performer"
+msgstr ""
+
+#: app/view/admin/settings.php:217
+msgid "Church/Spiritual"
+msgstr ""
+
+#: app/view/admin/settings.php:218
+msgid "Association/Group"
+msgstr ""
+
 #: app/view/admin/settings.php:219
+msgid "Other"
+msgstr ""
+
+#: app/view/admin/settings.php:231
 msgid "Save Settings"
 msgstr ""
 
-#: app/view/admin/settings.php:226
+#: app/view/admin/settings.php:238
 msgid ""
 "If the form below is not working please follow <a href=\"%s\">this link</a>."
 msgstr ""

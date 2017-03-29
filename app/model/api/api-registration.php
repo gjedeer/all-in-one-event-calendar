@@ -25,9 +25,10 @@ class Ai1ec_Api_Registration extends Ai1ec_Api_Abstract {
 	 * @return object Response body in JSON.
 	 */
 	public function signin() {
-		$body['email']    = $_POST['ai1ec_email'];
-		$body['password'] = $_POST['ai1ec_password'];
-		$response         = $this->request_api( 'POST', AI1EC_API_URL . 'auth/authenticate', json_encode( $body ), true, array( 'Authorization' => null ) );
+		$body['email']         = $_POST['ai1ec_email'];
+		$body['password']      = $_POST['ai1ec_password'];
+		$body['calendar_type'] = $_POST['ai1ec_calendar_type'];
+		$response              = $this->request_api( 'POST', AI1EC_API_URL . 'auth/authenticate', json_encode( $body ), true, array( 'Authorization' => null ) );
 		if ( $this->is_response_success( $response ) ) {
 			$response_body = (array) $response->body;
 			// Save calendar ID as 0 first, otherwise the auth data won't be saved in the database before creating/finding the calendar
@@ -53,6 +54,7 @@ class Ai1ec_Api_Registration extends Ai1ec_Api_Abstract {
 		$body['password']              = $_POST['ai1ec_password'];
 		$body['password_confirmation'] = $_POST['ai1ec_password_confirmation'];
 		$body['phone']                 = $_POST['ai1ec_phone'];
+		$body['calendar_type']         = $_POST['ai1ec_calendar_type'];
 		$body['terms']                 = $_POST['ai1ec_terms'];
 		$response                      = $this->request_api( 'POST', AI1EC_API_URL . 'auth/register', json_encode( $body ), true );
 		if ( $this->is_response_success( $response ) ) {
