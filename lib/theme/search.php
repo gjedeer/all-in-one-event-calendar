@@ -100,6 +100,7 @@ class Ai1ec_Theme_Search extends Ai1ec_Base {
 	 */
 	protected function _replace_search_globals( array $variables_map ) {
         foreach ( $variables_map as $key => $current_value ) {
+            global $$key;
             $variables_map[$key] = $$key;
             $$key                = $current_value;
         }
