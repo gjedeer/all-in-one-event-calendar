@@ -53,7 +53,7 @@ class SG_iCal_Parser {
 			}
 			curl_setopt($c, CURLOPT_COOKIESESSION, true);
 			curl_setopt($c, CURLOPT_HEADER, true);
-            curl_setopt($c, CURLOPT_FOLLOWLOCATION, true);
+			curl_setopt($c, CURLOPT_FOLLOWLOCATION, true);
 
 			$content = curl_exec($c);
 			$ct = curl_getinfo($c, CURLINFO_CONTENT_TYPE);
