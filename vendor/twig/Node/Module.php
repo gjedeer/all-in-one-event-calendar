@@ -173,9 +173,9 @@ class Twig_Node_Module extends Twig_Node
                         ->write(sprintf("\$_trait_%s_blocks[", $i))
                         ->subcompile($value)
                         ->raw(sprintf("] = \$_trait_%s_blocks[", $i))
-                        ->string($key)
+                        ->_string($key)
                         ->raw(sprintf("]; unset(\$_trait_%s_blocks[", $i))
-                        ->string($key)
+                        ->_string($key)
                         ->raw("]);\n\n")
                     ;
                 }

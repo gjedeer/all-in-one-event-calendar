@@ -63,7 +63,7 @@ class Twig_Node_Macro extends Twig_Node
             foreach ($this->getNode('arguments') as $name => $default) {
                 $compiler
                     ->write('')
-                    ->string($name)
+                    ->_string($name)
                     ->raw(' => $_'.$name)
                     ->raw(",\n")
                 ;

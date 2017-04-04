@@ -37,7 +37,7 @@ class Twig_Node_Expression_Name extends Twig_Node_Expression
         } elseif ($this->getAttribute('always_defined')) {
             $compiler
                 ->raw('$context[')
-                ->string($name)
+                ->_string($name)
                 ->raw(']')
             ;
         } else {
@@ -48,21 +48,21 @@ class Twig_Node_Expression_Name extends Twig_Node_Expression
                 // PHP 5.4 ternary operator performance was optimized
                 $compiler
                     ->raw('(isset($context[')
-                    ->string($name)
+                    ->_string($name)
                     ->raw(']) ? $context[')
-                    ->string($name)
+                    ->_string($name)
                     ->raw('] : ')
                 ;
 
                 if ($this->getAttribute('ignore_strict_check') || !$compiler->getEnvironment()->isStrictVariables()) {
                     $compiler->raw('null)');
                 } else {
-                    $compiler->raw('$this->getContext($context, ')->string($name)->raw('))');
+                    $compiler->raw('$this->getContext($context, ')->_string($name)->raw('))');
                 }
             } else {
                 $compiler
                     ->raw('$this->getContext($context, ')
-                    ->string($name)
+                    ->_string($name)
                 ;
 
                 if ($this->getAttribute('ignore_strict_check')) {
