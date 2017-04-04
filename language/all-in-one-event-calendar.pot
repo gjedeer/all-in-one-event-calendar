@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the All-in-One Event Calendar by Time.ly package.
 msgid ""
 msgstr ""
-"Project-Id-Version: All-in-One Event Calendar by Time.ly 2.5.17\n"
+"Project-Id-Version: All-in-One Event Calendar by Time.ly 2.5.18\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/all-in-one-event-calendar\n"
-"POT-Creation-Date: 2017-03-07 19:17:51+00:00\n"
+"POT-Creation-Date: 2017-03-28 16:00:53+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -358,27 +358,27 @@ msgstr ""
 msgid "We were unable to unsubscribe feed"
 msgstr ""
 
-#: app/model/api/api-registration.php:41
+#: app/model/api/api-registration.php:42
 msgid "We were unable to Sign you In for Time.ly Network"
 msgstr ""
 
-#: app/model/api/api-registration.php:68
+#: app/model/api/api-registration.php:70
 msgid "We were unable to Sign you Up for Time.ly Network"
 msgstr ""
 
-#: app/model/api/api-registration.php:161
+#: app/model/api/api-registration.php:163
 msgid "We were unable to Sign you Out of Time.ly Network"
 msgstr ""
 
-#: app/model/api/api-registration.php:191
+#: app/model/api/api-registration.php:193
 msgid "Payment preferences were saved."
 msgstr ""
 
-#: app/model/api/api-registration.php:200
+#: app/model/api/api-registration.php:202
 msgid "Payment preferences were not saved."
 msgstr ""
 
-#: app/model/api/api-registration.php:228
+#: app/model/api/api-registration.php:230
 msgid "We were unable to get the Sales information from Time.ly Network"
 msgstr ""
 
@@ -1200,11 +1200,51 @@ msgstr ""
 msgid "Sign In"
 msgstr ""
 
+#: app/view/admin/settings.php:209
+msgid "Calendar Type:"
+msgstr ""
+
+#: app/view/admin/settings.php:211
+msgid "Tourism"
+msgstr ""
+
+#: app/view/admin/settings.php:212
+msgid "Media"
+msgstr ""
+
+#: app/view/admin/settings.php:213
+msgid "Community Hubs"
+msgstr ""
+
+#: app/view/admin/settings.php:214
+msgid "Education"
+msgstr ""
+
+#: app/view/admin/settings.php:215
+msgid "Venue/Business"
+msgstr ""
+
+#: app/view/admin/settings.php:216
+msgid "Artist/Performer"
+msgstr ""
+
+#: app/view/admin/settings.php:217
+msgid "Church/Spiritual"
+msgstr ""
+
+#: app/view/admin/settings.php:218
+msgid "Association/Group"
+msgstr ""
+
 #: app/view/admin/settings.php:219
+msgid "Other"
+msgstr ""
+
+#: app/view/admin/settings.php:231
 msgid "Save Settings"
 msgstr ""
 
-#: app/view/admin/settings.php:226
+#: app/view/admin/settings.php:238
 msgid ""
 "If the form below is not working please follow <a href=\"%s\">this link</a>."
 msgstr ""
@@ -1788,18 +1828,18 @@ msgstr ""
 msgid "Edit this occurrence (%s)"
 msgstr ""
 
-#: app/view/event/single.php:207
+#: app/view/event/single.php:210
 msgid ""
 "This post was replicated from another site's <a href=\"%s\" title="
 "\"iCalendar feed\"><i class=\"ai1ec-fa ai1ec-fa-calendar\"></i> calendar "
 "feed</a>."
 msgstr ""
 
-#: app/view/event/single.php:211
+#: app/view/event/single.php:214
 msgid "This post was imported from a CSV/ICS file."
 msgstr ""
 
-#: app/view/event/single.php:224
+#: app/view/event/single.php:227
 msgid "View original"
 msgstr ""
 
@@ -1912,7 +1952,7 @@ msgstr ""
 msgid "noCAPTCHA private key:"
 msgstr ""
 
-#: lib/captcha/provider/nocaptcha.php:86 lib/captcha/provider/recaptcha.php:108
+#: lib/captcha/provider/nocaptcha.php:86 lib/captcha/provider/recaptcha.php:110
 msgid "Please try verifying you are human again."
 msgstr ""
 
@@ -2019,7 +2059,7 @@ msgstr ""
 msgid "Error encountered: %s"
 msgstr ""
 
-#: lib/date/system.php:202
+#: lib/date/system.php:203
 msgid "GMT%+d:%02d"
 msgstr ""
 
@@ -2107,11 +2147,11 @@ msgstr ""
 msgid "Try reactivating plugin"
 msgstr ""
 
-#: lib/exception/handler.php:581
+#: lib/exception/handler.php:584
 msgid "Toggle error details"
 msgstr ""
 
-#: lib/exception/handler.php:582
+#: lib/exception/handler.php:585
 msgid "Error Details:"
 msgstr ""
 

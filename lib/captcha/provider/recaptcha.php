@@ -96,10 +96,12 @@ class Ai1ec_Captcha_Recaptcha_Provider extends Ai1ec_Captcha_Provider {
 			$response['success'] = false;
 		}
 
+		$remoteAddress = isset( $_SERVER['HTTP_REFERER'] ) ? $_SERVER['HTTP_REFERER'] : null;
+
 		require_once( AI1EC_VENDOR_PATH . 'recaptcha/recaptchalib.php' );
 		$resp = recaptcha_check_answer(
 			$this->_settings->get( 'google_recaptcha_private_key' ),
-			$_SERVER['REMOTE_ADDR'],
+			$remoteAddress,
 			$data['recaptcha_challenge_field'],
 			$data['recaptcha_response_field']
 		);

@@ -206,6 +206,18 @@ class Ai1ec_View_Admin_Settings extends Ai1ec_View_Admin_Abstract {
 			'sign_out_confirm'      => Ai1ec_I18n::__( 'Sign Out' ),
 			'sign_up_button_text'   => Ai1ec_I18n::__( 'Sign Up' ),
 			'sign_in_button_text'   => Ai1ec_I18n::__( 'Sign In' ),
+			'calendar_type_text'    => Ai1ec_I18n::__( 'Calendar Type:' ),
+			'calendar_types'        => array(
+					'tourism'           => Ai1ec_I18n::__( 'Tourism' ),
+					'media'             => Ai1ec_I18n::__( 'Media' ),
+					'community_hubs'    => Ai1ec_I18n::__( 'Community Hubs' ),
+					'education'         => Ai1ec_I18n::__( 'Education' ),
+					'venue_business'    => Ai1ec_I18n::__( 'Venue/Business' ),
+					'artist_performer'  => Ai1ec_I18n::__( 'Artist/Performer' ),
+					'church_spiritual'  => Ai1ec_I18n::__( 'Church/Spiritual' ),
+					'association_group' => Ai1ec_I18n::__( 'Association/Group' ),
+					'other'             => Ai1ec_I18n::__( 'Other' )
+			),
 		);
 		$loader->get_file( 'setting/api-signup.twig', $signup_args, true )->render();
 		

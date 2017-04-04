@@ -689,7 +689,11 @@ JSC;
 	 * @return boolean TRUE if we are in the calendar feeds page FALSE otherwise
 	 */
 	public function are_we_on_calendar_feeds_page() {
-		$path_details = pathinfo( $_SERVER["SCRIPT_NAME"] );
+		if ( !isset( $_SERVER['SCRIPT_NAME'] ) ) {
+			return FALSE;
+		}
+
+		$path_details = pathinfo( $_SERVER['SCRIPT_NAME'] );
 		$post_type = isset( $_GET['post_type'] ) ? $_GET['post_type'] : FALSE;
 		$page = isset( $_GET['page'] ) ? $_GET['page'] : FALSE;
 		if( $post_type === FALSE || $page === FALSE ) {
@@ -768,7 +772,11 @@ JSC;
 	 * @return boolean TRUE if we are editing an event FALSE otherwise
 	 */
 	private function _are_we_editing_an_event() {
-		$path_details = pathinfo( $_SERVER["SCRIPT_NAME"] );
+		if ( !isset( $_SERVER['SCRIPT_NAME'] ) ) {
+			return FALSE;
+		}
+
+		$path_details = pathinfo( $_SERVER['SCRIPT_NAME'] );
 		$post_id = isset( $_GET['post'] ) ? $_GET['post'] : FALSE;
 		$action = isset( $_GET['action'] ) ? $_GET['action'] : FALSE;
 		if( $post_id === FALSE || $action === FALSE ) {
@@ -789,6 +797,10 @@ JSC;
 	 * @return boolean TRUE if we are on the events list FALSE otherwise
 	 */
 	private function _are_we_managing_events_list() {
+		if ( !isset( $_SERVER['SCRIPT_NAME'] ) ) {
+			return FALSE;
+		}
+
 		$path_details = pathinfo( $_SERVER['SCRIPT_NAME'] );
 		$post_type    = isset( $_GET['post_type'] ) ? $_GET['post_type'] : FALSE;
 		if ( FALSE === $post_type ) {
@@ -809,6 +821,10 @@ JSC;
 	 * @return boolean TRUE if we are creating a new event FALSE otherwise
 	 */
 	private function _are_we_creating_a_new_event() {
+		if ( !isset( $_SERVER['SCRIPT_NAME'] ) ) {
+			return FALSE;
+		}
+
 		$path_details = pathinfo( $_SERVER['SCRIPT_NAME'] );
 		$post_type = isset( $_GET['post_type'] ) ? $_GET['post_type'] : '';
 		return $path_details['basename'] === 'post-new.php' &&
@@ -821,6 +837,10 @@ JSC;
 	 * @return boolean TRUE if we are accessing the settings page FALSE otherwise
 	 */
 	private function _are_we_accessing_the_calendar_settings_page() {
+		if ( !isset( $_SERVER['SCRIPT_NAME'] ) ) {
+			return FALSE;
+		}
+
 		$path_details = pathinfo( $_SERVER['SCRIPT_NAME'] );
 		$page = isset( $_GET['page'] ) ? $_GET['page'] : '';
 		return $path_details['basename'] === 'edit.php' &&
@@ -828,6 +848,10 @@ JSC;
 	}
 
 	protected function _are_we_creating_widgets() {
+		if ( !isset( $_SERVER['SCRIPT_NAME'] ) ) {
+			return FALSE;
+		}
+
 		$path_details = pathinfo( $_SERVER['SCRIPT_NAME'] );
 		$page = isset( $_GET['page'] ) ? $_GET['page'] : '';
 		return $path_details['basename'] === 'edit.php' &&
@@ -835,6 +859,10 @@ JSC;
 	}
 
 	protected function _are_we_managing_tickets() {
+		if ( !isset( $_SERVER['SCRIPT_NAME'] ) ) {
+			return FALSE;
+		}
+
 		$path_details = pathinfo( $_SERVER['SCRIPT_NAME'] );
 		$page = isset( $_GET['page'] ) ? $_GET['page'] : '';
 		return $path_details['basename'] === 'edit.php' &&
@@ -847,7 +875,11 @@ JSC;
 	 * @return boolean TRUE if we are accessing a single event page FALSE otherwise
 	 */
 	private function _are_we_editing_less_variables() {
-		$path_details = pathinfo( $_SERVER["SCRIPT_NAME"] );
+		if ( !isset( $_SERVER['SCRIPT_NAME'] ) ) {
+			return FALSE;
+		}
+
+		$path_details = pathinfo( $_SERVER['SCRIPT_NAME'] );
 		$page = isset( $_GET['page'] ) ? $_GET['page'] : '';
 		return $path_details['basename'] === 'edit.php' && $page === AI1EC_PLUGIN_NAME . '-edit-css';
 	}
@@ -858,7 +890,11 @@ JSC;
 	 * @return boolean TRUE if we are accessing the events category page FALSE otherwise
 	 */
 	private function _are_we_editing_event_categories() {
-		$path_details = pathinfo( $_SERVER["SCRIPT_NAME"] );
+		if ( !isset( $_SERVER['SCRIPT_NAME'] ) ) {
+			return FALSE;
+		}
+
+		$path_details = pathinfo( $_SERVER['SCRIPT_NAME'] );
 		$post_type = isset( $_GET['post_type'] ) ? $_GET['post_type'] : '';
 		return (
 			$path_details['basename'] === 'edit-tags.php' ||
