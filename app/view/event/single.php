@@ -162,8 +162,8 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
 		$aco = $this->_registry->get( 'acl.aco' );
 		if ( ! $aco->is_our_post_type() ) return;
 
-		// Get Event and process desciption
-        $instance_id     = ( isset( $_GET[ 'instance_id' ] ) ) ? $_GET[ 'instance_id' ] : null;
+		// Get Event and process description
+		$instance_id     = ( isset( $_GET[ 'instance_id' ] ) ) ? $_GET[ 'instance_id' ] : null;
 
 		if ( !is_null( $instance_id ) ) {
 			$instance_id = preg_replace( '/\D/', '', $instance_id );
