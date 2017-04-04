@@ -27,7 +27,7 @@ class Ai1ec_View_Admin_Settings extends Ai1ec_View_Admin_Abstract {
 	public function display_page() {
 		$settings = $this->_registry->get( 'model.settings' );
 		$args = array(
-			'title' => Ai1ec_I18n::_trans(
+			'title' => Ai1ec_I18n::__(
 				'All-in-One Event Calendar: Settings'
 			),
 			'nonce' => array(
@@ -65,8 +65,8 @@ class Ai1ec_View_Admin_Settings extends Ai1ec_View_Admin_Abstract {
 	public function add_page() {
 		$settings_page = add_submenu_page(
 			AI1EC_ADMIN_BASE_URL,
-			Ai1ec_I18n::_trans( 'Settings' ),
-			Ai1ec_I18n::_trans( 'Settings' ),
+			Ai1ec_I18n::__( 'Settings' ),
+			Ai1ec_I18n::__( 'Settings' ),
 			'manage_ai1ec_options',
 			AI1EC_PLUGIN_NAME . '-settings',
 			array( $this, 'display_page' )
@@ -137,19 +137,19 @@ class Ai1ec_View_Admin_Settings extends Ai1ec_View_Admin_Abstract {
 	public function display_meta_box( $object, $box )  {
 		$tabs = array(
 			'viewing-events' => array(
-				'name' => Ai1ec_I18n::_trans( 'Viewing Events' ),
+				'name' => Ai1ec_I18n::__( 'Viewing Events' ),
 			),
 			'editing-events' => array(
-				'name' => Ai1ec_I18n::_trans( 'Adding/Editing Events' ),
+				'name' => Ai1ec_I18n::__( 'Adding/Editing Events' ),
 			),
 			'advanced' => array(
-				'name' => Ai1ec_I18n::_trans( 'Advanced' ),
+				'name' => Ai1ec_I18n::__( 'Advanced' ),
 				'items' => array(
-					'advanced'       => Ai1ec_I18n::_trans( 'Advanced Settings' ),
-					'embedded-views' => Ai1ec_I18n::_trans( 'Shortcodes' ),
-					'email'          => Ai1ec_I18n::_trans( 'Email Templates' ),
-					'apis'           => Ai1ec_I18n::_trans( 'External Services' ),
-					'cache'          => Ai1ec_I18n::_trans( 'Cache Report' ),
+					'advanced'       => Ai1ec_I18n::__( 'Advanced Settings' ),
+					'embedded-views' => Ai1ec_I18n::__( 'Shortcodes' ),
+					'email'          => Ai1ec_I18n::__( 'Email Templates' ),
+					'apis'           => Ai1ec_I18n::__( 'External Services' ),
+					'cache'          => Ai1ec_I18n::__( 'Cache Report' ),
 				)
 			),
 		);
@@ -170,7 +170,7 @@ class Ai1ec_View_Admin_Settings extends Ai1ec_View_Admin_Abstract {
 		$signup_args       = array(
 			'api_signed'            => $signed_to_api,
 			'signup_available'      => $signup_available,
-			'title'                 => Ai1ec_I18n::_trans(
+			'title'                 => Ai1ec_I18n::__(
 				'Please, Sign In to Timely Network.'
 			),
 			'nonce'                 => array(
@@ -181,31 +181,31 @@ class Ai1ec_View_Admin_Settings extends Ai1ec_View_Admin_Abstract {
 			'api_action'            =>
 				'?controller=front&action=ai1ec_api_ticketing_signup&plugin=' .
 				AI1EC_PLUGIN_NAME,
-			'required_text'         => Ai1ec_I18n::_trans( 'This field is required.' ),
-			'register_text'         => Ai1ec_I18n::_trans( 'Register' ),
-			'sign_in_text'          => Ai1ec_I18n::_trans( 'Sign in' ),
-			'signed_in_text'        => Ai1ec_I18n::_trans(
+			'required_text'         => Ai1ec_I18n::__( 'This field is required.' ),
+			'register_text'         => Ai1ec_I18n::__( 'Register' ),
+			'sign_in_text'          => Ai1ec_I18n::__( 'Sign in' ),
+			'signed_in_text'        => Ai1ec_I18n::__(
 				'You are signed in to <b>Timely Network</b> as ' . $account
 			),
-			'sign_out_text'         => Ai1ec_I18n::_trans( 'Sign out' ),
+			'sign_out_text'         => Ai1ec_I18n::__( 'Sign out' ),
 			'can_sign_out'          => apply_filters( 'ai1ec_api_can_sign_out', true ),
-			'full_name_text'        => Ai1ec_I18n::_trans( 'Full Name:' ),
-			'hide_form_text'        => Ai1ec_I18n::_trans( 'Hide form' ),
-			'show_form_text'        => Ai1ec_I18n::_trans( 'Show form' ),
-			'email_text'            => Ai1ec_I18n::_trans( 'Email:' ),
-			'password_text'         => Ai1ec_I18n::_trans( 'Password:' ),
-			'confirm_password_text' => Ai1ec_I18n::_trans( 'Confirm Password:' ),
-			'phone_number_text'     => Ai1ec_I18n::_trans( 'Phone Number:' ),
-			'terms_text'            => Ai1ec_I18n::_trans(
+			'full_name_text'        => Ai1ec_I18n::__( 'Full Name:' ),
+			'hide_form_text'        => Ai1ec_I18n::__( 'Hide form' ),
+			'show_form_text'        => Ai1ec_I18n::__( 'Show form' ),
+			'email_text'            => Ai1ec_I18n::__( 'Email:' ),
+			'password_text'         => Ai1ec_I18n::__( 'Password:' ),
+			'confirm_password_text' => Ai1ec_I18n::__( 'Confirm Password:' ),
+			'phone_number_text'     => Ai1ec_I18n::__( 'Phone Number:' ),
+			'terms_text'            => Ai1ec_I18n::__(
 				'I confirm that I have read, understand and agree with the <a href="https://time.ly/tos">terms of service</a>.'
 			),
-			'sign_out_warning'      => Ai1ec_I18n::_trans(
+			'sign_out_warning'      => Ai1ec_I18n::__(
 				'<h4>Attention Required:</h4>If you choose to sign-out of the API Timely Network this will close all the created tickets and remove user access to them. In this case, on the event page, users will see the status “Event closed”.'
 			),
-			'sign_out_cancel'       => Ai1ec_I18n::_trans( 'Cancel' ),
-			'sign_out_confirm'      => Ai1ec_I18n::_trans( 'Sign Out' ),
-			'sign_up_button_text'   => Ai1ec_I18n::_trans( 'Sign Up' ),
-			'sign_in_button_text'   => Ai1ec_I18n::_trans( 'Sign In' ),
+			'sign_out_cancel'       => Ai1ec_I18n::__( 'Cancel' ),
+			'sign_out_confirm'      => Ai1ec_I18n::__( 'Sign Out' ),
+			'sign_up_button_text'   => Ai1ec_I18n::__( 'Sign Up' ),
+			'sign_in_button_text'   => Ai1ec_I18n::__( 'Sign In' ),
 		);
 		$loader->get_file( 'setting/api-signup.twig', $signup_args, true )->render();
 		
@@ -216,14 +216,14 @@ class Ai1ec_View_Admin_Settings extends Ai1ec_View_Admin_Abstract {
 			'submit'        => array(
 				'id'          => 'ai1ec_save_settings',
 				'value'       => '<i class="ai1ec-fa ai1ec-fa-save ai1ec-fa-fw"></i> ' .
-					Ai1ec_I18n::_trans( 'Save Settings' ),
+					Ai1ec_I18n::__( 'Save Settings' ),
 				'args'        => array(
 					'class'     => 'ai1ec-btn ai1ec-btn-primary ai1ec-btn-lg',
 				),
 			),
 			'pre_tabs_markup'   => sprintf(
 				'<div class="ai1ec-gzip-causes-js-failure">' .
-				Ai1ec_I18n::_trans(
+				Ai1ec_I18n::__(
 					'If the form below is not working please follow <a href="%s">this link</a>.'
 				) .
 				'</div>',

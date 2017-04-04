@@ -61,7 +61,7 @@ class Ai1ec_Twig_Ai1ec_Extension extends Twig_Extension {
 			new Twig_SimpleFilter( 'dropdown_filter',   array( $this, 'dropdown_filter' ),
 				array( 'is_safe' => array( 'html' ) )
 			),
-			new Twig_SimpleFilter( '__',                'Ai1ec_I18n::_trans' ),
+			new Twig_SimpleFilter( '__',                'Ai1ec_I18n::__' ),
 		);
 	}
 

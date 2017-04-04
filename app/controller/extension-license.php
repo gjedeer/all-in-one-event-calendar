@@ -50,7 +50,7 @@ abstract class Ai1ec_Base_License_Controller extends Ai1ec_Base_Extension_Contro
 	public function add_tabs( array $tabs ) {
 		if ( ! isset( $tabs['extensions'] ) ) {
 			$tabs['extensions'] = array(
-				'name'  => Ai1ec_I18n::_trans( 'Add-ons' ),
+				'name'  => Ai1ec_I18n::__( 'Add-ons' ),
 				'items' => array(),
 			);
 		}

@@ -179,7 +179,7 @@ class Ai1ec_Database_Applicator extends Ai1ec_Base {
 			}
 			if ( strtolower( $c_type ) !== $type ) {
 				return sprintf(
-					Ai1ec_I18n::_trans(
+					Ai1ec_I18n::__(
 						'Date columns in table %s have different types.'
 					),
 					$t_name

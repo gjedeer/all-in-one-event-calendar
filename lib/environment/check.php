@@ -72,7 +72,7 @@ class Ai1ec_Environment_Checks extends Ai1ec_Base {
 				$current_user->has_cap( 'manage_ai1ec_options' )
 			) {
 				$msg = sprintf(
-					Ai1ec_I18n::_trans( 'The plugin is successfully installed! <a href="%s">Add some events</a> and see them on your <a href="%s">Calendar page</a>.<br />Visit the <a href="%s">Settings page</a> to configure the plugin and get most of it.' ),
+					Ai1ec_I18n::__( 'The plugin is successfully installed! <a href="%s">Add some events</a> and see them on your <a href="%s">Calendar page</a>.<br />Visit the <a href="%s">Settings page</a> to configure the plugin and get most of it.' ),
 					'post-new.php?post_type=ai1ec_event',
 					get_page_link( $calendar_page_id ),
 					ai1ec_admin_url( AI1EC_SETTINGS_BASE_URL )
@@ -84,7 +84,7 @@ class Ai1ec_Environment_Checks extends Ai1ec_Base {
 					array( Ai1ec_Notification_Admin::RCPT_ADMIN )
 				);
 			} else {
-				$msg = Ai1ec_I18n::_trans(
+				$msg = Ai1ec_I18n::__(
 					'The plugin is installed, but has not been configured. Please log in as an Administrator to set it up.'
 				);
 				$notification->store(
@@ -108,7 +108,7 @@ class Ai1ec_Environment_Checks extends Ai1ec_Base {
 			$is_signed = $api_reg->is_signed();
 
 			if ( 0 < count( $rows ) && ! $is_signed ) {
-				$msg = Ai1ec_I18n::_trans(
+				$msg = Ai1ec_I18n::__(
 						'<b>ACTION REQUIRED!</b> Please, <a href="edit.php?post_type=ai1ec_event&page=all-in-one-event-calendar-settings">sign</a> into Timely Network to continue syncing your imported events.'
 					);
 				$notification->store(
@@ -126,7 +126,7 @@ class Ai1ec_Environment_Checks extends Ai1ec_Base {
 			! function_exists( 'iconv' ) &&
 			! $option->get( 'ai1ec_iconv_notification' )
 		) {
-			$msg = Ai1ec_I18n::_trans(
+			$msg = Ai1ec_I18n::__(
 					'PHP extension "iconv" needed for All-In-One-Event-Calendar is missing. Please, check your PHP configuration.<br />'
 				);
 			$notification->store(
@@ -142,7 +142,7 @@ class Ai1ec_Environment_Checks extends Ai1ec_Base {
 			! function_exists( 'mb_check_encoding' ) &&
 			! $option->get( 'ai1ec_mbstring_notification' )
 		) {
-			$msg = Ai1ec_I18n::_trans(
+			$msg = Ai1ec_I18n::__(
 					'PHP extension "mbstring" needed for All-In-One-Event-Calendar is missing. Please, check your PHP configuration.<br />'
 				);
 			$notification->store(
@@ -252,8 +252,8 @@ class Ai1ec_Environment_Checks extends Ai1ec_Base {
 		}
 		$version = $ev_data['Version'];
 		if ( -1 === version_compare( $version, $min_version ) ) {
-			$msg1 = Ai1ec_I18n::_trans( 'The add-on <strong>%s</strong> must be updated to at least version %s to maintain compatibility with the core calendar.' );
-			$msg2 = Ai1ec_I18n::_trans( 'If you do not see update notices below, ensure you have properly <a href="https://time.ly/document/user-guide/getting-started/license-keys/" target="_blank">entered your licence keys</a>. Alternatively, navigate to <a href="https://time.ly/your-account/">your account</a> to download the latest version of the add-on(s) and <a href="http://time.ly/document/user-guide/troubleshooting/perform-manual-upgrade/">update manually</a>. Please <a href="https://time.ly/forums/">post in the forum</a> if you have trouble. We are happy to help.' );
+			$msg1 = Ai1ec_I18n::__( 'The add-on <strong>%s</strong> must be updated to at least version %s to maintain compatibility with the core calendar.' );
+			$msg2 = Ai1ec_I18n::__( 'If you do not see update notices below, ensure you have properly <a href="https://time.ly/document/user-guide/getting-started/license-keys/" target="_blank">entered your licence keys</a>. Alternatively, navigate to <a href="https://time.ly/your-account/">your account</a> to download the latest version of the add-on(s) and <a href="http://time.ly/document/user-guide/troubleshooting/perform-manual-upgrade/">update manually</a>. Please <a href="https://time.ly/forums/">post in the forum</a> if you have trouble. We are happy to help.' );
 
 			$message = sprintf(
 				'<span class="highlight" style="margin: 0 -6px; padding: 4px 6px">' .

@@ -23,7 +23,7 @@ class Ai1ec_View_Add_New_Event extends Ai1ec_Base {
 	public function event_meta_box_container() {
 		add_meta_box(
 			AI1EC_POST_TYPE,
-			Ai1ec_I18n::_trans( 'Event Details' ),
+			Ai1ec_I18n::__( 'Event Details' ),
 			array( $this, 'meta_box_view' ),
 			AI1EC_POST_TYPE,
 			'normal',
@@ -409,7 +409,7 @@ class Ai1ec_View_Add_New_Event extends Ai1ec_Base {
 			$submitter_info = $event->get_submitter_info();
 			if (  null !== $submitter_info ) {
 				if ( 1 === $submitter_info['is_organizer'] ) {
-					$submitter_html = Ai1ec_I18n::_trans( '<span class="ai1ec-info-text">The event was submitted by this Organizer.</span>' );
+					$submitter_html = Ai1ec_I18n::__( '<span class="ai1ec-info-text">The event was submitted by this Organizer.</span>' );
 				} else if ( isset( $submitter_info['email'] ) ||
 					isset( $submitter_info['name'] ) ) {
 					$submitted_by   = '';
@@ -418,11 +418,11 @@ class Ai1ec_View_Add_New_Event extends Ai1ec_Base {
 					}
 					if ( false === ai1ec_is_blank( $submitter_info['email'] ) ) {
 						if ( '' !== $submitted_by ) {
-							$submitted_by .= Ai1ec_I18n::_trans( ', email: ' );
+							$submitted_by .= Ai1ec_I18n::__( ', email: ' );
 						}	
 						$submitted_by .= sprintf( '<a href="mailto:%s" target="_top">%s</a>', $submitter_info['email'], $submitter_info['email'] ) ;
 					}
-					$submitter_html = sprintf( Ai1ec_I18n::_trans( '<span class="ai1ec-info-text">The event was submitted by %s.</span>' ),
+					$submitter_html = sprintf( Ai1ec_I18n::__( '<span class="ai1ec-info-text">The event was submitted by %s.</span>' ),
 							$submitted_by 
 						);
 				}
@@ -502,8 +502,8 @@ class Ai1ec_View_Add_New_Event extends Ai1ec_Base {
 		$args = array(
 			'src'         => $banner_image_meta && $banner_image_meta[0]
 				? $banner_image_meta[0] : false,
-			'set_text'    => Ai1ec_I18n::_trans( 'Set banner image' ),
-			'remove_text' => Ai1ec_I18n::_trans( 'Remove banner image' ),
+			'set_text'    => Ai1ec_I18n::__( 'Set banner image' ),
+			'remove_text' => Ai1ec_I18n::__( 'Remove banner image' ),
 
 		);
 		echo $theme_loader

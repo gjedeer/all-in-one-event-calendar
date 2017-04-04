@@ -152,8 +152,8 @@ class Ai1ec_View_Admin_EventCategory extends Ai1ec_Base {
 		$args = array(
 			'style'       => $style,
 			'color'       => $clr,
-			'label'       => Ai1ec_I18n::_trans( 'Category Color' ),
-			'description' => Ai1ec_I18n::_trans(
+			'label'       => Ai1ec_I18n::__( 'Category Color' ),
+			'description' => Ai1ec_I18n::__(
 				'Events in this category will be identified by this color'
 			),
 			'edit'        => true,

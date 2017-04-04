@@ -70,7 +70,7 @@ class Ai1ec_Calendar_View_Week extends Ai1ec_Calendar_View_Abstract {
 		$pagination_links = $this->_get_pagination( $args, $title );
 
 		$time_format = $this->_registry->get( 'model.option' )
-			->get( 'time_format', Ai1ec_I18n::_trans( 'g a' ) );
+			->get( 'time_format', Ai1ec_I18n::__( 'g a' ) );
 
 		// Calculate today marker's position.
 		$now = $this->_registry->get( 'date.time', 'now', 'sys.default' );

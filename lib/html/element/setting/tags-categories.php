@@ -36,7 +36,7 @@ class Ai1ec_Html_Setting_Tags_Categories extends Ai1ec_Html_Element_Settings {
 		if ( ! empty ( $tags ) ) {
 			$args['tags'] = $this->_get_select_for_terms(
 				'tags',
-				Ai1ec_I18n::_trans( 'Tags' ),
+				Ai1ec_I18n::__( 'Tags' ),
 				$tags
 			);
 		}
@@ -44,7 +44,7 @@ class Ai1ec_Html_Setting_Tags_Categories extends Ai1ec_Html_Element_Settings {
 		if ( ! empty ( $categories ) ) {
 			$args['categories'] = $this->_get_select_for_terms(
 				'categories',
-				Ai1ec_I18n::_trans( 'Categories' ),
+				Ai1ec_I18n::__( 'Categories' ),
 				$categories
 			);
 		}

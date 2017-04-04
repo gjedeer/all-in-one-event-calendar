@@ -199,7 +199,7 @@ class Ai1ec_Date_System extends Ai1ec_Base {
 		$offset_h = (int)( $timezone / 60 );
 		$offset_m = absint( $timezone - $offset_h * 60 );
 		$timezone = sprintf(
-			Ai1ec_I18n::_trans( 'GMT%+d:%02d' ),
+			Ai1ec_I18n::__( 'GMT%+d:%02d' ),
 			$offset_h,
 			$offset_m
 		);

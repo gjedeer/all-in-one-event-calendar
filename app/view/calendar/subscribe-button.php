@@ -19,19 +19,19 @@ class Ai1ec_View_Calendar_SubscribeButton {
 	public function get_labels() {
 		return array(
 			'label' => array(
-				'timely'    => Ai1ec_I18n::_trans( 'Add to Timely Calendar' ),
-				'google'    => Ai1ec_I18n::_trans( 'Add to Google' ),
-				'outlook'   => Ai1ec_I18n::_trans( 'Add to Outlook' ),
-				'apple'     => Ai1ec_I18n::_trans( 'Add to Apple Calendar' ),
-				'plaintext' => Ai1ec_I18n::_trans( 'Add to other calendar' ),
-				'xml'       => Ai1ec_I18n::_trans( 'Export to XML' ),
+				'timely'    => Ai1ec_I18n::__( 'Add to Timely Calendar' ),
+				'google'    => Ai1ec_I18n::__( 'Add to Google' ),
+				'outlook'   => Ai1ec_I18n::__( 'Add to Outlook' ),
+				'apple'     => Ai1ec_I18n::__( 'Add to Apple Calendar' ),
+				'plaintext' => Ai1ec_I18n::__( 'Add to other calendar' ),
+				'xml'       => Ai1ec_I18n::__( 'Export to XML' ),
 			),
 			'title' => array(
-				'timely'    => Ai1ec_I18n::_trans( 'Copy this URL for your own Timely calendar or click to add to your rich-text calendar' ),
-				'google'    => Ai1ec_I18n::_trans( 'Subscribe to this calendar in your Google Calendar' ),
-				'outlook'   => Ai1ec_I18n::_trans( 'Subscribe to this calendar in MS Outlook' ),
-				'apple'     => Ai1ec_I18n::_trans( 'Subscribe to this calendar in Apple Calendar/iCal' ),
-				'plaintext' => Ai1ec_I18n::_trans( 'Subscribe to this calendar in another plain-text calendar' ),
+				'timely'    => Ai1ec_I18n::__( 'Copy this URL for your own Timely calendar or click to add to your rich-text calendar' ),
+				'google'    => Ai1ec_I18n::__( 'Subscribe to this calendar in your Google Calendar' ),
+				'outlook'   => Ai1ec_I18n::__( 'Subscribe to this calendar in MS Outlook' ),
+				'apple'     => Ai1ec_I18n::__( 'Subscribe to this calendar in Apple Calendar/iCal' ),
+				'plaintext' => Ai1ec_I18n::__( 'Subscribe to this calendar in another plain-text calendar' ),
 			),
 		);
 	}

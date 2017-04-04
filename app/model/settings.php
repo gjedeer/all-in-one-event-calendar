@@ -398,7 +398,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class' => 'calendar-page-selector',
 					'tab'   => 'viewing-events',
 					'item'  => 'viewing-events',
-					'label' => Ai1ec_I18n::_trans( 'Calendar page' )
+					'label' => Ai1ec_I18n::__( 'Calendar page' )
 				),
 				'default'  => false,
 			),
@@ -408,7 +408,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class'   => 'select',
 					'tab'     => 'viewing-events',
 					'item'    => 'viewing-events',
-					'label'   => Ai1ec_I18n::_trans( 'Week starts on' ),
+					'label'   => Ai1ec_I18n::__( 'Week starts on' ),
 					'options' => 'get_weekdays',
 				),
 				'default'  => $this->_registry->get( 'model.option' )->get(
@@ -421,7 +421,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class' => 'enabled-views',
 					'tab'   => 'viewing-events',
 					'item'  => 'viewing-events',
-					'label' => Ai1ec_I18n::_trans( 'Available views' ),
+					'label' => Ai1ec_I18n::__( 'Available views' ),
 				),
 				'default'  => array(
 					'agenda' => array(
@@ -476,7 +476,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class'     => 'select',
 					'tab'       => 'viewing-events',
 					'item'      => 'viewing-events',
-					'label'     => Ai1ec_I18n::_trans( 'Timezone' ),
+					'label'     => Ai1ec_I18n::__( 'Timezone' ),
 					'options'   => 'Ai1ec_Date_Timezone:get_timezones',
 				),
 				'default'  => $this->_registry->get( 'model.option' )->get(
@@ -489,8 +489,8 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class' => 'tags-categories',
 					'tab'   => 'viewing-events',
 					'item'  => 'viewing-events',
-					'label' => Ai1ec_I18n::_trans( 'Preselected calendar filters' ),
-					'help'  => Ai1ec_I18n::_trans(
+					'label' => Ai1ec_I18n::__( 'Preselected calendar filters' ),
+					'help'  => Ai1ec_I18n::__(
 						'To clear, hold &#8984;/<abbr class="initialism">CTRL</abbr> and click selection.'
 					)
 				),
@@ -505,7 +505,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class' => 'input',
 					'tab'   => 'viewing-events',
 					'item'  => 'viewing-events',
-					'label' => Ai1ec_I18n::_trans( 'Default calendar start date (optional)' ),
+					'label' => Ai1ec_I18n::__( 'Default calendar start date (optional)' ),
 					'type'  => 'date',
 				),
 				'default'  => '',
@@ -516,7 +516,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class'     => 'input',
 					'tab'       => 'viewing-events',
 					'item'      => 'viewing-events',
-					'label'     => Ai1ec_I18n::_trans( 'Agenda pages show at most' ),
+					'label'     => Ai1ec_I18n::__( 'Agenda pages show at most' ),
 					'type'      => 'append',
 					'append'    => 'events',
 					'validator' => 'numeric',
@@ -529,7 +529,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class'     => 'input',
 					'tab'       => 'viewing-events',
 					'item'      => 'viewing-events',
-					'label'     => Ai1ec_I18n::_trans( 'Week/Day view starts at' ),
+					'label'     => Ai1ec_I18n::__( 'Week/Day view starts at' ),
 					'type'      => 'append',
 					'append'    => 'hrs',
 					'validator' => 'numeric',
@@ -542,7 +542,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class'     => 'input',
 					'tab'       => 'viewing-events',
 					'item'      => 'viewing-events',
-					'label'     => Ai1ec_I18n::_trans( 'Week/Day view ends at' ),
+					'label'     => Ai1ec_I18n::__( 'Week/Day view ends at' ),
 					'type'      => 'append',
 					'append'    => 'hrs',
 					'validator' => 'numeric',
@@ -555,7 +555,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class'     => 'input',
 					'tab'       => 'viewing-events',
 					'item'      => 'viewing-events',
-					'label'     => Ai1ec_I18n::_trans(
+					'label'     => Ai1ec_I18n::__(
 									'<span class="ai1ec-tooltip-toggle"
 									data-original-title="Google may request for an API key in order to show the map">
 									Google Maps API Key</span> (<a target="_blank" href="https://developers.google.com/maps/documentation/javascript/get-api-key#get-an-api-key">Get an API key</a>)'
@@ -570,10 +570,10 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class'  => 'checkbox',
 					'tab'    => 'viewing-events',
 					'item'   => 'viewing-events',
-					'label'  => Ai1ec_I18n::_trans(
+					'label'  => Ai1ec_I18n::__(
 						'<strong>Word-wrap event stubs</strong> in Month view'
 					),
-					'help'  => Ai1ec_I18n::_trans(
+					'help'  => Ai1ec_I18n::__(
 						'Only applies to events that span a single day.'
 					),
 				),
@@ -585,7 +585,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class'  => 'checkbox',
 					'tab'    => 'viewing-events',
 					'item'   => 'viewing-events',
-					'label'  => Ai1ec_I18n::_trans(
+					'label'  => Ai1ec_I18n::__(
 						'In <span class="ai1ec-tooltip-toggle"
 						data-original-title="These include Agenda view,
 						the Upcoming Events widget, and some extended views.">
@@ -601,7 +601,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class' => 'checkbox',
 					'tab'   => 'viewing-events',
 					'item'  => 'viewing-events',
-					'label' => Ai1ec_I18n::_trans(
+					'label' => Ai1ec_I18n::__(
 						'Keep all events <strong>expanded</strong> in Agenda view'
 					)
 				),
@@ -613,7 +613,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class' => 'checkbox',
 					'tab'   => 'viewing-events',
 					'item'  => 'viewing-events',
-					'label' => Ai1ec_I18n::_trans(
+					'label' => Ai1ec_I18n::__(
 						'<strong>Show year</strong> in calendar date labels'
 					)
 				),
@@ -625,7 +625,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class' => 'checkbox',
 					'tab'   => 'viewing-events',
 					'item'  => 'viewing-events',
-					'label' => Ai1ec_I18n::_trans(
+					'label' => Ai1ec_I18n::__(
 						'<strong>Show location in event titles</strong> in calendar views'
 					)
 				),
@@ -637,7 +637,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class' => 'checkbox',
 					'tab'   => 'viewing-events',
 					'item'  => 'viewing-events',
-					'label' => Ai1ec_I18n::_trans(
+					'label' => Ai1ec_I18n::__(
 						'<strong>Exclude</strong> events from search results'
 					)
 				),
@@ -649,7 +649,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class' => 'checkbox',
 					'tab'   => 'viewing-events',
 					'item'  => 'viewing-events',
-					'label' => Ai1ec_I18n::_trans(
+					'label' => Ai1ec_I18n::__(
 						'Hide <strong>Subscribe</strong>/<strong>Add to Calendar</strong> buttons in calendar and single event views '
 					)
 				),
@@ -661,7 +661,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class' => 'checkbox',
 					'tab'   => 'viewing-events',
 					'item'  => 'viewing-events',
-					'label' => Ai1ec_I18n::_trans(
+					'label' => Ai1ec_I18n::__(
 						'Hide <strong>Get a Timely Calendar</strong> button'
 					)
 				),
@@ -673,7 +673,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class' => 'checkbox',
 					'tab'   => 'viewing-events',
 					'item'  => 'viewing-events',
-					'label' => Ai1ec_I18n::_trans(
+					'label' => Ai1ec_I18n::__(
 						' Hide <strong>Google Maps</strong> until clicked'
 					)
 				),
@@ -685,10 +685,10 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class' => 'checkbox',
 					'tab'   => 'viewing-events',
 					'item'  => 'viewing-events',
-					'label' => Ai1ec_I18n::_trans(
+					'label' => Ai1ec_I18n::__(
 						' <strong>Affix filter menu</strong> to top of window when it scrolls out of view'
 					),
-					'help'  => Ai1ec_I18n::_trans(
+					'help'  => Ai1ec_I18n::__(
 						'Only applies to first visible calendar found on the page.'
 					),
 				),
@@ -700,7 +700,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class'     => 'input',
 					'tab'       => 'viewing-events',
 					'item'      => 'viewing-events',
-					'label'     => Ai1ec_I18n::_trans( 'Offset affixed filter bar vertically by' ),
+					'label'     => Ai1ec_I18n::__( 'Offset affixed filter bar vertically by' ),
 					'type'      => 'append',
 					'append'    => 'pixels',
 					'validator' => 'numeric',
@@ -715,7 +715,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'item'      => 'viewing-events',
 					'label'     =>
 						'<i class="ai1ec-fa ai1ec-fa-lg ai1ec-fa-fw ai1ec-fa-desktop"></i> ' .
-						Ai1ec_I18n::_trans( 'Wide screens only (&#8805; 1200px)' ),
+						Ai1ec_I18n::__( 'Wide screens only (&#8805; 1200px)' ),
 					'type'      => 'append',
 					'append'    => 'pixels',
 					'validator' => 'numeric',
@@ -730,7 +730,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'item'      => 'viewing-events',
 					'label'     =>
 						'<i class="ai1ec-fa ai1ec-fa-lg ai1ec-fa-fw ai1ec-fa-tablet"></i> ' .
-						Ai1ec_I18n::_trans( 'Tablets only (< 980px)' ),
+						Ai1ec_I18n::__( 'Tablets only (< 980px)' ),
 					'type'      => 'append',
 					'append'    => 'pixels',
 					'validator' => 'numeric',
@@ -745,7 +745,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'item'      => 'viewing-events',
 					'label'     =>
 						'<i class="ai1ec-fa ai1ec-fa-lg ai1ec-fa-fw ai1ec-fa-mobile"></i> ' .
-						Ai1ec_I18n::_trans( 'Phones only (< 768px)' ),
+						Ai1ec_I18n::__( 'Phones only (< 768px)' ),
 					'type'      => 'append',
 					'append'    => 'pixels',
 					'validator' => 'numeric',
@@ -758,7 +758,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class' => 'checkbox',
 					'tab'   => 'viewing-events',
 					'item'  => 'viewing-events',
-					'label' => Ai1ec_I18n::_trans(
+					'label' => Ai1ec_I18n::__(
 						'Strict compatibility content filtering'
 					),
 				),
@@ -770,10 +770,10 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class' => 'checkbox',
 					'tab'   => 'viewing-events',
 					'item'  => 'viewing-events',
-					'label' => Ai1ec_I18n::_trans(
+					'label' => Ai1ec_I18n::__(
 						' <strong>Hide featured image</strong> from event details page'
 					),
-					'help'  => Ai1ec_I18n::_trans(
+					'help'  => Ai1ec_I18n::__(
 						"Select this option if your theme already displays each post's featured image."
 					),
 				),
@@ -784,24 +784,24 @@ class Ai1ec_Settings extends Ai1ec_App {
 				'renderer' => array(
 					'class'   => 'select',
 					'tab'     => 'editing-events',
-					'label'   => Ai1ec_I18n::_trans(
+					'label'   => Ai1ec_I18n::__(
 						'Input dates in this format'
 					),
 					'options' => array(
 						array(
-							'text' => Ai1ec_I18n::_trans( 'Default (d/m/yyyy)' ),
+							'text' => Ai1ec_I18n::__( 'Default (d/m/yyyy)' ),
 							'value' => 'def'
 					 	),
 						array(
-							'text' => Ai1ec_I18n::_trans( 'US (m/d/yyyy)' ),
+							'text' => Ai1ec_I18n::__( 'US (m/d/yyyy)' ),
 							'value' => 'us'
 						),
 						array(
-							'text' => Ai1ec_I18n::_trans( 'ISO 8601 (yyyy-m-d)' ),
+							'text' => Ai1ec_I18n::__( 'ISO 8601 (yyyy-m-d)' ),
 							'value' => 'iso'
 						),
 						array(
-							'text' => Ai1ec_I18n::_trans( 'Dotted (m.d.yyyy)' ),
+							'text' => Ai1ec_I18n::__( 'Dotted (m.d.yyyy)' ),
 							'value' => 'dot'
 					 	),
 					),
@@ -813,7 +813,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 				'renderer' => array(
 					'class' => 'checkbox',
 					'tab'   => 'editing-events',
-					'label' => Ai1ec_I18n::_trans(
+					'label' => Ai1ec_I18n::__(
 						' Use <strong>24h time</strong> in time pickers'
 					)
 				),
@@ -824,7 +824,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 				'renderer' => array(
 					'class' => 'checkbox',
 					'tab'   => 'editing-events',
-					'label' => Ai1ec_I18n::_trans(
+					'label' => Ai1ec_I18n::__(
 						'<strong>Disable address autocomplete</strong> function'
 					)
 				),
@@ -835,7 +835,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 				'renderer' => array(
 					'class' => 'checkbox',
 					'tab'   => 'editing-events',
-					'label' => Ai1ec_I18n::_trans(
+					'label' => Ai1ec_I18n::__(
 						'Use the configured <strong>region</strong> (WordPress locale) to bias the address autocomplete function '
 					)
 				),
@@ -866,9 +866,9 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class' => 'input',
 					'tab'   => 'advanced',
 					'item'  => 'advanced',
-					'label' => Ai1ec_I18n::_trans( 'Move calendar into this DOM element' ),
+					'label' => Ai1ec_I18n::__( 'Move calendar into this DOM element' ),
 					'type'  => 'normal',
-					'help'  => Ai1ec_I18n::_trans(
+					'help'  => Ai1ec_I18n::__(
 						'Optional. Use this JavaScript-based shortcut to place the
 						calendar a DOM element other than the usual page content container
 						if you are unable to create an appropriate page template
@@ -887,10 +887,10 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class' => 'checkbox',
 					'tab'   => 'advanced',
 					'item'  => 'advanced',
-					'label' => Ai1ec_I18n::_trans(
+					'label' => Ai1ec_I18n::__(
 						'<strong>Skip <tt>in_the_loop()</tt> check </strong> that protects against multiple calendar output'
 					),
-					'help'  => Ai1ec_I18n::_trans(
+					'help'  => Ai1ec_I18n::__(
 						'Try enabling this option if your calendar does not appear on the calendar page. It is needed for compatibility with a small number of themes that call <tt>the_content()</tt> from outside of The Loop. Leave disabled otherwise.'
 					),
 				),
@@ -902,10 +902,10 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class' => 'checkbox',
 					'tab'   => 'advanced',
 					'item'  => 'advanced',
-					'label' => Ai1ec_I18n::_trans(
+					'label' => Ai1ec_I18n::__(
 						'Disable <strong>gzip</strong> compression.'
 					),
-					'help'  => Ai1ec_I18n::_trans(
+					'help'  => Ai1ec_I18n::__(
 						'Use this option if calendar is unresponsive. <a target="_blank" href="http://time.ly/document/user-guide/troubleshooting/disable-gzip-compression/">Read more</a> about the issue. (From version 2.1 onwards, gzip is disabled by default for maximum compatibility.)'
 					),
 				),
@@ -917,10 +917,10 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class' => 'checkbox',
 					'tab'   => 'advanced',
 					'item'  => 'advanced',
-					'label' => Ai1ec_I18n::_trans(
+					'label' => Ai1ec_I18n::__(
 						'Use frontend rendering.'
 					),
-					'help'  => Ai1ec_I18n::_trans(
+					'help'  => Ai1ec_I18n::__(
 						'Renders calendar views on the client rather than the server; can improve performance.'
 					),
 				),
@@ -932,10 +932,10 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class' => 'checkbox',
 					'tab'   => 'advanced',
 					'item'  => 'advanced',
-					'label' => Ai1ec_I18n::_trans(
+					'label' => Ai1ec_I18n::__(
 						'Use advanced JS cache.'
 					),
-					'help'  => Ai1ec_I18n::_trans(
+					'help'  => Ai1ec_I18n::__(
 						'Cache dynamically generated JS files. Improves performance.'
 					),
 				),
@@ -947,10 +947,10 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class' => 'checkbox',
 					'tab'   => 'advanced',
 					'item'  => 'advanced',
-					'label' => Ai1ec_I18n::_trans(
+					'label' => Ai1ec_I18n::__(
 						'<strong>Link CSS</strong> in <code>&lt;head&gt;</code> section when file cache is unavailable.'
 					),
-					'help'  => Ai1ec_I18n::_trans(
+					'help'  => Ai1ec_I18n::__(
 						'Use this option if file cache is unavailable and you would prefer to serve CSS as a link rather than have it output inline.'
 					),
 				),
@@ -962,11 +962,11 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class'    => 'textarea',
 					'tab'      => 'advanced',
 					'item'     => 'advanced',
-					'label'    => Ai1ec_I18n::_trans( 'Current <strong>robots.txt</strong> on this site' ),
+					'label'    => Ai1ec_I18n::__( 'Current <strong>robots.txt</strong> on this site' ),
 					'type'     => 'normal',
 					'rows'     => 6,
 					'readonly' => 'readonly',
-					'help'     => Ai1ec_I18n::_trans(
+					'help'     => Ai1ec_I18n::__(
 						'The Robot Exclusion Standard, also known as the Robots Exclusion Protocol or
 						<code><a href="http://en.wikipedia.org/wiki/Robots.txt" target="_blank">robots.txt</a></code>
 						protocol, is a convention for cooperating web crawlers and other web robots
@@ -983,7 +983,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'tab'   => 'advanced',
 					'item'  => 'advanced',
 					'label' => sprintf(
-						Ai1ec_I18n::_trans(
+						Ai1ec_I18n::__(
 							'<strong>Publicize, promote, and share my events</strong> marked as public on the Timely network. (<a href="%s" target="_blank">Learn more &#187;</a>)'
 						),
 						'http://time.ly/event-search-calendar'
@@ -1006,7 +1006,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'tab'   => 'advanced',
 					'item'  => 'cache',
 					'label' => sprintf(
-						Ai1ec_I18n::_trans(
+						Ai1ec_I18n::__(
 							'Templates cache improves site performance'
 						)
 					),
@@ -1019,10 +1019,10 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'class'  => 'checkbox',
 					'tab'    => 'viewing-events',
 					'item'   => 'viewing-events',
-					'label'  => Ai1ec_I18n::_trans(
+					'label'  => Ai1ec_I18n::__(
 						'Display events in <strong>calendar time zone</strong>'
 					),
-					'help'  => Ai1ec_I18n::_trans(
+					'help'  => Ai1ec_I18n::__(
 						'If this box is checked events will appear in the calendar time zone with time zone information displayed on the event details page.'
 					),
 				),

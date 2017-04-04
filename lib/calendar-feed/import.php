@@ -21,7 +21,7 @@ class Ai1ecImportConnectorPlugin extends Ai1ec_Connector_Plugin {
 	);
 
 	public function get_tab_title() {
-		return Ai1ec_I18n::_trans( 'Import Feeds' );
+		return Ai1ec_I18n::__( 'Import Feeds' );
 	}
 
 	public function __construct( Ai1ec_Registry_Object $registry ) {

@@ -47,7 +47,7 @@ class Ai1ec_Html_Element_Calendar_Page_Selector
 	 */
 	public function render( $snippet = '' ) {
 		$output = '<label class="ai1ec-control-label ai1ec-col-sm-5" for="' .
-			self::ELEMENT_ID . '">' . Ai1ec_I18n::_trans( 'Calendar page' ) . '</label>'
+			self::ELEMENT_ID . '">' . Ai1ec_I18n::__( 'Calendar page' ) . '</label>'
 			. '<div class="ai1ec-col-sm-7">' .
 			$this->_get_pages_selector() . $this->_get_page_view_link() . '</div>';
 		return parent::render( $output );
@@ -67,7 +67,7 @@ class Ai1ec_Html_Element_Calendar_Page_Selector
 			return '';
 		}
 		$args = array(
-			'view'  => Ai1ec_I18n::_trans( 'View' ),
+			'view'  => Ai1ec_I18n::__( 'View' ),
 			'link'  => get_permalink( $post->ID ),
 			'title' => apply_filters(
 				'the_title',
@@ -111,7 +111,7 @@ class Ai1ec_Html_Element_Calendar_Page_Selector
 			$pages = array();
 		}
 		$output = array(
-			'__auto_page:Calendar' => Ai1ec_I18n::_trans(
+			'__auto_page:Calendar' => Ai1ec_I18n::__(
 				'- Auto-Create New Page -'
 			),
 		);

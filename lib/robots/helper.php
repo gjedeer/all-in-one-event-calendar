@@ -68,7 +68,7 @@ class Ai1ec_Robots_Helper extends Ai1ec_Base {
 				// parameter but in this case second ftp credentials screen
 				// would appear
 				$notification = $this->_registry->get( 'notification.admin' );
-				$err_msg = Ai1ec_I18n::_trans(
+				$err_msg = Ai1ec_I18n::__(
 					'<strong>ERROR:</strong> There was an error connecting to the server, Please verify the settings are correct.'
 				);
 				$notification->store( $err_msg, 'error', 1 );
@@ -102,7 +102,7 @@ class Ai1ec_Robots_Helper extends Ai1ec_Base {
 			FS_CHMOD_FILE
 		);
 		if ( false === $robots_txt['is_installed'] ) {
-			$err_msg = Ai1ec_I18n::_trans(
+			$err_msg = Ai1ec_I18n::__(
 				'<strong>ERROR:</strong> There was an error storing <strong>robots.txt</strong> to the server, the file could not be written.'
 			);
 			$this->_registry->get( 'notification.admin' )

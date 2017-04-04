@@ -76,7 +76,7 @@ class Ai1ec_Calendar_View_Oneday extends Ai1ec_Calendar_View_Abstract {
 		$show_reveal_button       = apply_filters( 'ai1ec_oneday_reveal_button', false );
 
 		$time_format              = $this->_registry->get( 'model.option' )
-			->get( 'time_format', Ai1ec_I18n::_trans( 'g a' ) );
+			->get( 'time_format', Ai1ec_I18n::__( 'g a' ) );
 
 		$hours = array();
 		$today = $this->_registry->get( 'date.time', 'now', 'sys.default' );

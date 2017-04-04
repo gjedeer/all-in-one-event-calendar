@@ -236,7 +236,7 @@ class Ai1ec_Css_Frontend extends Ai1ec_Base {
 			)->check_available_memory( AI1EC_LESS_MIN_AVAIL_MEMORY )
 		) {
 			$message = sprintf(
-				Ai1ec_I18n::_trans(
+				Ai1ec_I18n::__(
 					'CSS compilation failed because you don\'t have enough free memory (a minimum of %s is needed). Your calendar will not render or function properly without CSS. Please read <a href="http://time.ly/document/user-guide/getting-started/pre-sale-questions/">this article</a> to learn how to increase your PHP memory limit.'
 				),
 				AI1EC_LESS_MIN_AVAIL_MEMORY
@@ -263,13 +263,13 @@ class Ai1ec_Css_Frontend extends Ai1ec_Base {
 			}
 		} catch ( Ai1ec_Cache_Write_Exception $e ) {
 			// This means successful during parsing but problems persisting the CSS.
-			$message = '<p>' . Ai1ec_I18n::_trans( "The LESS file compiled correctly but there was an error while saving the generated CSS to persistence." ) . '</p>';
+			$message = '<p>' . Ai1ec_I18n::__( "The LESS file compiled correctly but there was an error while saving the generated CSS to persistence." ) . '</p>';
 			$notification->store( $message, 'error' );
 			return false;
 		} catch ( Exception $e ) {
 			// An error from lessphp.
 			$message = sprintf(
-				Ai1ec_I18n::_trans( '<p><strong>There was an error while compiling CSS.</strong> The message returned was: <em>%s</em></p>' ),
+				Ai1ec_I18n::__( '<p><strong>There was an error while compiling CSS.</strong> The message returned was: <em>%s</em></p>' ),
 				$e->getMessage()
 			);
 			$notification->store( $message, 'error', 1 );
@@ -297,14 +297,14 @@ class Ai1ec_Css_Frontend extends Ai1ec_Base {
 
 			if ( true === $resetting ) {
 				$message = sprintf(
-					'<p>' . Ai1ec_I18n::_trans(
+					'<p>' . Ai1ec_I18n::__(
 						"Theme options were successfully reset to their default values. <a href='%s'>Visit site</a>"
 					) . '</p>',
 					ai1ec_get_site_url()
 				);
 			} else {
 				$message = sprintf(
-					'<p>' .Ai1ec_I18n::_trans(
+					'<p>' .Ai1ec_I18n::__(
 						"Theme options were updated successfully. <a href='%s'>Visit site</a>"
 					) . '</p>',
 					ai1ec_get_site_url()

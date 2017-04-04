@@ -149,7 +149,7 @@ class Ai1ec_Theme_List extends WP_List_Table {
 				current_user_can( 'manage_network_themes' )
 			) {
 				printf(
-					Ai1ec_I18n::_trans(
+					Ai1ec_I18n::__(
 						'You only have one theme enabled for this site right now. Visit the Network Admin to <a href="%1$s">enable</a> or <a href="%2$s">install</a> more themes.'
 					),
 					ai1ec_network_admin_url(
@@ -161,7 +161,7 @@ class Ai1ec_Theme_List extends WP_List_Table {
 				return;
 			} elseif ( current_user_can( 'manage_network_themes' ) ) {
 				printf(
-					Ai1ec_I18n::_trans(
+					Ai1ec_I18n::__(
 						'You only have one theme enabled for this site right now. Visit the Network Admin to <a href="%1$s">enable</a> more themes.'
 					),
 					ai1ec_network_admin_url(
@@ -176,7 +176,7 @@ class Ai1ec_Theme_List extends WP_List_Table {
 		} else {
 			if ( current_user_can( 'install_themes' ) ) {
 				printf(
-					Ai1ec_I18n::_trans(
+					Ai1ec_I18n::__(
 						'You only have one theme installed right now. You can choose from many free themes in the Timely Theme Directory at any time: just click on the <a href="%s">Install Themes</a> tab above.'
 					),
 					ai1ec_admin_url( AI1EC_THEME_SELECTION_BASE_URL )
@@ -187,7 +187,7 @@ class Ai1ec_Theme_List extends WP_List_Table {
 		}
 		// Fallthrough.
 		printf(
-			Ai1ec_I18n::_trans(
+			Ai1ec_I18n::__(
 				'Only the active theme is available to you. Contact the <em>%s</em> administrator to add more themes.'
 			),
 			get_site_option( 'site_name' )
@@ -254,14 +254,14 @@ class Ai1ec_Theme_List extends WP_List_Table {
 
 				$activate_text  = esc_attr(
 					sprintf(
-						Ai1ec_I18n::_trans( 'Activate &#8220;%s&#8221;' ),
+						Ai1ec_I18n::__( 'Activate &#8220;%s&#8221;' ),
 						$title
 					)
 				);
 				$actions        = array();
 				$actions[]      = '<a href="' . $activate_link .
 					'" class="activatelink" title="' . $activate_text . '">' .
-					Ai1ec_I18n::_trans( 'Activate' ) . '</a>';
+					Ai1ec_I18n::__( 'Activate' ) . '</a>';
 
 				$actions = apply_filters(
 					'theme_action_links',
@@ -278,7 +278,7 @@ class Ai1ec_Theme_List extends WP_List_Table {
 			<?php
 				/* translators: 1: theme title, 2: theme version, 3: theme author */
 				printf(
-					Ai1ec_I18n::_trans( '%1$s %2$s by %3$s' ),
+					Ai1ec_I18n::__( '%1$s %2$s by %3$s' ),
 					$title,
 					$version,
 					$author
@@ -290,7 +290,7 @@ class Ai1ec_Theme_List extends WP_List_Table {
 					<p>
 						<?php
 						printf(
-							Ai1ec_I18n::_trans(
+							Ai1ec_I18n::__(
 								'The template files are located in <code>%2$s</code>. The stylesheet files are located in <code>%3$s</code>. <strong>%4$s</strong> uses templates from <strong>%5$s</strong>. Changes made to the templates will affect both themes.'
 							),
 							$title,
@@ -305,7 +305,7 @@ class Ai1ec_Theme_List extends WP_List_Table {
 				<p>
 					<?php
 					printf(
-						Ai1ec_I18n::_trans(
+						Ai1ec_I18n::__(
 							'All of this theme&#8217;s files are located in <code>%2$s</code>.'
 						),
 						$title,
@@ -317,7 +317,7 @@ class Ai1ec_Theme_List extends WP_List_Table {
 			<?php } ?>
 			<?php if ( $tags ) : ?>
 				<p>
-				 <?php echo Ai1ec_I18n::_trans( 'Tags:' ); ?> <?php echo join( ', ', $tags ); ?>
+				 <?php echo Ai1ec_I18n::__( 'Tags:' ); ?> <?php echo join( ', ', $tags ); ?>
 				</p>
 			<?php endif; ?>
 		<?php endif; // end if not empty theme_name ?>

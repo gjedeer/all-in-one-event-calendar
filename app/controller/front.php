@@ -352,11 +352,11 @@ class Ai1ec_Front_Controller {
 				$notification = $this->_registry->get( 'notification.admin' );
 				$notification->store(
 					sprintf(
-						Ai1ec_I18n::_trans(
+						Ai1ec_I18n::__(
 							'Your active calendar theme could not be properly initialized. The default theme has been activated instead. Please visit %s and try reactivating your theme manually.'
 						),
 						'<a href="' . ai1ec_admin_url( AI1EC_THEME_SELECTION_BASE_URL ) . '">' .
-						Ai1ec_I18n::_trans( 'Calendar Themes' ) . '</a>'
+						Ai1ec_I18n::__( 'Calendar Themes' ) . '</a>'
 					),
 					'error',
 					1
@@ -1060,7 +1060,7 @@ class Ai1ec_Front_Controller {
 			$errors = $this->_registry->get( 'database.applicator' )
 				->check_db_consistency_for_date_migration() ;
 			if ( ! empty( $errors ) ) {
-				$message = Ai1ec_I18n::_trans(
+				$message = Ai1ec_I18n::__(
 					'Your database is found to be corrupt. Likely previous update has failed. Please restore All-in-One Event Calendar tables from a backup and retry.<br>Following errors were found:<br>%s'
 				);
 				$message = sprintf( $message, implode( $errors, '<br>' ) );
