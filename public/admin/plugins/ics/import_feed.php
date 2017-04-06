@@ -16,7 +16,7 @@
 <div class="ai1ec-feed-container ai1ec-well ai1ec-well-sm ai1ec-clearfix">
 	<?php _e(
 		'<b>You don\'t have a subscription for this feature.</b><br>
-		Please <a href="https://time.ly/tickets/">upgrade here</a> to a plan that
+		Please <a href="https://time.ly/pricing/" target="_blank">upgrade here</a> to a plan that
 		supports "Import Feeds".', AI1EC_PLUGIN_NAME )
 	?>
 </div>
@@ -26,8 +26,7 @@
 <div class="ai1ec-feed-container ai1ec-well ai1ec-well-sm ai1ec-clearfix">
 	<?php _e(
 		'<b>You have reached the limit of how many feeds you can import.</b><br>
-		Please <a href="https://time.ly/tickets/">upgrade here</a> to a plan that
-		supports more feeds.', AI1EC_PLUGIN_NAME )
+		Please sign up for EventBoost plan <a href="https://time.ly/pricing-eventboost/" target="_blank">here</a>', AI1EC_PLUGIN_NAME )
 	?>
 </div>
 <?php
