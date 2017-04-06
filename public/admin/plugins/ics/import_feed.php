@@ -35,7 +35,7 @@
 <div class="ai1ec-feed-container ai1ec-well ai1ec-well-sm ai1ec-clearfix">
 	<?php _e(
 			sprintf(
-					__( 'You are importing %s feed out of %s.', AI1EC_PLUGIN_NAME ),
+					__( 'You are importing %s feed(s) out of %s.', AI1EC_PLUGIN_NAME ),
 					$used,
 					$provided
 			) )
@@ -53,7 +53,7 @@
 <div class="ai1ec-feed-container ai1ec-well ai1ec-well-sm ai1ec-clearfix">
 	<?php _e(
 			sprintf(
-					__( 'You are importing %s feed out of %s.', AI1EC_PLUGIN_NAME ),
+					__( 'You are importing %s feed(s) out of %s.', AI1EC_PLUGIN_NAME ),
 					$used,
 					$provided
 			) )
