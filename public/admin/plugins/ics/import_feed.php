@@ -44,7 +44,7 @@
 <div class="ai1ec-feed-container ai1ec-well ai1ec-well-sm ai1ec-clearfix">
 	<?php _e(
 		'<b>You have reached the limit of how many feeds you can import.</b><br>
-		Please sign up for EventBoost plan <a href="https://time.ly/pricing-eventboost/" target="_blank">here</a>.', AI1EC_PLUGIN_NAME )
+		Please sign up for EventBoost plan <a href="https://time.ly/eventboost/" target="_blank">here</a>.', AI1EC_PLUGIN_NAME )
 	?>
 </div>
 <?php
