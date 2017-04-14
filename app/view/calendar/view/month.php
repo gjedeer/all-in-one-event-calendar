@@ -400,6 +400,7 @@ class Ai1ec_Calendar_View_Month extends Ai1ec_Calendar_View_Abstract {
 					);
 					if ( $timely_tickets ) {
 						$event_data['ticket_url'] = $timely_tickets;
+						$evt->set( 'ticket_url', $event_data['ticket_url'] );
 					}
 				}
 				if (

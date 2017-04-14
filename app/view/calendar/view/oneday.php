@@ -341,6 +341,7 @@ class Ai1ec_Calendar_View_Oneday extends Ai1ec_Calendar_View_Abstract {
 					);
 					if ( $timely_tickets ) {
 						$event['ticket_url'] = $timely_tickets;
+						$evt->set( 'ticket_url', $event['ticket_url'] );
 					}
 				}
 				if (
