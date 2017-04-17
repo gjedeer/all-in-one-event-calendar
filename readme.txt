@@ -152,6 +152,8 @@ https://vimeo.com/135004810
 = Version 2.5.19 =
 * Fixed: Changed code to remove some PHP 7 warnings.
 * Fixed: XSS Security vulnerability. Thanks to @stacyvlasits for pointing it out.
+* Fixed: Right arrow for moving to the next month was missing in the Month view.
+* Fixed: No modal window was showing up when clicking on link in the Tooltip/Popup in Featured Events.
 
 = Version 2.5.18 =
 * Fixed: Returned the missing label for the previous month button.
