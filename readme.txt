@@ -5,7 +5,7 @@ calendar, ical, iCalendar, all-in-one, events sync, events widget,
 calendar widget
 Requires WordPress at least: 3.5
 Tested up to: 4.7.3
-Stable tag: 2.5.18
+Stable tag: 2.5.19
 License: GNU General Public License, version 3 (GPL-3.0)
 
 A calendar system with many views, upcoming events widget, color-coded
@@ -148,6 +148,12 @@ https://vimeo.com/135004810
 **[ai1ec exact_date="5-10-2015"]**
 
 == Changelog ==
+
+= Version 2.5.19 =
+* Fixed: Changed code to remove some PHP 7 warnings.
+* Fixed: XSS Security vulnerability. Thanks to @stacyvlasits for pointing it out.
+* Fixed: Right arrow for moving to the next month was missing in the Month view.
+* Fixed: No modal window was showing up when clicking on link in the Tooltip/Popup in Featured Events.
 
 = Version 2.5.18 =
 * Fixed: Returned the missing label for the previous month button.

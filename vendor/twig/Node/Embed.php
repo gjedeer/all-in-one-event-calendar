@@ -29,9 +29,9 @@ class Twig_Node_Embed extends Twig_Node_Include
     {
         $compiler
             ->write("\$this->env->loadTemplate(")
-            ->string($this->getAttribute('filename'))
+            ->_string($this->getAttribute('filename'))
             ->raw(', ')
-            ->string($this->getAttribute('index'))
+            ->_string($this->getAttribute('index'))
             ->raw(")")
         ;
     }

@@ -148,7 +148,7 @@ class Twig_Compiler implements Twig_CompilerInterface
      *
      * @return Twig_Compiler The current compiler instance
      */
-    public function string($value)
+    public function _string($value)
     {
         $this->source .= sprintf('"%s"', addcslashes($value, "\0\t\"\$\\"));
 
@@ -192,7 +192,7 @@ class Twig_Compiler implements Twig_CompilerInterface
             }
             $this->raw(')');
         } else {
-            $this->string($value);
+            $this->_string($value);
         }
 
         return $this;

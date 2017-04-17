@@ -1,4 +1,13 @@
 <?php
+	$feature      = Ai1ec_Api_Features::CODE_IMPORT_FEEDS;
+	$api          = $this->_registry->get( 'model.api.api-feeds' );
+	$provided     = $api->subscription_get_quantity_limit( $feature );
+	$used         = $api->subscription_get_used_quantity( $feature );
+
+	if ( $provided >= 1000000 ) {
+		$provided = __( 'unlimited', AI1EC_PLUGIN_NAME );
+	}
+
 	if ( ! $api_signed ):
 ?>
 <div class="ai1ec-ics-signup-box">
@@ -16,7 +25,7 @@
 <div class="ai1ec-feed-container ai1ec-well ai1ec-well-sm ai1ec-clearfix">
 	<?php _e(
 		'<b>You don\'t have a subscription for this feature.</b><br>
-		Please <a href="https://time.ly/pricing/">upgrade here</a> to a plan that
+		Please <a href="https://time.ly/pricing/" target="_blank">upgrade here</a> to a plan that
 		supports "Import Feeds".', AI1EC_PLUGIN_NAME )
 	?>
 </div>
@@ -25,14 +34,31 @@
 ?>
 <div class="ai1ec-feed-container ai1ec-well ai1ec-well-sm ai1ec-clearfix">
 	<?php _e(
+			sprintf(
+					__( 'You are importing %s feed(s) out of %s.', AI1EC_PLUGIN_NAME ),
+					$used,
+					$provided
+			) )
+	?>
+</div>
+<div class="ai1ec-feed-container ai1ec-well ai1ec-well-sm ai1ec-clearfix">
+	<?php _e(
 		'<b>You have reached the limit of how many feeds you can import.</b><br>
-		Please <a href="https://time.ly/pricing/">upgrade here</a> to a plan that
-		supports more feeds.', AI1EC_PLUGIN_NAME )
+		Please sign up for EventBoost plan <a href="https://time.ly/eventboost/" target="_blank">here</a>.', AI1EC_PLUGIN_NAME )
 	?>
 </div>
 <?php
 	else:
 ?>
+<div class="ai1ec-feed-container ai1ec-well ai1ec-well-sm ai1ec-clearfix">
+	<?php _e(
+			sprintf(
+					__( 'You are importing %s feed(s) out of %s.', AI1EC_PLUGIN_NAME ),
+					$used,
+					$provided
+			) )
+	?>
+</div>
 <div id="ai1ec-feeds-after"
 	class="ai1ec-feed-container ai1ec-well ai1ec-well-sm ai1ec-clearfix">
 	<div class="ai1ec-form-group ai1ec-row">

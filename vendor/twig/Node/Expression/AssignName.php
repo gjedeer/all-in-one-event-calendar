@@ -21,7 +21,7 @@ class Twig_Node_Expression_AssignName extends Twig_Node_Expression_Name
     {
         $compiler
             ->raw('$context[')
-            ->string($this->getAttribute('name'))
+            ->_string($this->getAttribute('name'))
             ->raw(']')
         ;
     }

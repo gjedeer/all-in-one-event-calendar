@@ -53,9 +53,8 @@ class SG_iCal_Parser {
 			}
 			curl_setopt($c, CURLOPT_COOKIESESSION, true);
 			curl_setopt($c, CURLOPT_HEADER, true);
-			if( !ini_get('safe_mode') ){
-				curl_setopt($c, CURLOPT_FOLLOWLOCATION, true);
-			}
+			curl_setopt($c, CURLOPT_FOLLOWLOCATION, true);
+
 			$content = curl_exec($c);
 			$ct = curl_getinfo($c, CURLINFO_CONTENT_TYPE);
 			$enc = preg_replace('/^.*charset=([-a-zA-Z0-9]+).*$/', '$1', $ct);

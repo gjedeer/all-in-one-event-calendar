@@ -385,8 +385,8 @@ abstract class Ai1ec_Api_Abstract extends Ai1ec_App {
 				$subscriptions = array();
 			}
 
-			// Save for 15 minutes
-			$minutes = 15;
+			// Save for 5 minutes
+			$minutes = 5;
 			set_transient( 'ai1ec_api_subscriptions', $subscriptions, $minutes * 60 );
 		}
 
@@ -408,19 +408,48 @@ abstract class Ai1ec_Api_Abstract extends Ai1ec_App {
 	public function subscription_has_reached_limit( $feature ) {
 		$has_reached_limit = true;
 
+		$provided = $this->subscription_get_quantity_limit( $feature );
+		$used     = $this->subscription_get_used_quantity( $feature );
+
+		if ( $provided - $used > 0 ) {
+			$has_reached_limit = false;
+		}
+
+		return $has_reached_limit;
+	}
+
+	/**
+	 * Get feature quantity limit
+	 */
+	public function subscription_get_quantity_limit( $feature ) {
+		$provided = 0;
+
 		$subscriptions = $this->get_subscriptions();
 
 		if ( array_key_exists( $feature, $subscriptions ) ) {
 			$quantity = (array) $subscriptions[$feature];
-			$provided = $quantity['provided'];
-			$used     = $quantity['used'];
 
-			if ( $provided - $used > 0 ) {
-				$has_reached_limit = false;
-			}
+			$provided = $quantity['provided'];
 		}
 
-		return $has_reached_limit;
+		return $provided;
+	}
+
+	/**
+	 * Get feature used quantity
+	 */
+	public function subscription_get_used_quantity( $feature ) {
+		$used = 0;
+
+		$subscriptions = $this->get_subscriptions();
+
+		if ( array_key_exists( $feature, $subscriptions ) ) {
+			$quantity = (array) $subscriptions[$feature];
+
+			$used = $quantity['used'];
+		}
+
+		return $used;
 	}
 
 	/**

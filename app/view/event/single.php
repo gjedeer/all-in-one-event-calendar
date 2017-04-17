@@ -162,11 +162,9 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
 		$aco = $this->_registry->get( 'acl.aco' );
 		if ( ! $aco->is_our_post_type() ) return;
 
-		// Get Event and process desciption
-		$instance_id = null;
-		if ( isset( $_GET[ 'instance_id' ] ) ) {
-			$instance_id = $_GET[ 'instance_id' ];
-		}
+		// Get Event and process description
+		$instance_id     = ( isset( $_GET[ 'instance_id' ] ) ) ? $_GET[ 'instance_id' ] : null;
+
 		if ( !is_null( $instance_id ) ) {
 			$instance_id = preg_replace( '/\D/', '', $instance_id );
 		}
@@ -181,7 +179,7 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
 		$desc            = substr( $desc, 0, 300 );
 
 		$og              = array(
-			'url'         => home_url( add_query_arg( null, null ) ),
+			'url'         => home_url( esc_url( add_query_arg( null, null ) ) ),
 			'title'       => htmlspecialchars(
 				$event->get( 'post' )->post_title .
 				' (' . substr( $event->get( 'start' ) , 0, 10 ) . ')'

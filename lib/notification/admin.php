@@ -177,9 +177,9 @@ class Ai1ec_Notification_Admin extends Ai1ec_Notification {
 			}
 			$entity['text_label'] = apply_filters(
 				'ai1ec_notification_label',
-				Ai1ec_i18n::__( 'All-in-One Event Calendar' )
+				Ai1ec_I18n::__( 'All-in-One Event Calendar' )
 			);
-			$entity['text_dismiss_button'] = Ai1ec_i18n::__( 'Got it – dismiss this' );
+			$entity['text_dismiss_button'] = Ai1ec_I18n::__( 'Got it – dismiss this' );
 			$file = $theme->get_file(
 				'notification/admin.twig',
 				$entity,

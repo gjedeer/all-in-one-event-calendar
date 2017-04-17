@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the All-in-One Event Calendar by Time.ly package.
 msgid ""
 msgstr ""
-"Project-Id-Version: All-in-One Event Calendar by Time.ly 2.5.18\n"
+"Project-Id-Version: All-in-One Event Calendar by Time.ly 2.5.19\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/all-in-one-event-calendar\n"
-"POT-Creation-Date: 2017-03-28 16:00:53+00:00\n"
+"POT-Creation-Date: 2017-04-17 20:52:15+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -334,7 +334,7 @@ msgid ""
 "your report please include the information below.<br/>%s."
 msgstr ""
 
-#: app/model/api/api-abstract.php:463
+#: app/model/api/api-abstract.php:492
 msgid "Error decoding the response"
 msgstr ""
 
@@ -1184,7 +1184,7 @@ msgid ""
 msgstr ""
 
 #: app/view/admin/settings.php:205 public/admin/box_repeat.php:116
-#: public/admin/plugins/ics/import_feed.php:101
+#: public/admin/plugins/ics/import_feed.php:127
 msgid "Cancel"
 msgstr ""
 
@@ -1828,18 +1828,18 @@ msgstr ""
 msgid "Edit this occurrence (%s)"
 msgstr ""
 
-#: app/view/event/single.php:210
+#: app/view/event/single.php:208
 msgid ""
 "This post was replicated from another site's <a href=\"%s\" title="
 "\"iCalendar feed\"><i class=\"ai1ec-fa ai1ec-fa-calendar\"></i> calendar "
 "feed</a>."
 msgstr ""
 
-#: app/view/event/single.php:214
+#: app/view/event/single.php:212
 msgid "This post was imported from a CSV/ICS file."
 msgstr ""
 
-#: app/view/event/single.php:227
+#: app/view/event/single.php:225
 msgid "View original"
 msgstr ""
 
@@ -3082,7 +3082,7 @@ msgstr ""
 msgid "Ending after"
 msgstr ""
 
-#: public/admin/box_repeat.php:109 public/admin/plugins/ics/import_feed.php:107
+#: public/admin/box_repeat.php:109 public/admin/plugins/ics/import_feed.php:133
 msgid "Please wait&#8230;"
 msgstr ""
 
@@ -3230,7 +3230,7 @@ msgstr ""
 msgid "Twice Daily"
 msgstr ""
 
-#: public/admin/feed_row.php:16 public/admin/plugins/ics/import_feed.php:41
+#: public/admin/feed_row.php:16 public/admin/plugins/ics/import_feed.php:67
 msgid "Feed URL:"
 msgstr ""
 
@@ -3254,13 +3254,13 @@ msgstr ""
 msgid "Keep original events categories and tags"
 msgstr ""
 
-#: public/admin/feed_row.php:82 public/admin/plugins/ics/import_feed.php:85
+#: public/admin/feed_row.php:82 public/admin/plugins/ics/import_feed.php:111
 msgid ""
 "On refresh, preserve previously imported events that are missing from the "
 "feed"
 msgstr ""
 
-#: public/admin/feed_row.php:93 public/admin/plugins/ics/import_feed.php:92
+#: public/admin/feed_row.php:93 public/admin/plugins/ics/import_feed.php:118
 msgid "Convert event's date/time to calendar's timezone"
 msgstr ""
 
@@ -3295,13 +3295,13 @@ msgid "Successfully imported events:"
 msgstr ""
 
 #: public/admin/plugins/ics/display_feeds.php:6
-#: public/admin/plugins/ics/import_feed.php:6
+#: public/admin/plugins/ics/import_feed.php:15
 #: public/admin/plugins/suggested/display_feeds.php:6
 msgid "Please, Sign In to <b>Timely Network</b> to manage your feeds."
 msgstr ""
 
 #: public/admin/plugins/ics/display_feeds.php:10
-#: public/admin/plugins/ics/import_feed.php:10
+#: public/admin/plugins/ics/import_feed.php:19
 #: public/admin/plugins/suggested/display_feeds.php:10
 msgid "Sign In to Timely Network"
 msgstr ""
@@ -3324,40 +3324,43 @@ msgid ""
 "events):"
 msgstr ""
 
-#: public/admin/plugins/ics/import_feed.php:17
+#: public/admin/plugins/ics/import_feed.php:8
+msgid "unlimited"
+msgstr ""
+
+#: public/admin/plugins/ics/import_feed.php:26
 msgid ""
 "<b>You don't have a subscription for this feature.</b><br>\n"
-"\t\tPlease <a href=\"https://time.ly/pricing/\">upgrade here</a> to a plan "
-"that\n"
+"\t\tPlease <a href=\"https://time.ly/pricing/\" target=\"_blank\">upgrade "
+"here</a> to a plan that\n"
 "\t\tsupports \"Import Feeds\"."
 msgstr ""
 
-#: public/admin/plugins/ics/import_feed.php:27
+#: public/admin/plugins/ics/import_feed.php:45
 msgid ""
 "<b>You have reached the limit of how many feeds you can import.</b><br>\n"
-"\t\tPlease <a href=\"https://time.ly/pricing/\">upgrade here</a> to a plan "
-"that\n"
-"\t\tsupports more feeds."
+"\t\tPlease sign up for EventBoost plan <a href=\"https://time.ly/eventboost/"
+"\" target=\"_blank\">here</a>."
 msgstr ""
 
-#: public/admin/plugins/ics/import_feed.php:63
+#: public/admin/plugins/ics/import_feed.php:89
 msgid "Allow comments on imported events"
 msgstr ""
 
-#: public/admin/plugins/ics/import_feed.php:70
+#: public/admin/plugins/ics/import_feed.php:96
 msgid "Show map on imported events"
 msgstr ""
 
-#: public/admin/plugins/ics/import_feed.php:77
+#: public/admin/plugins/ics/import_feed.php:103
 msgid ""
 "Import any tags/categories provided by feed, in addition those selected above"
 msgstr ""
 
-#: public/admin/plugins/ics/import_feed.php:110
+#: public/admin/plugins/ics/import_feed.php:136
 msgid "Import feed"
 msgstr ""
 
-#: public/admin/plugins/ics/import_feed.php:113
+#: public/admin/plugins/ics/import_feed.php:139
 msgid "Update feed"
 msgstr ""
 

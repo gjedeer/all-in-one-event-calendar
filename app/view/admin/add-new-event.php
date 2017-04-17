@@ -422,7 +422,7 @@ class Ai1ec_View_Add_New_Event extends Ai1ec_Base {
 						}	
 						$submitted_by .= sprintf( '<a href="mailto:%s" target="_top">%s</a>', $submitter_info['email'], $submitter_info['email'] ) ;
 					}
-					$submitter_html = sprintf( Ai1ec_I18n::__( '<span class="ai1ec-info-text">The event was submitted by %s.</span>' ), 
+					$submitter_html = sprintf( Ai1ec_I18n::__( '<span class="ai1ec-info-text">The event was submitted by %s.</span>' ),
 							$submitted_by 
 						);
 				}
