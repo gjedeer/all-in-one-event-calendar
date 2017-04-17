@@ -1,4 +1,5 @@
-<div class="ai1ec-popover ai1ec-popup {{ popup_classes }}">
+<div class="ai1ec-popover ai1ec-popup {{ popup_classes }}
+	ai1ec-event-instance-id-{{ event.instance_id }}">
 
 	{% set category_colors = event.get_runtime( 'category_colors' ) %}
 	{% if category_colors is not empty %}
