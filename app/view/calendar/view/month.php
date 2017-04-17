@@ -216,8 +216,8 @@ class Ai1ec_Calendar_View_Month extends Ai1ec_Calendar_View_Abstract {
 		$links[] = array(
 			'enabled' => true,
 			'class'=> 'ai1ec-next-month',
-			'text' => ( array_key_exists( $m, $months ) ? $months[$m] : $m ) .
-				' <i class="ai1ec-fa ai1ec-fa-angle-right"></i>',
+			'text' => array_key_exists( $m, $months ) ? $months[$m] : $m .
+			' <i class="ai1ec-fa ai1ec-fa-angle-right"></i>',
 			'href' => $href->generate_href(),
 		);
 
