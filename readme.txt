@@ -1,6 +1,6 @@
 === All-in-One Event Calendar ===
 Contributors: uchu, calvinyeh, raquelleira, renatotbueno, domanb, elirenato, hubrik, vtowel, yani.iliev, nicolapeluchetti, jbutkus, lpawlik, bangelov
-Tags: events calendar, website calendar, calendar, events, ics, ics feed, wordpress ical importer, google
+Tags: events calendar, website calendar, calendar, Event, Events, ics feed, wordpress ical importer, google
 calendar, ical, iCalendar, all-in-one, events sync, events widget,
 calendar widget
 Requires WordPress at least: 3.5
