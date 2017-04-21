@@ -1,6 +1,6 @@
 === All-in-One Event Calendar ===
 Contributors: uchu, calvinyeh, raquelleira, renatotbueno, domanb, elirenato, hubrik, vtowel, yani.iliev, nicolapeluchetti, jbutkus, lpawlik, bangelov
-Tags: calendar, events, ics, ics feed, wordpress ical importer, google
+Tags: events calendar, website calendar, calendar, events, ics, ics feed, wordpress ical importer, google
 calendar, ical, iCalendar, all-in-one, events sync, events widget,
 calendar widget
 Requires WordPress at least: 3.5
@@ -8,7 +8,7 @@ Tested up to: 4.7.4
 Stable tag: 2.5.19
 License: GNU General Public License, version 3 (GPL-3.0)
 
-A calendar system with many views, upcoming events widget, color-coded
+An events calendar system with multiple views, upcoming events widget, color-coded
 categories, recurrence, and import/export of .ics feeds.
 
 == Description ==
@@ -19,9 +19,9 @@ categories, recurrence, and import/export of .ics feeds.
 
 The [All-in-One Event Calendar](https://time.ly/) from
 [Timely](https://time.ly/) is a beautiful way to list your events in
-WordPress and easily share them with the rest of the world. Our
-calendar system combines clean visual design with a powerful set of
-features to create the most advanced calendar system available for
+WordPress and easily share them with the rest of the world. Our events
+calendar is easy to manage. Combines clean visual design with a powerful set of
+features to create the most advanced website calendar system available for
 WordPress.
 
 = Get Add-ons =
@@ -37,8 +37,8 @@ integration](https://time.ly/downloads/twitter/) and
 
 = Import and Export Events =
 
-Timely offers full ics/ical support. You can import events from other
-calendars and offer users the ability to subscribe to your calendar.
+Timely events calendar offers full ics/ical support. You can import events from other
+Website calendars and offer users the ability to subscribe to your events calendar.
 
 Importing and exporting iCalendar (.ics) feeds is one of the strongest
 features of the All-in-One Event Calendar system. Enter an event on
@@ -48,7 +48,7 @@ combination of categories and tags).
 
 = Even More Features =
 
-This plugin has many features we hope will prove useful to users,
+Our events calendar has many features we hope will prove useful to users,
 including:
 
 * **Recurring** events including complex patterns.
@@ -102,7 +102,7 @@ You can help translate by going to
 
 = Become the Hub of your community =
 
-If your goal is to run a community event calendar, Timely's All-in-one
+If your goal is to run a community events calendar, Timely's All-in-one
 Event Calendar has everything you'll need.
 
 https://vimeo.com/135004810
