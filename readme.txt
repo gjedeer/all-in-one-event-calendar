@@ -3,7 +3,7 @@ Contributors: uchu, calvinyeh, raquelleira, renatotbueno, domanb, elirenato, hub
 Tags: calendar, event, ical, feed, ics, icalendar, sync, aggregator, google, venue, calendar widget, events widget
 Requires at least: 3.5
 Tested up to: 4.7.4
-Stable tag: 2.5.19
+Stable tag: 2.5.20
 License: GNU General Public License, version 3 (GPL-3.0)
 
 An events calendar system with multiple views, upcoming events widget, color-coded categories, recurrence, and import/export of .ics feeds.
@@ -132,6 +132,9 @@ https://vimeo.com/135004810
 **[ai1ec exact_date="5-10-2017"]**
 
 == Changelog ==
+
+= Version 2.5.20 =
+* Fixed: Monthly view would fill up with empty lines if there are no events for the current month.
 
 = Version 2.5.19 =
 * Fixed: Changed code to remove some PHP 7 warnings.
