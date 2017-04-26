@@ -1,14 +1,12 @@
 === All-in-One Event Calendar ===
-
 Contributors: uchu, calvinyeh, raquelleira, renatotbueno, domanb, elirenato, hubrik, vtowel, yani.iliev, nicolapeluchetti, jbutkus, lpawlik, bangelov
 Tags: calendar, event, ics, feed, venue, google, ical, iCalendar, all-in-one, events sync, events widget, calendar widget, aggregator, venue
-Requires WordPress at least: 3.5
+Requires at least: 3.5
 Tested up to: 4.7.4
 Stable tag: 2.5.19
 License: GNU General Public License, version 3 (GPL-3.0)
 
-An events calendar system with multiple views, upcoming events widget, color-coded
-categories, recurrence, and import/export of .ics feeds.
+An events calendar system with multiple views, upcoming events widget, color-coded categories, recurrence, and import/export of .ics feeds.
 
 == Description ==
 
@@ -16,44 +14,34 @@ categories, recurrence, and import/export of .ics feeds.
 >
 >Please check-out our [Hub, Hublite and Pro hosted plans](https://time.ly/products) for many extra features and prioritized support.
 
-The [All-in-One Event Calendar](https://time.ly/) from
-[Timely](https://time.ly/) is a beautiful way to list your events in
-WordPress and easily share them with the rest of the world. Our events
-calendar is easy to manage. Combines clean visual design with a powerful set of
-features to create the most advanced website calendar system available for
-WordPress.
+The [All-in-One Event Calendar](https://time.ly/) from [Timely](https://time.ly/) is a beautiful way to list your events in WordPress and easily share them with the rest of the world.
+
+Our events calendar is easy to manage. Combines clean visual design with a powerful set of features to create the most advanced website calendar system available for WordPress.
 
 = Get Add-ons =
 
-Download add-ons at [Time.ly](https://time.ly) to get more features,
-like [Extended Views](https://time.ly/downloads/extended-views/),
-[Frontend Submission
-form](https://time.ly/downloads/front-end-event-form/),
+Download add-ons at [Time.ly](https://time.ly) to get more features, like:
+
+[Extended Views](https://time.ly/downloads/extended-views/),
+[Frontend Submission form](https://time.ly/downloads/front-end-event-form/),
 [Super Widget](https://time.ly/downloads/superwidget/),
-[Venues](https://time.ly/downloads/venues/), [Twitter
-integration](https://time.ly/downloads/twitter/) and
+[Venues](https://time.ly/downloads/venues/),
+[Twitter integration](https://time.ly/downloads/twitter/) and
 [more](https://time.ly/wordpress-calendar-plugin/addons/).
 
 = Import and Export Events =
 
-Timely events calendar offers full ics/ical support. You can import events from other
-Website calendars and offer users the ability to subscribe to your events calendar.
+Timely events calendar offers full ics/ical support. You can import events from other Website calendars and offer users the ability to subscribe to your events calendar.
 
-Importing and exporting iCalendar (.ics) feeds is one of the strongest
-features of the All-in-One Event Calendar system. Enter an event on
-one site and you can have it appear automatically in another website's
-calendar. You can even send events from a specific category or tag (or
-combination of categories and tags).
+Importing and exporting iCalendar (.ics) feeds is one of the strongest features of the All-in-One Event Calendar system. Enter an event on one site and you can have it appear automatically in another website's calendar. You can even send events from a specific category or tag (or combination of categories and tags).
 
 = Even More Features =
 
-Our events calendar has many features we hope will prove useful to users,
-including:
+Our events calendar has many features we hope will prove useful to users, including:
 
 * **Recurring** events including complex patterns.
 * **Filtering** by event category or tag.
-* Easy **sharing** with Google Calendar, Apple iCal, MS Outlook and
-any other system that accepts iCalendar (.ics) feeds.
+* Easy **sharing** with Google Calendar, Apple iCal, MS Outlook and any other system that accepts iCalendar (.ics) feeds.
 * Embedded **Google Maps**.
 * **Color-coded** events based on category.
 * Featured **event images** and **category images**.
@@ -71,14 +59,11 @@ any other system that accepts iCalendar (.ics) feeds.
 * Plugin can also be easily imported.
 * Each event is SEO-optimized.
 * Each event links to the original calendar.
-* Your calendar can be embedded into a WordPress page without needing
-to create template files or modify the theme.
+* Your calendar can be embedded into a WordPress page without needing to create template files or modify the theme.
 
 = Languages =
 
-Timely is supported by a committed group of translators offering
-[languages files](https://translate.time.ly/) in numerous languages
-including:
+Timely is supported by a committed group of translators offering [languages files](https://translate.time.ly/) in numerous languages including:
 
 * German
 * French
@@ -96,13 +81,11 @@ including:
 * Hungarian
 * Latvian
 
-You can help translate by going to
-[translate.time.ly](https://translate.time.ly).
+You can help translate by going to [translate.time.ly](https://translate.time.ly).
 
 = Become the Hub of your community =
 
-If your goal is to run a community events calendar, Timely's All-in-one
-Event Calendar has everything you'll need.
+If your goal is to run a community events calendar, Timely's All-in-one Event Calendar has everything you'll need.
 
 https://vimeo.com/135004810
 
@@ -126,6 +109,7 @@ https://vimeo.com/135004810
 * Filter by event category name: **[ai1ec cat_name="Holidays"]**
 * Filter by event category names (separate names by comma):
 **[ai1ec cat_name="Lunar Cycles,zodia-date-ranges"]**
+
 * Filter by event category id: **[ai1ec cat_id="1"]**
 * Filter by event category ids (separate IDs by comma):
 **[ai1ec cat_id="1, 2"]**
@@ -133,6 +117,7 @@ https://vimeo.com/135004810
 * Filter by event tag name: **[ai1ec tag_name="tips-and-tricks"]**
 * Filter by event tag names (separate names by comma):
 **[ai1ec tag_name="creative writing,performing arts"]**
+
 * Filter by event tag id: **[ai1ec tag_id="1"]**
 * Filter by event tag ids (separate IDs by comma):
 **[ai1ec tag_id="1, 2"]**
@@ -144,7 +129,7 @@ https://vimeo.com/135004810
 * Hide filter toolbar: **[ai1ec display_filters="false"]**
 * Limit number of events per page: **[ai1ec events_limit="5"]**
 * Select a different start date: 
-**[ai1ec exact_date="5-10-2015"]**
+**[ai1ec exact_date="5-10-2017"]**
 
 == Changelog ==
 
