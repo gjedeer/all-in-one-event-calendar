@@ -22,12 +22,12 @@ Our events calendar is easy to manage. Combines clean visual design with a power
 
 Download add-ons at [Time.ly](https://time.ly) to get more features, like:
 
-[Extended Views](https://time.ly/downloads/extended-views/),
-[Frontend Submission form](https://time.ly/downloads/front-end-event-form/),
-[Super Widget](https://time.ly/downloads/superwidget/),
-[Venues](https://time.ly/downloads/venues/),
-[Twitter integration](https://time.ly/downloads/twitter/) and
-[more](https://time.ly/wordpress-calendar-plugin/addons/).
+* [Extended Views](https://time.ly/downloads/extended-views/)
+* [Frontend Submission form](https://time.ly/downloads/front-end-event-form/)
+* [Super Widget](https://time.ly/downloads/superwidget/)
+* [Venues](https://time.ly/downloads/venues/)
+* [Twitter integration](https://time.ly/downloads/twitter/)
+* and [more](https://time.ly/wordpress-calendar-plugin/addons/)...
 
 = Import and Export Events =
 
@@ -81,7 +81,7 @@ Timely is supported by a committed group of translators offering [languages file
 * Hungarian
 * Latvian
 
-You can help translate by going to [translate.time.ly](https://translate.time.ly).
+You can help translate by going to [https://translate.time.ly](https://translate.time.ly).
 
 = Become the Hub of your community =
 
