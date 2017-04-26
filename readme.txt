@@ -1,6 +1,6 @@
 === All-in-One Event Calendar ===
 Contributors: uchu, calvinyeh, raquelleira, renatotbueno, domanb, elirenato, hubrik, vtowel, yani.iliev, nicolapeluchetti, jbutkus, lpawlik, bangelov
-Tags: calendar, event, ics, feed, venue, google, ical, iCalendar, all-in-one, events sync, events widget, calendar widget, aggregator
+Tags: calendar, event, ical, feed, ics, icalendar, sync, aggregator, google, venue, calendar widget, events widget
 Requires at least: 3.5
 Tested up to: 4.7.4
 Stable tag: 2.5.19
