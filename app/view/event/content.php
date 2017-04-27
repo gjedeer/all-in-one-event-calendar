@@ -148,21 +148,22 @@ HTML;
 	 */
 	public function get_content_img_url( Ai1ec_Event $event, &$size = null ) {
 
-        //try to find a featured image, if not find then try to find from the post content
+        //try to find a featured image
         $url_featured_image = ( ! empty ( wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) ) ? wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) : null );
+
         if ( ! empty( $url_featured_image ) ) {
             return $url_featured_image;
         }
 
-		preg_match(
+        preg_match(
 			'/<img([^>]+)src=["\']?([^"\'\ >]+)([^>]*)>/i',
 			$event->get( 'post' )->post_content,
 			$matches
 		);
 		// Check if we have a result
-        if ( empty( $matches ) ) {
-            return null;
-        }
+		if ( empty( $matches ) ) {
+			return null;
+		}
 
 		// Mark found image.
 		$event->get( 'post' )->post_content = str_replace(
