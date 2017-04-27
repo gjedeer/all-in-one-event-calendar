@@ -152,8 +152,14 @@ HTML;
 			$event->get( 'post' )->post_content,
 			$matches
 		);
-		// Check if we have a result, otherwise a notice is issued.
+		// Check if we have a result, otherwise try to find a featured image
 		if ( empty( $matches ) ) {
+			$url_featured_image = ( ! empty ( wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) ) ? wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) : null );
+
+			if ( ! empty( $url_featured_image ) ) {
+				return $url_featured_image;
+			}
+
 			return null;
 		}
 
