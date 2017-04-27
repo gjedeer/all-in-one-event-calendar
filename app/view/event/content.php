@@ -148,14 +148,14 @@ HTML;
 	 */
 	public function get_content_img_url( Ai1ec_Event $event, &$size = null ) {
 
-        //try to find a featured image
-        $url_featured_image = ( ! empty ( wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) ) ? wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) : null );
+		// Try to find a featured image
+		$url_featured_image = ( ! empty ( wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) ) ? wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) : null );
 
-        if ( ! empty( $url_featured_image ) ) {
-            return $url_featured_image;
-        }
+		if ( ! empty( $url_featured_image ) ) {
+			return $url_featured_image;
+		}
 
-        preg_match(
+		preg_match(
 			'/<img([^>]+)src=["\']?([^"\'\ >]+)([^>]*)>/i',
 			$event->get( 'post' )->post_content,
 			$matches
