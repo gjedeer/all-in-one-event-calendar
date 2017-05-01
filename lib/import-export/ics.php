@@ -932,14 +932,14 @@ class Ai1ec_Ics_Import_Export_Engine
 					}
 				}
 
-				if ( null !== $images ) {
-					$e->setProperty(
-						'X-WP-IMAGES-URL',
-						$this->_sanitize_value(
-							implode( ',', $images )
-						)
-					);
-				}
+			if ( null !== $images ) {
+				$e->setProperty(
+					'X-WP-IMAGES-URL',
+					$this->_sanitize_value(
+						implode( ',', $images )
+					)
+				);
+			}
 
 		if ( isset( $params['no_html'] ) && $params['no_html'] ) {
 			$e->setProperty(
