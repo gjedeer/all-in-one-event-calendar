@@ -885,61 +885,61 @@ class Ai1ec_Ics_Import_Export_Engine
 		// Prepend featured image if available.
 		$size    = null;
 		$avatar  = $this->_registry->get( 'view.event.avatar' );
-				$post_id = get_post_thumbnail_id( $event->get( 'post_id' ) );
-				$attributes = wp_get_attachment_image_src( $post_id );
-				$images  = null;
-				// if no img is already present - add thumbnail
-				if ( ! empty( $attributes ) ) {
+        $post_id = get_post_thumbnail_id( $event->get( 'post_id' ) );
+        $attributes = wp_get_attachment_image_src( $post_id );
+        $images  = null;
+        // if no img is already present - add thumbnail
+        if ( ! empty( $attributes ) ) {
 
-					$added   = null;
-					foreach ( array( 'thumbnail', 'medium', 'large', 'full' ) as $_size ) {
-						$attributes = wp_get_attachment_image_src( $post_id, $_size );
-						if ( false !== $attributes ) {
-							$key_str    = sprintf( '%d_%d', $attributes[1], $attributes[2]);
-							if ( null === $added || false === isset( $added[$key_str] ) ) {
-								$added[$key_str] = true;
-								array_unshift( $attributes, $_size );
-								$images[] = implode( ';', $attributes );
-							}
+            $added   = null;
+            foreach ( array( 'thumbnail', 'medium', 'large', 'full' ) as $_size ) {
+                $attributes = wp_get_attachment_image_src( $post_id, $_size );
+                if ( false !== $attributes ) {
+                    $key_str    = sprintf( '%d_%d', $attributes[1], $attributes[2]);
+                    if ( null === $added || false === isset( $added[$key_str] ) ) {
+                        $added[$key_str] = true;
+                        array_unshift( $attributes, $_size );
+                        $images[] = implode( ';', $attributes );
+                    }
 
-						}
-					}
+                }
+            }
 
-					if ( $img_url = $avatar->get_post_thumbnail_url( $event, $size ) ) {
-						$content = '<div class="ai1ec-event-avatar alignleft timely"><img src="' .
-							esc_attr( $img_url ) . '" width="' . $size[0] . '" height="' .
-							$size[1] . '" /></div>' . $content;
-					}
-				} else {
+            if ( $img_url = $avatar->get_post_thumbnail_url( $event, $size ) ) {
+                $content = '<div class="ai1ec-event-avatar alignleft timely"><img src="' .
+                    esc_attr( $img_url ) . '" width="' . $size[0] . '" height="' .
+                    $size[1] . '" /></div>' . $content;
+            }
+        } else {
 
-					$matches = $avatar->get_image_from_content( $content );
+            $matches = $avatar->get_image_from_content( $content );
 
-					if ( ! empty( $matches ) ) {
+            if ( ! empty( $matches ) ) {
 
-						$patternWidth = '/width="(?P<width>\w+)/i';
-						preg_match( $patternWidth, $matches[0], $matchesWidth );
+                $patternWidth = '/width="(?P<width>\w+)/i';
+                preg_match( $patternWidth, $matches[0], $matchesWidth );
 
-						$patternHeight = '/height="(?P<height>\w+)/i';
-						preg_match( $patternHeight, $matches[0], $matchesHeight );
+                $patternHeight = '/height="(?P<height>\w+)/i';
+                preg_match( $patternHeight, $matches[0], $matchesHeight );
 
-						if ( ! empty( $matchesWidth ) && ! empty( $matchesHeight ) ) {
+                if ( ! empty( $matchesWidth ) && ! empty( $matchesHeight ) ) {
 
-							foreach ( array( 'thumbnail', 'medium', 'large', 'full' ) as $_size ) {
-								$attributes = [ $_size, $matches[2], $matchesWidth['width'], $matchesHeight['height'] ];
-								$images[] = implode( ';', $attributes );
-							}
-						}
-					}
-				}
+                    foreach ( array( 'thumbnail', 'medium', 'large', 'full' ) as $_size ) {
+                        $attributes = [ $_size, $matches[2], $matchesWidth['width'], $matchesHeight['height'] ];
+                        $images[] = implode( ';', $attributes );
+                    }
+                }
+            }
+        }
 
-			if ( null !== $images ) {
-				$e->setProperty(
-					'X-WP-IMAGES-URL',
-					$this->_sanitize_value(
-						implode( ',', $images )
-					)
-				);
-			}
+        if ( null !== $images ) {
+            $e->setProperty(
+                'X-WP-IMAGES-URL',
+                $this->_sanitize_value(
+                    implode( ',', $images )
+                )
+            );
+        }
 
 		if ( isset( $params['no_html'] ) && $params['no_html'] ) {
 			$e->setProperty(
