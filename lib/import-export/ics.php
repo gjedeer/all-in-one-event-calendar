@@ -885,12 +885,12 @@ class Ai1ec_Ics_Import_Export_Engine
 		// Prepend featured image if available.
 		$size    = null;
 		$avatar  = $this->_registry->get( 'view.event.avatar' );
-		$post_id = get_post_thumbnail_id( $event->get( 'post_id' ) );
 
 		$images  = null;
-		// if no img is already present - add thumbnail
-		if ( has_post_thumbnail( $post_id ) ) {
+		// try to find a featured image
+		if ( has_post_thumbnail( $event->get( 'post_id' )  ) ) {
 
+			$post_id = get_post_thumbnail_id( $event->get( 'post_id' ) );
 			$added   = null;
 			foreach ( array( 'thumbnail', 'medium', 'large', 'full' ) as $_size ) {
 				$attributes = wp_get_attachment_image_src( $post_id, $_size );
