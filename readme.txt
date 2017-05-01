@@ -135,6 +135,7 @@ https://vimeo.com/135004810
 
 = Version 2.5.20 =
 * Fixed: Monthly view would fill up with empty lines if there are no events for the current month.
+* Fixed: Some events with featured image were being exported without X-WP-IMAGES-URL property set.
 
 = Version 2.5.19 =
 * Fixed: Changed code to remove some PHP 7 warnings.
