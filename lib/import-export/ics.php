@@ -886,10 +886,10 @@ class Ai1ec_Ics_Import_Export_Engine
 		$size    = null;
 		$avatar  = $this->_registry->get( 'view.event.avatar' );
 		$post_id = get_post_thumbnail_id( $event->get( 'post_id' ) );
-		$attributes = wp_get_attachment_image_src( $post_id );
+
 		$images  = null;
 		// if no img is already present - add thumbnail
-		if ( ! empty( $attributes ) ) {
+		if ( has_post_thumbnail( $post_id ) ) {
 
 			$added   = null;
 			foreach ( array( 'thumbnail', 'medium', 'large', 'full' ) as $_size ) {
@@ -904,7 +904,7 @@ class Ai1ec_Ics_Import_Export_Engine
 
 				}
 			}
-		
+
 			if ( $img_url = $avatar->get_post_thumbnail_url( $event, $size ) ) {
 				$content = '<div class="ai1ec-event-avatar alignleft timely"><img src="' .
 					esc_attr( $img_url ) . '" width="' . $size[0] . '" height="' .
