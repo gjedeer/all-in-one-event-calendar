@@ -916,11 +916,11 @@ class Ai1ec_Ics_Import_Export_Engine
 
             if ( ! empty( $matches ) ) {
 
-                $patternEventId = '/width="(?P<width>\w+)/i';
-                preg_match( $patternEventId, $matches[0], $matchesWidth );
+                $patternWidth = '/width="(?P<width>\w+)/i';
+                preg_match( $patternWidth, $matches[0], $matchesWidth );
 
-                $patternEventId = '/height="(?P<height>\w+)/i';
-                preg_match( $patternEventId, $matches[0], $matchesHeight );
+                $patternHeight = '/height="(?P<height>\w+)/i';
+                preg_match( $patternHeight, $matches[0], $matchesHeight );
 
                 if ( ! empty( $matchesWidth ) && ! empty( $matchesHeight ) ) {
 
