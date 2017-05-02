@@ -191,6 +191,22 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
 		foreach ( $og as $key => $val ) {
 			echo "<meta property=\"og:$key\" content=\"$val\" />\n";
 		}
+		// Twitter meta tags
+		$twitter         = array(
+			'card'        => 'summary',
+			'title'       => htmlspecialchars(
+				$event->get( 'post' )->post_title .
+				' (' . substr( $event->get( 'start' ) , 0, 10 ) . ')'
+				),
+			'description' => htmlspecialchars( $desc ),
+			'image'       => $content->get_content_img_url( $event )
+		);
+		foreach ( $twitter as $key => $val ) {
+			if ( empty( $val ) && 'image' !== $key ) {
+				$val = Ai1ec_I18n::__( 'No data' );
+			}
+			echo "<meta name=\"twitter:$key\" content=\"$val\" />\n";
+		}
 	}
 
 	/**
