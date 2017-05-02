@@ -202,7 +202,7 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
 			'image'       => $content->get_content_img_url( $event )
 		);
 		foreach ( $twitter as $key => $val ) {
-			if ( empty( $val ) ) {
+			if ( empty( $val ) && 'image' !== $key ) {
 				$val = Ai1ec_I18n::__( 'No data' );
 			}
 			echo "<meta name=\"twitter:$key\" content=\"$val\" />\n";
