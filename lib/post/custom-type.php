@@ -231,13 +231,11 @@ class Ai1ec_Post_Custom_Type extends Ai1ec_Base {
 				// Edit events.
 				$role->add_cap( 'edit_ai1ec_event' );
 				$role->add_cap( 'edit_ai1ec_events' );
-				$role->add_cap( 'edit_others_ai1ec_events' );
 				$role->add_cap( 'edit_private_ai1ec_events' );
 				$role->add_cap( 'edit_published_ai1ec_events' );
 				// Delete events.
 				$role->add_cap( 'delete_ai1ec_event' );
 				$role->add_cap( 'delete_ai1ec_events' );
-				$role->add_cap( 'delete_others_ai1ec_events' );
 				$role->add_cap( 'delete_published_ai1ec_events' );
 				$role->add_cap( 'delete_private_ai1ec_events' );
 				// Publish events.
@@ -252,6 +250,11 @@ class Ai1ec_Post_Custom_Type extends Ai1ec_Base {
 					// Change calendar themes & manage calendar options.
 					$role->add_cap( 'switch_ai1ec_themes' );
 					$role->add_cap( 'manage_ai1ec_options' );
+				}
+				// Add additional roles for administrator and editor
+				if ( 'author' !== $role_name ) {
+					$role->add_cap( 'edit_others_ai1ec_events' );
+					$role->add_cap( 'delete_others_ai1ec_events' );
 				}
 			}
 		}

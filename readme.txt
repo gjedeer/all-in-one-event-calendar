@@ -136,6 +136,7 @@ https://vimeo.com/135004810
 = Version 2.5.20 =
 * Fixed: Monthly view would fill up with empty lines if there are no events for the current month.
 * Fixed: Some events with featured image were being exported without X-WP-IMAGES-URL property set.
+* Fixed: User with Author role was able do edit/delete other's posts.
 * Improved: Added meta tags in event's page, which will be used by Twitter's URL Preview feature.
 
 = Version 2.5.19 =
