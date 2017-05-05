@@ -10,10 +10,6 @@ An events calendar system with multiple views, upcoming events widget, color-cod
 
 == Description ==
 
-><strong>Note on support:</strong> Please read our sticky post before creating a new thread. The forum is a place where our users can provide insightful help to other plugin users.
->
->Please check-out our [Hub, Hublite and Pro hosted plans](https://time.ly/products) for many extra features and prioritized support.
-
 The [All-in-One Event Calendar](https://time.ly/) from [Timely](https://time.ly/) is a beautiful way to list your events in WordPress and easily share them with the rest of the world.
 
 Our events calendar is easy to manage. Combines clean visual design with a powerful set of features to create the most advanced website calendar system available for WordPress.
