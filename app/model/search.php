@@ -626,7 +626,7 @@ class Ai1ec_Event_Search extends Ai1ec_Base {
 		// retrieve actual feed ID if any
 		$select = 'SELECT `post_id` FROM `' . $table_name .
 			'` WHERE `ical_uid` = %s';
-		return $dbi->get_var( $dbi->prepare( $select, $argv ) );
+		return $dbi->get_var( $dbi->prepare( $select, array( $uid ) ) );
 	}
 
 	/**
