@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: All-in-One Event Calendar by Time.ly 2.5.20\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/all-in-one-event-calendar\n"
-"POT-Creation-Date: 2017-04-26 20:07:33+00:00\n"
+"POT-Creation-Date: 2017-05-09 20:47:15+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -707,89 +707,102 @@ msgid ""
 "address autocomplete function "
 msgstr ""
 
-#: app/model/settings.php:869
+#: app/model/settings.php:854
+msgid ""
+" Show the old <strong>Post Your Event</strong> button above the calendar to "
+"privileged users"
+msgstr ""
+
+#: app/model/settings.php:857
+msgid ""
+"Install the <a target=\"_blank\" href=\"https://time.ly/\">Interactive "
+"Frontend Extension</a> for the <strong>frontend Post Your Event form</"
+"strong>."
+msgstr ""
+
+#: app/model/settings.php:878
 msgid "Move calendar into this DOM element"
 msgstr ""
 
-#: app/model/settings.php:871
+#: app/model/settings.php:880
 msgid ""
 "Optional. Use this JavaScript-based shortcut to place the\n"
 "\t\t\t\t\t\tcalendar a DOM element other than the usual page content "
 "container\n"
 "\t\t\t\t\t\tif you are unable to create an appropriate page template\n"
 "\t\t\t\t\t\t for the calendar page. To use, enter a\n"
-"\t\t\t\t\t\t<a target=\"_blank\" href=\"http://api.jquery.com/category/"
+"\t\t\t\t\t\t<a target=\"_blank\" href=\"https://api.jquery.com/category/"
 "selectors/\">\n"
 "\t\t\t\t\t\tjQuery selector</a> that evaluates to a single DOM element.\n"
 "\t\t\t\t\t\tAny existing markup found within the target will be replaced\n"
 "\t\t\t\t\t\tby the calendar."
 msgstr ""
 
-#: app/model/settings.php:890
+#: app/model/settings.php:899
 msgid ""
 "<strong>Skip <tt>in_the_loop()</tt> check </strong> that protects against "
 "multiple calendar output"
 msgstr ""
 
-#: app/model/settings.php:893
+#: app/model/settings.php:902
 msgid ""
 "Try enabling this option if your calendar does not appear on the calendar "
 "page. It is needed for compatibility with a small number of themes that call "
 "<tt>the_content()</tt> from outside of The Loop. Leave disabled otherwise."
 msgstr ""
 
-#: app/model/settings.php:905
+#: app/model/settings.php:914
 msgid "Disable <strong>gzip</strong> compression."
 msgstr ""
 
-#: app/model/settings.php:908
+#: app/model/settings.php:917
 msgid ""
 "Use this option if calendar is unresponsive. <a target=\"_blank\" href="
-"\"http://time.ly/document/user-guide/troubleshooting/disable-gzip-"
+"\"https://time.ly/document/user-guide/troubleshooting/disable-gzip-"
 "compression/\">Read more</a> about the issue. (From version 2.1 onwards, "
 "gzip is disabled by default for maximum compatibility.)"
 msgstr ""
 
-#: app/model/settings.php:920
+#: app/model/settings.php:929
 msgid "Use frontend rendering."
 msgstr ""
 
-#: app/model/settings.php:923
+#: app/model/settings.php:932
 msgid ""
 "Renders calendar views on the client rather than the server; can improve "
 "performance."
 msgstr ""
 
-#: app/model/settings.php:935
+#: app/model/settings.php:944
 msgid "Use advanced JS cache."
 msgstr ""
 
-#: app/model/settings.php:938
+#: app/model/settings.php:947
 msgid "Cache dynamically generated JS files. Improves performance."
 msgstr ""
 
-#: app/model/settings.php:950
+#: app/model/settings.php:959
 msgid ""
 "<strong>Link CSS</strong> in <code>&lt;head&gt;</code> section when file "
 "cache is unavailable."
 msgstr ""
 
-#: app/model/settings.php:953
+#: app/model/settings.php:962
 msgid ""
 "Use this option if file cache is unavailable and you would prefer to serve "
 "CSS as a link rather than have it output inline."
 msgstr ""
 
-#: app/model/settings.php:965
+#: app/model/settings.php:974
 msgid "Current <strong>robots.txt</strong> on this site"
 msgstr ""
 
-#: app/model/settings.php:969
+#: app/model/settings.php:978
 msgid ""
 "The Robot Exclusion Standard, also known as the Robots Exclusion Protocol "
 "or\n"
-"\t\t\t\t\t\t<code><a href=\"http://en.wikipedia.org/wiki/Robots.txt\" target="
-"\"_blank\">robots.txt</a></code>\n"
+"\t\t\t\t\t\t<code><a href=\"https://en.wikipedia.org/wiki/Robots.txt\" "
+"target=\"_blank\">robots.txt</a></code>\n"
 "\t\t\t\t\t\tprotocol, is a convention for cooperating web crawlers and other "
 "web robots\n"
 "\t\t\t\t\t\tabout accessing all or part of a website that is otherwise "
@@ -798,21 +811,21 @@ msgid ""
 "your root WordPress directory."
 msgstr ""
 
-#: app/model/settings.php:986
+#: app/model/settings.php:995
 msgid ""
 "<strong>Publicize, promote, and share my events</strong> marked as public on "
 "the Timely network. (<a href=\"%s\" target=\"_blank\">Learn more &#187;</a>)"
 msgstr ""
 
-#: app/model/settings.php:1009
+#: app/model/settings.php:1018
 msgid "Templates cache improves site performance"
 msgstr ""
 
-#: app/model/settings.php:1022
+#: app/model/settings.php:1031
 msgid "Display events in <strong>calendar time zone</strong>"
 msgstr ""
 
-#: app/model/settings.php:1025
+#: app/model/settings.php:1034
 msgid ""
 "If this box is checked events will appear in the calendar time zone with "
 "time zone information displayed on the event details page."
@@ -1828,18 +1841,22 @@ msgstr ""
 msgid "Edit this occurrence (%s)"
 msgstr ""
 
-#: app/view/event/single.php:208
+#: app/view/event/single.php:206
+msgid "No data"
+msgstr ""
+
+#: app/view/event/single.php:224
 msgid ""
 "This post was replicated from another site's <a href=\"%s\" title="
 "\"iCalendar feed\"><i class=\"ai1ec-fa ai1ec-fa-calendar\"></i> calendar "
 "feed</a>."
 msgstr ""
 
-#: app/view/event/single.php:212
+#: app/view/event/single.php:228
 msgid "This post was imported from a CSV/ICS file."
 msgstr ""
 
-#: app/view/event/single.php:225
+#: app/view/event/single.php:241
 msgid "View original"
 msgstr ""
 
@@ -2011,7 +2028,7 @@ msgstr ""
 msgid ""
 "CSS compilation failed because you don't have enough free memory (a minimum "
 "of %s is needed). Your calendar will not render or function properly without "
-"CSS. Please read <a href=\"http://time.ly/document/user-guide/getting-"
+"CSS. Please read <a href=\"https://time.ly/document/user-guide/getting-"
 "started/pre-sale-questions/\">this article</a> to learn how to increase your "
 "PHP memory limit."
 msgstr ""
@@ -2129,7 +2146,7 @@ msgid ""
 "\"https://time.ly/document/user-guide/getting-started/license-keys/\" target="
 "\"_blank\">entered your licence keys</a>. Alternatively, navigate to <a href="
 "\"https://time.ly/your-account/\">your account</a> to download the latest "
-"version of the add-on(s) and <a href=\"http://time.ly/document/user-guide/"
+"version of the add-on(s) and <a href=\"https://time.ly/document/user-guide/"
 "troubleshooting/perform-manual-upgrade/\">update manually</a>. Please <a "
 "href=\"https://time.ly/forums/\">post in the forum</a> if you have trouble. "
 "We are happy to help."
@@ -2443,13 +2460,13 @@ msgctxt "Event feed taxonomy (singular)"
 msgid "Event Feed"
 msgstr ""
 
-#: lib/post/custom-type.php:285
+#: lib/post/custom-type.php:288
 msgid ""
 "All Events <span class=\"update-plugins count-%d\" title=\"%d Pending Events"
 "\"><span class=\"update-count\">%d</span></span>"
 msgstr ""
 
-#: lib/post/custom-type.php:296
+#: lib/post/custom-type.php:299
 msgid "All Events"
 msgstr ""
 
@@ -3170,7 +3187,7 @@ msgstr ""
 
 #: public/admin/calendar_tasks.php:4
 msgid ""
-"to the All-in-One Event Calendar by <a href=\"http://time.ly/\" target="
+"to the All-in-One Event Calendar by <a href=\"https://time.ly/\" target="
 "\"_blank\">Timely</a>"
 msgstr ""
 
@@ -3712,7 +3729,7 @@ msgid "All-in-One Event Calendar by Time.ly"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "http://wordpress.org/plugins/all-in-one-event-calendar/"
+msgid "https://wordpress.org/plugins/all-in-one-event-calendar/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -3726,5 +3743,5 @@ msgid "Time.ly Network Inc."
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://time.ly/"
+msgid "https://time.ly/"
 msgstr ""
