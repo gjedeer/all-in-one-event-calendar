@@ -24,7 +24,7 @@ abstract class Ai1ec_Base_License_Controller extends Ai1ec_Base_Extension_Contro
 	/**
 	 * @var string Licensing API endpoint URI.
 	 */
-	protected $_store = 'http://time.ly/';
+	protected $_store = 'https://time.ly/';
 
 	/**
 	 * Get label to be used for license input field.

@@ -1,6 +1,6 @@
 <div class="ai1ec-clearfix">
 	<h2 class="timely-logo">
-		<a href="http://time.ly/?utm_source=dashboard&nbsp;utm_medium=button&nbsp;utm_term=ai1ec-pro&nbsp;utm_content=1.11.4&nbsp;utm_campaign=logo"
+		<a href="https://time.ly/?utm_source=dashboard&nbsp;utm_medium=button&nbsp;utm_term=ai1ec-pro&nbsp;utm_content=1.11.4&nbsp;utm_campaign=logo"
 			title="<?php esc_attr_e( 'Timely', AI1EC_PLUGIN_NAME ); ?>"
 			target="_blank">
 		</a>
@@ -14,7 +14,7 @@
 			<div class="ai1ec-col-lg-3" id="ai1ec-addons-col">
 				<a class="ai1ec-btn ai1ec-btn-primary ai1ec-btn-block ai1ec-btn-lg"
 					target="_blank"
-					href="http://time.ly/document/user-guide/">
+					href="https://time.ly/document/user-guide/">
 					<i class="ai1ec-fa ai1ec-fa-book ai1ec-fa-fw"></i>
 					<?php _e( 'Guide', AI1EC_PLUGIN_NAME ); ?>
 				</a>
@@ -50,7 +50,7 @@
 			<i class="ai1ec-fa ai1ec-fa-bullhorn"></i>
 			<?php _e( 'Timely News', AI1EC_PLUGIN_NAME ); ?>
 			<small>
-				<a href="http://time.ly/blog?utm_source=dashboard&nbsp;utm_medium=blog&nbsp;utm_term=ai1ec-pro&nbsp;utm_content=1.11.4&nbsp;utm_campaign=news"
+				<a href="https://time.ly/blog?utm_source=dashboard&nbsp;utm_medium=blog&nbsp;utm_term=ai1ec-pro&nbsp;utm_content=1.11.4&nbsp;utm_campaign=news"
 					target="_blank">
 					<?php _e( 'view all news', AI1EC_PLUGIN_NAME ); ?>
 					<i class="ai1ec-fa ai1ec-fa-arrow-right"></i>
@@ -96,10 +96,10 @@
 	<div class="ai1ec-follow-fan">
 		<div class="ai1ec-facebook-like-top">
 			<script src="//connect.facebook.net/en_US/all.js#xfbml=1"></script>
-			<fb:like href="http://www.facebook.com/timelycal" layout="button_count"
+			<fb:like href="https://www.facebook.com/timelycal" layout="button_count"
 				show_faces="true" width="110" font="lucida grande"></fb:like>
 		</div>
-		<a href="http://twitter.com/_Timely" class="twitter-follow-button">
+		<a href="https://twitter.com/_Timely" class="twitter-follow-button">
 			<?php _e( 'Follow @_Timely', AI1EC_PLUGIN_NAME ) ?>
 		</a>
 		<script src="//platform.twitter.com/widgets.js" type="text/javascript">

@@ -57,7 +57,7 @@ define( 'AI1EC_VERSION', '2.5.20' );
 	// = RSS FEED URL =
 	// ================
 	if ( ! defined( 'AI1EC_RSS_FEED' ) ) {
-		define( 'AI1EC_RSS_FEED',           'http://time.ly/blog/feed/' );
+		define( 'AI1EC_RSS_FEED',           'https://time.ly/blog/feed/' );
 	}
 
 	// =================
@@ -411,7 +411,7 @@ define( 'AI1EC_VERSION', '2.5.20' );
 	// = Add-ons list URL =
 	// ====================
 	if ( ! defined( 'AI1EC_TIMELY_ADDONS_URI' ) ) {
-		define( 'AI1EC_TIMELY_ADDONS_URI', 'http://time.ly/?action=addons_list' );
+		define( 'AI1EC_TIMELY_ADDONS_URI', 'https://time.ly/?action=addons_list' );
 	}
 
 	// Enable All-in-One-Event-Calendar to work in debug mode, which means,
