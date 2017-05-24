@@ -455,8 +455,11 @@ class Ai1ec_Javascript_Controller {
 			'invalid_url_message'            => esc_html(
 				Ai1ec_I18n::__( 'Please enter a valid iCalendar URL.' )
 			),
-			'invalid_website_message'      	 => esc_html(
+			'invalid_website_message'        => esc_html(
 				Ai1ec_I18n::__( 'Please enter a valid Website URL.' )
+			),
+			'invalid_registration_message'   => esc_html(
+				Ai1ec_I18n::__( 'Please enter a valid Registration URL, starting with https:// or http://.' )
 			),
 			'invalid_email_message'          => esc_html(
 				Ai1ec_I18n::__( 'Please enter a valid email address.' )
