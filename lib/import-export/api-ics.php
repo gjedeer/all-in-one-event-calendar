@@ -328,7 +328,7 @@ class Ai1ec_Api_Ics_Import_Export_Engine
 					$data['contact_url']   = $el;
 				}
 				// Detect phone number.
-				elseif ( preg_match( '/\d/', $el ) ) {
+				elseif ( preg_match( '/^[\+0-9\-\(\)\s]*$/', $el ) && strlen( $el ) <= 32 ) {
 					$data['contact_phone'] = $el;
 				}
 				// Default to name.
