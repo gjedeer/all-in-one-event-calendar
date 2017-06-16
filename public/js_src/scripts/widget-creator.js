@@ -69,7 +69,7 @@ define(
 										selected = selected.join( ',' );
 										id       = $select.data( 'id' )
 									}
-									em_code += ' data-' + id + '="' + selected + '"';
+									em_code += ' data-' + id.replace( /\-/g, '_' ) + '="' + selected + '"';
 								}
 							} );
 							// Process inputs.
