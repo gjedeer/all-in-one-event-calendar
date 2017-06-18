@@ -847,9 +847,18 @@ class Ai1ec_Settings extends Ai1ec_App {
 				'default'  => false,
 			),
 			'show_create_event_button' => array(
-				'type'     => 'deprecated',
-				'renderer' => null,
-				'default'  => false,
+				'type' => 'bool',
+				'renderer' => array(
+ 					'class' => 'checkbox',
+ 					'tab'   => 'extensions',
+ 					'label' => Ai1ec_I18n::__(
+ 						' Show the old <strong>Post Your Event</strong> button above the calendar to privileged users'
+ 					),
+ 					'help'  => Ai1ec_I18n::__(
+ 						'Install the <a target="_blank" href="https://time.ly/">Interactive Frontend Extension</a> for the <strong>frontend Post Your Event form</strong>.'
+ 					),
+ 				),
+				'default'  => true,
 			),
 			'embedding' => array(
 				'type' => 'html',
@@ -873,7 +882,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 						calendar a DOM element other than the usual page content container
 						if you are unable to create an appropriate page template
 						 for the calendar page. To use, enter a
-						<a target="_blank" href="http://api.jquery.com/category/selectors/">
+						<a target="_blank" href="https://api.jquery.com/category/selectors/">
 						jQuery selector</a> that evaluates to a single DOM element.
 						Any existing markup found within the target will be replaced
 						by the calendar.'
@@ -906,7 +915,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 						'Disable <strong>gzip</strong> compression.'
 					),
 					'help'  => Ai1ec_I18n::__(
-						'Use this option if calendar is unresponsive. <a target="_blank" href="http://time.ly/document/user-guide/troubleshooting/disable-gzip-compression/">Read more</a> about the issue. (From version 2.1 onwards, gzip is disabled by default for maximum compatibility.)'
+						'Use this option if calendar is unresponsive. <a target="_blank" href="https://time.ly/document/user-guide/troubleshooting/disable-gzip-compression/">Read more</a> about the issue. (From version 2.1 onwards, gzip is disabled by default for maximum compatibility.)'
 					),
 				),
 				'default'  => true,
@@ -968,7 +977,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 					'readonly' => 'readonly',
 					'help'     => Ai1ec_I18n::__(
 						'The Robot Exclusion Standard, also known as the Robots Exclusion Protocol or
-						<code><a href="http://en.wikipedia.org/wiki/Robots.txt" target="_blank">robots.txt</a></code>
+						<code><a href="https://en.wikipedia.org/wiki/Robots.txt" target="_blank">robots.txt</a></code>
 						protocol, is a convention for cooperating web crawlers and other web robots
 						about accessing all or part of a website that is otherwise publicly viewable.
 						You can change it manually by editing <code>robots.txt</code> in your root WordPress directory.'
@@ -986,7 +995,7 @@ class Ai1ec_Settings extends Ai1ec_App {
 						Ai1ec_I18n::__(
 							'<strong>Publicize, promote, and share my events</strong> marked as public on the Timely network. (<a href="%s" target="_blank">Learn more &#187;</a>)'
 						),
-						'http://time.ly/event-search-calendar'
+						'https://time.ly/event-search-calendar'
 					),
 				),
 				'default'  => false,

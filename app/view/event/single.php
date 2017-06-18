@@ -81,7 +81,7 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
 			'subscribe_url_no_html'   => $subscribe_url . '&no_html=true',
 			'edit_instance_url'       => null,
 			'edit_instance_text'      => null,
-			'google_url'              => 'http://www.google.com/calendar/render?cid=' . urlencode( $subscribe_url ),
+			'google_url'              => 'https://www.google.com/calendar/render?cid=' . urlencode( $subscribe_url ),
 			'show_subscribe_buttons'  => ! $settings->get( 'turn_off_subscription_buttons' ),
 			'hide_featured_image'     => $settings->get( 'hide_featured_image' ),
 			'extra_buttons'           => $extra_buttons,
@@ -190,6 +190,22 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
 		);
 		foreach ( $og as $key => $val ) {
 			echo "<meta property=\"og:$key\" content=\"$val\" />\n";
+		}
+		// Twitter meta tags
+		$twitter         = array(
+			'card'        => 'summary',
+			'title'       => htmlspecialchars(
+				$event->get( 'post' )->post_title .
+				' (' . substr( $event->get( 'start' ) , 0, 10 ) . ')'
+				),
+			'description' => htmlspecialchars( $desc ),
+			'image'       => $content->get_content_img_url( $event )
+		);
+		foreach ( $twitter as $key => $val ) {
+			if ( empty( $val ) && 'image' !== $key ) {
+				$val = Ai1ec_I18n::__( 'No data' );
+			}
+			echo "<meta name=\"twitter:$key\" content=\"$val\" />\n";
 		}
 	}
 

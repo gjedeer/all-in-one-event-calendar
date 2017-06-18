@@ -133,7 +133,7 @@ class Ai1ec_View_Widget_Creator extends Ai1ec_View_Admin_Abstract {
 				'text_alternatives' => sprintf(
 					Ai1ec_I18n::__( '<p>Use <a href="%s"><strong>Appearance</strong> &gt; <strong>Widgets</strong></a> to add event widgets to your WordPress site as you would any other widget, or use <a href="%s" target="_blank">shortcodes</a> to embed the full calendar.</strong></p>' ),
 					admin_url( 'widgets.php' ),
-					'http://time.ly/document/user-guide/using-calendar/display-multiple-calendars-site/'
+					'https://time.ly/document/user-guide/using-calendar/display-multiple-calendars-site/'
 				),
 				'display_alert'     => apply_filters( 'ai1ec_display_widget_creator_warning', true ),
 				'text_preview'      => Ai1ec_I18n::__( 'Preview:' ),

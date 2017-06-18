@@ -464,7 +464,7 @@ class Ai1ec_Ics_Import_Export_Engine
 					$data['contact_url']   = $el;
 				}
 				// Detect phone number.
-				elseif ( preg_match( '/\d/', $el ) ) {
+				elseif ( preg_match( '/^[\+0-9\-\(\)\s]*$/', $el ) && strlen( $el ) <= 32 ) {
 					$data['contact_phone'] = $el;
 				}
 				// Default to name.
@@ -885,12 +885,12 @@ class Ai1ec_Ics_Import_Export_Engine
 		// Prepend featured image if available.
 		$size    = null;
 		$avatar  = $this->_registry->get( 'view.event.avatar' );
-		$matches = $avatar->get_image_from_content( $content );
-		// if no img is already present - add thumbnail
-		if ( empty( $matches ) ) {
+
+		$images  = null;
+		// try to find a featured image
+		if ( has_post_thumbnail( $event->get( 'post_id' )  ) ) {
 
 			$post_id = get_post_thumbnail_id( $event->get( 'post_id' ) );
-			$images  = null;
 			$added   = null;
 			foreach ( array( 'thumbnail', 'medium', 'large', 'full' ) as $_size ) {
 				$attributes = wp_get_attachment_image_src( $post_id, $_size );
@@ -901,15 +901,8 @@ class Ai1ec_Ics_Import_Export_Engine
 						array_unshift( $attributes, $_size );
 						$images[] = implode( ';', $attributes );
 					}
+
 				}
-			}
-			if ( null !== $images ) {
-				$e->setProperty(
-					'X-WP-IMAGES-URL',
-					$this->_sanitize_value(
-						implode( ',', $images )
-					)
-				);
 			}
 
 			if ( $img_url = $avatar->get_post_thumbnail_url( $event, $size ) ) {
@@ -917,6 +910,35 @@ class Ai1ec_Ics_Import_Export_Engine
 					esc_attr( $img_url ) . '" width="' . $size[0] . '" height="' .
 					$size[1] . '" /></div>' . $content;
 			}
+		} else {
+
+			$matches = $avatar->get_image_from_content( $content );
+
+			if ( ! empty( $matches ) ) {
+
+				$patternWidth = '/(width="|width=\')(?P<width>\w+)/i';
+				preg_match( $patternWidth, $matches[0], $matchesWidth );
+
+				$patternHeight = '/(height="|height=\')(?P<height>\w+)/i';
+				preg_match( $patternHeight, $matches[0], $matchesHeight );
+
+				if ( ! empty( $matchesWidth ) && ! empty( $matchesHeight ) ) {
+
+					foreach ( array( 'thumbnail', 'medium', 'large', 'full' ) as $_size ) {
+						$attributes = [ $_size, $matches[2], $matchesWidth['width'], $matchesHeight['height'] ];
+						$images[] = implode( ';', $attributes );
+					}
+				}
+			}
+		}
+
+		if ( null !== $images ) {
+			$e->setProperty(
+				'X-WP-IMAGES-URL',
+				$this->_sanitize_value(
+					implode( ',', $images )
+				)
+			);
 		}
 
 		if ( isset( $params['no_html'] ) && $params['no_html'] ) {

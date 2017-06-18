@@ -1,7 +1,7 @@
 <div class="timely">
 	<div class="ai1ec-hero-unit">
 		<h1><?php _e( 'Welcome', AI1EC_PLUGIN_NAME ); ?></h1>
-		<p><?php _e( 'to the All-in-One Event Calendar by <a href="http://time.ly/" target="_blank">Timely</a>', AI1EC_PLUGIN_NAME ); ?></p>
+		<p><?php _e( 'to the All-in-One Event Calendar by <a href="https://time.ly/" target="_blank">Timely</a>', AI1EC_PLUGIN_NAME ); ?></p>
 	</div>
 
 	<div class="ai1ec-clearfix">

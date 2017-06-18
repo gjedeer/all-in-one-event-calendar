@@ -2,17 +2,13 @@
 Contributors: uchu, calvinyeh, raquelleira, renatotbueno, domanb, elirenato, hubrik, vtowel, yani.iliev, nicolapeluchetti, jbutkus, lpawlik, bangelov
 Tags: calendar, event, ical, feed, ics, icalendar, sync, aggregator, google, venue, calendar widget, events widget
 Requires at least: 3.5
-Tested up to: 4.7.4
-Stable tag: 2.5.19
+Tested up to: 4.8
+Stable tag: 2.5.20
 License: GNU General Public License, version 3 (GPL-3.0)
 
 An events calendar system with multiple views, upcoming events widget, color-coded categories, recurrence, and import/export of .ics feeds.
 
 == Description ==
-
-><strong>Note on support:</strong> Please read our sticky post before creating a new thread. The forum is a place where our users can provide insightful help to other plugin users.
->
->Please check-out our [Hub, Hublite and Pro hosted plans](https://time.ly/products) for many extra features and prioritized support.
 
 The [All-in-One Event Calendar](https://time.ly/) from [Timely](https://time.ly/) is a beautiful way to list your events in WordPress and easily share them with the rest of the world.
 
@@ -132,6 +128,13 @@ https://vimeo.com/135004810
 **[ai1ec exact_date="5-10-2017"]**
 
 == Changelog ==
+
+= Version 2.5.20 =
+* Fixed: Monthly view would fill up with empty lines if there are no events for the current month.
+* Fixed: Some events with featured image were being exported without X-WP-IMAGES-URL property set.
+* Fixed: User with Author role was able do edit/delete other's posts.
+* Fixed: Some imported events weren't being saved correctly due to faulty parse in the contact details.
+* Improved: Added meta tags in event's page, which will be used by Twitter's URL Preview feature.
 
 = Version 2.5.19 =
 * Fixed: Changed code to remove some PHP 7 warnings.

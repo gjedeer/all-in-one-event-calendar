@@ -45,8 +45,8 @@ class Ai1ec_Api_Feeds extends Ai1ec_Api_Abstract {
 	 * [per_page] => 8
 	 * [current_page] => 1
 	 * [last_page] => 2
-	 * [next_page_url] => http://dev.time.ly:882/api/calendars/4/discover/events?page=2
-	 * [prev_page_url] => 
+	 * [next_page_url] =>
+	 * [prev_page_url] =>
 	 * [from] => 1
 	 * [to] => 8
 	 * [data] => Array list of suggested events
