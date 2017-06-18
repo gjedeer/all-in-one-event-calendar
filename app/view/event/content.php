@@ -148,8 +148,10 @@ HTML;
 	 */
 	public function get_content_img_url( Ai1ec_Event $event, &$size = null ) {
 
+		$attachment_url = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) );
+
 		// Try to find a featured image
-		$url_featured_image = ( ! empty ( wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) ) ? wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) : null );
+		$url_featured_image = ( ! empty ( $attachment_url ) ? wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) : null );
 
 		if ( ! empty( $url_featured_image ) ) {
 			return $url_featured_image;
