@@ -254,13 +254,9 @@ class Ai1ec_Ics_Import_Export_Engine
 			}
 			$event_timezone = $timezone;
 
-			try {
-				$tztest = timezone_open( $event_timezone );
-			}
-			catch ( Exception $exception ) {
-				$event_timezone = $local_timezone;
-			}
-
+			// Check if the timezone is a recognized TZ in PHP
+			// Note: the TZ may be perfectly valid, but it may not be an accepted value in the PHP version the plugin is running on
+			$tztest = timezone_open( $event_timezone );
 			if ( ! $tztest || $allday || preg_match( "/GMT[+|-][0-9]{4}.*/", $event_timezone ) ) {
 				$event_timezone = $local_timezone;
 			}
