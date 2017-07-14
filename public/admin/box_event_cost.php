@@ -32,7 +32,7 @@
 		<p><?php echo $tickets_loading_error; ?></p>
 	<?php elseif ( $is_ticket_event && ! $ticketing ): ?>	
 		<p><?php echo sprintf( 
-			__( 'This event was created using Timely Network. Sign in with the accouunt %s to see the Ticket options.', AI1EC_PLUGIN_NAME ), 
+			__( 'This event was created using Timely Network. Sign in with the account %s to see the Ticket options.', AI1EC_PLUGIN_NAME ), 
 		$ticket_event_account ); ?></p>	
 		<a href="edit.php?post_type=ai1ec_event&page=all-in-one-event-calendar-tickets"
 	   		class="ai1ec-btn ai1ec-btn-primary ai1ec-btn-lg">
