@@ -131,6 +131,7 @@ https://vimeo.com/135004810
 
 = Version 2.5.22 =
 * Fixed: On some PHP installations a specific code for exporting events wouldn't work. Thanks to @vralfy.
+* Fixed: On some events the featured image was missing.
 
 = Version 2.5.21 =
 * Fixed: One code implemented in Core 2.5.20 was incompatible with PHP 5. Thanks to @nelero.
