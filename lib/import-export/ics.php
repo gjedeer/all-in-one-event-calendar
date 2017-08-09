@@ -930,7 +930,7 @@ class Ai1ec_Ics_Import_Export_Engine
 				if ( ! empty( $matchesWidth ) && ! empty( $matchesHeight ) ) {
 
 					foreach ( array( 'thumbnail', 'medium', 'large', 'full' ) as $_size ) {
-						$attributes = [ $_size, $matches[2], $matchesWidth['width'], $matchesHeight['height'] ];
+						$attributes = array( $_size, $matches[2], $matchesWidth['width'], $matchesHeight['height'] );
 						$images[] = implode( ';', $attributes );
 					}
 				}
