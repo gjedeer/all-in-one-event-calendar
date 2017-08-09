@@ -253,7 +253,12 @@ class Ai1ec_Ics_Import_Export_Engine
 				$allday = true;
 			}
 			$event_timezone = $timezone;
-			if ( $allday || preg_match( "/GMT[+|-][0-9]{4}.*/", $event_timezone ) ) {
+
+			// Check if the timezone is a recognized TZ in PHP
+			// Note: the TZ may be perfectly valid, but it may not be an accepted value in the PHP version the plugin is running on
+			$tztest = @timezone_open( $event_timezone );
+
+			if ( ! $tztest || $allday || preg_match( "/GMT[+|-][0-9]{4}.*/", $event_timezone ) ) {
 				$event_timezone = $local_timezone;
 			}
 			$start = $this->_time_array_to_datetime(
@@ -925,7 +930,7 @@ class Ai1ec_Ics_Import_Export_Engine
 				if ( ! empty( $matchesWidth ) && ! empty( $matchesHeight ) ) {
 
 					foreach ( array( 'thumbnail', 'medium', 'large', 'full' ) as $_size ) {
-						$attributes = [ $_size, $matches[2], $matchesWidth['width'], $matchesHeight['height'] ];
+						$attributes = array( $_size, $matches[2], $matchesWidth['width'], $matchesHeight['height'] );
 						$images[] = implode( ';', $attributes );
 					}
 				}
