@@ -96,6 +96,11 @@ class Ai1ec_Command_Save_Settings extends Ai1ec_Command_Save_Abstract {
 		do_action( 'ai1ec_settings_updated', $options, $new_options );
 
 		$settings->persist();
+
+		// Check settings
+		$api = $this->_registry->get( 'model.api.api-registration' );
+		$api->check_settings();
+
 		return array(
 			'url'        => ai1ec_admin_url(
 				'edit.php?post_type=ai1ec_event&page=all-in-one-event-calendar-settings'

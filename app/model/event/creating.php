@@ -266,6 +266,10 @@ class Ai1ec_Event_Creating extends Ai1ec_Base {
 		// restore `magic` WordPress quotes to maintain compatibility
 		$_POST = add_magic_quotes( $_POST );
 
+		// Check settings
+		$api = $this->_registry->get( 'model.api.api-registration' );
+		$api->check_settings();
+
 		return $event;
 	}
 
