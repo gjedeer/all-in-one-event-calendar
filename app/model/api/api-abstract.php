@@ -342,20 +342,26 @@ abstract class Ai1ec_Api_Abstract extends Ai1ec_App {
 	}
 
 	public function check_settings() {
-		require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+		$checked = get_transient( 'ai1ec_api_checked' );
 
-		$failList = array();
-		foreach ( Ai1ec_Api_Features::FEATURES as $key => $value ) {
-			if ( empty( $value ) ) {
-				continue;
-			}
-			if ( ! $this->is_signed() || ! $this->has_subscription_active( $key ) ) {
-				$failList[] = $value;
-			}
-		}
+		if ( false === $checked ) {
+			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
-		if ( count( $failList ) > 0 ) {
-			deactivate_plugins( $failList );
+			$failList = array();
+			foreach ( Ai1ec_Api_Features::FEATURES as $key => $value ) {
+				if ( empty( $value ) ) {
+					continue;
+				}
+				if ( ! $this->is_signed() || ! $this->has_subscription_active( $key ) ) {
+					$failList[] = $value;
+				}
+			}
+
+			if ( count( $failList ) > 0 ) {
+				deactivate_plugins( $failList );
+			}
+
+			set_transient( 'ai1ec_api_checked', true, 5 * 60 );
 		}
 	}
 
