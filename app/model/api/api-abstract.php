@@ -77,7 +77,6 @@ abstract class Ai1ec_Api_Abstract extends Ai1ec_App {
 		delete_transient( 'ai1ec_api_subscriptions' );
 		delete_transient( 'ai1ec_api_features' );
 
-		// Check settings
 		$this->check_settings();
 	}
 
