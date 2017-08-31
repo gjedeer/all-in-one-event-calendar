@@ -301,7 +301,6 @@ class Ai1ecIcsConnectorPlugin extends Ai1ec_Connector_Plugin {
 	 * @return void
 	 */
 	public function cron() {
-		// Check settings
 		$this->_api_feed->check_settings();
 
 		if ( false === $this->_api_feed->is_signed() ) {

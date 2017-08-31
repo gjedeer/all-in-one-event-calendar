@@ -97,7 +97,6 @@ class Ai1ec_Command_Save_Settings extends Ai1ec_Command_Save_Abstract {
 
 		$settings->persist();
 
-		// Check settings
 		$api = $this->_registry->get( 'model.api.api-registration' );
 		$api->check_settings();
 
