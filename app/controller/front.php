@@ -669,6 +669,12 @@ class Ai1ec_Front_Controller {
 				array( 'view.admin.calendar-feeds', 'add_page' )
 			);
 			$dispatcher->register_action(
+				'admin_menu',
+				array( 'view.admin.samples', 'add_page' ),
+				100,
+				1
+			);
+			$dispatcher->register_action(
 				'current_screen',
 				array( 'view.admin.calendar-feeds', 'add_meta_box' )
 			);
