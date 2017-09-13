@@ -358,7 +358,7 @@ abstract class Ai1ec_Api_Abstract extends Ai1ec_App {
 			}
 
 			if ( count( $failList ) > 0 ) {
-				deactivate_plugins( $failList );
+				//deactivate_plugins( $failList );
 			}
 
 			set_transient( 'ai1ec_api_checked', true, 5 * 60 );

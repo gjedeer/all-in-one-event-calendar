@@ -29,6 +29,30 @@ class Ai1ec_View_Add_New_Event extends Ai1ec_Base {
 			'normal',
 			'high'
 		);
+		
+		add_meta_box(
+			AI1EC_POST_TYPE.'x',
+			Ai1ec_I18n::__( 'Empower your calendar, build your community' ),
+			array( $this, 'features_info' ),
+			AI1EC_POST_TYPE,
+			'side',
+			'low'
+		);
+		
+	}
+
+	/**
+	 * Add Event Details meta box to the Add/Edit Event screen in the dashboard.
+	 *
+	 * @return void
+	 */
+	public function features_info( $post ) {
+		$message = __(
+				'<ul style="list-style: disc; padding-left:25px;"><li><a href="https://time.ly/hub" target="_blank">Pull events from other calendars</a></li><li><a href="https://time.ly/hub" target="_blank">Pull events from Facebook</a></li><li><a href="https://time.ly/hub" target="_blank">Add a Newsletter</a></li><li><a href="https://time.ly/hub" target="_blank">Get public event submissions</a></li><li><a href="https://time.ly/hub" target="_blank">Charge people to post events</a></li><li><a href="https://time.ly/hub" target="_blank">Add social sharing</a></li><li><a href="https://time.ly/hub" target="_blank">And more</a></li></ul>',
+				AI1EC_PLUGIN_NAME
+			);
+			
+		echo $message;
 	}
 
 	/**
