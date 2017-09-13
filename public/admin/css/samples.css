@@ -1,0 +1,11 @@
+.calendar-samples {
+	background-repeat: no-repeat;
+	background-size: contain;
+	max-width: 100%;
+}
+
+#calendar-sample-1 {
+	background-image: url(../img/sample1.jpg);
+	height: 799px;
+	width: 800px;
+}
