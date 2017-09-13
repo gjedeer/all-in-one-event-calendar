@@ -13,27 +13,27 @@
  */
 interface Ai1ec_Html_Element_Interface {
 
-	/**
-	 * Set attribute for renderable element.
-	 *
-	 * Attributes are object specific.
-	 *
-	 * @param string $attribute Name of attribute to set.
-	 * @param mixed  $value     Value to set for attribute.
-	 *
-	 * @return Ai1ec_Html_Element_Interface Instance of self for chaining.
-	 */
-	public function set( $attribute, $value );
+    /**
+     * Set attribute for renderable element.
+     *
+     * Attributes are object specific.
+     *
+     * @param string $attribute Name of attribute to set.
+     * @param mixed  $value     Value to set for attribute.
+     *
+     * @return Ai1ec_Html_Element_Interface Instance of self for chaining.
+     */
+    public function set( $attribute, $value );
 
-	/**
-	 * Generate HTML snippet for inclusion in page.
-	 *
-	 * @param string $snippet Particle to append to result.
-	 *
-	 * @return string HTML snippet.
-	 *
-	 * @throws Ai1ec_Html_Exception If rendering may not be completed.
-	 */
-	public function render( $snippet = '' );
+    /**
+     * Generate HTML snippet for inclusion in page.
+     *
+     * @param string $snippet Particle to append to result.
+     *
+     * @return string HTML snippet.
+     *
+     * @throws Ai1ec_Html_Exception If rendering may not be completed.
+     */
+    public function render( $snippet = '' );
 
 }

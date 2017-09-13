@@ -11,8 +11,8 @@
  */
 class Ai1ec_Filter_Authors extends Ai1ec_Filter_Int {
 
-	public function get_field() {
-		return 'p.post_author';
-	}
+    public function get_field() {
+        return 'p.post_author';
+    }
 
 }

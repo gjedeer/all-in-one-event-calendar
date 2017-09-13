@@ -11,35 +11,35 @@
  */
 class Ai1ec_Calendar_Avatar_Fallbacks extends Ai1ec_Base {
 
-	/**
-	 * Default avatar fallbacks.
-	 *
-	 * @var array
-	 */
-	protected $_fallbacks = array(
-		'post_thumbnail',
-		'content_img',
-		'category_avatar',
-	);
+    /**
+     * Default avatar fallbacks.
+     *
+     * @var array
+     */
+    protected $_fallbacks = array(
+        'post_thumbnail',
+        'content_img',
+        'category_avatar',
+    );
 
-	/**
-	 * Get registered fallbacks.
-	 *
-	 * @return array
-	 */
-	public function get_all() {
-		return apply_filters( 'ai1ec_avatar_fallbacks', $this->_fallbacks );
-	}
+    /**
+     * Get registered fallbacks.
+     *
+     * @return array
+     */
+    public function get_all() {
+        return apply_filters( 'ai1ec_avatar_fallbacks', $this->_fallbacks );
+    }
 
-	/**
-	 * Register new avatar fallbacks.
-	 *
-	 * @param array $fallbacks Fallbacks.
-	 *
-	 * @return void Method does not return.
-	 */
-	public function set( array $fallbacks ) {
-		$this->_fallbacks = $fallbacks;
-	}
+    /**
+     * Register new avatar fallbacks.
+     *
+     * @param array $fallbacks Fallbacks.
+     *
+     * @return void Method does not return.
+     */
+    public function set( array $fallbacks ) {
+        $this->_fallbacks = $fallbacks;
+    }
 
 }
