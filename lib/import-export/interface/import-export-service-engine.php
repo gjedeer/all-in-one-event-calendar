@@ -10,11 +10,11 @@
  * @subpackage AI1EC.Import-export.Interface
  */
 interface Ai1ec_Import_Export_Service_Engine
-	extends Ai1ec_Import_Export_Engine {
+    extends Ai1ec_Import_Export_Engine {
 
-	/**
-	 * Register everything the interface needs into core.
-	 */
-	public function register_settings();
+    /**
+     * Register everything the interface needs into core.
+     */
+    public function register_settings();
 
 }

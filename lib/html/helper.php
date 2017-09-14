@@ -10,26 +10,26 @@
  */
 class Ai1ec_Html_Helper {
 
-	/**
-	 * Escape HTML for use within any tag.
-	 *
-	 * @param string $input Arbitrary UTF-8 input.
-	 *
-	 * @return string Escaped HTML value.
-	 */
-	public function esc_html( $input ) {
-		return esc_html( $input );
-	}
+    /**
+     * Escape HTML for use within any tag.
+     *
+     * @param string $input Arbitrary UTF-8 input.
+     *
+     * @return string Escaped HTML value.
+     */
+    public function esc_html( $input ) {
+        return esc_html( $input );
+    }
 
-	/**
-	 * Escape string for use within HTML attribute.
-	 *
-	 * @param string $input Characters to be used as HTML attribute.
-	 *
-	 * @return string Escaped characters sequence.
-	 */
-	public function esc_attr( $input ) {
-		return esc_attr( $input );
-	}
+    /**
+     * Escape string for use within HTML attribute.
+     *
+     * @param string $input Characters to be used as HTML attribute.
+     *
+     * @return string Escaped characters sequence.
+     */
+    public function esc_attr( $input ) {
+        return esc_attr( $input );
+    }
 
 }

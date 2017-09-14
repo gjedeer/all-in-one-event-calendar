@@ -11,23 +11,23 @@
  */
 abstract class Ai1ec_Notification extends Ai1ec_Base {
 
-	/**
-	 * @var string The message to send.
-	 */
-	protected $_message;
+    /**
+     * @var string The message to send.
+     */
+    protected $_message;
 
-	/**
-	 * @var array A list of recipients.
-	 */
-	protected $_recipients = array();
+    /**
+     * @var array A list of recipients.
+     */
+    protected $_recipients = array();
 
-	/**
-	 * This function performs the actual sending of the message.
-	 *
-	 * Must be implemented in child classes.
-	 *
-	 * @return bool Success.
-	 */
-	abstract public function send();
+    /**
+     * This function performs the actual sending of the message.
+     *
+     * Must be implemented in child classes.
+     *
+     * @return bool Success.
+     */
+    abstract public function send();
 
 }
