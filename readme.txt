@@ -130,7 +130,7 @@ https://vimeo.com/135004810
 == Changelog ==
 
 = Version 2.5.23 =
-* Fixed: External ticketing URLs was not being presented correctly for imported events.
+* Fixed: External ticketing URLs was not being presented correctly on imported events.
 
 = Version 2.5.22 =
 * Fixed: On some PHP installations a specific code for exporting events wouldn't work. Thanks to @vralfy.
