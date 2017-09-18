@@ -1,5 +1,6 @@
 <?php
 class Ai1ec_Api_Features {
+
     const CODE_API_ACCESS           = 'api-access';
     const CODE_TICKETING            = 'ticketing';
     const CODE_TWITTER              = 'twitter';

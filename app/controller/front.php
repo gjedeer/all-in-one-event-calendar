@@ -701,6 +701,12 @@ class Ai1ec_Front_Controller {
                 array( 'controller.javascript', 'load_admin_js' )
             );
             $dispatcher->register_action(
+                'admin_menu',
+                array( 'view.admin.samples', 'add_page' ),
+                100,
+                1
+            );
+            $dispatcher->register_action(
                 'wp_ajax_ai1ec_add_ics',
                 array( 'calendar-feed.ics', 'add_ics_feed' )
             );

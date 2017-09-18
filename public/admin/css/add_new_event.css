@@ -537,3 +537,13 @@ td.ai1ec-avail-block {
 	margin-top: -43px !important;
 	margin-left: -9px;
 }
+.ai1ec-features-list {
+	list-style: disc;
+	padding-left:25px;
+}
+.ai1ec-features-list a,
+.ai1ec-features-list a:hover,
+.ai1ec-features-list a:visited,
+.ai1ec-features-list a:active {
+	color: #6ba136;
+}
