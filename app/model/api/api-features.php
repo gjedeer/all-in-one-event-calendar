@@ -21,7 +21,7 @@ class Ai1ec_Api_Features {
     const CODE_VENUES               = 'venues';
     const CODE_IMPORT_FEEDS         = 'import-feeds';
 
-    const FEATURES = array(
+    public static $features = array(
         self::CODE_API_ACCESS           => '',
         self::CODE_TICKETING            => '',
         self::CODE_TWITTER              => 'all-in-one-event-calendar-twitter-integration/all-in-one-event-calendar-twitter-integration.php',
