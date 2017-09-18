@@ -11,8 +11,8 @@
  */
 class Ai1ec_Filter_Tags extends Ai1ec_Filter_Taxonomy {
 
-	public function get_taxonomy() {
-		return 'events_tags';
-	}
+    public function get_taxonomy() {
+        return 'events_tags';
+    }
 
 }

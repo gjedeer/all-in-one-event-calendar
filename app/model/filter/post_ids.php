@@ -11,8 +11,8 @@
  */
 class Ai1ec_Filter_Posts extends Ai1ec_Filter_Int {
 
-	public function get_field() {
-		return 'e.post_id';
-	}
+    public function get_field() {
+        return 'e.post_id';
+    }
 
 }

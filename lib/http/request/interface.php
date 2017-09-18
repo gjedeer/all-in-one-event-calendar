@@ -11,20 +11,20 @@
  */
 interface Ai1ec_Adapter_Query_Interface {
 
-	/**
-	 * Check if rewrite module is enabled
-	 */
-	public function rewrite_enabled();
+    /**
+     * Check if rewrite module is enabled
+     */
+    public function rewrite_enabled();
 
-	/**
-	 * Register rewrite rule
-	 *
-	 * @param string $regexp   Matching expression
-	 * @param string $landing  Landing point for queries matching regexp
-	 * @param int    $priority Rule priority (match list) [optional=NULL]
-	 *
-	 * @return bool
-	 */
-	public function register_rule( $regexp, $landing, $priority = NULL );
+    /**
+     * Register rewrite rule
+     *
+     * @param string $regexp   Matching expression
+     * @param string $landing  Landing point for queries matching regexp
+     * @param int    $priority Rule priority (match list) [optional=NULL]
+     *
+     * @return bool
+     */
+    public function register_rule( $regexp, $landing, $priority = NULL );
 
 }

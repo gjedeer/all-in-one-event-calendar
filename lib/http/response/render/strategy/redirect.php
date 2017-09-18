@@ -11,14 +11,14 @@
  */
 class Ai1ec_Render_Strategy_Redirect extends Ai1ec_Http_Response_Render_Strategy {
 
-	/* (non-PHPdoc)
-	 * @see Ai1ec_Http_Response_Render_Strategy::render()
-	*/
-	public function render( array $params ) {
-		Ai1ec_Wp_Uri_Helper::local_redirect( 
-			$params['url'], 
-			$params['query_args']
-		);
-	}
+    /* (non-PHPdoc)
+     * @see Ai1ec_Http_Response_Render_Strategy::render()
+    */
+    public function render( array $params ) {
+        Ai1ec_Wp_Uri_Helper::local_redirect(
+            $params['url'],
+            $params['query_args']
+        );
+    }
 
 }
