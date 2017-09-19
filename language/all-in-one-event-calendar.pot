@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the All-in-One Event Calendar by Time.ly package.
 msgid ""
 msgstr ""
-"Project-Id-Version: All-in-One Event Calendar by Time.ly 2.5.23\n"
+"Project-Id-Version: All-in-One Event Calendar by Time.ly 2.5.26\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/all-in-one-event-calendar\n"
-"POT-Creation-Date: 2017-09-13 13:27:12+00:00\n"
+"POT-Creation-Date: 2017-09-18 18:14:23+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,7 +29,7 @@ msgstr ""
 msgid "Calendar Themes"
 msgstr ""
 
-#: app/controller/front.php:1063
+#: app/controller/front.php:1069
 msgid ""
 "Your database is found to be corrupt. Likely previous update has failed. "
 "Please restore All-in-One Event Calendar tables from a backup and retry."
@@ -339,7 +339,7 @@ msgid ""
 "your report please include the information below.<br/>%s."
 msgstr ""
 
-#: app/model/api/api-abstract.php:544
+#: app/model/api/api-abstract.php:545
 msgid "Error decoding the response"
 msgstr ""
 
@@ -391,7 +391,7 @@ msgstr ""
 msgid "This Event was replicated from another site. Changes are not allowed."
 msgstr ""
 
-#: app/model/api/api-ticketing.php:75 app/view/admin/add-new-event.php:359
+#: app/model/api/api-ticketing.php:75 app/view/admin/add-new-event.php:384
 #: app/view/admin/all-events.php:214
 msgid ""
 "This Event was created using a different account %s. Changes are not allowed."
@@ -845,13 +845,30 @@ msgstr ""
 msgid "Event Details"
 msgstr ""
 
-#: app/view/admin/add-new-event.php:307
+#: app/view/admin/add-new-event.php:35
+msgid "Empower your calendar, build your community"
+msgstr ""
+
+#: app/view/admin/add-new-event.php:50
+msgid ""
+"<ul class=\"ai1ec-features-list\"><li><a href=\"https://time.ly/hub\" target="
+"\"_blank\">Pull events from other calendars</a></li><li><a href=\"https://"
+"time.ly/hub\" target=\"_blank\">Pull events from Facebook</a></li><li><a "
+"href=\"https://time.ly/hub\" target=\"_blank\">Add a Newsletter</a></"
+"li><li><a href=\"https://time.ly/hub\" target=\"_blank\">Get public event "
+"submissions</a></li><li><a href=\"https://time.ly/hub\" target=\"_blank"
+"\">Charge people to post events</a></li><li><a href=\"https://time.ly/hub\" "
+"target=\"_blank\">Add social sharing</a></li><li><a href=\"https://time.ly/"
+"hub\" target=\"_blank\">And more</a></li></ul>"
+msgstr ""
+
+#: app/view/admin/add-new-event.php:332
 msgid ""
 "Ticketing is currently not available for this website. Please, try again "
 "later."
 msgstr ""
 
-#: app/view/admin/add-new-event.php:312
+#: app/view/admin/add-new-event.php:337
 msgid ""
 "Timely Ticketing saves time & money. Create ticketing/registration right "
 "here and now. You do not pay any ticketing fees (other than regular PayPal "
@@ -861,25 +878,25 @@ msgid ""
 "\"_blank\">here</a>."
 msgstr ""
 
-#: app/view/admin/add-new-event.php:412
+#: app/view/admin/add-new-event.php:437
 msgid ""
 "<span class=\"ai1ec-info-text\">The event was submitted by this Organizer.</"
 "span>"
 msgstr ""
 
-#: app/view/admin/add-new-event.php:421
+#: app/view/admin/add-new-event.php:446
 msgid ", email: "
 msgstr ""
 
-#: app/view/admin/add-new-event.php:425
+#: app/view/admin/add-new-event.php:450
 msgid "<span class=\"ai1ec-info-text\">The event was submitted by %s.</span>"
 msgstr ""
 
-#: app/view/admin/add-new-event.php:505
+#: app/view/admin/add-new-event.php:530
 msgid "Set banner image"
 msgstr ""
 
-#: app/view/admin/add-new-event.php:506
+#: app/view/admin/add-new-event.php:531
 msgid "Remove banner image"
 msgstr ""
 
@@ -1085,6 +1102,10 @@ msgstr ""
 
 #: app/view/admin/organize.php:100
 msgid "Organize Events"
+msgstr ""
+
+#: app/view/admin/samples.php:26 app/view/admin/samples.php:27
+msgid "Samples"
 msgstr ""
 
 #: app/view/admin/settings.php:30
@@ -1851,22 +1872,22 @@ msgstr ""
 msgid "Edit this occurrence (%s)"
 msgstr ""
 
-#: app/view/event/single.php:206
+#: app/view/event/single.php:209
 msgid "No data"
 msgstr ""
 
-#: app/view/event/single.php:224
+#: app/view/event/single.php:227
 msgid ""
 "This post was replicated from another site's <a href=\"%s\" title="
 "\"iCalendar feed\"><i class=\"ai1ec-fa ai1ec-fa-calendar\"></i> calendar "
 "feed</a>."
 msgstr ""
 
-#: app/view/event/single.php:228
+#: app/view/event/single.php:231
 msgid "This post was imported from a CSV/ICS file."
 msgstr ""
 
-#: app/view/event/single.php:241
+#: app/view/event/single.php:244
 msgid "View original"
 msgstr ""
 

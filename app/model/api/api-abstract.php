@@ -348,7 +348,7 @@ abstract class Ai1ec_Api_Abstract extends Ai1ec_App {
             require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
             $failList = array();
-            foreach ( Ai1ec_Api_Features::FEATURES as $key => $value ) {
+            foreach ( Ai1ec_Api_Features::$features as $key => $value ) {
                 if ( empty( $value ) ) {
                     continue;
                 }
@@ -380,7 +380,8 @@ abstract class Ai1ec_Api_Abstract extends Ai1ec_App {
                             '<br /><br />';
 
                 foreach ( $failList as $failed ) {
-                    $message .= '- ' . explode( '/', $failed )[0] . '<br />';
+                    $pieces = explode( '/', $failed );
+                    $message .= '- ' . $pieces[0] . '<br />';
                 }
 
                 $this->show_error( $message );
