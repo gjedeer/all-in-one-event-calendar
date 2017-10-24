@@ -614,3 +614,19 @@ div.ai1ec-form-group > .ai1ec-setting-fieldset {
 	font-weight: bold;
 	margin-bottom: 5px;
 }
+.ai1ec-brought-by {
+	text-align: center;
+}
+.ai1ec-support-buttons.ai1ec-row .ai1ec-col-lg-3 {
+	padding: 0 7px;
+}
+.ai1ec-support-tab {
+	display: none;
+}
+.ai1ec-twitterinfo-wrap {
+	padding: 20px;
+	padding-top: 0;
+}
+#twitterinfo {
+	display: none !important;
+}

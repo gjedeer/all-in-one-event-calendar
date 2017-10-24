@@ -1,4 +1,5 @@
 <div class="ai1ec-clearfix">
+	<div class="ai1ec-brought-by">Your calendar is brought to you by:</div>
     <h2 class="timely-logo">
         <a href="https://time.ly/?utm_source=dashboard&nbsp;utm_medium=button&nbsp;utm_term=ai1ec-pro&nbsp;utm_content=1.11.4&nbsp;utm_campaign=logo"
             title="<?php esc_attr_e( 'Timely', AI1EC_PLUGIN_NAME ); ?>"
@@ -12,7 +13,7 @@
         </h2>
         <div class="ai1ec-support-buttons ai1ec-row">
             <div class="ai1ec-col-lg-3" id="ai1ec-addons-col">
-                <a class="ai1ec-btn ai1ec-btn-primary ai1ec-btn-block ai1ec-btn-lg"
+                <a class="ai1ec-btn ai1ec-btn-primary ai1ec-btn-block"
                     target="_blank"
                     href="https://time.ly/document/user-guide/">
                     <i class="ai1ec-fa ai1ec-fa-book ai1ec-fa-fw"></i>
@@ -20,15 +21,15 @@
                 </a>
             </div>
             <div class="ai1ec-col-lg-3" id="ai1ec-support-col">
-                <a class="ai1ec-btn ai1ec-btn-primary ai1ec-btn-block ai1ec-btn-lg"
+                <a class="ai1ec-btn ai1ec-btn-primary ai1ec-btn-block"
                     target="_blank"
-                    href="https://wordpress.org/support/plugin/all-in-one-event-calendar">
+                    href="#" onclick="jQuery('.ai1ec-support-tab').show(); jQuery('.ai1ec-news').hide(); return !1;">
                     <i class="ai1ec-fa ai1ec-fa-comments ai1ec-fa-fw"></i>
-                    <?php _e( 'Forum', AI1EC_PLUGIN_NAME ); ?>
+                    <?php _e( 'Support', AI1EC_PLUGIN_NAME ); ?>
                 </a>
             </div>
             <div class="ai1ec-col-lg-3" id="ai1ec-videos-col">
-                <a class="ai1ec-btn ai1ec-btn-primary ai1ec-btn-block ai1ec-btn-lg"
+                <a class="ai1ec-btn ai1ec-btn-primary ai1ec-btn-block"
                     target="_blank"
                     href="https://www.youtube.com/playlist?list=PL0BLCDSrRmI5RJ1Pg4IPQScQQHShQzVn8">
                     <i class="ai1ec-fa ai1ec-fa-film ai1ec-fa-fw"></i>
@@ -36,11 +37,11 @@
                 </a>
             </div>
             <div class="ai1ec-col-lg-3" id="ai1ec-events-col">
-                <a class="ai1ec-btn ai1ec-btn-info ai1ec-btn-block ai1ec-btn-lg"
+                <a class="ai1ec-btn ai1ec-btn-info ai1ec-btn-block"
                     target="_blank"
                     href="https://time.ly/wordpress-calendar-plugin/addons/">
                     <i class="ai1ec-fa ai1ec-fa-magic ai1ec-fa-fw"></i>
-                    <?php _e( 'Add-ons', AI1EC_PLUGIN_NAME ); ?>
+                    <?php _e( 'More Features', AI1EC_PLUGIN_NAME ); ?>
                 </a>
             </div>
         </div>
@@ -92,6 +93,33 @@
         <?php endif; ?>
         </div>
     </div>
+
+	<div class="ai1ec-support-tab">
+		Seems like you’re having troubles, and we don’t like that. Here’s how we can work together to get your issues fixed.
+		<br><br>
+		
+		<ol>
+		<li><b>Do you have a theme or plugin conflict? </b><br>
+		First Troubleshooting step click <a target="_blank" href="https://time.ly/document/user-guide/troubleshooting/first-troubleshooting-step/">here</a><br><br>
+		
+		Note: If the error is being caused by something in your environment (ie. hosting, theme or plugin conflict) - choosing any of our web-application calendars should solve it: <a target="_blank" href="https://time.ly/pricing/">https://time.ly/pricing/</a><br><br>
+		
+		
+		
+		<li><b>To submit a support ticket:</b><br>
+		Please log into your Timely account and raise a ticket using the “get help” button <a target="_blank" href="https://dashboard.time.ly/account/get-help">https://dashboard.time.ly/account/get-help</a> <br><br>
+		
+		Please note the response times for free core users can be up to 3 days as we have prioritized support for our paid users depending on the plan. If you require a higher level of support we encourage you to look into one of our web-application calendar plans at <a target="_blank" href="https://time.ly/pricing/">https://time.ly/pricing/</a>
+		
+		
+		
+		<li><b>Feature Request</b><br>
+		If there is a feature that we don’t currently provide that would make your life better, please share your idea here: <a target="_blank" href="https://ideas.time.ly/">https://ideas.time.ly/</a><br><br>
+		
+		For more details on how we provide support please go to <a target="_blank" href="http://time.ly/support">http://time.ly/support</a><br><br><br>
+		
+
+	</div>
 
     <div class="ai1ec-follow-fan">
         <div class="ai1ec-facebook-like-top">
