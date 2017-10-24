@@ -60,6 +60,12 @@ class Ai1ec_View_Tickets extends Ai1ec_View_Admin_Abstract {
         $ticketing_enabled   = $this->_api_registration->has_subscription_active( Ai1ec_Api_Features::CODE_TICKETING );
         $ticketing_message   = $this->_api_registration->get_sign_message();
         $loader              = $this->_registry->get( 'theme.loader' );
+         wp_enqueue_style(
+            'ai1ec_samples.css',
+            AI1EC_ADMIN_THEME_CSS_URL . 'samples.css',
+            array(),
+            AI1EC_VERSION
+        );
 
         if ( ! $signed_to_api ) {
 
@@ -69,35 +75,38 @@ class Ai1ec_View_Tickets extends Ai1ec_View_Admin_Abstract {
 
             $args = array(
                 'title' => Ai1ec_I18n::__(
-                    'Time.ly Ticketing'
+                    'Timely Ticketing'
                 ),
-                'sign_up_text' => 'Please, <a href="edit.php?post_type=ai1ec_event&page=all-in-one-event-calendar-settings">Sign Up for a Timely Network account</a> to use Ticketing or Import Feeds.',
-                'signup_form'  => Ai1ec_I18n::__( 'You need to sign up for a Timely Network account in order to use Ticketing or Import Feeds<br /><br />' ) .
+                'sign_up_text' => 'Please, <a href="edit.php?post_type=ai1ec_event&page=all-in-one-event-calendar-settings">Sign Up for a Timely Network account</a> to use Ticketing.',
+                'signup_form'  => Ai1ec_I18n::__( 'You need to sign up for a Timely Network account in order to use Ticketing.<br /><br />' ) .
                     (
                         $signup_available
                         ? Ai1ec_I18n::__( '<a href="edit.php?post_type=ai1ec_event&page=all-in-one-event-calendar-settings" class="ai1ec-btn ai1ec-btn-primary ai1ec-btn-lg">Sign In to Timely Network</a>' )
                         : Ai1ec_I18n::__( '<b>Signing up for a Timely Network account is currently unavailable. Please, try again later.</b>' )
-                    )
+                    ),
+                'show_info'    => true
 
             );
             $file = $loader->get_file( 'ticketing/signup.twig', $args, true );
         } elseif ( ! $ticketing_available ) {
             $args = array(
                 'title' => Ai1ec_I18n::__(
-                    'Time.ly Ticketing'
+                    'Timely Ticketing'
                 ),
                 'sign_up_text' => '',
-                'signup_form'  => 'Ticketing is currently not available for this website. Please, try again later.'
+                'signup_form'  => 'Ticketing is currently not available for this website. Please, try again later.',
+                'show_info'    => true
 
             );
             $file = $loader->get_file( 'ticketing/signup.twig', $args, true );
         } elseif ( ! $ticketing_enabled ) {
             $args = array(
                     'title' => Ai1ec_I18n::__(
-                            'Time.ly Ticketing'
+                            'Timely Ticketing'
                             ),
                     'sign_up_text' => '',
-                    'signup_form'  => 'Timely Ticketing saves time & money. Create ticketing/registration right here and now. You do not pay any ticketing fees (other than regular PayPal transaction costs). Create as many ticketing/registration as you\'d like.<br /><br />Ticketing feature is not enabled for this website. Please sign up for Ticketing plan <a href="https://time.ly/tickets-existing-users/" target="_blank">here</a>.'
+                    'signup_form'  => '',
+                    'show_info'    => true
             );
             $file = $loader->get_file( 'ticketing/signup.twig', $args, true );
         } else {
@@ -105,7 +114,7 @@ class Ai1ec_View_Tickets extends Ai1ec_View_Admin_Abstract {
             $purchases = $this->_api_registration->get_purchases();
             $args      = array(
                 'title'                             => Ai1ec_I18n::__(
-                    'Time.ly Ticketing'
+                    'Timely Ticketing'
                 ),
                 'settings_text'                     => Ai1ec_I18n::__( 'Settings' ),
                 'sales_text'                        => Ai1ec_I18n::__( 'Sales' ),
