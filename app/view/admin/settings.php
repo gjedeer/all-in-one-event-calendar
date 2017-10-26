@@ -152,6 +152,12 @@ class Ai1ec_View_Admin_Settings extends Ai1ec_View_Admin_Abstract {
                     'cache'          => Ai1ec_I18n::__( 'Cache Report' ),
                 )
             ),
+            'extensions' => array(
+                'name' => Ai1ec_I18n::__( 'Add-ons' ),
+                'items' => array(
+                    'twittertab'       => Ai1ec_I18n::__( 'Twitter' ),
+                )
+            ),
         );
 
         // let other extensions add tabs.
@@ -160,7 +166,6 @@ class Ai1ec_View_Admin_Settings extends Ai1ec_View_Admin_Abstract {
         $plugin_settings  = $settings->get_options();
         $tabs             = $this->_get_tabs_to_show( $plugin_settings, $tabs );
         $loader           = $this->_registry->get( 'theme.loader' );
-
         $api               = $this->_registry->get( 'model.api.api-registration' );
         $signup_available  = $api->is_api_sign_up_available();
         $signed_to_api     = $api->is_signed();
@@ -246,6 +251,8 @@ class Ai1ec_View_Admin_Settings extends Ai1ec_View_Admin_Abstract {
             )
         );
 
+
+
         $file = $loader->get_file( 'setting/bootstrap_tabs.twig', $args, true );
         $file->render();
 
@@ -311,7 +318,7 @@ class Ai1ec_View_Admin_Settings extends Ai1ec_View_Admin_Abstract {
                     continue;
                 }
                 // if only one item is active, do not use the dropdown
-                if ( count( $tab['items_active'] ) === 1 ) {
+                if ( count( $tab['items_active'] ) === 0 ) {
                     $name = key($tab['items_active']);
                     $tab['name'] = $tab['items'][$name];
                     unset ( $tab['items'] );

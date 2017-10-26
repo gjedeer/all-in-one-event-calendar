@@ -2,18 +2,18 @@
 # This file is distributed under the same license as the All-in-One Event Calendar by Time.ly package.
 msgid ""
 msgstr ""
-"Project-Id-Version: All-in-One Event Calendar by Time.ly 2.5.26\n"
+"Project-Id-Version: All-in-One Event Calendar by Time.ly 2.5.27\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/all-in-one-event-calendar\n"
-"POT-Creation-Date: 2017-09-18 18:14:23+00:00\n"
+"POT-Creation-Date: 2017-10-26 20:45:14+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-09-18 18:14+0000\n"
+"PO-Revision-Date: 2017-10-26 20:45+0000\n"
 "Last-Translator: Timely <support@time.ly>\n"
 "Language-Team:\n"
 
 #: app/controller/extension-license.php:53 app/view/admin/add-ons.php:26
-#: app/view/admin/add-ons.php:27 public/admin/box_support.php:43
+#: app/view/admin/add-ons.php:27 app/view/admin/settings.php:156
 msgid "Add-ons"
 msgstr "Add-ons"
 
@@ -270,11 +270,11 @@ msgstr "Attendees List"
 msgid "Guest Name"
 msgstr "Guest Name"
 
-#: app/controller/javascript.php:571 app/view/admin/tickets.php:123
+#: app/controller/javascript.php:571 app/view/admin/tickets.php:132
 msgid "Status"
 msgstr "Status"
 
-#: app/controller/javascript.php:572 app/view/admin/tickets.php:122
+#: app/controller/javascript.php:572 app/view/admin/tickets.php:131
 #: app/view/event/ticket.php:71
 msgid "Email"
 msgstr "Email"
@@ -802,11 +802,29 @@ msgstr ""
 "Frontend Extension</a> for the <strong>frontend Post Your Event form</"
 "strong>."
 
-#: app/model/settings.php:878
+#: app/model/settings.php:870
+msgid ""
+"<div class=\"ai1ec-twitterinfo-wrap\"><b>Twitter</b><br>This feature allows "
+"your events to be automatically tweeted before they happen. Great way to add "
+"regular content to your twitter roll and keep your audience informed of all "
+"your great events. This feature is not yet enabled in your product. Please "
+"purchase it as a standalone for a low annual subscription or inside the Core"
+"+ bundle. <a target=\"_blank\" href=\"https://time.ly/wordpress-calendar-"
+"plugin/addons/\">Click here.</a></div>"
+msgstr ""
+"<div class=\"ai1ec-twitterinfo-wrap\"><b>Twitter</b><br>This feature allows "
+"your events to be automatically tweeted before they happen. Great way to add "
+"regular content to your twitter roll and keep your audience informed of all "
+"your great events. This feature is not yet enabled in your product. Please "
+"purchase it as a standalone for a low annual subscription or inside the Core"
+"+ bundle. <a target=\"_blank\" href=\"https://time.ly/wordpress-calendar-"
+"plugin/addons/\">Click here.</a></div>"
+
+#: app/model/settings.php:891
 msgid "Move calendar into this DOM element"
 msgstr "Move calendar into this DOM element"
 
-#: app/model/settings.php:880
+#: app/model/settings.php:893
 msgid ""
 "Optional. Use this JavaScript-based shortcut to place the\n"
 "                        calendar a DOM element other than the usual page "
@@ -836,7 +854,7 @@ msgstr ""
 "replaced\n"
 "                        by the calendar."
 
-#: app/model/settings.php:899
+#: app/model/settings.php:912
 msgid ""
 "<strong>Skip <tt>in_the_loop()</tt> check </strong> that protects against "
 "multiple calendar output"
@@ -844,7 +862,7 @@ msgstr ""
 "<strong>Skip <tt>in_the_loop()</tt> check </strong> that protects against "
 "multiple calendar output"
 
-#: app/model/settings.php:902
+#: app/model/settings.php:915
 msgid ""
 "Try enabling this option if your calendar does not appear on the calendar "
 "page. It is needed for compatibility with a small number of themes that call "
@@ -854,11 +872,11 @@ msgstr ""
 "page. It is needed for compatibility with a small number of themes that call "
 "<tt>the_content()</tt> from outside of The Loop. Leave disabled otherwise."
 
-#: app/model/settings.php:914
+#: app/model/settings.php:927
 msgid "Disable <strong>gzip</strong> compression."
 msgstr "Disable <strong>gzip</strong> compression."
 
-#: app/model/settings.php:917
+#: app/model/settings.php:930
 msgid ""
 "Use this option if calendar is unresponsive. <a target=\"_blank\" href="
 "\"https://time.ly/document/user-guide/troubleshooting/disable-gzip-"
@@ -870,11 +888,11 @@ msgstr ""
 "compression/\">Read more</a> about the issue. (From version 2.1 onwards, "
 "gzip is disabled by default for maximum compatibility.)"
 
-#: app/model/settings.php:929
+#: app/model/settings.php:942
 msgid "Use frontend rendering."
 msgstr "Use frontend rendering."
 
-#: app/model/settings.php:932
+#: app/model/settings.php:945
 msgid ""
 "Renders calendar views on the client rather than the server; can improve "
 "performance."
@@ -882,15 +900,15 @@ msgstr ""
 "Renders calendar views on the client rather than the server; can improve "
 "performance."
 
-#: app/model/settings.php:944
+#: app/model/settings.php:957
 msgid "Use advanced JS cache."
 msgstr "Use advanced JS cache."
 
-#: app/model/settings.php:947
+#: app/model/settings.php:960
 msgid "Cache dynamically generated JS files. Improves performance."
 msgstr "Cache dynamically generated JS files. Improves performance."
 
-#: app/model/settings.php:959
+#: app/model/settings.php:972
 msgid ""
 "<strong>Link CSS</strong> in <code>&lt;head&gt;</code> section when file "
 "cache is unavailable."
@@ -898,7 +916,7 @@ msgstr ""
 "<strong>Link CSS</strong> in <code>&lt;head&gt;</code> section when file "
 "cache is unavailable."
 
-#: app/model/settings.php:962
+#: app/model/settings.php:975
 msgid ""
 "Use this option if file cache is unavailable and you would prefer to serve "
 "CSS as a link rather than have it output inline."
@@ -906,11 +924,11 @@ msgstr ""
 "Use this option if file cache is unavailable and you would prefer to serve "
 "CSS as a link rather than have it output inline."
 
-#: app/model/settings.php:974
+#: app/model/settings.php:987
 msgid "Current <strong>robots.txt</strong> on this site"
 msgstr "Current <strong>robots.txt</strong> on this site"
 
-#: app/model/settings.php:978
+#: app/model/settings.php:991
 msgid ""
 "The Robot Exclusion Standard, also known as the Robots Exclusion Protocol "
 "or\n"
@@ -934,7 +952,7 @@ msgstr ""
 "                        You can change it manually by editing <code>robots."
 "txt</code> in your root WordPress directory."
 
-#: app/model/settings.php:995
+#: app/model/settings.php:1008
 msgid ""
 "<strong>Publicize, promote, and share my events</strong> marked as public on "
 "the Timely network. (<a href=\"%s\" target=\"_blank\">Learn more &#187;</a>)"
@@ -942,15 +960,15 @@ msgstr ""
 "<strong>Publicize, promote, and share my events</strong> marked as public on "
 "the Timely network. (<a href=\"%s\" target=\"_blank\">Learn more &#187;</a>)"
 
-#: app/model/settings.php:1018
+#: app/model/settings.php:1031
 msgid "Templates cache improves site performance"
 msgstr "Templates cache improves site performance"
 
-#: app/model/settings.php:1031
+#: app/model/settings.php:1044
 msgid "Display events in <strong>calendar time zone</strong>"
 msgstr "Display events in <strong>calendar time zone</strong>"
 
-#: app/model/settings.php:1034
+#: app/model/settings.php:1047
 msgid ""
 "If this box is checked events will appear in the calendar time zone with "
 "time zone information displayed on the event details page."
@@ -1254,7 +1272,7 @@ msgid "All-in-One Event Calendar: Settings"
 msgstr "All-in-One Event Calendar: Settings"
 
 #: app/view/admin/settings.php:68 app/view/admin/settings.php:69
-#: app/view/admin/tickets.php:110 lib/date/timezone.php:366
+#: app/view/admin/tickets.php:119 lib/date/timezone.php:366
 msgid "Settings"
 msgstr "Settings"
 
@@ -1300,11 +1318,15 @@ msgstr "External Services"
 msgid "Cache Report"
 msgstr "Cache Report"
 
-#: app/view/admin/settings.php:173
+#: app/view/admin/settings.php:158
+msgid "Twitter"
+msgstr "Twitter"
+
+#: app/view/admin/settings.php:178
 msgid "Please, Sign In to Timely Network."
 msgstr "Please, Sign In to Timely Network."
 
-#: app/view/admin/settings.php:184 app/view/admin/tickets.php:116
+#: app/view/admin/settings.php:189 app/view/admin/tickets.php:125
 #: public/admin/box_ask_customer_review.php:113
 #: public/admin/box_ask_customer_review.php:127
 #: public/admin/box_ask_customer_review.php:141
@@ -1314,47 +1336,47 @@ msgstr "Please, Sign In to Timely Network."
 msgid "This field is required."
 msgstr "This field is required."
 
-#: app/view/admin/settings.php:185 app/view/event/ticket.php:25
+#: app/view/admin/settings.php:190 app/view/event/ticket.php:25
 msgid "Register"
 msgstr "Register"
 
-#: app/view/admin/settings.php:186
+#: app/view/admin/settings.php:191
 msgid "Sign in"
 msgstr "Sign in"
 
-#: app/view/admin/settings.php:190
+#: app/view/admin/settings.php:195
 msgid "Sign out"
 msgstr "Sign out"
 
-#: app/view/admin/settings.php:192
+#: app/view/admin/settings.php:197
 msgid "Full Name:"
 msgstr "Full Name:"
 
-#: app/view/admin/settings.php:193
+#: app/view/admin/settings.php:198
 msgid "Hide form"
 msgstr "Hide form"
 
-#: app/view/admin/settings.php:194
+#: app/view/admin/settings.php:199
 msgid "Show form"
 msgstr "Show form"
 
-#: app/view/admin/settings.php:195
+#: app/view/admin/settings.php:200
 msgid "Email:"
 msgstr "Email:"
 
-#: app/view/admin/settings.php:196
+#: app/view/admin/settings.php:201
 msgid "Password:"
 msgstr "Password:"
 
-#: app/view/admin/settings.php:197
+#: app/view/admin/settings.php:202
 msgid "Confirm Password:"
 msgstr "Confirm Password:"
 
-#: app/view/admin/settings.php:198
+#: app/view/admin/settings.php:203
 msgid "Phone Number:"
 msgstr "Phone Number:"
 
-#: app/view/admin/settings.php:199
+#: app/view/admin/settings.php:204
 msgid ""
 "I confirm that I have read, understand and agree with the <a href=\"https://"
 "time.ly/tos\">terms of service</a>."
@@ -1362,7 +1384,7 @@ msgstr ""
 "I confirm that I have read, understand and agree with the <a href=\"https://"
 "time.ly/tos\">terms of service</a>."
 
-#: app/view/admin/settings.php:202
+#: app/view/admin/settings.php:207
 msgid ""
 "<h4>Attention Required:</h4>If you choose to sign-out of the API Timely "
 "Network this will close all the created tickets and remove user access to "
@@ -1374,68 +1396,68 @@ msgstr ""
 "them. In this case, on the event page, users will see the status “Event "
 "closed”."
 
-#: app/view/admin/settings.php:205 public/admin/box_repeat.php:116
+#: app/view/admin/settings.php:210 public/admin/box_repeat.php:116
 #: public/admin/plugins/ics/import_feed.php:127
 msgid "Cancel"
 msgstr "Cancel"
 
-#: app/view/admin/settings.php:206 app/view/admin/tickets.php:125
+#: app/view/admin/settings.php:211 app/view/admin/tickets.php:134
 msgid "Sign Out"
 msgstr "Sign Out"
 
-#: app/view/admin/settings.php:207
+#: app/view/admin/settings.php:212
 msgid "Sign Up"
 msgstr "Sign Up"
 
-#: app/view/admin/settings.php:208
+#: app/view/admin/settings.php:213
 msgid "Sign In"
 msgstr "Sign In"
 
-#: app/view/admin/settings.php:209
+#: app/view/admin/settings.php:214
 msgid "Calendar Type:"
 msgstr "Calendar Type:"
 
-#: app/view/admin/settings.php:211
+#: app/view/admin/settings.php:216
 msgid "Tourism"
 msgstr "Tourism"
 
-#: app/view/admin/settings.php:212
+#: app/view/admin/settings.php:217
 msgid "Media"
 msgstr "Media"
 
-#: app/view/admin/settings.php:213
+#: app/view/admin/settings.php:218
 msgid "Community Hubs"
 msgstr "Community Hubs"
 
-#: app/view/admin/settings.php:214
+#: app/view/admin/settings.php:219
 msgid "Education"
 msgstr "Education"
 
-#: app/view/admin/settings.php:215
+#: app/view/admin/settings.php:220
 msgid "Venue/Business"
 msgstr "Venue/Business"
 
-#: app/view/admin/settings.php:216
+#: app/view/admin/settings.php:221
 msgid "Artist/Performer"
 msgstr "Artist/Performer"
 
-#: app/view/admin/settings.php:217
+#: app/view/admin/settings.php:222
 msgid "Church/Spiritual"
 msgstr "Church/Spiritual"
 
-#: app/view/admin/settings.php:218
+#: app/view/admin/settings.php:223
 msgid "Association/Group"
 msgstr "Association/Group"
 
-#: app/view/admin/settings.php:219
+#: app/view/admin/settings.php:224
 msgid "Other"
 msgstr "Other"
 
-#: app/view/admin/settings.php:231
+#: app/view/admin/settings.php:236
 msgid "Save Settings"
 msgstr "Save Settings"
 
-#: app/view/admin/settings.php:238
+#: app/view/admin/settings.php:243
 msgid ""
 "If the form below is not working please follow <a href=\"%s\">this link</a>."
 msgstr ""
@@ -1498,20 +1520,20 @@ msgstr "All-in-One Event Calendar: Themes"
 msgid "Ticketing"
 msgstr "Ticketing"
 
-#: app/view/admin/tickets.php:71 app/view/admin/tickets.php:86
-#: app/view/admin/tickets.php:96 app/view/admin/tickets.php:107
-msgid "Time.ly Ticketing"
-msgstr "Time.ly Ticketing"
+#: app/view/admin/tickets.php:77 app/view/admin/tickets.php:93
+#: app/view/admin/tickets.php:104 app/view/admin/tickets.php:116
+msgid "Timely Ticketing"
+msgstr "Timely Ticketing"
 
-#: app/view/admin/tickets.php:75
+#: app/view/admin/tickets.php:81
 msgid ""
-"You need to sign up for a Timely Network account in order to use Ticketing "
-"or Import Feeds<br /><br />"
+"You need to sign up for a Timely Network account in order to use Ticketing."
+"<br /><br />"
 msgstr ""
-"You need to sign up for a Timely Network account in order to use Ticketing "
-"or Import Feeds<br /><br />"
+"You need to sign up for a Timely Network account in order to use Ticketing."
+"<br /><br />"
 
-#: app/view/admin/tickets.php:78
+#: app/view/admin/tickets.php:84
 msgid ""
 "<a href=\"edit.php?post_type=ai1ec_event&page=all-in-one-event-calendar-"
 "settings\" class=\"ai1ec-btn ai1ec-btn-primary ai1ec-btn-lg\">Sign In to "
@@ -1521,7 +1543,7 @@ msgstr ""
 "settings\" class=\"ai1ec-btn ai1ec-btn-primary ai1ec-btn-lg\">Sign In to "
 "Timely Network</a>"
 
-#: app/view/admin/tickets.php:79
+#: app/view/admin/tickets.php:85
 msgid ""
 "<b>Signing up for a Timely Network account is currently unavailable. Please, "
 "try again later.</b>"
@@ -1529,68 +1551,68 @@ msgstr ""
 "<b>Signing up for a Timely Network account is currently unavailable. Please, "
 "try again later.</b>"
 
-#: app/view/admin/tickets.php:111
+#: app/view/admin/tickets.php:120
 msgid "Sales"
 msgstr "Sales"
 
-#: app/view/admin/tickets.php:112
+#: app/view/admin/tickets.php:121
 msgid "Please provide your PayPal details."
 msgstr "Please provide your PayPal details."
 
-#: app/view/admin/tickets.php:113
+#: app/view/admin/tickets.php:122
 msgid "Cheque"
 msgstr "Cheque"
 
-#: app/view/admin/tickets.php:114
+#: app/view/admin/tickets.php:123
 msgid "PayPal"
 msgstr "PayPal"
 
-#: app/view/admin/tickets.php:115
+#: app/view/admin/tickets.php:124
 msgid "Preferred currency for tickets:"
 msgstr "Preferred currency for tickets:"
 
-#: app/view/admin/tickets.php:117
+#: app/view/admin/tickets.php:126
 msgid "Save Changes"
 msgstr "Save Changes"
 
-#: app/view/admin/tickets.php:118
+#: app/view/admin/tickets.php:127
 msgid "Date"
 msgstr "Date"
 
-#: app/view/admin/tickets.php:119
+#: app/view/admin/tickets.php:128
 msgid "Event"
 msgstr "Event"
 
-#: app/view/admin/tickets.php:120
+#: app/view/admin/tickets.php:129
 msgid "Purchaser"
 msgstr "Purchaser"
 
-#: app/view/admin/tickets.php:121 app/view/calendar/view/abstract.php:107
+#: app/view/admin/tickets.php:130 app/view/calendar/view/abstract.php:107
 #: app/view/event/ticket.php:39
 msgid "Tickets"
 msgstr "Tickets"
 
-#: app/view/admin/tickets.php:124
+#: app/view/admin/tickets.php:133
 msgid "Total"
 msgstr "Total"
 
-#: app/view/admin/tickets.php:141
+#: app/view/admin/tickets.php:150
 msgid "United States Dollar"
 msgstr "United States Dollar"
 
-#: app/view/admin/tickets.php:142
+#: app/view/admin/tickets.php:151
 msgid "Canadian Dollar"
 msgstr "Canadian Dollar"
 
-#: app/view/admin/tickets.php:143
+#: app/view/admin/tickets.php:152
 msgid "Australian Dollar"
 msgstr "Australian Dollar"
 
-#: app/view/admin/tickets.php:144
+#: app/view/admin/tickets.php:153
 msgid "Brazilian Real"
 msgstr "Brazilian Real"
 
-#: app/view/admin/tickets.php:144 app/view/admin/tickets.php:152
+#: app/view/admin/tickets.php:153 app/view/admin/tickets.php:161
 msgid ""
 "Note: This currency is supported as a payment currency and a currency "
 "balance for in-country PayPal accounts only."
@@ -1598,27 +1620,27 @@ msgstr ""
 "Note: This currency is supported as a payment currency and a currency "
 "balance for in-country PayPal accounts only."
 
-#: app/view/admin/tickets.php:145
+#: app/view/admin/tickets.php:154
 msgid "Czech Koruna"
 msgstr "Czech Koruna"
 
-#: app/view/admin/tickets.php:146
+#: app/view/admin/tickets.php:155
 msgid "Danish Krone"
 msgstr "Danish Krone"
 
-#: app/view/admin/tickets.php:147
+#: app/view/admin/tickets.php:156
 msgid "Euro"
 msgstr "Euro"
 
-#: app/view/admin/tickets.php:148
+#: app/view/admin/tickets.php:157
 msgid "Hong Kong Dollar"
 msgstr "Hong Kong Dollar"
 
-#: app/view/admin/tickets.php:149
+#: app/view/admin/tickets.php:158
 msgid "Hungarian Forint"
 msgstr "Hungarian Forint"
 
-#: app/view/admin/tickets.php:149 app/view/admin/tickets.php:163
+#: app/view/admin/tickets.php:158 app/view/admin/tickets.php:172
 msgid ""
 "Note: Decimal amounts are not supported for this currency. Passing a decimal "
 "amount will throw an error."
@@ -1626,15 +1648,15 @@ msgstr ""
 "Note: Decimal amounts are not supported for this currency. Passing a decimal "
 "amount will throw an error."
 
-#: app/view/admin/tickets.php:150
+#: app/view/admin/tickets.php:159
 msgid "Israeli New Sheqel"
 msgstr "Israeli New Sheqel"
 
-#: app/view/admin/tickets.php:151
+#: app/view/admin/tickets.php:160
 msgid "Japanese Yen"
 msgstr "Japanese Yen"
 
-#: app/view/admin/tickets.php:151
+#: app/view/admin/tickets.php:160
 msgid ""
 "Note: This currency does not support decimals. Passing a decimal amount will "
 "throw an error. 1,000,000"
@@ -1642,39 +1664,39 @@ msgstr ""
 "Note: This currency does not support decimals. Passing a decimal amount will "
 "throw an error. 1,000,000"
 
-#: app/view/admin/tickets.php:152
+#: app/view/admin/tickets.php:161
 msgid "Malaysian Ringgit"
 msgstr "Malaysian Ringgit"
 
-#: app/view/admin/tickets.php:153
+#: app/view/admin/tickets.php:162
 msgid "Mexican Peso"
 msgstr "Mexican Peso"
 
-#: app/view/admin/tickets.php:154
+#: app/view/admin/tickets.php:163
 msgid "Norwegian Krone"
 msgstr "Norwegian Krone"
 
-#: app/view/admin/tickets.php:155
+#: app/view/admin/tickets.php:164
 msgid "New Zealand Dollar"
 msgstr "New Zealand Dollar"
 
-#: app/view/admin/tickets.php:156
+#: app/view/admin/tickets.php:165
 msgid "Philippine Peso"
 msgstr "Philippine Peso"
 
-#: app/view/admin/tickets.php:157
+#: app/view/admin/tickets.php:166
 msgid "Polish Zloty"
 msgstr "Polish Zloty"
 
-#: app/view/admin/tickets.php:158
+#: app/view/admin/tickets.php:167
 msgid "Pound Sterling"
 msgstr "Pound Sterling"
 
-#: app/view/admin/tickets.php:159
+#: app/view/admin/tickets.php:168
 msgid "Russian Ruble"
 msgstr "Russian Ruble"
 
-#: app/view/admin/tickets.php:159
+#: app/view/admin/tickets.php:168
 msgid ""
 "For in-border payments (payments made within Russia), the Russian Ruble is "
 "the only accepted currency. If you use another currency for in-border "
@@ -1684,23 +1706,23 @@ msgstr ""
 "the only accepted currency. If you use another currency for in-border "
 "payments, the transaction will fail"
 
-#: app/view/admin/tickets.php:160
+#: app/view/admin/tickets.php:169
 msgid "Singapore Dollar"
 msgstr "Singapore Dollar"
 
-#: app/view/admin/tickets.php:161
+#: app/view/admin/tickets.php:170
 msgid "Swedish Krona"
 msgstr "Swedish Krona"
 
-#: app/view/admin/tickets.php:162
+#: app/view/admin/tickets.php:171
 msgid "Swiss Franc"
 msgstr "Swiss Franc"
 
-#: app/view/admin/tickets.php:163
+#: app/view/admin/tickets.php:172
 msgid "Taiwan New Dollar"
 msgstr "Taiwan New Dollar"
 
-#: app/view/admin/tickets.php:164
+#: app/view/admin/tickets.php:173
 msgid "Thai Baht"
 msgstr "Thai Baht"
 
@@ -3423,11 +3445,11 @@ msgstr "Please wait&#8230;"
 msgid "Apply"
 msgstr "Apply"
 
-#: public/admin/box_support.php:4
+#: public/admin/box_support.php:5
 msgid "Timely"
 msgstr "Timely"
 
-#: public/admin/box_support.php:11
+#: public/admin/box_support.php:12
 msgid ""
 "Timely’s All-in-One Event Calendar is a<br />revolutionary new way to find "
 "and share events."
@@ -3435,27 +3457,31 @@ msgstr ""
 "Timely’s All-in-One Event Calendar is a<br />revolutionary new way to find "
 "and share events."
 
-#: public/admin/box_support.php:19
+#: public/admin/box_support.php:20
 msgid "Guide"
 msgstr "Guide"
 
-#: public/admin/box_support.php:27
-msgid "Forum"
-msgstr "Forum"
+#: public/admin/box_support.php:28
+msgid "Support"
+msgstr "Support"
 
-#: public/admin/box_support.php:35
+#: public/admin/box_support.php:36
 msgid "Videos"
 msgstr "Videos"
 
-#: public/admin/box_support.php:51
+#: public/admin/box_support.php:44
+msgid "More Features"
+msgstr "More Features"
+
+#: public/admin/box_support.php:52
 msgid "Timely News"
 msgstr "Timely News"
 
-#: public/admin/box_support.php:55
+#: public/admin/box_support.php:56
 msgid "view all news"
 msgstr "view all news"
 
-#: public/admin/box_support.php:103
+#: public/admin/box_support.php:131
 msgid "Follow @_Timely"
 msgstr "Follow @_Timely"
 

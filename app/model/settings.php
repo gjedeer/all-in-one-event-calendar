@@ -860,6 +860,19 @@ class Ai1ec_Settings extends Ai1ec_App {
                  ),
                 'default'  => true,
             ),
+            'twitterinfo' => array(
+                'type' => 'bool',
+                'renderer' => array(
+                    'class' => 'checkbox',
+                    'tab'   => 'extensions',
+                    'item'  => 'twittertab',
+                    'label' => '',
+                    'help'  => Ai1ec_I18n::__(
+                         '<div class="ai1ec-twitterinfo-wrap"><b>Twitter</b><br>This feature allows your events to be automatically tweeted before they happen. Great way to add regular content to your twitter roll and keep your audience informed of all your great events. This feature is not yet enabled in your product. Please purchase it as a standalone for a low annual subscription or inside the Core+ bundle. <a target="_blank" href="https://time.ly/wordpress-calendar-plugin/addons/">Click here.</a></div>'
+                     ),
+                ),
+                'default'  => true,
+            ),
             'embedding' => array(
                 'type' => 'html',
                 'renderer' => array(

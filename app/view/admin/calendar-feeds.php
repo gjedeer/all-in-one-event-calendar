@@ -70,6 +70,12 @@ class Ai1ec_View_Calendar_Feeds extends Ai1ec_View_Admin_Abstract {
             'calendar_settings' => false,
         );
         $file     = $loader->get_file( 'feeds_settings.php', $args, true );
+        wp_enqueue_style(
+            'ai1ec_samples.css',
+            AI1EC_ADMIN_THEME_CSS_URL . 'samples.css',
+            array(),
+            AI1EC_VERSION
+        );
         $file->render();
     }
 
