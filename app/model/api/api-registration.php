@@ -28,7 +28,7 @@ class Ai1ec_Api_Registration extends Ai1ec_Api_Abstract {
         $body['email']         = $_POST['ai1ec_email'];
         $body['password']      = $_POST['ai1ec_password'];
         $body['calendar_type'] = $_POST['ai1ec_calendar_type'];
-        $response              = $this->request_api( 'POST', AI1EC_API_URL . 'auth/authenticate', json_encode( $body ), true, array( 'Authorization' => null ) );
+        $response              = $this->request_api( 'POST', AI1EC_API_URL . 'auth/authenticate', $body, true, array( 'Authorization' => null ) );
         if ( $this->is_response_success( $response ) ) {
             $response_body = (array) $response->body;
             // Save calendar ID as 0 first, otherwise the auth data won't be saved in the database before creating/finding the calendar
@@ -56,7 +56,7 @@ class Ai1ec_Api_Registration extends Ai1ec_Api_Abstract {
         $body['phone']                 = $_POST['ai1ec_phone'];
         $body['calendar_type']         = $_POST['ai1ec_calendar_type'];
         $body['terms']                 = $_POST['ai1ec_terms'];
-        $response                      = $this->request_api( 'POST', AI1EC_API_URL . 'auth/register', json_encode( $body ), true );
+        $response                      = $this->request_api( 'POST', AI1EC_API_URL . 'auth/register', $body, true );
         if ( $this->is_response_success( $response ) ) {
             $response_body = (array) $response->body;
             // Save calendar ID as 0 first, otherwise the auth data won't be saved in the database before creating the calendar
@@ -154,7 +154,7 @@ class Ai1ec_Api_Registration extends Ai1ec_Api_Abstract {
             $this->clear_ticketing_settings();
             return false;
         }
-        $response = $this->request_api( 'GET', AI1EC_API_URL . "calendars/$calendar_id/signout", null, true );
+        $response = $this->request_api( 'GET', AI1EC_API_URL . 'calendars/' . $calendar_id . '/signout', null, true );
         // Consider "Unauthorized" status (401) a valid response
         if ( $this->is_response_success( $response ) || 401 === wp_remote_retrieve_response_code( $response->raw ) ) {
             $this->clear_ticketing_settings();

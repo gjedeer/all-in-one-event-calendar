@@ -163,7 +163,7 @@ abstract class Ai1ec_Api_Abstract extends Ai1ec_App {
      */
     protected function _get_headers( $custom_headers = null ) {
         $headers  = array(
-            'content-type' => 'application/json'
+            'Content-Type' => 'application/x-www-form-urlencoded'
         );
         $headers['Authorization'] = 'Basic ' . $this->get_ticketing_settings( 'token', '' );
         if ( null !== $custom_headers ) {
@@ -300,9 +300,7 @@ abstract class Ai1ec_Api_Abstract extends Ai1ec_App {
             'title' => get_bloginfo( 'name' ),
             'url'   => ai1ec_site_url()
         );
-        $response = $this->request_api( 'GET', AI1EC_API_URL . 'calendars',
-            json_encode( $body )
-        );
+        $response = $this->request_api( 'GET', AI1EC_API_URL . 'calendars', $body );
         if ( $this->is_response_success( $response ) ) {
             if ( is_array( $response->body ) ) {
                 return $response->body[0]->id;
@@ -323,9 +321,7 @@ abstract class Ai1ec_Api_Abstract extends Ai1ec_App {
             'url'      => ai1ec_site_url(),
             'timezone' => $this->_settings->get( 'timezone_string' )
             );
-        $response = $this->request_api( 'POST', AI1EC_API_URL . 'calendars',
-            json_encode( $body )
-        );
+        $response = $this->request_api( 'POST', AI1EC_API_URL . 'calendars', $body );
         if ( $this->is_response_success( $response ) ) {
             return $response->body->id;
         } else {
@@ -520,11 +516,12 @@ abstract class Ai1ec_Api_Abstract extends Ai1ec_App {
     protected function request_api(  $method, $url, $body = null, $decode_response_body = true, $custom_headers = null ) {
         $request = array(
             'method'  => $method,
+            'accept'  => 'application/json',
             'headers' => $this->_get_headers( $custom_headers ),
             'timeout' => self::DEFAULT_TIMEOUT
         );
         if ( ! is_null( $body ) ) {
-            $request[ 'body' ] = $body;
+            $request['body'] = $body;
         }
         $response    = wp_remote_request( $url, $request );
         $result      = new stdClass();
@@ -567,7 +564,6 @@ abstract class Ai1ec_Api_Abstract extends Ai1ec_App {
             return false;
         }
         $url  = AI1EC_API_URL . str_replace( '{calendar_id}', $calendar_id, $endpoint );
-        $body = json_encode( $body );
         return $this->request_api( $method, $url, $body, $decode_response_body, $custom_headers );
     }
 
