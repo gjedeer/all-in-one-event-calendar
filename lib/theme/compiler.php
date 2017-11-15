@@ -152,7 +152,7 @@ class Ai1ec_Theme_Compiler extends Ai1ec_Base {
             $parent = realpath( $cache_dir );
 
             // PROD-3918 - Check if we are cleaning the TWIG cache dir
-            // This checking will fail if a custom directory is used to store twig cache
+            // This validation will fail if a custom directory is used to store twig cache
             if ( strpos( $parent, 'cache/twig' ) === false ) {
                 return false;
             }
