@@ -889,69 +889,80 @@ var calendricalDateFormats = {
     				}
     			} );
 
-    		// Validation upon form submission
-    		start_date_input.closest( 'form' )
-    			.bind( 'submit.timespan', function() {
-    				// Update hidden field values with chosen date/time.
-    				//
-    				// 1. Start date/time
+			// Validation upon form submission
+			start_date_input.closest( 'form' )
+				.bind( 'submit.timespan',  calcTimespan);
 
-    				// Convert Date object into UNIX timestamp for form submission
-    				var unix_start_time = parseDate( start_date_input.val(), o.date_format ).getTime() / 1000;
-    				// If parsed correctly, proceed to add the time.
-    				if ( ! isNaN( unix_start_time ) ) {
-    					// Add time quantity to date, unless "All day" is checked.
-    					if( ! allday.get(0).checked ) {
-    						var time = parseTime( start_time_input.val() );
-    						// If parsed correctly, proceed add its value.
-    						if( time ) {
-    							unix_start_time += time.hour * 3600 + time.minute * 60;
-    						} else {
-    							// Else entire calculation is invalid.
-    							unix_start_time = '';
-    						}
-    					}
-    				} else {
-    					// Else entire calculation is invalid.
-    					unix_start_time = '';
-    				}
-    				// Set start date value to valid unix time, or empty string, depending
-    				// on above validation.
-					if ( unix_start_time > 0 ) {
-    					start_time.val( formatDateToIso( new Date( unix_start_time * 1000 ), true ) );
+			start_date_input.closest( 'form' ).find(
+				'#ai1ec_start-date-input, #ai1ec_end-date-input, \
+				 #ai1ec_start-time-input, #ai1ec_end-time-input'
+			)
+				.on( 'change', calcTimespan );
+
+			start_date_input.closest( '.ai1ec-form' )
+				.on( 'click', calcTimespan );
+			
+		function calcTimespan() {
+				// Update hidden field values with chosen date/time.
+				//
+				// 1. Start date/time
+
+				// Convert Date object into UNIX timestamp for form submission
+				var unix_start_time = parseDate( start_date_input.val(), o.date_format ).getTime() / 1000;
+				// If parsed correctly, proceed to add the time.
+				if ( ! isNaN( unix_start_time ) ) {
+					// Add time quantity to date, unless "All day" is checked.
+					if( ! allday.get(0).checked ) {
+						var time = parseTime( start_time_input.val() );
+						// If parsed correctly, proceed add its value.
+						if( time ) {
+							unix_start_time += time.hour * 3600 + time.minute * 60;
+						} else {
+							// Else entire calculation is invalid.
+							unix_start_time = '';
+						}
 					}
+				} else {
+					// Else entire calculation is invalid.
+					unix_start_time = '';
+				}
+				// Set start date value to valid unix time, or empty string, depending
+				// on above validation.
+				if ( unix_start_time > 0 ) {
+					start_time.val( formatDateToIso( new Date( unix_start_time * 1000 ), true ) );
+				}
 
-    				// 2. End date/time
+				// 2. End date/time
 
-    				// Convert Date object into UNIX timestamp for form submission
-    				var unix_end_time = parseDate( end_date_input.val(), o.date_format ).getTime() / 1000;
-    				// If parsed correctly, proceed to add the time.
-    				if( ! isNaN( unix_end_time ) ) {
-    					// If "All day" is checked, store an end date that is one day
-    					// *after* the start date (following iCalendar spec).
-    					if( allday.get(0).checked ) {
-    						unix_end_time += 24 * 60 * 60;
-    					// Else add time quantity to date.
-    					} else {
-    						var time = parseTime( end_time_input.val() );
-    						// If parsed correctly, proceed add its value.
-    						if( time ) {
-    							unix_end_time += time.hour * 3600 + time.minute * 60;
-    						} else {
-    							// Else entire calculation is invalid.
-    							unix_end_time = '';
-    						}
-    					}
-    				} else {
-    					// Else entire calculation is invalid.
-    					unix_end_time = '';
-    				}
-    				// Set end date value to valid unix time, or empty string, depending
-    				// on above validation.
-					if ( unix_end_time > 0 ) {
-    					end_time.val( formatDateToIso( new Date( unix_end_time * 1000 ), true ) );
+				// Convert Date object into UNIX timestamp for form submission
+				var unix_end_time = parseDate( end_date_input.val(), o.date_format ).getTime() / 1000;
+				// If parsed correctly, proceed to add the time.
+				if( ! isNaN( unix_end_time ) ) {
+					// If "All day" is checked, store an end date that is one day
+					// *after* the start date (following iCalendar spec).
+					if( allday.get(0).checked ) {
+						unix_end_time += 24 * 60 * 60;
+					// Else add time quantity to date.
+					} else {
+						var time = parseTime( end_time_input.val() );
+						// If parsed correctly, proceed add its value.
+						if( time ) {
+							unix_end_time += time.hour * 3600 + time.minute * 60;
+						} else {
+							// Else entire calculation is invalid.
+							unix_end_time = '';
+						}
 					}
-    			} );
+				} else {
+					// Else entire calculation is invalid.
+					unix_end_time = '';
+				}
+				// Set end date value to valid unix time, or empty string, depending
+				// on above validation.
+				if ( unix_end_time > 0 ) {
+					end_time.val( formatDateToIso( new Date( unix_end_time * 1000 ), true ) );
+				}
+    		}
 
     		// Store original form values
     		start_time.data( 'timespan.initial_value', start_time.val() );

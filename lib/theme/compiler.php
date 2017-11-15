@@ -145,10 +145,20 @@ class Ai1ec_Theme_Compiler extends Ai1ec_Base {
      */
     public function clean_and_check_dir( $cache_dir ) {
         try {
-            $parent = realpath( $cache_dir );
-            if ( ! $this->_prune_dir( $parent ) ) {
+            // PROD-3918 - Check if we are cleaning the TWIG cache dir
+            // This validation will fail if a custom directory is used to store twig cache
+            if ( empty( $cache_dir ) || strpos( $cache_dir, 'cache/twig' ) === false ) {
                 return false;
             }
+
+            $parent = realpath( $cache_dir );
+
+            // $parent will return empty if the directory doesn't exist
+            // Only clean directory if directory exists
+            if ( ! empty( $parent ) && ! $this->_prune_dir( $parent ) ) {
+                return false;
+            }
+
             if (
                 is_dir( $cache_dir ) && chmod( $cache_dir, 0754 )
                 || mkdir( $cache_dir, 0754, true )
