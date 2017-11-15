@@ -479,7 +479,7 @@ class Ai1ec_Api_Ticketing extends Ai1ec_Api_Abstract {
     public function get_ticket_types( $post_id, $get_canceled = true ) {
         $api_event_id = $this->get_api_event_id( $post_id );
         if ( ! $api_event_id ) {
-            return array( 'data' => array() );
+            return json_encode( array( 'data' => array() ) );
         }
         $response = $this->request_api( 'GET', $this->get_api_event_url( $post_id ) . 'events/' . $api_event_id . '/ticket_types',
             array( 'get_canceled' => ( true === $get_canceled ? 1 : 0 ) )
@@ -489,9 +489,9 @@ class Ai1ec_Api_Ticketing extends Ai1ec_Api_Abstract {
                  foreach ( $response->body->ticket_types as $ticket_api ) {
                      $this->_unparse_tickets_type_from_api_structure( $ticket_api );
                 }
-                return array( 'data' => $response->body->ticket_types );
+                return json_encode( array( 'data' => $response->body->ticket_types ) );
             } else {
-                return array( 'data' => array() );
+                return json_encode( array( 'data' => array() ) );
             }
         } else {
             $error_message = $this->_transform_error_message(
@@ -499,7 +499,7 @@ class Ai1ec_Api_Ticketing extends Ai1ec_Api_Abstract {
                 $response->raw, $response->url,
                 true
             );
-            return array( 'data' => array(), 'error' => $error_message );
+            return json_encode( array( 'data' => array(), 'error' => $error_message ) );
         }
     }
 
