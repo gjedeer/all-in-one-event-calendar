@@ -131,6 +131,7 @@ https://vimeo.com/135004810
 
 = Version 2.5.28 =
 * Fixed: On the event preview page, the date shown was incorrect.
+* Security: Added security check before cleaning TWIG cache files.
 
 = Version 2.5.27 =
 * Fixed: Compatibility with PHP 7.0.
