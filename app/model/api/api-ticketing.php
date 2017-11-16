@@ -173,7 +173,7 @@ class Ai1ec_Api_Ticketing extends Ai1ec_Api_Abstract {
 
         if ( true === $update_image && 0 < $post_thumbnail_id ) {
             $boundary                       = wp_generate_password( 24 );
-            $custom_headers['content-type'] = 'multipart/form-data; boundary=' . $boundary;
+            $custom_headers['Content-Type'] = 'multipart/form-data; boundary=' . $boundary;
             $body_data['update_image']      = '1';
             foreach ($body_data as $key => $value) {
                 if ( is_array( $value ) ) {
