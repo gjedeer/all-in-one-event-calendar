@@ -173,7 +173,7 @@ class Ai1ec_Api_Ticketing extends Ai1ec_Api_Abstract {
 
         if ( true === $update_image && 0 < $post_thumbnail_id ) {
             $boundary                       = wp_generate_password( 24 );
-            $custom_headers['content-type'] = 'multipart/form-data; boundary=' . $boundary;
+            $custom_headers['Content-Type'] = 'multipart/form-data; boundary=' . $boundary;
             $body_data['update_image']      = '1';
             foreach ($body_data as $key => $value) {
                 if ( is_array( $value ) ) {
@@ -182,17 +182,17 @@ class Ai1ec_Api_Ticketing extends Ai1ec_Api_Abstract {
                         if ( is_array( $arr_value ) ) {
                             foreach ( $arr_value as $child_key => $child_value ) {
                                 $payload .= '--' . $boundary;
-                                 $payload .= "\r\n";
+                                $payload .= "\r\n";
                                 $payload .= 'Content-Disposition: form-data; name="' . $key . '[' . $index . '][' . $child_key . ']"' . "\r\n";
-                                   $payload .= "\r\n";
+                                $payload .= "\r\n";
                                 $payload .= $child_value;
                                 $payload .= "\r\n";
                             }
                         } else {
                             $payload .= '--' . $boundary;
-                             $payload .= "\r\n";
+                            $payload .= "\r\n";
                             $payload .= 'Content-Disposition: form-data; name="tax_options[' . $arr_key . ']"' . "\r\n";
-                               $payload .= "\r\n";
+                            $payload .= "\r\n";
                             $payload .= $arr_value;
                             $payload .= "\r\n";
                         }
@@ -200,9 +200,9 @@ class Ai1ec_Api_Ticketing extends Ai1ec_Api_Abstract {
                     }
                 } else {
                     $payload .= '--' . $boundary;
-                     $payload .= "\r\n";
+                    $payload .= "\r\n";
                     $payload .= 'Content-Disposition: form-data; name="' . $key . '"' . "\r\n";
-                       $payload .= "\r\n";
+                    $payload .= "\r\n";
                     $payload .= $value;
                     $payload .= "\r\n";
                 }
@@ -219,7 +219,7 @@ class Ai1ec_Api_Ticketing extends Ai1ec_Api_Abstract {
             $payload  .= '--' . $boundary . '--';
         } else {
             $body_data['update_image'] = (true === $update_image) ? '1' : '0';
-             $payload                   = json_encode( $body_data );
+            $payload                   = $body_data;
         }
         $response = $this->request_api( 'POST', $url, $payload,
             true, //true to decode response body
@@ -288,7 +288,7 @@ class Ai1ec_Api_Ticketing extends Ai1ec_Api_Abstract {
 
         //removing blank values
         foreach ($body as $key => $value) {
-            if ( ai1ec_is_blank( $value ) )    {
+            if ( ai1ec_is_blank( $value ) ) {
                 unset( $body[ $key ] );
             }
         }
@@ -443,7 +443,7 @@ class Ai1ec_Api_Ticketing extends Ai1ec_Api_Abstract {
                 case 'sale_closed':
                     return __( 'Sale closed' );
                 case 'sold_out':
-                    return __( 'Sold out' );    
+                    return __( 'Sold out' );
                 default:
                     return __( 'Not available' );
             }
@@ -469,7 +469,7 @@ class Ai1ec_Api_Ticketing extends Ai1ec_Api_Abstract {
                 $response->raw, $response->url,
                 true
             );
-            return (object)  array( 'data' => array(), 'error' => $error_message );
+            return (object) array( 'data' => array(), 'error' => $error_message );
         }
     }
 
@@ -483,7 +483,7 @@ class Ai1ec_Api_Ticketing extends Ai1ec_Api_Abstract {
         }
         $response = $this->request_api( 'GET', $this->get_api_event_url( $post_id ) . 'events/' . $api_event_id . '/ticket_types',
             array( 'get_canceled' => ( true === $get_canceled ? 1 : 0 ) )
-            );
+        );
         if ( $this->is_response_success( $response ) ) {
             if ( isset( $response->body->ticket_types ) ) {
                  foreach ( $response->body->ticket_types as $ticket_api ) {
@@ -634,8 +634,8 @@ class Ai1ec_Api_Ticketing extends Ai1ec_Api_Abstract {
             $api_fields_values
         );
         $response = $this->request_api( 'POST',
-            AI1EC_API_URL . "events/$api_event_id",
-            json_encode( $body_data ),
+            AI1EC_API_URL . 'events/' . $api_event_id,
+            $body_data,
             true //true to decode response body
             );
         if ( ! $this->is_response_success( $response ) ) {
@@ -688,7 +688,7 @@ class Ai1ec_Api_Ticketing extends Ai1ec_Api_Abstract {
             }
         }
         $response = $this->request_api( 'DELETE',
-            AI1EC_API_URL . "events/$api_event_id",
+            AI1EC_API_URL . 'events/' . $api_event_id,
             true //true to decode response body
             );
         if ( $this->is_response_success( $response ) ) {
@@ -840,11 +840,11 @@ class Ai1ec_Api_Ticketing extends Ai1ec_Api_Abstract {
      public function get_tax_options_modal( $post_id = null ) {
          $calendar_id = $this->_get_ticket_calendar();
          $event_id    = $this->get_api_event_id( $post_id );
-        $response    = $this->request_api( 'GET',
-            AI1EC_API_URL . "calendars/$calendar_id/tax_options" .
-            ( is_null( $event_id ) ? '' : "?event_id=$event_id" )
-        );
-        return (object) array( 'data' => $response->raw, 'error' => false );
+         $response    = $this->request_api( 'GET',
+            AI1EC_API_URL . 'calendars/' . $calendar_id . '/tax_options' .
+            ( is_null( $event_id ) ? '' : '?event_id=' . $event_id )
+         );
+         return (object) array( 'data' => $response->raw, 'error' => false );
     }
 
      /**
@@ -853,10 +853,10 @@ class Ai1ec_Api_Ticketing extends Ai1ec_Api_Abstract {
      */
      public function get_tax_options_modal_ep() {
          $calendar_id = $this->_get_ticket_calendar();
-        $response    = $this->request_api( 'GET',
-            AI1EC_API_URL . "eventpromote/$calendar_id/tax_options"
-        );
-        return (object) array( 'data' => $response->raw, 'error' => false );
+         $response    = $this->request_api( 'GET',
+            AI1EC_API_URL . 'eventpromote/' . $calendar_id . '/tax_options'
+         );
+         return (object) array( 'data' => $response->raw, 'error' => false );
     }
 
      /**
