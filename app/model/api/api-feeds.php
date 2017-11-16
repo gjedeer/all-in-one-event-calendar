@@ -84,7 +84,7 @@ class Ai1ec_Api_Feeds extends Ai1ec_Api_Abstract {
             $location;
 
         $response = $this->request_api( 'GET', $url,
-            null !== $body ? $body : null,
+            $body,
             true //decode body response
         );
 

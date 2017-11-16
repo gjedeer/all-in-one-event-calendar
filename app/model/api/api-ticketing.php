@@ -443,7 +443,7 @@ class Ai1ec_Api_Ticketing extends Ai1ec_Api_Abstract {
                 case 'sale_closed':
                     return __( 'Sale closed' );
                 case 'sold_out':
-                    return __( 'Sold out' );    
+                    return __( 'Sold out' );
                 default:
                     return __( 'Not available' );
             }
