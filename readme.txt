@@ -130,7 +130,8 @@ https://vimeo.com/135004810
 == Changelog ==
 
 = Version 2.5.29 =
-* Renamed "No CAPTCHA" to "reCAPTCHA V2"
+* Fixed: Removed type hint from Exception Handler method for PHP 7 compatibility.
+* Renamed "No CAPTCHA" to "reCAPTCHA V2".
 
 = Version 2.5.28 =
 * Fixed: On the event preview page, the date shown was incorrect.
