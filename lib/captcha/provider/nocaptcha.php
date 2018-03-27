@@ -29,7 +29,7 @@ class Ai1ec_Captcha_Nocaptcha_Provider extends Ai1ec_Captcha_Provider {
                     'item'      => 'interactive',
                     'type'      => 'normal',
                     'label'     => __(
-                        'noCAPTCHA public key:',
+                        'reCAPTCHA V2 public key:',
                         AI1ECFS_PLUGIN_NAME
                     ),
                     'condition' => $enable_rendering,
@@ -45,7 +45,7 @@ class Ai1ec_Captcha_Nocaptcha_Provider extends Ai1ec_Captcha_Provider {
                     'item'      => 'interactive',
                     'type'      => 'normal',
                     'label'     => __(
-                        'noCAPTCHA private key:',
+                        'reCAPTCHA V2 private key:',
                         AI1ECFS_PLUGIN_NAME
                     ),
                     'condition' => $enable_rendering,
@@ -127,6 +127,6 @@ class Ai1ec_Captcha_Nocaptcha_Provider extends Ai1ec_Captcha_Provider {
      * @return string
      */
     public function get_name() {
-        return 'Google No CAPTCHA';
+        return 'Google reCAPTCHA V2';
     }
 }
