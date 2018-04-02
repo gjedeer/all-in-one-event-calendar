@@ -1278,17 +1278,6 @@ WordPress Dashboard.
 3. Once the plugin is activated, follow the instructions in the notice
 to configure it.
 
-= For advanced users: =
-
-To place the calendar in a DOM/HTML element besides the default page
-content container without modifying the theme:
-
-1. Navigate to **Events** > **Settings** > **Advanced** > **Advanced
-Settings** in the WordPress Dashboard.
-2. Enter a CSS or jQuery-style selector of the target element in the
-**Move calendar into this DOM element** field.
-3. Click **Update**.
-
 == Screenshots ==
 
 1. Posterboard view

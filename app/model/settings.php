@@ -883,7 +883,7 @@ class Ai1ec_Settings extends Ai1ec_App {
                 'default'  => null,
             ),
             'calendar_css_selector' => array(
-                'type' => 'string',
+                'type' => 'deprecated',
                 'renderer' => array(
                     'class' => 'input',
                     'tab'   => 'advanced',
