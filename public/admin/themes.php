@@ -13,7 +13,6 @@
 <?php endif; ?>
 
 <div class="wrap">
-    <?php screen_icon() ?>
     <h2><?php echo esc_html( $page_title ); ?></h2>
     <h3><?php _e( 'Current Calendar Theme', AI1EC_PLUGIN_NAME ); ?></h3>
     <div id="current-theme"<?php echo ( $ct->screenshot ) ? ' class="has-screenshot"' : '' ?>>

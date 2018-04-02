@@ -30,7 +30,6 @@
 
     <div class="wrap">
         <?php
-        screen_icon();
         if( ! is_multisite() && current_user_can( 'install_themes' ) ) : ?>
             <h2 class="nav-tab-wrapper">
                 <a href="<?php echo ai1ec_admin_url( AI1EC_THEME_SELECTION_BASE_URL ) ?>" class="nav-tab nav-tab-active">
