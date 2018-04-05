@@ -15,7 +15,7 @@ class Ai1ec_Html_Settings_Checkbox extends Ai1ec_Html_Element_Settings {
     /* (non-PHPdoc)
      * @see Ai1ec_Html_Element_Settings::render()
      */
-    public function render( $output = '' ) {
+    public function render( $output = '', $wrap = true, $hidden = false ) {
         $attributes = array(
             'class' => 'checkbox',
         );
@@ -30,7 +30,7 @@ class Ai1ec_Html_Settings_Checkbox extends Ai1ec_Html_Element_Settings {
             $args,
             true
         );
-        return parent::render( $file->get_content() );
+        return parent::render( $file->get_content(), $wrap, $hidden );
     }
 
 }
