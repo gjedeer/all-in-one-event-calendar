@@ -129,6 +129,10 @@ https://vimeo.com/135004810
 
 == Changelog ==
 
+= Version 2.5.30 =
+* Fixed: Compatibility with PHP 7.2
+* Clean up: Removing use of deprecated WordPress function.
+
 = Version 2.5.29 =
 * Fixed: Removed type hint from Exception Handler method for PHP 7 compatibility.
 * Renamed "No CAPTCHA" to "reCAPTCHA V2".
