@@ -14,7 +14,7 @@ class Ai1ec_Html_Setting_Custom extends Ai1ec_Html_Element_Settings {
     /* (non-PHPdoc)
      * @see Ai1ec_Html_Element_Settings::render()
      */
-    public function render( $output = '' ) {
+    public function render( $output = '', $wrap = true, $hidden = false ) {
         $label   = $this->_args['renderer']['label'];
         $content = $this->_args['renderer']['content'];
         $loader  = $this->_registry->get( 'theme.loader' );
@@ -22,7 +22,7 @@ class Ai1ec_Html_Setting_Custom extends Ai1ec_Html_Element_Settings {
             'label'   => $label,
             'content' => $content
         ), true );
-        return parent::render( $file->get_content() );
+        return parent::render( $file->get_content(), $wrap, $hidden );
     }
 
 }

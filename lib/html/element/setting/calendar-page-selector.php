@@ -45,12 +45,12 @@ class Ai1ec_Html_Element_Calendar_Page_Selector
      *
      * @return string HTML snippet for page selection.
      */
-    public function render( $snippet = '' ) {
+    public function render( $snippet = '', $wrap = true, $hidden = false ) {
         $output = '<label class="ai1ec-control-label ai1ec-col-sm-5" for="' .
             self::ELEMENT_ID . '">' . Ai1ec_I18n::__( 'Calendar page' ) . '</label>'
             . '<div class="ai1ec-col-sm-7">' .
             $this->_get_pages_selector() . $this->_get_page_view_link() . '</div>';
-        return parent::render( $output );
+        return parent::render( $output, $wrap, $hidden );
     }
 
     /**
