@@ -14,11 +14,11 @@ class Ai1ec_Html_Setting_Cache extends Ai1ec_Html_Element_Settings {
     /* (non-PHPdoc)
      * @see Ai1ec_Html_Element_Settings::render()
      */
-    public function render( $output = '' ) {
+    public function render( $output = '', $wrap = true, $hidden = false ) {
         $args   = $this->get_twig_cache_args();
         $loader = $this->_registry->get( 'theme.loader' );
         $file   = $loader->get_file( 'setting/twig_cache.twig', $args, true );
-        return parent::render( $file->get_content() );
+        return parent::render( $file->get_content(), $wrap, $hidden );
     }
 
     /**

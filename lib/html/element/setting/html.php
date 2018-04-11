@@ -14,7 +14,7 @@ class Ai1ec_Html_Setting_Html extends Ai1ec_Html_Element_Settings {
     /* (non-PHPdoc)
      * @see Ai1ec_Html_Element_Settings::render()
      */
-    public function render( $output = '' ) {
+    public function render( $output = '', $wrap = true, $hidden = false ) {
         $file   = $this->_args['id'] . '.twig';
         $method = 'get_' . $this->_args['id'] . '_args';
         $args   = array();
@@ -23,7 +23,7 @@ class Ai1ec_Html_Setting_Html extends Ai1ec_Html_Element_Settings {
         }
         $loader = $this->_registry->get( 'theme.loader' );
         $file   = $loader->get_file( 'setting/' . $file, $args, true );
-        return parent::render( $file->get_content() );
+        return parent::render( $file->get_content(), $wrap, $hidden );
     }
 
     /*
