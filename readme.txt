@@ -130,7 +130,7 @@ https://vimeo.com/135004810
 == Changelog ==
 
 = Version 2.5.30 =
-* Fixed: Compatibility with PHP 7.2
+* Fixed compatibility with PHP 7.2
 * Clean up: Removing use of deprecated WordPress function.
 
 = Version 2.5.29 =
