@@ -110,7 +110,7 @@ class Ai1ec_Exception_Handler {
      *
      * @return string|null Add-on identifier (plugin url), or null.
      */
-    public function is_caused_by_addon( Exception $exception ) {
+    public function is_caused_by_addon( $exception ) {
         $addon = null;
         if ( method_exists( $exception, 'plugin_to_disable' ) ) {
             $addon = $exception->plugin_to_disable();
@@ -567,7 +567,7 @@ class Ai1ec_Exception_Handler {
      *
      * @return string HTML code.
      */
-    protected function _get_backtrace( Exception $exception ) {
+    protected function _get_backtrace( $exception ) {
         $backtrace = '';
         $trace     = nl2br( $exception->getTraceAsString() );
         $ident     = sha1( $trace );
