@@ -249,7 +249,7 @@ class Ai1ec_Recurrence_Rule extends Ai1ec_Base {
                                 $_days .= ' ' . $wp_locale->weekday[$day] . ' ' . Ai1ec_I18n::__( 'and' );
                             }
                             // remove the last ' and'
-                            $_days = substr( $_days, 0, -4 );
+                            $_days = substr( $_days, 0, -( strlen( Ai1ec_I18n::__( 'and' ) ) + 1 ) );
                             $txt .= ' ' . Ai1ec_I18n::_x( 'on', 'Recurrence editor - weekly tab' ) . $_days;
                         }
                     } else {
