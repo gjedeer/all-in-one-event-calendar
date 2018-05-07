@@ -30,7 +30,6 @@ class Ai1ec_Twig_Ai1ec_Extension extends Twig_Extension {
      */
     public function getFunctions() {
         return array(
-            'screen_icon'                  => new Twig_Function_Method( $this, 'screen_icon' ),
             'wp_nonce_field'               => new Twig_Function_Method( $this, 'wp_nonce_field' ),
             'do_meta_boxes'                => new Twig_Function_Method( $this, 'do_meta_boxes' ),
             'fb'                           => new Twig_Function_Method( $this, 'fb' ),
@@ -325,19 +324,6 @@ class Ai1ec_Twig_Ai1ec_Extension extends Twig_Extension {
         $string = htmlspecialchars( $string );
         $string = preg_replace( '/&amp;/', '&', $string );
         return $string;
-    }
-
-    /**
-     * Displays a screen icon.
-     *
-     * @uses get_screen_icon()
-     * @since 2.7.0
-     *
-     * @param string|WP_Screen $screen Optional. Accepts a screen object (and defaults to the current screen object)
-     *     which it uses to determine an icon HTML ID. Or, if a string is provided, it is used to form the icon HTML ID.
-     */
-    public function screen_icon( $screen = '' ){
-        return screen_icon( $screen );
     }
 
     /**

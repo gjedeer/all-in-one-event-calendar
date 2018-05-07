@@ -2,8 +2,8 @@
 Contributors: uchu, calvinyeh, raquelleira, renatotbueno, domanb, elirenato, hubrik, vtowel, yani.iliev, nicolapeluchetti, jbutkus, lpawlik, bangelov
 Tags: calendar, event, ical, feed, ics, icalendar, sync, aggregator, google, venue, calendar widget, events widget
 Requires at least: 3.5
-Tested up to: 4.9.4
-Stable tag: 2.5.29
+Tested up to: 4.9.5
+Stable tag: 2.5.31
 License: GNU General Public License, version 3 (GPL-3.0)
 
 An events calendar system with multiple views, upcoming events widget, color-coded categories, recurrence, and import/export of .ics feeds.
@@ -128,6 +128,13 @@ https://vimeo.com/135004810
 **[ai1ec exact_date="5-10-2017"]**
 
 == Changelog ==
+
+= Version 2.5.31 =
+* Fixed: Featured Image was not being shown when the event was shared on Twitter or Facebook.
+
+= Version 2.5.30 =
+* Fixed compatibility with PHP 7.2
+* Clean up: Removing use of deprecated WordPress function.
 
 = Version 2.5.29 =
 * Fixed: Removed type hint from Exception Handler method for PHP 7 compatibility.
@@ -1277,17 +1284,6 @@ directory.
 WordPress Dashboard.
 3. Once the plugin is activated, follow the instructions in the notice
 to configure it.
-
-= For advanced users: =
-
-To place the calendar in a DOM/HTML element besides the default page
-content container without modifying the theme:
-
-1. Navigate to **Events** > **Settings** > **Advanced** > **Advanced
-Settings** in the WordPress Dashboard.
-2. Enter a CSS or jQuery-style selector of the target element in the
-**Move calendar into this DOM element** field.
-3. Click **Update**.
 
 == Screenshots ==
 

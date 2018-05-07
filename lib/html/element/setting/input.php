@@ -15,7 +15,7 @@ class Ai1ec_Html_Setting_Input extends Ai1ec_Html_Element_Settings {
     /* (non-PHPdoc)
      * @see Ai1ec_Html_Element_Settings::render()
      */
-    public function render( $output = '' ) {
+    public function render( $output = '', $wrap = true, $hidden = false ) {
         $system = $this->_registry->get( 'date.system' );
         $type   = $this->_args['renderer']['type'];
         $date   = $append = false;
@@ -92,7 +92,7 @@ class Ai1ec_Html_Setting_Input extends Ai1ec_Html_Element_Settings {
         } else {
             $hidden = false;
         }
-        return parent::render( $file->get_content(), true, $hidden );
+        return parent::render( $file->get_content(), $wrap, $hidden );
     }
 
 }

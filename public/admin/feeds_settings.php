@@ -1,7 +1,5 @@
 <div class="wrap">
 
-    <?php screen_icon(); ?>
-
     <h2><?php echo $title; ?></h2>
 
     <div id="poststuff">

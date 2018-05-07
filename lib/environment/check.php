@@ -161,6 +161,7 @@ class Ai1ec_Environment_Checks extends Ai1ec_Base {
             ! $rewrite ||
             ! is_object( $wp_rewrite ) ||
             ! isset( $wp_rewrite->rules ) ||
+            ! is_array ( $wp_rewrite->rules ) ||
             0 === count( $wp_rewrite->rules )
         ) {
             return;

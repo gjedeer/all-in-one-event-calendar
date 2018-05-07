@@ -50,7 +50,7 @@ class Twig_Node_Module extends Twig_Node
 
         $this->compileClassHeader($compiler);
 
-        if (count($this->getNode('blocks')) || count($this->getNode('traits')) || null === $this->getNode('parent') || $this->getNode('parent') instanceof Twig_Node_Expression_Constant) {
+        if ((null !== $this->getNode('blocks') && count($this->getNode('blocks'))) || (null !== $this->getNode('traits') && count($this->getNode('traits'))) || null === $this->getNode('parent') || $this->getNode('parent') instanceof Twig_Node_Expression_Constant) {
             $this->compileConstructor($compiler);
         }
 
@@ -150,7 +150,7 @@ class Twig_Node_Module extends Twig_Node
             ;
         }
 
-        $countTraits = count($this->getNode('traits'));
+        $countTraits = null !== $this->getNode('traits') ? count($this->getNode('traits')) : 0;
         if ($countTraits) {
             // traits
             foreach ($this->getNode('traits') as $i => $trait) {
@@ -292,7 +292,7 @@ class Twig_Node_Module extends Twig_Node
         //
         // Put another way, a template can be used as a trait if it
         // only contains blocks and use statements.
-        $traitable = null === $this->getNode('parent') && 0 === count($this->getNode('macros'));
+        $traitable = null === $this->getNode('parent') && null !== $this->getNode('macros') && 0 === count($this->getNode('macros'));
         if ($traitable) {
             if ($this->getNode('body') instanceof Twig_Node_Body) {
                 $nodes = $this->getNode('body')->getNode(0);
@@ -300,12 +300,12 @@ class Twig_Node_Module extends Twig_Node
                 $nodes = $this->getNode('body');
             }
 
-            if (!count($nodes)) {
+            if (null === $nodes || !count($nodes)) {
                 $nodes = new Twig_Node(array($nodes));
             }
 
             foreach ($nodes as $node) {
-                if (!count($node)) {
+                if (null === $node || !count($node)) {
                     continue;
                 }
 

@@ -172,6 +172,7 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
             $instance_id = preg_replace( '/\D/', '', $instance_id );
         }
         $event           = $this->_registry->get( 'model.event', get_the_ID(), $instance_id );
+        $avatar          = $this->_registry->get( 'view.event.avatar' );
         $content         = $this->_registry->get( 'view.event.content' );
         $desc            = $event->get( 'post' )->post_content;
         $desc            = apply_filters( 'the_excerpt', $desc );
@@ -180,6 +181,11 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
         $desc            = strip_tags( $desc );
         $desc            = preg_replace( '/\n+/', ' ', $desc);
         $desc            = substr( $desc, 0, 300 );
+        // Get featured image
+        $image           = $avatar->get_post_thumbnail_url( $event );
+        if ( ! $image ) {
+            $image       = $content->get_content_img_url( $event );
+        }
 
         $og              = array(
             'url'         => home_url( esc_url( add_query_arg( null, null ) ) ),
@@ -189,7 +195,7 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
             ),
             'type'        => 'article',
             'description' => htmlspecialchars( $desc ),
-            'image'       => $content->get_content_img_url( $event )
+            'image'       => $image,
         );
         foreach ( $og as $key => $val ) {
             echo "<meta property=\"og:$key\" content=\"$val\" />\n";
@@ -202,7 +208,7 @@ class Ai1ec_View_Event_Single extends Ai1ec_Base {
                 ' (' . substr( $event->get( 'start' ) , 0, 10 ) . ')'
                 ),
             'description' => htmlspecialchars( $desc ),
-            'image'       => $content->get_content_img_url( $event )
+            'image'       => $image,
         );
         foreach ( $twitter as $key => $val ) {
             if ( empty( $val ) && 'image' !== $key ) {

@@ -14,7 +14,7 @@ class Ai1ec_Html_Element_Enabled_Views
     /* (non-PHPdoc)
      * @see Ai1ec_Html_Element_Settings::render()
      */
-    public function render( $output = '' ) {
+    public function render( $output = '', $wrap = true, $hidden = false ) {
         $this->_convert_values();
         $args = array(
             'views'        => $this->_args['value'],
