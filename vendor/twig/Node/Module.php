@@ -150,7 +150,7 @@ class Twig_Node_Module extends Twig_Node
             ;
         }
 
-        $countTraits = null !== $this->getNode('traits') && count($this->getNode('traits'));
+        $countTraits = null !== $this->getNode('traits') ? count($this->getNode('traits')) : 0;
         if ($countTraits) {
             // traits
             foreach ($this->getNode('traits') as $i => $trait) {
@@ -300,12 +300,12 @@ class Twig_Node_Module extends Twig_Node
                 $nodes = $this->getNode('body');
             }
 
-            if (null !== $nodes && !count($nodes)) {
+            if (null === $nodes || !count($nodes)) {
                 $nodes = new Twig_Node(array($nodes));
             }
 
             foreach ($nodes as $node) {
-                if (null !== $node && !count($node)) {
+                if (null === $node || !count($node)) {
                     continue;
                 }
 
