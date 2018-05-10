@@ -79,12 +79,6 @@ Timely is supported by a committed group of translators offering [languages file
 
 You can help translate by going to [https://translate.time.ly](https://translate.time.ly).
 
-= Become the Hub of your community =
-
-If your goal is to run a community events calendar, Timely's All-in-one Event Calendar has everything you'll need.
-
-https://vimeo.com/135004810
-
 = Helpful Links =
 
 * [**Access our User Guide**](https://time.ly/document/user-guide/).
