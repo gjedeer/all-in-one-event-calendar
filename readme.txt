@@ -2,8 +2,8 @@
 Contributors: uchu, calvinyeh, raquelleira, renatotbueno, domanb, elirenato, hubrik, vtowel, yani.iliev, nicolapeluchetti, jbutkus, lpawlik, bangelov
 Tags: calendar, event, ical, feed, ics, icalendar, sync, aggregator, google, venue, calendar widget, events widget
 Requires at least: 3.5
-Tested up to: 4.9.5
-Stable tag: 2.5.31
+Tested up to: 4.9.6
+Stable tag: 2.5.32
 License: GNU General Public License, version 3 (GPL-3.0)
 
 An events calendar system with multiple views, upcoming events widget, color-coded categories, recurrence, and import/export of .ics feeds.
@@ -79,12 +79,6 @@ Timely is supported by a committed group of translators offering [languages file
 
 You can help translate by going to [https://translate.time.ly](https://translate.time.ly).
 
-= Become the Hub of your community =
-
-If your goal is to run a community events calendar, Timely's All-in-one Event Calendar has everything you'll need.
-
-https://vimeo.com/135004810
-
 = Helpful Links =
 
 * [**Access our User Guide**](https://time.ly/document/user-guide/).
@@ -128,6 +122,9 @@ https://vimeo.com/135004810
 **[ai1ec exact_date="5-10-2017"]**
 
 == Changelog ==
+
+= Version 2.5.32 =
+* Fixed: Subscribe dropdown wasn't working properly.
 
 = Version 2.5.31 =
 * Fixed: Featured Image was not being shown when the event was shared on Twitter or Facebook.
