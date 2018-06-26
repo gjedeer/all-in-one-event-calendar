@@ -3,7 +3,7 @@ Contributors: uchu, calvinyeh, raquelleira, renatotbueno, domanb, elirenato, hub
 Tags: calendar, event, ical, feed, ics, icalendar, sync, aggregator, google, venue, calendar widget, events widget
 Requires at least: 3.5
 Tested up to: 4.9.6
-Stable tag: 2.5.31
+Stable tag: 2.5.32
 License: GNU General Public License, version 3 (GPL-3.0)
 
 An events calendar system with multiple views, upcoming events widget, color-coded categories, recurrence, and import/export of .ics feeds.
@@ -122,6 +122,9 @@ You can help translate by going to [https://translate.time.ly](https://translate
 **[ai1ec exact_date="5-10-2017"]**
 
 == Changelog ==
+
+= Version 2.5.32 =
+* Fixed: Subscribe dropdown wasn't working properly.
 
 = Version 2.5.31 =
 * Fixed: Featured Image was not being shown when the event was shared on Twitter or Facebook.
