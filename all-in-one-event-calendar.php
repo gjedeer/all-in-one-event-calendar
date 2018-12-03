@@ -71,6 +71,9 @@ require $ai1ec_base_dir . DIRECTORY_SEPARATOR . 'lib' .
 require $ai1ec_base_dir . DIRECTORY_SEPARATOR . 'lib' .
     DIRECTORY_SEPARATOR . 'global-functions.php';
 
+require $ai1ec_base_dir . DIRECTORY_SEPARATOR . 'lib' .
+    DIRECTORY_SEPARATOR . 'iCal' . DIRECTORY_SEPARATOR . 'iCalcreator-2.24.2' . DIRECTORY_SEPARATOR . 'autoload.php';
+
 require $ai1ec_base_dir . DIRECTORY_SEPARATOR . 'app' .
     DIRECTORY_SEPARATOR . 'controller' . DIRECTORY_SEPARATOR . 'extension.php';
 
