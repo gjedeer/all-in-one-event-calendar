@@ -1,5 +1,8 @@
 <?php
 
+use kigkonsult\iCalcreator\vcalendar;
+use kigkonsult\iCalcreator\timezoneHandler;
+
 /**
  * The ics import/export engine.
  *
@@ -56,7 +59,7 @@ class Ai1ec_Ics_Import_Export_Engine
         if ( $tz ) {
             $c->setProperty( 'X-WR-TIMEZONE', $tz );
             $tz_xprops = array( 'X-LIC-LOCATION' => $tz );
-            iCalUtilityFunctions::createTimezone( $c, $tz, $tz_xprops );
+            timezoneHandler::createTimezone( $c, $tz, $tz_xprops );
         }
 
         $this->_taxonomy_model = $this->_registry->get( 'model.taxonomy' );
@@ -797,7 +800,7 @@ class Ai1ec_Ics_Import_Export_Engine
         $tz  = $this->_registry->get( 'date.timezone' )
             ->get_default_timezone();
 
-        $e   = & $calendar->newComponent( 'vevent' );
+        $e   = $calendar->newComponent( 'vevent' );
         $uid = '';
         if ( $event->get( 'ical_uid' ) ) {
             $uid = addcslashes( $event->get( 'ical_uid' ), "\\;,\n" );

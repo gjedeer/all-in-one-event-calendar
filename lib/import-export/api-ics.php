@@ -246,7 +246,7 @@ class Ai1ec_Api_Ics_Import_Export_Engine
             // = Latitude & longitude =
             // ========================
             $latitude = $longitude = NULL;
-            $geo_tag  = $e->geo;
+            $geo_tag  = isset( $e->geo ) ? $e->geo : null;
             if ( ! empty( $geo_tag ) && false !== strpos( $geo_tag, ',' ) ) {
                 list( $latitude, $longitude ) = explode( ',', $geo_tag, 2 );
                 $latitude  = (float)$latitude;

@@ -1,5 +1,7 @@
 <?php
 
+use kigkonsult\iCalcreator\util\utilRecur;
+
 /**
  * Event instance management model.
  *
@@ -126,13 +128,13 @@ class Ai1ec_Event_Instance extends Ai1ec_Base {
                 );
             unset($exception_rules['EXDATE']);
             if ( ! empty( $exception_rules ) ) {
-                $exception_rules = iCalUtilityFunctions::_setRexrule(
+                $exception_rules = utilRecur::setRexrule(
                     $exception_rules
                 );
                 $result = array();
                 date_default_timezone_set( $timezone );
                 // The first array is the result and it is passed by reference
-                iCalUtilityFunctions::_recur2date(
+                utilRecur::recur2date(
                     $exclude_dates,
                     $exception_rules,
                     $wdate,
@@ -147,10 +149,10 @@ class Ai1ec_Event_Instance extends Ai1ec_Base {
                 $event->get( 'recurrence_rules' )
             );
 
-        $recurrence_rules = iCalUtilityFunctions::_setRexrule( $recurrence_rules );
+        $recurrence_rules = utilRecur::setRexrule( $recurrence_rules );
         if ( $recurrence_rules ) {
             date_default_timezone_set( $timezone );
-            iCalUtilityFunctions::_recur2date(
+            utilRecur::recur2date(
                 $recurrence_dates,
                 $recurrence_rules,
                 $wdate,

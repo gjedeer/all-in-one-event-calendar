@@ -1,4 +1,7 @@
 <?php
+
+use kigkonsult\iCalcreator\vcalendar;
+
 /**
  * iCalcnv ver 3.0
  * copyright (c) 2011 Kjell-Inge Gustafsson kigkonsult
