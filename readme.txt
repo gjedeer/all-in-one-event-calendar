@@ -125,7 +125,7 @@ You can help translate by going to [https://translate.time.ly](https://translate
 == Changelog ==
 
 = Version 2.5.33 =
-* Fixed: Updated iCalcreator library to latest version, fixing environments using PHP 7.2.
+* Fixed: iCalcreator library has been updated to the latest version, fixing problems with PHP 7.2.
 
 = Version 2.5.32 =
 * Fixed: Subscribe dropdown wasn't working properly.
