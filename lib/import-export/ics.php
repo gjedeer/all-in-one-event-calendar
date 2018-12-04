@@ -800,7 +800,7 @@ class Ai1ec_Ics_Import_Export_Engine
         $tz  = $this->_registry->get( 'date.timezone' )
             ->get_default_timezone();
 
-        $e   = & $calendar->newComponent( 'vevent' );
+        $e   = $calendar->newComponent( 'vevent' );
         $uid = '';
         if ( $event->get( 'ical_uid' ) ) {
             $uid = addcslashes( $event->get( 'ical_uid' ), "\\;,\n" );
