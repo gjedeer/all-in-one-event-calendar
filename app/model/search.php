@@ -758,7 +758,8 @@ class Ai1ec_Event_Search extends Ai1ec_Base {
         // Query the correct post status
         if (
             current_user_can( 'administrator' ) ||
-            current_user_can( 'editor' )
+            current_user_can( 'editor' ) ||
+            current_user_can( 'read_private_ai1ec_events' )
         ) {
             // User has privilege of seeing all published and private
             $post_status_where = 'AND post_status IN ( %s, %s ) ';
