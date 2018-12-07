@@ -141,6 +141,20 @@ class Ai1ec_Event_Instance extends Ai1ec_Base {
                     $startdate,
                     $enddate
                 );
+                // Get start date time
+                $startHour   = isset( $startdate['hour'] ) ? sprintf( "%02d", $startdate['hour'] ) : '00';
+                $startMinute = isset( $startdate['min'] )  ? sprintf( "%02d", $startdate['min'] )  : '00';
+                $startSecond = isset( $startdate['sec'] )  ? sprintf( "%02d", $startdate['sec'] )  : '00';
+                $startTime   = $startHour . $startMinute . $startSecond;
+                // Convert to timestamp
+                if ( is_array( $exclude_dates ) ) {
+                    $new_exclude_dates = [];
+                    foreach ( $exclude_dates as $key => $value ) {
+                        $timestamp = strtotime( $key . 'T' . $startTime );
+                        $new_exclude_dates[$timestamp] = $value;
+                    }
+                    $exclude_dates = $new_exclude_dates;
+                }
                 date_default_timezone_set( $restore_timezone );
             }
         }
@@ -159,6 +173,20 @@ class Ai1ec_Event_Instance extends Ai1ec_Base {
                 $startdate,
                 $enddate
             );
+            // Get start date time
+            $startHour   = isset( $startdate['hour'] ) ? sprintf( "%02d", $startdate['hour'] ) : '00';
+            $startMinute = isset( $startdate['min'] )  ? sprintf( "%02d", $startdate['min'] )  : '00';
+            $startSecond = isset( $startdate['sec'] )  ? sprintf( "%02d", $startdate['sec'] )  : '00';
+            $startTime   = $startHour . $startMinute . $startSecond;
+            // Convert to timestamp
+            if ( is_array( $recurrence_dates ) ) {
+                $new_recurrence_dates = [];
+                foreach ( $recurrence_dates as $key => $value ) {
+                    $timestamp = strtotime( $key . 'T' . $startTime );
+                    $new_recurrence_dates[$timestamp] = $value;
+                }
+                $recurrence_dates = $new_recurrence_dates;
+            }
             date_default_timezone_set( $restore_timezone );
         }
 
@@ -171,8 +199,8 @@ class Ai1ec_Event_Instance extends Ai1ec_Base {
             // The arrays are in the form timestamp => true so an isset call is what we need
             if ( ! isset( $exclude_dates[$timestamp] ) ) {
                 $event_instance['start'] = $timestamp;
-                $event_instance['end']     = $timestamp + $duration;
-                $events[$timestamp] = $event_instance;
+                $event_instance['end']   = $timestamp + $duration;
+                $events[$timestamp]      = $event_instance;
             }
         }
 
