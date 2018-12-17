@@ -2,7 +2,7 @@
 Contributors: uchu, calvinyeh, raquelleira, renatotbueno, domanb, elirenato, hubrik, vtowel, yani.iliev, nicolapeluchetti, jbutkus, lpawlik, bangelov
 Tags: calendar, event, ical, feed, ics, icalendar, sync, aggregator, google, venue, calendar widget, events widget
 Requires at least: 3.5
-Tested up to: 5.0
+Tested up to: 5.0.1
 Stable tag: 2.5.33
 Requires PHP: 5.4
 License: GNU General Public License, version 3 (GPL-3.0)
