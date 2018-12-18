@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: All-in-One Event Calendar by Time.ly 2.5.36\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/all-in-one-event-calendar\n"
-"POT-Creation-Date: 2018-12-18 16:15:13+00:00\n"
+"POT-Creation-Date: 2018-12-18 17:18:59+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1932,38 +1932,6 @@ msgstr ""
 msgid ", and "
 msgstr ""
 
-#: cache/twig/57/45/0188512a8737525f2a834d1b88782d9a19e5e6d3a9e57df3dbed47bab219.php:38
-msgid "Import events from a CSV file or iCalendar (.ics) feed:"
-msgstr ""
-
-#: cache/twig/57/45/0188512a8737525f2a834d1b88782d9a19e5e6d3a9e57df3dbed47bab219.php:61
-msgid "Or paste your CSV data or iCalendar (.ics) feed here:"
-msgstr ""
-
-#: cache/twig/57/45/0188512a8737525f2a834d1b88782d9a19e5e6d3a9e57df3dbed47bab219.php:102
-#: public/admin/plugins/ics/import_feed.php:89
-msgid "Allow comments on imported events"
-msgstr ""
-
-#: cache/twig/57/45/0188512a8737525f2a834d1b88782d9a19e5e6d3a9e57df3dbed47bab219.php:112
-#: public/admin/plugins/ics/import_feed.php:96
-msgid "Show map on imported events"
-msgstr ""
-
-#: cache/twig/57/45/0188512a8737525f2a834d1b88782d9a19e5e6d3a9e57df3dbed47bab219.php:122
-#: public/admin/plugins/ics/import_feed.php:103
-msgid ""
-"Import any tags/categories provided by feed, in addition those selected above"
-msgstr ""
-
-#: cache/twig/dc/78/b950182efb8f436b144938fb0dc48cf395d7daabe20293234dbcf2b26545.php:38
-msgid "Excludes: "
-msgstr ""
-
-#: cache/twig/dc/78/b950182efb8f436b144938fb0dc48cf395d7daabe20293234dbcf2b26545.php:49
-msgid "Repeats"
-msgstr ""
-
 #: lib/calendar-feed/ics.php:40
 msgid "My Feeds"
 msgstr ""
@@ -3432,6 +3400,19 @@ msgid ""
 "<b>You have reached the limit of how many feeds you can import.</b><br>\n"
 "        Please sign up for EventBoost plan <a href=\"https://time.ly/"
 "eventboost/\" target=\"_blank\">here</a>."
+msgstr ""
+
+#: public/admin/plugins/ics/import_feed.php:89
+msgid "Allow comments on imported events"
+msgstr ""
+
+#: public/admin/plugins/ics/import_feed.php:96
+msgid "Show map on imported events"
+msgstr ""
+
+#: public/admin/plugins/ics/import_feed.php:103
+msgid ""
+"Import any tags/categories provided by feed, in addition those selected above"
 msgstr ""
 
 #: public/admin/plugins/ics/import_feed.php:136
