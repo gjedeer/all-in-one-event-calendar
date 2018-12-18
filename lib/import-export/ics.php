@@ -132,11 +132,6 @@ class Ai1ec_Ics_Import_Export_Engine
         //sort by event date function _cmpfcn of iCalcreator.class.php
         $v->sort();
 
-        // Reverse the sort order, so that RECURRENCE-IDs are listed before the
-        // defining recurrence events, and therefore take precedence during
-        // caching.
-        $v->components = array_reverse( $v->components );
-
         // TODO: select only VEVENT components that occur after, say, 1 month ago.
         // Maybe use $v->selectComponents(), which takes into account recurrence
 

@@ -1,7 +1,5 @@
 <?php
 
-use kigkonsult\iCalcreator\vcalendar;
-
 /**
  * iCalcnv ver 3.0
  * copyright (c) 2011 Kjell-Inge Gustafsson kigkonsult
@@ -143,7 +141,7 @@ class iCalcnv {
     ini_set( 'auto_detect_line_endings', false );
     $cntrows = count( $rows );
             /** iCalcreator checks when setting directory and filename */
-    $calendar = new vcalendar();
+    $calendar = new kigkonsult\iCalcreator\vcalendar();
     if( FALSE !== ( $unique_id = $this->getConfig( 'unique_id' )))
       $calendar->setConfig( 'unique_id', $unique_id );
     if( ! $this->getConfig( 'outputobj' ) ) {
@@ -240,16 +238,16 @@ class iCalcnv {
         if( 'VTIMEZONE' == $compname ) {
           if( $comp )
             $calendar->setComponent( $comp );
-          $comp = new vtimezone();
+          $comp = new kigkonsult\iCalcreator\vtimezone();
           $actcomp = & $comp;
           $cntprops += 1;
         }
         elseif( 'STANDARD' == $compname ) {
-          $subcomp = new vtimezone( 'STANDARD' );
+          $subcomp = new kigkonsult\iCalcreator\vtimezone( 'STANDARD' );
           $actcomp = & $subcomp;
         }
         elseif( 'DAYLIGHT' == $compname ) {
-          $subcomp = new vtimezone( 'DAYLIGHT' );
+          $subcomp = new kigkonsult\iCalcreator\vtimezone( 'DAYLIGHT' );
           $actcomp = & $subcomp;
         }
         else {
@@ -335,12 +333,13 @@ class iCalcnv {
         if( in_array( $compname, $allowedComps )) {
           if( $comp )
             $calendar->setComponent( $comp );
-          $comp = new $rows[$row][0];
+          $className = 'kigkonsult\\iCalcreator\\' . $rows[$row][0];
+          $comp = new $className;
           $actcomp = & $comp;
           $cntprops += 1;
         }
         elseif( 'VALARM' == $compname ) {
-          $subcomp = new valarm();
+          $subcomp = new kigkonsult\iCalcreator\valarm();
           $actcomp = & $subcomp;
         }
         else {
@@ -819,7 +818,7 @@ class iCalcnv {
     if( $calendar )
       $calnl = $calendar->getConfig( 'nl' );
     else {  /** iCalcreator set config, read and parse input iCal file */
-      $calendar = new vcalendar();
+      $calendar = new kigkonsult\iCalcreator\vcalendar();
       if( FALSE !== ( $unique_id = $this->getConfig( 'unique_id' )))
         $calendar->setConfig( 'unique_id', $unique_id );
       $calnl = $calendar->getConfig( 'nl' );
@@ -1393,7 +1392,7 @@ class iCalcnv {
     if( $calendar )
       $calnl = $calendar->getConfig( 'nl' );
     else {    /** iCalcreator set config, read and parse input iCal file */
-      $calendar = new vcalendar();
+      $calendar = new kigkonsult\iCalcreator\vcalendar();
       if( FALSE !== ( $unique_id = $this->getConfig( 'unique_id' )))
         $calendar->setConfig( 'unique_id', $unique_id );
       $calnl = $calendar->getConfig( 'nl' );
