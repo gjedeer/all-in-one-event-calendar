@@ -5,7 +5,7 @@
  * Description: A calendar system with month, week, day, agenda views, upcoming events widget, color-coded categories, recurrence, and import/export of .ics feeds.
  * Author: Time.ly Network Inc.
  * Author URI: https://time.ly/
- * Version: 2.5.35
+ * Version: 2.5.36
  * Text Domain: all-in-one-event-calendar
  * Domain Path: /language
  */
