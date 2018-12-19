@@ -104,7 +104,7 @@ class Ai1ec_Event_Instance extends Ai1ec_Base {
         $wdate             = $startdate = $enddate
             = $this->_parsed_date_array( $_start, $timezone );
         $enddate['year']   = $enddate['year'] + 10;
-        $exclude_dates       = array();
+        $exclude_dates     = array();
         $recurrence_dates  = array();
         if ( $recurrence_dates = $event->get( 'recurrence_dates' ) ) {
             $recurrence_dates  = $this->_populate_recurring_dates(
@@ -114,7 +114,7 @@ class Ai1ec_Event_Instance extends Ai1ec_Base {
             );
         }
         if ( $exception_dates = $event->get( 'exception_dates' ) ) {
-            $exclude_dates  = $this->_populate_recurring_dates(
+            $exclude_dates = $this->_populate_recurring_dates(
                 $exception_dates,
                 $startdate,
                 $timezone
@@ -148,7 +148,7 @@ class Ai1ec_Event_Instance extends Ai1ec_Base {
                 $startTime   = $startHour . $startMinute . $startSecond;
                 // Convert to timestamp
                 if ( is_array( $exclude_dates ) ) {
-                    $new_exclude_dates = [];
+                    $new_exclude_dates = array();
                     foreach ( $exclude_dates as $key => $value ) {
                         $timestamp = strtotime( $key . 'T' . $startTime );
                         $new_exclude_dates[$timestamp] = $value;
@@ -180,7 +180,7 @@ class Ai1ec_Event_Instance extends Ai1ec_Base {
             $startTime   = $startHour . $startMinute . $startSecond;
             // Convert to timestamp
             if ( is_array( $recurrence_dates ) ) {
-                $new_recurrence_dates = [];
+                $new_recurrence_dates = array();
                 foreach ( $recurrence_dates as $key => $value ) {
                     $timestamp = strtotime( $key . 'T' . $startTime );
                     $new_recurrence_dates[$timestamp] = $value;
