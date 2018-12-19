@@ -3,7 +3,7 @@ Contributors: uchu, calvinyeh, raquelleira, renatotbueno, domanb, elirenato, hub
 Tags: calendar, event, ical, feed, ics, icalendar, sync, aggregator, google, venue, calendar widget, events widget
 Requires at least: 3.5
 Tested up to: 5.0.2
-Stable tag: 2.5.36
+Stable tag: 2.5.37
 Requires PHP: 5.4
 License: GNU General Public License, version 3 (GPL-3.0)
 
@@ -124,8 +124,11 @@ You can help translate by going to [https://translate.time.ly](https://translate
 
 == Changelog ==
 
+= Version 2.5.37 =
+* Fixed compatibility with PHP 5.2 and 5.3.
+
 = Version 2.5.36 =
-* Updating and fixing compatibility with CSV addon
+* Updating and fixing compatibility with CSV addon.
 
 = Version 2.5.35 =
 * Bumping version
