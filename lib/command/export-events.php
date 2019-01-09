@@ -116,8 +116,10 @@ class Ai1ec_Command_Export_Events extends Ai1ec_Command {
             );
         }
         $filter = apply_filters( 'ai1ec_export_filter', $filter );
-        $start  = $this->_registry->get( 'date.time', '-3 years' );
-        $end    = $this->_registry->get( 'date.time', '+3 years' );
+        $startend = array('start' => '-3 years', 'end' => '+3 years');
+        $startend = apply_filters( 'ai1ec_export_startend_filter', $startend );
+        $start  = $this->_registry->get( 'date.time', $startend['start'] );
+        $end    = $this->_registry->get( 'date.time', $startend['end'] );
         $search = $this->_registry->get( 'model.search' );
         $params = array(
             'no_html' => $this->_params['no_html'],
